@@ -1,0 +1,16 @@
+﻿Shipper_ID ,User_ID    ,Ho_Ten            ,SDT          ,Bien_So_Xe ,Khu_Vuc_Hub  ,Tien_Ky_Quy ,Cash_On_Hand
+SHP_001    ,U_SHIP_001 ,Bác Tú Dương      ,092077843836 ,59-S3 9380 ,Kho Gò Vấp   ,    5000000 ,     1050000
+SHP_002    ,U_SHIP_002 ,Quý cô Hà Lê      ,091209159646 ,59-Q8 8418 ,Kho Quận 7   ,    5000000 ,     3450000
+SHP_003    ,U_SHIP_003 ,Thành Nguyễn      ,096063359363 ,59-J5 4771 ,Kho Thủ Đức  ,    5000000 ,     2700000
+SHP_004    ,U_SHIP_004 ,Quý cô Linh Dương ,097191954291 ,59-K7 1423 ,Kho Quận 7   ,    5000000 ,     2950000
+SHP_005    ,U_SHIP_005 ,Nhật Lê           ,095330303308 ,59-H6 2222 ,Kho Quận 7   ,    5000000 ,     1050000
+SHP_006    ,U_SHIP_006 ,Hạnh Đức Trần     ,094430652362 ,59-O9 8104 ,Kho Bình Tân ,    5000000 ,     1950000
+SHP_007    ,U_SHIP_007 ,Hoàng Hoàng       ,099615101808 ,59-J2 8507 ,Kho Bình Tân ,    5000000 ,     2050000
+SHP_008    ,U_SHIP_008 ,Phúc Hoàng Phạm   ,097343605590 ,59-K1 7689 ,Kho Tân Bình ,    5000000 ,     2400000
+SHP_009    ,U_SHIP_009 ,Quý ông Quang Bùi ,099095100525 ,59-Z3 6347 ,Kho Gò Vấp   ,    5000000 ,     3000000
+SHP_010    ,U_SHIP_010 ,Mai Đặng          ,094881725204 ,59-N5 4380 ,Kho Thủ Đức  ,    5000000 ,      150000
+SHP_011    ,U_SHIP_011 ,Ông Thành Phạm    ,096041486029 ,59-T2 3263 ,Kho Quận 7   ,    5000000 ,     2450000
+SHP_012    ,U_SHIP_012 ,Cô Yến Trần       ,093506736777 ,59-S8 8127 ,Kho Gò Vấp   ,    5000000 ,     2250000
+SHP_013    ,U_SHIP_013 ,Minh Mai          ,097970207928 ,59-Q1 5724 ,Kho Tân Bình ,    5000000 ,      300000
+SHP_014    ,U_SHIP_014 ,Vi Mai            ,098005935263 ,59-F9 8845 ,Kho Tân Bình ,    5000000 ,     4850000
+SHP_015    ,U_SHIP_015 ,Trung Lê          ,096548269119 ,59-X9 8124 ,Kho Gò Vấp   ,    5000000 ,      150000
