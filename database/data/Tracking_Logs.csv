@@ -1,0 +1,1497 @@
+﻿Log_ID                               ,Order_ID    ,Trang_Thai   ,Thoi_Gian                  ,Mo_Ta
+dd544f8f-8693-4f9d-a611-600bcb6c4cab ,HCM26970493 ,Mới tạo      ,2025-11-30 06:07:04.304538 ,Shop tạo đơn tại TP.HCM
+f5f28a1f-c2d8-4777-a717-4506a1189110 ,HCM26970493 ,Đã điều phối ,2025-11-30 06:37:04.304538 ,Gán cho Shipper SHP_010
+2af332d4-f940-43ff-8525-91d7cc6323cf ,HCM26970493 ,Đang giao    ,2025-11-30 08:37:04.304538 ,Shipper đã lấy hàng
+41f5e681-a788-4ab6-93c5-e048e738f922 ,HCM26970493 ,Đang giao    ,2025-11-30 23:37:04.304538 ,Giao thất bại/Hoàn trả
+86696fda-3eb2-4f5c-a94f-3380d415a95d ,HCM29803366 ,Mới tạo      ,2025-11-30 16:41:27.819973 ,Shop tạo đơn tại TP.HCM
+0e52e62e-c7cd-480b-bb74-29d6416c41e6 ,HCM29803366 ,Đã điều phối ,2025-11-30 17:11:27.819973 ,Gán cho Shipper SHP_006
+79e7602d-9cbd-4cd7-87eb-9f04a97a84ef ,HCM29803366 ,Đang giao    ,2025-11-30 19:11:27.819973 ,Shipper đã lấy hàng
+1d9359a9-c697-4b25-a126-541974da888b ,HCM29803366 ,Đang giao    ,2025-12-01 08:11:27.819973 ,Giao thất bại/Hoàn trả
+d7d87cce-760c-4865-b84a-bc6909319b76 ,HCM84855385 ,Mới tạo      ,2025-11-22 11:09:35.172235 ,Shop tạo đơn tại TP.HCM
+f5b33403-e026-4530-a1d3-1062ab14ba78 ,HCM84855385 ,Đã điều phối ,2025-11-22 11:39:35.172235 ,Gán cho Shipper SHP_001
+d04be2f2-a1e1-4566-9359-e0cdc0cbd5db ,HCM84855385 ,Đang giao    ,2025-11-22 13:39:35.172235 ,Shipper đã lấy hàng
+21c3d723-1ba1-4a2a-ac1f-3a8824c742ee ,HCM84855385 ,Hoàn trả     ,2025-11-23 02:39:35.172235 ,Giao thất bại/Hoàn trả
+086d78f1-4b63-48e0-bd74-ce48d4565d95 ,HCM43295261 ,Mới tạo      ,2025-12-02 09:40:09.244113 ,Shop tạo đơn tại TP.HCM
+28d33120-b529-4b61-ac6e-1b2919b8bfbc ,HCM47198075 ,Mới tạo      ,2025-11-28 12:48:12.393123 ,Shop tạo đơn tại TP.HCM
+ef5d71aa-cc22-4e5c-a444-9745e14e81f6 ,HCM47198075 ,Đã điều phối ,2025-11-28 13:18:12.393123 ,Gán cho Shipper SHP_009
+90d35ca0-ca0a-4ed4-aa58-562115ba92cc ,HCM47198075 ,Đang giao    ,2025-11-28 15:18:12.393123 ,Shipper đã lấy hàng
+08805550-1888-449c-8cc4-a9f03233b0ad ,HCM47198075 ,Hoàn trả     ,2025-11-29 14:18:12.393123 ,Giao thất bại/Hoàn trả
+5f9b3596-dbc5-4a48-80d9-6f2d13223af5 ,HCM12507531 ,Mới tạo      ,2025-11-16 11:05:45.484437 ,Shop tạo đơn tại TP.HCM
+bae73be9-3ca6-42cb-abb3-0232206fd49c ,HCM12507531 ,Đã điều phối ,2025-11-16 11:35:45.484437 ,Gán cho Shipper SHP_015
+a907d8de-d0c9-49e5-88ae-1e84148dedcf ,HCM12507531 ,Đang giao    ,2025-11-16 13:35:45.484437 ,Shipper đã lấy hàng
+ae53686a-5349-4214-ae95-7e949e9b85f6 ,HCM12507531 ,Đang giao    ,2025-11-17 03:35:45.484437 ,Giao thất bại/Hoàn trả
+f42fce46-e986-4d79-a7c0-1096b1ac676a ,HCM23836763 ,Mới tạo      ,2025-11-27 22:41:23.986371 ,Shop tạo đơn tại TP.HCM
+6e7f1d5a-69c8-4f1d-a876-5a912774b35a ,HCM23836763 ,Đã điều phối ,2025-11-27 23:11:23.986371 ,Gán cho Shipper SHP_008
+c3c5b238-c5e2-47db-8478-4298c513bbab ,HCM23836763 ,Đang giao    ,2025-11-28 01:11:23.986371 ,Shipper đã lấy hàng
+af4250ad-ce8e-42dd-aea6-73358d8cb3de ,HCM23836763 ,Đang lấy     ,2025-11-28 06:11:23.986371 ,Giao thất bại/Hoàn trả
+b2dc848a-bb4b-4130-ba20-6271675777bc ,HCM61556694 ,Mới tạo      ,2025-11-10 09:57:33.777883 ,Shop tạo đơn tại TP.HCM
+362fc2b1-6913-4e6f-ab72-28ea2932acee ,HCM61556694 ,Đã điều phối ,2025-11-10 10:27:33.777883 ,Gán cho Shipper SHP_010
+9cfb2a17-e260-41d3-9452-f7102d054402 ,HCM61556694 ,Đang giao    ,2025-11-10 12:27:33.777883 ,Shipper đã lấy hàng
+a63dc1a9-071b-47b1-8c9c-372f1ac79a06 ,HCM61556694 ,Đang giao    ,2025-11-10 17:27:33.777883 ,Giao thất bại/Hoàn trả
+a725fdcb-f925-4971-b358-c8b70bfb3f82 ,HCM39726712 ,Mới tạo      ,2025-11-27 09:19:16.357230 ,Shop tạo đơn tại TP.HCM
+afc630c1-51d0-4abd-b356-e3ffd2f2ca11 ,HCM39726712 ,Đã điều phối ,2025-11-27 09:49:16.357230 ,Gán cho Shipper SHP_011
+47f7eae2-d85a-4a17-a268-f41d41c02431 ,HCM39726712 ,Đang giao    ,2025-11-27 11:49:16.357230 ,Shipper đã lấy hàng
+348b70ae-6a8c-4f6e-9426-30c63751711a ,HCM39726712 ,Đang giao    ,2025-11-28 05:49:16.357230 ,Giao thất bại/Hoàn trả
+479f65e4-a5c8-4cd3-b852-86d2a1ee3652 ,HCM59859880 ,Mới tạo      ,2025-11-14 19:08:45.857222 ,Shop tạo đơn tại TP.HCM
+74ede3b5-b8aa-4b59-8c31-e858d366a02e ,HCM93902865 ,Mới tạo      ,2025-11-15 16:02:33.826636 ,Shop tạo đơn tại TP.HCM
+5c265970-4d72-4306-828a-812ca0b29441 ,HCM93902865 ,Đã điều phối ,2025-11-15 16:32:33.826636 ,Gán cho Shipper SHP_009
+51dbd62f-3150-49e9-9f3c-01c9c19a1df8 ,HCM93902865 ,Đang giao    ,2025-11-15 18:32:33.826636 ,Shipper đã lấy hàng
+73a21891-88b5-43ec-a061-4fb7a24d9d19 ,HCM93902865 ,Đang giao    ,2025-11-16 10:32:33.826636 ,Giao thất bại/Hoàn trả
+87ffd62e-e521-41eb-a2c0-4efa946e1a6f ,HCM50550608 ,Mới tạo      ,2025-12-06 04:07:22.019042 ,Shop tạo đơn tại TP.HCM
+ab125545-de15-4adf-9496-17c7c2e6e011 ,HCM50550608 ,Đã điều phối ,2025-12-06 04:37:22.019042 ,Gán cho Shipper SHP_001
+3f745003-cbc4-46d0-a344-bd1cafd835fb ,HCM50550608 ,Đang giao    ,2025-12-06 06:37:22.019042 ,Shipper đã lấy hàng
+e71b3a93-3643-4564-9143-84fcf5033562 ,HCM50550608 ,Đang lấy     ,2025-12-06 21:37:22.019042 ,Giao thất bại/Hoàn trả
+55597291-cd22-4ebf-9a34-fc4a45f05730 ,HCM98898218 ,Mới tạo      ,2025-11-09 19:48:59.664586 ,Shop tạo đơn tại TP.HCM
+d320c38d-053c-47d4-b0e2-9c10f76309ef ,HCM98898218 ,Đã điều phối ,2025-11-09 20:18:59.664586 ,Gán cho Shipper SHP_005
+75543783-1736-4416-a062-6a05f30b8afb ,HCM98898218 ,Đang giao    ,2025-11-09 22:18:59.664586 ,Shipper đã lấy hàng
+63d192b7-7a22-4288-8aa0-582141038154 ,HCM98898218 ,Đang lấy     ,2025-11-10 08:18:59.664586 ,Giao thất bại/Hoàn trả
+1f295e33-143c-400a-96d9-1fbbfed779bf ,HCM95593413 ,Mới tạo      ,2025-12-08 03:02:39.330015 ,Shop tạo đơn tại TP.HCM
+03a04f75-9dea-45d2-9a30-95c645092e4d ,HCM95593413 ,Đã điều phối ,2025-12-08 03:32:39.330015 ,Gán cho Shipper SHP_003
+8192dda4-504a-4042-89bf-ec390d9c11aa ,HCM95593413 ,Đang giao    ,2025-12-08 05:32:39.330015 ,Shipper đã lấy hàng
+5a7e3b42-bfef-4fd2-8835-dafef497b8c0 ,HCM95593413 ,Đang giao    ,2025-12-09 03:32:39.330015 ,Giao thất bại/Hoàn trả
+c47b081a-4dc3-4364-950c-4c06a77e71f6 ,HCM76659631 ,Mới tạo      ,2025-12-04 13:00:21.080156 ,Shop tạo đơn tại TP.HCM
+ae5279b6-e0cd-4850-ab9c-6b6b61626785 ,HCM76659631 ,Đã điều phối ,2025-12-04 13:30:21.080156 ,Gán cho Shipper SHP_007
+b76a9fd6-c6f9-4bd7-bd6d-a267ed84481c ,HCM76659631 ,Đang giao    ,2025-12-04 15:30:21.080156 ,Shipper đã lấy hàng
+18a1a0b0-6811-4dd6-a07b-981c84e7428e ,HCM76659631 ,Đang giao    ,2025-12-05 11:30:21.080156 ,Giao thất bại/Hoàn trả
+80939c8c-0422-4d3d-b1a3-a310e171238a ,HCM5934723  ,Mới tạo      ,2025-11-27 17:32:40.000703 ,Shop tạo đơn tại TP.HCM
+c4f0de55-6d79-46b8-bcad-f1eda44918e7 ,HCM5934723  ,Đã điều phối ,2025-11-27 18:02:40.000703 ,Gán cho Shipper SHP_001
+5f871172-2301-4a5e-96c1-a62af092ee83 ,HCM5934723  ,Đang giao    ,2025-11-27 20:02:40.000703 ,Shipper đã lấy hàng
+f21819fd-404b-47e0-b91f-c91bc203817e ,HCM5934723  ,Hoàn trả     ,2025-11-28 06:02:40.000703 ,Giao thất bại/Hoàn trả
+3875fffe-fdf5-4d9d-97c6-50c5372f71dd ,HCM12267572 ,Mới tạo      ,2025-11-22 08:47:57.208550 ,Shop tạo đơn tại TP.HCM
+184bac5b-46e8-4513-b6e1-b13610251f89 ,HCM12267572 ,Đã điều phối ,2025-11-22 09:17:57.208550 ,Gán cho Shipper SHP_002
+14ef5403-ee05-440f-b176-5767036087f1 ,HCM12267572 ,Đang giao    ,2025-11-22 11:17:57.208550 ,Shipper đã lấy hàng
+20b5f412-3585-4f09-9716-0667539da295 ,HCM12267572 ,Đang giao    ,2025-11-22 12:17:57.208550 ,Giao thất bại/Hoàn trả
+da189807-2818-425f-84b9-dd378b21e570 ,HCM23261938 ,Mới tạo      ,2025-11-17 14:38:23.359358 ,Shop tạo đơn tại TP.HCM
+6328c590-77bc-4344-aeda-d0c6e776808d ,HCM23261938 ,Đã điều phối ,2025-11-17 15:08:23.359358 ,Gán cho Shipper SHP_012
+a36a36a1-a8a2-402b-ad47-e82042472a83 ,HCM23261938 ,Đang giao    ,2025-11-17 17:08:23.359358 ,Shipper đã lấy hàng
+486b1f3d-d858-485d-8599-322267e30daf ,HCM23261938 ,Đang lấy     ,2025-11-18 01:08:23.359358 ,Giao thất bại/Hoàn trả
+b8c75c0f-6dbe-4b6c-a253-00065bd60b25 ,HCM78596591 ,Mới tạo      ,2025-11-20 06:44:50.845273 ,Shop tạo đơn tại TP.HCM
+980c416a-0bd2-4e0f-93b4-8f3729921012 ,HCM78596591 ,Đã điều phối ,2025-11-20 07:14:50.845273 ,Gán cho Shipper SHP_002
+78b31aac-3eee-4674-a785-ef458e161c34 ,HCM78596591 ,Đang giao    ,2025-11-20 09:14:50.845273 ,Shipper đã lấy hàng
+f5975dcb-6fb8-4151-9b09-24701f860af1 ,HCM78596591 ,Đang giao    ,2025-11-21 07:14:50.845273 ,Giao thất bại/Hoàn trả
+b54721f3-8b23-483e-83c1-583ef4284cb9 ,HCM60251984 ,Mới tạo      ,2025-11-15 21:05:57.988675 ,Shop tạo đơn tại TP.HCM
+40ddcf54-5d0e-4111-b34c-998b27c0875f ,HCM60251984 ,Đã điều phối ,2025-11-15 21:35:57.988675 ,Gán cho Shipper SHP_003
+d235de5b-f939-44d4-9ed0-965dd86918b4 ,HCM60251984 ,Đang giao    ,2025-11-15 23:35:57.988675 ,Shipper đã lấy hàng
+ac998580-0a80-4761-885e-08ae569730b5 ,HCM60251984 ,Hoàn trả     ,2025-11-16 23:35:57.988675 ,Giao thất bại/Hoàn trả
+1ce4dde8-d431-4c5e-9c98-71ab27191e19 ,HCM56022403 ,Mới tạo      ,2025-11-29 07:58:11.130486 ,Shop tạo đơn tại TP.HCM
+3cccd3a3-2973-4c41-8b63-0ac6f08b814f ,HCM84940330 ,Mới tạo      ,2025-11-15 23:05:56.076718 ,Shop tạo đơn tại TP.HCM
+7ee2ddc4-2715-4e87-821e-60f8f4cc88e4 ,HCM84940330 ,Đã điều phối ,2025-11-15 23:35:56.076718 ,Gán cho Shipper SHP_005
+5bdeaf11-eb05-41c0-a36a-24651a89ceb9 ,HCM84940330 ,Đang giao    ,2025-11-16 01:35:56.076718 ,Shipper đã lấy hàng
+1548c728-3a42-4e92-8503-3d9f2528ebba ,HCM84940330 ,Đang giao    ,2025-11-16 09:35:56.076718 ,Giao thất bại/Hoàn trả
+e54d55a9-5caf-4076-b739-b7af157a8b83 ,HCM24420931 ,Mới tạo      ,2025-11-19 22:03:27.951061 ,Shop tạo đơn tại TP.HCM
+ed1b637f-c036-4618-91e4-b4e5e7adbc2d ,HCM24420931 ,Đã điều phối ,2025-11-19 22:33:27.951061 ,Gán cho Shipper SHP_014
+d4d9f3b5-7ba6-4d13-8316-2ac4f1cbc125 ,HCM24420931 ,Đang giao    ,2025-11-20 00:33:27.951061 ,Shipper đã lấy hàng
+c898da69-a8e1-4420-b2df-13c7bc0e10bc ,HCM24420931 ,Hoàn trả     ,2025-11-20 19:33:27.951061 ,Giao thất bại/Hoàn trả
+813214be-195f-4956-a2fc-958bbccfdfb3 ,HCM99394658 ,Mới tạo      ,2025-11-27 02:37:06.339925 ,Shop tạo đơn tại TP.HCM
+081eef74-c193-41ef-9c80-9a875be47e0f ,HCM99394658 ,Đã điều phối ,2025-11-27 03:07:06.339925 ,Gán cho Shipper SHP_009
+cb2827ba-78c0-49e3-8464-833f9928596a ,HCM99394658 ,Đang giao    ,2025-11-27 05:07:06.339925 ,Shipper đã lấy hàng
+36888dd4-f082-4dc9-a53d-970d688e0f2f ,HCM99394658 ,Đã giao      ,2025-11-28 05:07:06.339925 ,Giao thành công
+1a0e61c5-dfe1-482d-81aa-15d1f5f3cf8a ,HCM91799106 ,Mới tạo      ,2025-11-22 13:28:19.602414 ,Shop tạo đơn tại TP.HCM
+315b6249-c137-441e-8124-5f1523a06cef ,HCM91799106 ,Đã điều phối ,2025-11-22 13:58:19.602414 ,Gán cho Shipper SHP_004
+ee43bdc2-b40b-4b08-8d06-f5d2b8ca2ef6 ,HCM91799106 ,Đang giao    ,2025-11-22 15:58:19.602414 ,Shipper đã lấy hàng
+8a3c7f05-0d1c-45e9-a14c-356b3c70c55e ,HCM91799106 ,Đang giao    ,2025-11-23 15:58:19.602414 ,Giao thất bại/Hoàn trả
+5cb6d5d7-9415-4822-8ed3-c9a47f4829dd ,HCM49459706 ,Mới tạo      ,2025-11-09 22:02:49.693724 ,Shop tạo đơn tại TP.HCM
+095daf30-d87f-45ff-a1a7-bed6d62d930e ,HCM84259605 ,Mới tạo      ,2025-11-27 01:23:44.656318 ,Shop tạo đơn tại TP.HCM
+498f429c-542b-4b35-992d-d5dea228b6a7 ,HCM84259605 ,Đã điều phối ,2025-11-27 01:53:44.656318 ,Gán cho Shipper SHP_001
+bd0117c8-be06-4350-b2db-16b29164d805 ,HCM84259605 ,Đang giao    ,2025-11-27 03:53:44.656318 ,Shipper đã lấy hàng
+2e907b77-2a78-453f-8aaa-68794de9d52f ,HCM84259605 ,Đã giao      ,2025-11-28 03:53:44.656318 ,Giao thành công
+1bee8cec-7212-4832-9492-1f6874828402 ,HCM52689277 ,Mới tạo      ,2025-11-15 15:03:15.789609 ,Shop tạo đơn tại TP.HCM
+a9a38298-7efc-440e-89c5-c84c77593386 ,HCM52689277 ,Đã điều phối ,2025-11-15 15:33:15.789609 ,Gán cho Shipper SHP_015
+4ce5a11c-45c5-4658-a7a9-190e132ed7ec ,HCM52689277 ,Đang giao    ,2025-11-15 17:33:15.789609 ,Shipper đã lấy hàng
+2cba96d5-4e35-496b-86b3-f214dc147a7e ,HCM52689277 ,Đang lấy     ,2025-11-15 19:33:15.789609 ,Giao thất bại/Hoàn trả
+493cf7c8-6494-4770-9b0e-d4381724ac66 ,HCM68248096 ,Mới tạo      ,2025-12-02 23:14:49.874641 ,Shop tạo đơn tại TP.HCM
+8d7811d3-a084-4570-9f61-22d7a4c9708c ,HCM26850302 ,Mới tạo      ,2025-12-03 16:27:31.749884 ,Shop tạo đơn tại TP.HCM
+86d4b547-c8ea-4740-8cdd-ff7ca777f2d4 ,HCM26850302 ,Đã điều phối ,2025-12-03 16:57:31.749884 ,Gán cho Shipper SHP_007
+d4541ca9-fa14-45da-a00b-5bfbc3ded2e5 ,HCM26850302 ,Đang giao    ,2025-12-03 18:57:31.749884 ,Shipper đã lấy hàng
+a713976e-e2ef-43c2-a8b6-d5b17d261e48 ,HCM26850302 ,Hoàn trả     ,2025-12-04 11:57:31.749884 ,Giao thất bại/Hoàn trả
+44294929-eaf3-4cd9-850b-2f9f35cd5fde ,HCM60746518 ,Mới tạo      ,2025-12-02 14:10:31.119929 ,Shop tạo đơn tại TP.HCM
+af7eecae-5914-42f8-9e17-69e1d5bade31 ,HCM60746518 ,Đã điều phối ,2025-12-02 14:40:31.119929 ,Gán cho Shipper SHP_008
+1ab0ed6f-436c-4053-8a23-5f6d3e1848c7 ,HCM60746518 ,Đang giao    ,2025-12-02 16:40:31.119929 ,Shipper đã lấy hàng
+ccb638ab-54b5-4ab1-84bb-29cd77055db3 ,HCM60746518 ,Đang giao    ,2025-12-02 19:40:31.119929 ,Giao thất bại/Hoàn trả
+364f47f4-d0a1-4733-ac17-90c0f2e5dd88 ,HCM40348454 ,Mới tạo      ,2025-12-07 18:39:25.607228 ,Shop tạo đơn tại TP.HCM
+21fd83de-55a6-4385-9da8-9473e233a33b ,HCM55168469 ,Mới tạo      ,2025-11-20 21:19:29.247425 ,Shop tạo đơn tại TP.HCM
+760ed1bc-6cbe-4623-a3c0-c9eb74fffd18 ,HCM55168469 ,Đã điều phối ,2025-11-20 21:49:29.247425 ,Gán cho Shipper SHP_007
+aef734cc-cd77-48e4-8306-17308581789d ,HCM55168469 ,Đang giao    ,2025-11-20 23:49:29.247425 ,Shipper đã lấy hàng
+aa0152bd-7428-4222-a2fa-f7206a1fe57d ,HCM55168469 ,Đang lấy     ,2025-11-21 16:49:29.247425 ,Giao thất bại/Hoàn trả
+644532ef-adf5-482e-8278-1bde6a876c9c ,HCM44100204 ,Mới tạo      ,2025-11-28 12:45:35.563327 ,Shop tạo đơn tại TP.HCM
+a33d25e9-88cc-4447-8ef5-e89826a1373a ,HCM13808779 ,Mới tạo      ,2025-11-30 07:42:51.987934 ,Shop tạo đơn tại TP.HCM
+87aad1aa-2063-4b9b-a1f9-2a7d483151a2 ,HCM13808779 ,Đã điều phối ,2025-11-30 08:12:51.987934 ,Gán cho Shipper SHP_006
+db0aa749-9760-4f77-a493-b06138a4d03a ,HCM13808779 ,Đang giao    ,2025-11-30 10:12:51.987934 ,Shipper đã lấy hàng
+738cfb60-2cc2-4f3f-93ff-d4e7a828f512 ,HCM13808779 ,Đã giao      ,2025-12-01 10:12:51.987934 ,Giao thành công
+149aafab-ca0c-446b-936a-73779d629df9 ,HCM73741967 ,Mới tạo      ,2025-11-15 19:17:04.408019 ,Shop tạo đơn tại TP.HCM
+a993b9ed-4774-4a8d-8c10-bbbc8bc484b1 ,HCM36275274 ,Mới tạo      ,2025-11-24 18:36:24.455353 ,Shop tạo đơn tại TP.HCM
+89837f51-356b-48a9-b566-de5d3c47d9c6 ,HCM36275274 ,Đã điều phối ,2025-11-24 19:06:24.455353 ,Gán cho Shipper SHP_010
+e2acfa0c-98ee-471c-b21a-c751eaa3d45b ,HCM36275274 ,Đang giao    ,2025-11-24 21:06:24.455353 ,Shipper đã lấy hàng
+2a9d8025-ff09-4024-856e-be51bf9ca75c ,HCM36275274 ,Đang giao    ,2025-11-25 19:06:24.455353 ,Giao thất bại/Hoàn trả
+cf535de7-dcd3-4437-8432-738c6857cd13 ,HCM61682085 ,Mới tạo      ,2025-11-09 19:08:22.931341 ,Shop tạo đơn tại TP.HCM
+3a00795f-8fba-4098-a9a2-3df8973e3792 ,HCM61682085 ,Đã điều phối ,2025-11-09 19:38:22.931341 ,Gán cho Shipper SHP_013
+37cd236e-6c98-4110-aade-61344b54392a ,HCM61682085 ,Đang giao    ,2025-11-09 21:38:22.931341 ,Shipper đã lấy hàng
+302f3c03-3fc4-4f89-895a-1d8ed82a5bbb ,HCM61682085 ,Đang lấy     ,2025-11-10 16:38:22.931341 ,Giao thất bại/Hoàn trả
+3d41f73c-bd82-448a-96ee-8d6be89376c4 ,HCM62381481 ,Mới tạo      ,2025-11-20 23:42:10.744696 ,Shop tạo đơn tại TP.HCM
+756cd6df-d88d-4bb2-bbaa-2c9fd32cd5ab ,HCM62381481 ,Đã điều phối ,2025-11-21 00:12:10.744696 ,Gán cho Shipper SHP_005
+12a37d06-36fe-4131-99af-cfd9f7ddbcbb ,HCM62381481 ,Đang giao    ,2025-11-21 02:12:10.744696 ,Shipper đã lấy hàng
+c4f9ca4f-9b2c-4388-8f6c-2f2a815549bd ,HCM62381481 ,Hoàn trả     ,2025-11-22 02:12:10.744696 ,Giao thất bại/Hoàn trả
+f8a6f7ff-4a76-4e22-b9b4-c4cc6d6d8bbd ,HCM30464474 ,Mới tạo      ,2025-11-18 10:44:35.444714 ,Shop tạo đơn tại TP.HCM
+dc94961c-2efd-4f89-8df6-701e6edadb8a ,HCM44434019 ,Mới tạo      ,2025-11-10 05:25:45.694969 ,Shop tạo đơn tại TP.HCM
+8582000a-7a84-4aa5-9db7-86a140cbd844 ,HCM44434019 ,Đã điều phối ,2025-11-10 05:55:45.694969 ,Gán cho Shipper SHP_014
+c9a7c763-4874-4b41-9d1b-4a66953b0a58 ,HCM44434019 ,Đang giao    ,2025-11-10 07:55:45.694969 ,Shipper đã lấy hàng
+b67ee767-398b-49c2-aa00-5cec6e9687d2 ,HCM44434019 ,Đang giao    ,2025-11-10 10:55:45.694969 ,Giao thất bại/Hoàn trả
+d95870f0-ea44-4228-b4d2-6d520ca0e203 ,HCM40341313 ,Mới tạo      ,2025-11-17 20:17:59.706200 ,Shop tạo đơn tại TP.HCM
+1094390c-41b7-4bb4-bb7f-751b24f027ef ,HCM89218188 ,Mới tạo      ,2025-11-24 08:14:26.266246 ,Shop tạo đơn tại TP.HCM
+9ced0649-d117-4ced-8adc-95da05e56247 ,HCM89218188 ,Đã điều phối ,2025-11-24 08:44:26.266246 ,Gán cho Shipper SHP_014
+04f023c3-ca84-4dba-b5a5-79bc33aba51d ,HCM89218188 ,Đang giao    ,2025-11-24 10:44:26.266246 ,Shipper đã lấy hàng
+9bcce057-68e5-4940-8247-ec459c38cc65 ,HCM89218188 ,Đã giao      ,2025-11-24 18:44:26.266246 ,Giao thành công
+494b8e0d-83c3-4e1e-9fb6-9e6357604132 ,HCM27112023 ,Mới tạo      ,2025-11-28 23:48:07.022229 ,Shop tạo đơn tại TP.HCM
+bc32337b-e9fd-4d3a-a64c-6fff33793351 ,HCM27112023 ,Đã điều phối ,2025-11-29 00:18:07.022229 ,Gán cho Shipper SHP_007
+4c33d5fa-e2ae-4e0c-aac0-2a3f75857b0a ,HCM27112023 ,Đang giao    ,2025-11-29 02:18:07.022229 ,Shipper đã lấy hàng
+6e6f065d-92ac-48cd-a44c-5b373407b0ca ,HCM27112023 ,Đang lấy     ,2025-11-29 06:18:07.022229 ,Giao thất bại/Hoàn trả
+6df28915-4543-483f-90e4-2fe4b5330e09 ,HCM25423522 ,Mới tạo      ,2025-12-05 04:10:34.289340 ,Shop tạo đơn tại TP.HCM
+a287638f-4157-4628-a2cc-ad9a71636c3d ,HCM25423522 ,Đã điều phối ,2025-12-05 04:40:34.289340 ,Gán cho Shipper SHP_002
+c244a938-b6f0-4538-9f54-ca3c08950c17 ,HCM25423522 ,Đang giao    ,2025-12-05 06:40:34.289340 ,Shipper đã lấy hàng
+df9df84c-a2e6-46d6-9591-36067e86cccd ,HCM25423522 ,Đang lấy     ,2025-12-05 23:40:34.289340 ,Giao thất bại/Hoàn trả
+81cd019b-e51c-4396-873e-9905b231ba94 ,HCM33588652 ,Mới tạo      ,2025-12-04 04:29:13.312784 ,Shop tạo đơn tại TP.HCM
+f7cd987a-a2e2-4fcf-95d3-15debb57b49e ,HCM33588652 ,Đã điều phối ,2025-12-04 04:59:13.312784 ,Gán cho Shipper SHP_015
+360f22e5-b712-47c2-af3e-e849887e7df7 ,HCM33588652 ,Đang giao    ,2025-12-04 06:59:13.312784 ,Shipper đã lấy hàng
+c20dc9a7-3db3-4595-a2e2-55399279b5a2 ,HCM33588652 ,Hoàn trả     ,2025-12-04 09:59:13.312784 ,Giao thất bại/Hoàn trả
+76319952-f767-4611-bbb5-d8db69e3b615 ,HCM54068092 ,Mới tạo      ,2025-11-17 05:07:19.533947 ,Shop tạo đơn tại TP.HCM
+f9b4502e-938d-4884-aa9b-7447722fe369 ,HCM95684162 ,Mới tạo      ,2025-11-10 04:49:16.860085 ,Shop tạo đơn tại TP.HCM
+5e58625b-ede9-4b25-8fe2-ba428b5ff121 ,HCM93944762 ,Mới tạo      ,2025-11-11 18:27:56.485105 ,Shop tạo đơn tại TP.HCM
+348a1c7e-473d-4739-916f-7ce7d0e0bd2b ,HCM93944762 ,Đã điều phối ,2025-11-11 18:57:56.485105 ,Gán cho Shipper SHP_004
+63754feb-8883-4499-a07f-f259153910c7 ,HCM93944762 ,Đang giao    ,2025-11-11 20:57:56.485105 ,Shipper đã lấy hàng
+de65daee-f023-4e84-a13b-219e01bcef71 ,HCM93944762 ,Đã giao      ,2025-11-12 11:57:56.485105 ,Giao thành công
+533aa518-dc72-4980-894e-e83dbc4abcc2 ,HCM74108211 ,Mới tạo      ,2025-11-14 07:42:13.590841 ,Shop tạo đơn tại TP.HCM
+6af61308-5df6-478a-92a8-ca66c154bc8c ,HCM10989346 ,Mới tạo      ,2025-11-11 06:59:28.177522 ,Shop tạo đơn tại TP.HCM
+f0cd05bb-f845-4c18-9b9b-e97f52b625c6 ,HCM42045746 ,Mới tạo      ,2025-11-21 18:54:18.133392 ,Shop tạo đơn tại TP.HCM
+e6792b8b-919b-4878-a0e5-31c4ca85bba4 ,HCM42045746 ,Đã điều phối ,2025-11-21 19:24:18.133392 ,Gán cho Shipper SHP_006
+7082194c-d342-478f-b384-a253adfa0b66 ,HCM42045746 ,Đang giao    ,2025-11-21 21:24:18.133392 ,Shipper đã lấy hàng
+198f98af-9cb4-41dc-8918-6706e39da18f ,HCM42045746 ,Đang giao    ,2025-11-22 07:24:18.133392 ,Giao thất bại/Hoàn trả
+8ba74971-40ea-492d-b216-1c910adf47bf ,HCM98740413 ,Mới tạo      ,2025-11-11 21:01:47.544489 ,Shop tạo đơn tại TP.HCM
+38e92f14-a66d-4c1a-8104-b04cfb4644cf ,HCM4538898  ,Mới tạo      ,2025-11-29 12:53:34.456159 ,Shop tạo đơn tại TP.HCM
+be0b5e16-dbc5-4a72-8199-c476d25ff046 ,HCM4538898  ,Đã điều phối ,2025-11-29 13:23:34.456159 ,Gán cho Shipper SHP_009
+7433f764-c311-473f-b234-91a8dc62c939 ,HCM4538898  ,Đang giao    ,2025-11-29 15:23:34.456159 ,Shipper đã lấy hàng
+e81dba22-6c3f-4e05-8909-638968ffaf8b ,HCM4538898  ,Đã giao      ,2025-11-30 01:23:34.456159 ,Giao thành công
+f202f442-8f1c-443a-adb0-c6ddc2230853 ,HCM30017503 ,Mới tạo      ,2025-11-28 08:28:39.390655 ,Shop tạo đơn tại TP.HCM
+0b37733d-1d61-4dc6-a16a-37b8cc95ad20 ,HCM30017503 ,Đã điều phối ,2025-11-28 08:58:39.390655 ,Gán cho Shipper SHP_004
+fc480e82-aae3-47c0-8c8f-babc554c2954 ,HCM30017503 ,Đang giao    ,2025-11-28 10:58:39.390655 ,Shipper đã lấy hàng
+236d1ab5-816a-4a30-aff9-8f2081b530c7 ,HCM30017503 ,Đang lấy     ,2025-11-29 05:58:39.390655 ,Giao thất bại/Hoàn trả
+d2834b29-6bda-41fa-a7c9-06d672dc0e71 ,HCM14693488 ,Mới tạo      ,2025-11-22 01:36:41.730794 ,Shop tạo đơn tại TP.HCM
+e110dbc4-fa5e-4865-bdc1-3b7b81b35450 ,HCM14693488 ,Đã điều phối ,2025-11-22 02:06:41.730794 ,Gán cho Shipper SHP_006
+65b69339-19b2-484a-892b-1e96a6bbf425 ,HCM14693488 ,Đang giao    ,2025-11-22 04:06:41.730794 ,Shipper đã lấy hàng
+687efd12-0b8a-48b8-a2ce-9e377bf4d4bf ,HCM14693488 ,Đã giao      ,2025-11-22 11:06:41.730794 ,Giao thành công
+2957c7f0-f5d9-4bbc-9c58-50e92c47b885 ,HCM90093268 ,Mới tạo      ,2025-12-01 00:01:49.274793 ,Shop tạo đơn tại TP.HCM
+26e98481-2524-467c-b0a3-86f11f9a91a2 ,HCM90093268 ,Đã điều phối ,2025-12-01 00:31:49.274793 ,Gán cho Shipper SHP_010
+67e0a53d-739d-4ec3-842b-0031638bb517 ,HCM90093268 ,Đang giao    ,2025-12-01 02:31:49.274793 ,Shipper đã lấy hàng
+e594c5fb-6876-4396-984c-82f93449eb50 ,HCM90093268 ,Đang lấy     ,2025-12-01 06:31:49.274793 ,Giao thất bại/Hoàn trả
+d38e9ac9-f3b5-49ed-857d-02453ad9f07e ,HCM19194090 ,Mới tạo      ,2025-11-26 17:23:48.875162 ,Shop tạo đơn tại TP.HCM
+dde9b824-c1dd-48a5-8e2b-80406d142699 ,HCM19194090 ,Đã điều phối ,2025-11-26 17:53:48.875162 ,Gán cho Shipper SHP_010
+a2c6bfc7-79ab-4c87-b12c-383d256ad3fa ,HCM19194090 ,Đang giao    ,2025-11-26 19:53:48.875162 ,Shipper đã lấy hàng
+412dbb67-5409-4f1e-b06f-46aea7f32c9c ,HCM19194090 ,Đang lấy     ,2025-11-27 01:53:48.875162 ,Giao thất bại/Hoàn trả
+f6010ec6-2228-4c22-bdde-08f0ddc09141 ,HCM87804760 ,Mới tạo      ,2025-11-21 09:45:34.641588 ,Shop tạo đơn tại TP.HCM
+d09756de-7617-4932-8a7b-2c7b739e5b31 ,HCM87804760 ,Đã điều phối ,2025-11-21 10:15:34.641588 ,Gán cho Shipper SHP_002
+f2337e42-f83e-4851-9e35-34ebbcd94d3d ,HCM87804760 ,Đang giao    ,2025-11-21 12:15:34.641588 ,Shipper đã lấy hàng
+94298a0a-4536-4bfa-bedb-b0b0e04e0693 ,HCM87804760 ,Đã giao      ,2025-11-22 03:15:34.641588 ,Giao thành công
+0d095f1b-b617-4793-ab7e-a73ff7bc702d ,HCM71391585 ,Mới tạo      ,2025-11-22 23:27:42.347705 ,Shop tạo đơn tại TP.HCM
+17e823c8-28ee-4a5d-876e-d25055cc6ad0 ,HCM71391585 ,Đã điều phối ,2025-11-22 23:57:42.347705 ,Gán cho Shipper SHP_011
+b2188f17-fcac-4ee6-9ec9-f8b23bde57c5 ,HCM71391585 ,Đang giao    ,2025-11-23 01:57:42.347705 ,Shipper đã lấy hàng
+550b7bc5-97ac-49ac-bf21-c6a99a7da015 ,HCM71391585 ,Đang lấy     ,2025-11-23 21:57:42.347705 ,Giao thất bại/Hoàn trả
+7c8d8712-5030-43ec-bd44-bbec1e5398e8 ,HCM66703580 ,Mới tạo      ,2025-12-04 18:30:24.005683 ,Shop tạo đơn tại TP.HCM
+7477ed32-c0af-4e7f-b1d5-768d25e058fa ,HCM68104036 ,Mới tạo      ,2025-11-12 02:44:22.330094 ,Shop tạo đơn tại TP.HCM
+4d4e1f57-6577-4a01-aea5-d881189583a6 ,HCM68104036 ,Đã điều phối ,2025-11-12 03:14:22.330094 ,Gán cho Shipper SHP_014
+3604eeb0-3d8e-4ead-852c-0c4055997858 ,HCM68104036 ,Đang giao    ,2025-11-12 05:14:22.330094 ,Shipper đã lấy hàng
+3ddf12ed-2c65-48ed-9f19-b6a5cef0076f ,HCM68104036 ,Đã giao      ,2025-11-13 01:14:22.330094 ,Giao thành công
+71a9f78b-fe78-464b-88b2-814453f07ede ,HCM25187619 ,Mới tạo      ,2025-11-11 07:39:17.434870 ,Shop tạo đơn tại TP.HCM
+7123d74f-1a3e-40d1-bcba-aac0b93dde8d ,HCM25187619 ,Đã điều phối ,2025-11-11 08:09:17.434870 ,Gán cho Shipper SHP_005
+ffece2f9-3752-45e7-8914-b8a849ac1940 ,HCM25187619 ,Đang giao    ,2025-11-11 10:09:17.434870 ,Shipper đã lấy hàng
+af8c43a0-348a-488c-8a2e-42b0b2941e5d ,HCM25187619 ,Đang giao    ,2025-11-11 12:09:17.434870 ,Giao thất bại/Hoàn trả
+8957b7d5-c1c4-45bf-8969-df46047b93d5 ,HCM30337414 ,Mới tạo      ,2025-11-16 23:02:26.331232 ,Shop tạo đơn tại TP.HCM
+90242678-ced4-49b2-af87-43316387d0f8 ,HCM30337414 ,Đã điều phối ,2025-11-16 23:32:26.331232 ,Gán cho Shipper SHP_004
+323ff039-842b-4323-ae1d-8dabed1c4dc7 ,HCM30337414 ,Đang giao    ,2025-11-17 01:32:26.331232 ,Shipper đã lấy hàng
+81072bbd-68ab-4f1a-842a-432ae84e3e56 ,HCM30337414 ,Đã giao      ,2025-11-17 08:32:26.331232 ,Giao thành công
+496764e3-cb46-4a17-b503-5a0abc428424 ,HCM58292558 ,Mới tạo      ,2025-11-29 13:30:59.756522 ,Shop tạo đơn tại TP.HCM
+b1299054-1fd4-4a96-95c9-8554777ceb91 ,HCM58292558 ,Đã điều phối ,2025-11-29 14:00:59.756522 ,Gán cho Shipper SHP_007
+217db4c1-9ad6-49c5-a405-30a24a0229f4 ,HCM58292558 ,Đang giao    ,2025-11-29 16:00:59.756522 ,Shipper đã lấy hàng
+4eb78cdc-48fc-4c5c-9417-acf769a802bf ,HCM58292558 ,Đang lấy     ,2025-11-30 10:00:59.756522 ,Giao thất bại/Hoàn trả
+a3148b05-0593-48ae-bbd7-431424a7ea85 ,HCM15902986 ,Mới tạo      ,2025-12-04 13:41:12.080636 ,Shop tạo đơn tại TP.HCM
+2b37ed1c-fe9f-415e-b308-e3e40dd03460 ,HCM9134289  ,Mới tạo      ,2025-11-24 08:16:40.064149 ,Shop tạo đơn tại TP.HCM
+2b11f28d-a777-4df9-a8c7-1db74786fb8e ,HCM57632021 ,Mới tạo      ,2025-12-04 09:57:14.057707 ,Shop tạo đơn tại TP.HCM
+7334d807-4775-46c6-9468-2cfec3c3c038 ,HCM82588898 ,Mới tạo      ,2025-11-26 20:57:31.715713 ,Shop tạo đơn tại TP.HCM
+d4e06151-ce11-4f26-b472-f1d7565e7d5a ,HCM82588898 ,Đã điều phối ,2025-11-26 21:27:31.715713 ,Gán cho Shipper SHP_015
+5f57c199-5807-4408-8490-768ca5a2671e ,HCM82588898 ,Đang giao    ,2025-11-26 23:27:31.715713 ,Shipper đã lấy hàng
+55ab2ca9-a267-4365-9bd4-fe6e68da26b6 ,HCM82588898 ,Hoàn trả     ,2025-11-27 04:27:31.715713 ,Giao thất bại/Hoàn trả
+f3682c56-01b0-4680-a44e-61c68b48d4f3 ,HCM13966535 ,Mới tạo      ,2025-12-04 11:51:47.993346 ,Shop tạo đơn tại TP.HCM
+c6deae44-d185-40c0-8030-c9d397e291fd ,HCM20645855 ,Mới tạo      ,2025-11-30 07:16:53.739734 ,Shop tạo đơn tại TP.HCM
+dc5f01de-5bfb-4988-8193-399791415240 ,HCM20645855 ,Đã điều phối ,2025-11-30 07:46:53.739734 ,Gán cho Shipper SHP_009
+ab4eaa29-b1ae-4371-8334-03b4e9502a94 ,HCM20645855 ,Đang giao    ,2025-11-30 09:46:53.739734 ,Shipper đã lấy hàng
+b87cd2d0-cd3e-466a-8bc5-f95b009a015f ,HCM20645855 ,Hoàn trả     ,2025-12-01 06:46:53.739734 ,Giao thất bại/Hoàn trả
+818d7373-aa97-4c82-98f1-8e9a6750a6c2 ,HCM18662113 ,Mới tạo      ,2025-11-11 07:42:18.311696 ,Shop tạo đơn tại TP.HCM
+8a0aa8ba-74be-4025-8ec1-0ae568fea6bf ,HCM47611925 ,Mới tạo      ,2025-12-05 07:12:39.334529 ,Shop tạo đơn tại TP.HCM
+f954c576-d6f5-444d-8f6f-4cdb7520e0c3 ,HCM47611925 ,Đã điều phối ,2025-12-05 07:42:39.334529 ,Gán cho Shipper SHP_007
+5cfb447b-9c8e-453e-8f54-7176ba1c9ca9 ,HCM47611925 ,Đang giao    ,2025-12-05 09:42:39.334529 ,Shipper đã lấy hàng
+0c524b99-9957-4e7c-b1c6-9241534f149f ,HCM47611925 ,Hoàn trả     ,2025-12-05 23:42:39.334529 ,Giao thất bại/Hoàn trả
+bda5cd41-4020-4f2b-b011-043a00e31ec6 ,HCM60538378 ,Mới tạo      ,2025-11-25 13:12:54.784854 ,Shop tạo đơn tại TP.HCM
+1b43b18c-ee24-4331-8132-485447fa9267 ,HCM56704843 ,Mới tạo      ,2025-12-05 22:46:29.852038 ,Shop tạo đơn tại TP.HCM
+9560edfc-1592-480b-8a46-3eb5388f3b72 ,HCM91610622 ,Mới tạo      ,2025-12-04 14:33:43.133768 ,Shop tạo đơn tại TP.HCM
+1c91b3d5-ded0-414a-8708-e1ef6c9cc4b5 ,HCM91610622 ,Đã điều phối ,2025-12-04 15:03:43.133768 ,Gán cho Shipper SHP_006
+08bc4795-90bb-4794-a3ce-9bc1009b37b2 ,HCM91610622 ,Đang giao    ,2025-12-04 17:03:43.133768 ,Shipper đã lấy hàng
+f9cea61f-daf9-441e-bcdc-0cd947d24bce ,HCM91610622 ,Đang giao    ,2025-12-05 05:03:43.133768 ,Giao thất bại/Hoàn trả
+5e5fc229-7729-4573-abc7-030cb6605e6c ,HCM13467814 ,Mới tạo      ,2025-11-30 13:15:09.785022 ,Shop tạo đơn tại TP.HCM
+3e0fc7e5-cb5c-4f2e-a2c8-057b9cb70d9c ,HCM13467814 ,Đã điều phối ,2025-11-30 13:45:09.785022 ,Gán cho Shipper SHP_002
+7afc341c-6042-43e3-828c-a7a21bb2a175 ,HCM13467814 ,Đang giao    ,2025-11-30 15:45:09.785022 ,Shipper đã lấy hàng
+f7ae03e9-95cf-4c51-a1d3-095c29caf8f1 ,HCM13467814 ,Đã giao      ,2025-11-30 19:45:09.785022 ,Giao thành công
+b9db0c0c-096e-4d75-b6cc-2eb19f15b8b5 ,HCM84374302 ,Mới tạo      ,2025-11-10 02:35:10.870324 ,Shop tạo đơn tại TP.HCM
+600d8706-e567-4d0a-b8a4-a32ceae1f3f8 ,HCM88340460 ,Mới tạo      ,2025-11-23 14:13:20.359836 ,Shop tạo đơn tại TP.HCM
+b1acbd4d-9071-4dfa-ab6e-e869cfe705e9 ,HCM88340460 ,Đã điều phối ,2025-11-23 14:43:20.359836 ,Gán cho Shipper SHP_005
+8fcfe268-b3ef-4636-aa52-40cd334f3a4d ,HCM88340460 ,Đang giao    ,2025-11-23 16:43:20.359836 ,Shipper đã lấy hàng
+eec65b0a-3ff3-46f3-88e6-1a8f495e1eff ,HCM88340460 ,Đang giao    ,2025-11-24 08:43:20.359836 ,Giao thất bại/Hoàn trả
+254a7fe6-dcfc-43ff-a7c0-1ef810c48451 ,HCM26256150 ,Mới tạo      ,2025-11-13 21:54:17.078823 ,Shop tạo đơn tại TP.HCM
+af9b3c4c-c3c5-40ea-b5ea-d24849245325 ,HCM26256150 ,Đã điều phối ,2025-11-13 22:24:17.078823 ,Gán cho Shipper SHP_003
+06b305eb-964f-4918-9676-245d919d5d9d ,HCM26256150 ,Đang giao    ,2025-11-14 00:24:17.078823 ,Shipper đã lấy hàng
+07a39e28-8c29-44be-a76f-543f9404430f ,HCM26256150 ,Đã giao      ,2025-11-14 17:24:17.078823 ,Giao thành công
+82eb394f-8743-47b3-b798-de00cf6850a5 ,HCM24482137 ,Mới tạo      ,2025-11-22 18:39:01.291371 ,Shop tạo đơn tại TP.HCM
+365b3f8a-7fda-4c7b-9214-c63c42e547b8 ,HCM37886259 ,Mới tạo      ,2025-11-26 07:55:10.147454 ,Shop tạo đơn tại TP.HCM
+b0a47cc9-f2aa-437f-83b6-9641fc2f4409 ,HCM76469401 ,Mới tạo      ,2025-11-09 07:15:45.512193 ,Shop tạo đơn tại TP.HCM
+7b6f50ff-8637-43a3-b38a-3f35a71d0c46 ,HCM76469401 ,Đã điều phối ,2025-11-09 07:45:45.512193 ,Gán cho Shipper SHP_004
+4b4ac078-1f1a-4a75-8553-542621195d94 ,HCM76469401 ,Đang giao    ,2025-11-09 09:45:45.512193 ,Shipper đã lấy hàng
+58744684-f130-441b-87e7-ce35a88f75cc ,HCM76469401 ,Đang lấy     ,2025-11-09 16:45:45.512193 ,Giao thất bại/Hoàn trả
+86d516f6-f605-41d7-a99d-e2ef59df9164 ,HCM2942172  ,Mới tạo      ,2025-11-12 11:02:56.603493 ,Shop tạo đơn tại TP.HCM
+40b6eca0-a208-4cc7-8cef-5e06f56e78c5 ,HCM30021945 ,Mới tạo      ,2025-11-09 22:41:40.043910 ,Shop tạo đơn tại TP.HCM
+4f6c6def-3218-421f-9618-3c185642d14e ,HCM30021945 ,Đã điều phối ,2025-11-09 23:11:40.043910 ,Gán cho Shipper SHP_012
+33bba4a1-44a3-4786-9e14-e4b87e5b5fb9 ,HCM30021945 ,Đang giao    ,2025-11-10 01:11:40.043910 ,Shipper đã lấy hàng
+db209d23-7915-43bb-a700-64eaeb29bc88 ,HCM30021945 ,Đang giao    ,2025-11-10 07:11:40.043910 ,Giao thất bại/Hoàn trả
+d300b3b1-c266-410c-b31f-7c9b92ad73fa ,HCM14224221 ,Mới tạo      ,2025-11-23 00:42:40.163347 ,Shop tạo đơn tại TP.HCM
+7233fb18-64d7-46a3-94cc-4c2815fa778b ,HCM14224221 ,Đã điều phối ,2025-11-23 01:12:40.163347 ,Gán cho Shipper SHP_008
+39b5c61b-bc01-4e51-a62c-c6378fdc918c ,HCM14224221 ,Đang giao    ,2025-11-23 03:12:40.163347 ,Shipper đã lấy hàng
+328ffc8a-283f-4786-b65b-a88f0c880089 ,HCM14224221 ,Đã giao      ,2025-11-23 19:12:40.163347 ,Giao thành công
+4a90aa58-20aa-44f4-a7ad-2b86b8289add ,HCM28427979 ,Mới tạo      ,2025-11-24 05:59:41.986659 ,Shop tạo đơn tại TP.HCM
+681c2deb-d3a7-4b56-a1d6-0f8bc30a031a ,HCM28427979 ,Đã điều phối ,2025-11-24 06:29:41.986659 ,Gán cho Shipper SHP_013
+4b3db1d3-241c-4607-a0e5-78fb271c3766 ,HCM28427979 ,Đang giao    ,2025-11-24 08:29:41.986659 ,Shipper đã lấy hàng
+7d94fdc2-c1dd-41f9-9129-e6160eb64b0e ,HCM28427979 ,Hoàn trả     ,2025-11-25 04:29:41.986659 ,Giao thất bại/Hoàn trả
+7bc822d0-0d9d-4426-ad8d-86dc348108ce ,HCM45296924 ,Mới tạo      ,2025-11-10 21:55:14.154701 ,Shop tạo đơn tại TP.HCM
+f06e5cca-1dc5-4eb1-95d1-ca8bc038c644 ,HCM45296924 ,Đã điều phối ,2025-11-10 22:25:14.154701 ,Gán cho Shipper SHP_005
+dc814323-a81b-4898-af3a-20d9ccf2a9db ,HCM45296924 ,Đang giao    ,2025-11-11 00:25:14.154701 ,Shipper đã lấy hàng
+49a043ce-06f5-4b5a-9f31-1c5c4f3e9149 ,HCM45296924 ,Đã giao      ,2025-11-11 06:25:14.154701 ,Giao thành công
+fa25d35f-6453-4b07-9cb3-c07bd509635f ,HCM175451   ,Mới tạo      ,2025-11-20 13:10:20.352393 ,Shop tạo đơn tại TP.HCM
+9a6a059e-2059-44fc-912b-47193ccc9f16 ,HCM175451   ,Đã điều phối ,2025-11-20 13:40:20.352393 ,Gán cho Shipper SHP_007
+b91f9ef4-ccad-4f47-8de2-ab4d05805049 ,HCM175451   ,Đang giao    ,2025-11-20 15:40:20.352393 ,Shipper đã lấy hàng
+ebe15368-4dc9-463f-8b8f-032d354463bc ,HCM175451   ,Đang lấy     ,2025-11-20 21:40:20.352393 ,Giao thất bại/Hoàn trả
+2115680d-bff2-4770-afee-263a934f6b97 ,HCM38647028 ,Mới tạo      ,2025-11-27 02:35:59.917369 ,Shop tạo đơn tại TP.HCM
+ea8ba545-1029-4d02-861c-8ec31650151d ,HCM14456332 ,Mới tạo      ,2025-11-23 08:45:28.056727 ,Shop tạo đơn tại TP.HCM
+9f596f36-f191-414f-8f7b-8c0fc7a505fd ,HCM14456332 ,Đã điều phối ,2025-11-23 09:15:28.056727 ,Gán cho Shipper SHP_014
+db47bbc5-a858-444c-bc6d-313ec7d6dd64 ,HCM14456332 ,Đang giao    ,2025-11-23 11:15:28.056727 ,Shipper đã lấy hàng
+29d77446-285a-4f2d-b771-5cb5926100e4 ,HCM14456332 ,Hoàn trả     ,2025-11-23 16:15:28.056727 ,Giao thất bại/Hoàn trả
+58cd4002-a884-487e-8d97-3f01b1e33bdb ,HCM31620000 ,Mới tạo      ,2025-11-24 14:40:08.636284 ,Shop tạo đơn tại TP.HCM
+6c33efb3-79f8-4341-81af-52778a0b00a5 ,HCM31620000 ,Đã điều phối ,2025-11-24 15:10:08.636284 ,Gán cho Shipper SHP_003
+881c705d-58c3-4e06-bd0a-b79a295c7603 ,HCM31620000 ,Đang giao    ,2025-11-24 17:10:08.636284 ,Shipper đã lấy hàng
+c5ff1d21-6dc3-4857-adac-3bee97ebc45f ,HCM31620000 ,Đang giao    ,2025-11-25 14:10:08.636284 ,Giao thất bại/Hoàn trả
+8be90a06-8268-46e9-ba95-e9cdf222fb0a ,HCM17805358 ,Mới tạo      ,2025-11-12 01:04:03.236946 ,Shop tạo đơn tại TP.HCM
+fbb364fd-7e78-4698-b9a0-398094197205 ,HCM17805358 ,Đã điều phối ,2025-11-12 01:34:03.236946 ,Gán cho Shipper SHP_015
+8eedb99f-5c17-407a-b003-29adde08b7e5 ,HCM17805358 ,Đang giao    ,2025-11-12 03:34:03.236946 ,Shipper đã lấy hàng
+8168e4f8-a68e-4a4e-b675-e20d0caa410a ,HCM17805358 ,Đang lấy     ,2025-11-12 18:34:03.236946 ,Giao thất bại/Hoàn trả
+66db7e73-87fc-4830-b56e-cbabc811ae79 ,HCM26326830 ,Mới tạo      ,2025-11-23 10:35:55.649031 ,Shop tạo đơn tại TP.HCM
+2f09c5ed-e478-447a-b06c-90378e339ad0 ,HCM26326830 ,Đã điều phối ,2025-11-23 11:05:55.649031 ,Gán cho Shipper SHP_013
+1e1f5aff-edb5-46e2-bce8-2f82811bdfdb ,HCM26326830 ,Đang giao    ,2025-11-23 13:05:55.649031 ,Shipper đã lấy hàng
+8fdc23f8-e3ed-4a92-99d4-557b535c04e0 ,HCM26326830 ,Đang giao    ,2025-11-23 15:05:55.649031 ,Giao thất bại/Hoàn trả
+1f10e069-a079-4195-b5d3-8b54afd6003e ,HCM34155641 ,Mới tạo      ,2025-11-19 10:39:08.747584 ,Shop tạo đơn tại TP.HCM
+8eac879b-42ca-4207-bd70-12b962efc188 ,HCM54187255 ,Mới tạo      ,2025-11-27 22:20:28.910173 ,Shop tạo đơn tại TP.HCM
+39f2d5a9-dfac-4b9c-9390-d3f2f30faa69 ,HCM54187255 ,Đã điều phối ,2025-11-27 22:50:28.910173 ,Gán cho Shipper SHP_006
+8f98e0e4-7003-4b72-aaf6-4fcb388c15fd ,HCM54187255 ,Đang giao    ,2025-11-28 00:50:28.910173 ,Shipper đã lấy hàng
+d097f010-c059-4b9a-9942-1233cb2b96e2 ,HCM54187255 ,Đang giao    ,2025-11-28 04:50:28.910173 ,Giao thất bại/Hoàn trả
+fd3f1baa-f8ea-4b6d-bf31-1e63bf978cc3 ,HCM42920292 ,Mới tạo      ,2025-11-19 13:04:23.904310 ,Shop tạo đơn tại TP.HCM
+c298d83f-b169-43da-bbcc-c4ab3966e9ac ,HCM42920292 ,Đã điều phối ,2025-11-19 13:34:23.904310 ,Gán cho Shipper SHP_009
+1b4354c4-5e01-45e0-b828-4625c3faa5d8 ,HCM42920292 ,Đang giao    ,2025-11-19 15:34:23.904310 ,Shipper đã lấy hàng
+879afaea-fa8d-45aa-835d-f34b4478e566 ,HCM42920292 ,Đã giao      ,2025-11-19 21:34:23.904310 ,Giao thành công
+89bb56a9-8011-4c9a-b366-a2e3e260e2cb ,HCM81226461 ,Mới tạo      ,2025-11-15 04:18:16.055614 ,Shop tạo đơn tại TP.HCM
+a9add2e3-00da-46e8-a120-506d9eb7b831 ,HCM81226461 ,Đã điều phối ,2025-11-15 04:48:16.055614 ,Gán cho Shipper SHP_011
+ee97037b-5eb4-4ab4-a471-b3e95928155e ,HCM81226461 ,Đang giao    ,2025-11-15 06:48:16.055614 ,Shipper đã lấy hàng
+0c9a50ef-878b-4ab6-b2cd-b30c3ddf7427 ,HCM81226461 ,Đang lấy     ,2025-11-16 03:48:16.055614 ,Giao thất bại/Hoàn trả
+1ed19fb9-36e0-4e11-a34c-a50e59181491 ,HCM22508409 ,Mới tạo      ,2025-11-15 02:54:55.041457 ,Shop tạo đơn tại TP.HCM
+04e15296-1285-4e49-bddd-109bcc51ad48 ,HCM22508409 ,Đã điều phối ,2025-11-15 03:24:55.041457 ,Gán cho Shipper SHP_003
+2217afb9-1bd5-41d8-9506-4cef62af06d2 ,HCM22508409 ,Đang giao    ,2025-11-15 05:24:55.041457 ,Shipper đã lấy hàng
+a79f2ce2-be3c-4ad1-beda-dc52b543fb8d ,HCM22508409 ,Đã giao      ,2025-11-16 03:24:55.041457 ,Giao thành công
+f05a59c6-eee8-49cb-b1e2-45be2b901116 ,HCM9508701  ,Mới tạo      ,2025-11-11 19:16:59.322727 ,Shop tạo đơn tại TP.HCM
+820a20e0-02a6-4296-8b9e-421daf481a85 ,HCM9508701  ,Đã điều phối ,2025-11-11 19:46:59.322727 ,Gán cho Shipper SHP_006
+490cc3a6-2e4d-4b31-a380-6b45abfd980e ,HCM9508701  ,Đang giao    ,2025-11-11 21:46:59.322727 ,Shipper đã lấy hàng
+f3d30d2a-243c-4b6d-99b1-b7c6f5579d7c ,HCM9508701  ,Đã giao      ,2025-11-11 23:46:59.322727 ,Giao thành công
+85e7abd2-7eac-4c31-a45c-3c3cf59f50ee ,HCM54412533 ,Mới tạo      ,2025-11-20 18:40:25.527799 ,Shop tạo đơn tại TP.HCM
+28176b01-1bc3-4ded-9b66-e76b60d00faa ,HCM54412533 ,Đã điều phối ,2025-11-20 19:10:25.527799 ,Gán cho Shipper SHP_012
+661c733e-aeea-4e63-b83a-deff6823bfca ,HCM54412533 ,Đang giao    ,2025-11-20 21:10:25.527799 ,Shipper đã lấy hàng
+fa5e1e4e-b2df-43e4-925f-ea05364b0179 ,HCM54412533 ,Đã giao      ,2025-11-21 21:10:25.527799 ,Giao thành công
+78c01977-a7e7-47f7-b176-3b391b9b299b ,HCM56536916 ,Mới tạo      ,2025-11-11 15:31:09.748887 ,Shop tạo đơn tại TP.HCM
+4df1b515-d276-4566-8a0b-ea97d7e0a481 ,HCM56536916 ,Đã điều phối ,2025-11-11 16:01:09.748887 ,Gán cho Shipper SHP_015
+cdc646e3-17ae-4988-9282-1fef450e45e4 ,HCM56536916 ,Đang giao    ,2025-11-11 18:01:09.748887 ,Shipper đã lấy hàng
+e7794bfb-9958-451c-b6f6-150c043940ba ,HCM56536916 ,Hoàn trả     ,2025-11-12 14:01:09.748887 ,Giao thất bại/Hoàn trả
+7a7c17f3-b940-47da-9ee9-0f3db542500e ,HCM72601750 ,Mới tạo      ,2025-11-28 14:08:49.394727 ,Shop tạo đơn tại TP.HCM
+faca4e9e-2148-4a82-8d01-e042f46b40d2 ,HCM72601750 ,Đã điều phối ,2025-11-28 14:38:49.394727 ,Gán cho Shipper SHP_012
+3ea52926-623e-4676-9f6c-519c210d4610 ,HCM72601750 ,Đang giao    ,2025-11-28 16:38:49.394727 ,Shipper đã lấy hàng
+193c721c-34ff-499e-a635-204d1b7d4568 ,HCM72601750 ,Đã giao      ,2025-11-29 12:38:49.394727 ,Giao thành công
+55103879-e652-4138-9119-12bb64f8c113 ,HCM24898157 ,Mới tạo      ,2025-11-16 14:31:19.936155 ,Shop tạo đơn tại TP.HCM
+8056ff77-d721-4dd0-b6cc-d5280ccec801 ,HCM6772759  ,Mới tạo      ,2025-11-30 23:30:07.068611 ,Shop tạo đơn tại TP.HCM
+b1709403-7963-4b1f-a34e-8c8ad268e0db ,HCM45241460 ,Mới tạo      ,2025-11-13 22:51:04.527197 ,Shop tạo đơn tại TP.HCM
+b4ae5784-628d-44c4-8c1b-bc939d635237 ,HCM46135067 ,Mới tạo      ,2025-11-11 22:45:06.526414 ,Shop tạo đơn tại TP.HCM
+efbd1f5a-ce72-4c50-93b6-6abbb43c2a1a ,HCM64606317 ,Mới tạo      ,2025-11-24 21:06:35.262472 ,Shop tạo đơn tại TP.HCM
+055b5758-087f-4752-92fa-1d673d4b6888 ,HCM64606317 ,Đã điều phối ,2025-11-24 21:36:35.262472 ,Gán cho Shipper SHP_014
+4803ea5a-d68d-46fe-88a7-9be26d68f406 ,HCM64606317 ,Đang giao    ,2025-11-24 23:36:35.262472 ,Shipper đã lấy hàng
+5b487d17-8702-4501-9339-bbbbcc5ebc13 ,HCM64606317 ,Đang giao    ,2025-11-25 18:36:35.262472 ,Giao thất bại/Hoàn trả
+722d5d3e-2c60-419c-b594-3fb77e3613a7 ,HCM76291098 ,Mới tạo      ,2025-12-01 04:40:46.427684 ,Shop tạo đơn tại TP.HCM
+fc606f43-41cf-4a55-8005-81ce7985e3f2 ,HCM94304328 ,Mới tạo      ,2025-12-02 10:20:07.194466 ,Shop tạo đơn tại TP.HCM
+950d5b1d-397f-4cd9-89f4-9fc2b1a3a13b ,HCM28223437 ,Mới tạo      ,2025-11-27 18:17:48.909700 ,Shop tạo đơn tại TP.HCM
+4d365a1d-f242-4db7-9cdf-10d66d395642 ,HCM28223437 ,Đã điều phối ,2025-11-27 18:47:48.909700 ,Gán cho Shipper SHP_012
+acc03fff-e836-431e-8073-7a5178c11340 ,HCM28223437 ,Đang giao    ,2025-11-27 20:47:48.909700 ,Shipper đã lấy hàng
+dea551d0-17b6-4a9d-a829-4330e3d9081f ,HCM28223437 ,Đã giao      ,2025-11-28 00:47:48.909700 ,Giao thành công
+905eae5c-96ae-4d2d-8219-c230f56f85c7 ,HCM14942153 ,Mới tạo      ,2025-11-13 07:05:22.791121 ,Shop tạo đơn tại TP.HCM
+c98265fb-d36c-4aaa-bdc4-31f605f66dd4 ,HCM14942153 ,Đã điều phối ,2025-11-13 07:35:22.791121 ,Gán cho Shipper SHP_004
+87f77907-1ff0-4c72-a514-1f002346f802 ,HCM14942153 ,Đang giao    ,2025-11-13 09:35:22.791121 ,Shipper đã lấy hàng
+68dce508-8c91-40ea-aec4-97f0d52082ba ,HCM14942153 ,Đang lấy     ,2025-11-14 08:35:22.791121 ,Giao thất bại/Hoàn trả
+e217f987-d7a4-47ee-a8a4-ea4bd992ac83 ,HCM1760223  ,Mới tạo      ,2025-11-17 15:25:46.982254 ,Shop tạo đơn tại TP.HCM
+993d2bf7-29d7-436a-8460-4d6e76e37c1a ,HCM39749028 ,Mới tạo      ,2025-12-02 01:34:06.207789 ,Shop tạo đơn tại TP.HCM
+0839515b-6cbc-4944-b70e-92a33d3d018c ,HCM39749028 ,Đã điều phối ,2025-12-02 02:04:06.207789 ,Gán cho Shipper SHP_007
+d4af9cd7-34a8-41cc-a0b3-c89adee21597 ,HCM39749028 ,Đang giao    ,2025-12-02 04:04:06.207789 ,Shipper đã lấy hàng
+c7c056d6-8695-46b1-84ee-7176335ac7d7 ,HCM39749028 ,Đã giao      ,2025-12-02 15:04:06.207789 ,Giao thành công
+96ef6e69-64f3-43e3-9cc4-f9a2be2c88c9 ,HCM29108636 ,Mới tạo      ,2025-11-22 00:15:27.381805 ,Shop tạo đơn tại TP.HCM
+29893094-be10-4da1-ac06-132cf18d2dc3 ,HCM10390161 ,Mới tạo      ,2025-12-02 13:13:51.258199 ,Shop tạo đơn tại TP.HCM
+c68935b6-d145-43ab-8d4f-de05fbcaa7e7 ,HCM10390161 ,Đã điều phối ,2025-12-02 13:43:51.258199 ,Gán cho Shipper SHP_013
+581c4598-0382-4b6d-b533-8782f1a8792b ,HCM10390161 ,Đang giao    ,2025-12-02 15:43:51.258199 ,Shipper đã lấy hàng
+76213ba1-b94a-4c87-aa64-2a88b5a5342a ,HCM10390161 ,Đang lấy     ,2025-12-02 19:43:51.258199 ,Giao thất bại/Hoàn trả
+55939814-24b3-4a1b-b6f0-f7d7d02889fd ,HCM47919905 ,Mới tạo      ,2025-12-08 14:11:05.539222 ,Shop tạo đơn tại TP.HCM
+a0e5142c-e586-4515-b873-17655ef54057 ,HCM47919905 ,Đã điều phối ,2025-12-08 14:41:05.539222 ,Gán cho Shipper SHP_005
+2150a0e3-0116-47d8-9e76-74e74aa7a5c9 ,HCM47919905 ,Đang giao    ,2025-12-08 16:41:05.539222 ,Shipper đã lấy hàng
+a739c01e-bc12-45e9-942a-d6c07dd166ef ,HCM47919905 ,Đang lấy     ,2025-12-09 16:41:05.539222 ,Giao thất bại/Hoàn trả
+a7ec9efd-8ee8-4cf5-a76f-247d1e461a33 ,HCM28491985 ,Mới tạo      ,2025-12-06 18:14:50.576733 ,Shop tạo đơn tại TP.HCM
+ef56547c-963f-4f49-bef9-b6b0ba7829db ,HCM28491985 ,Đã điều phối ,2025-12-06 18:44:50.576733 ,Gán cho Shipper SHP_005
+684a15ea-2c21-4761-99f1-debc846ca0aa ,HCM28491985 ,Đang giao    ,2025-12-06 20:44:50.576733 ,Shipper đã lấy hàng
+5bb2adf0-cda4-4177-823f-7ef14ef202c7 ,HCM28491985 ,Hoàn trả     ,2025-12-07 01:44:50.576733 ,Giao thất bại/Hoàn trả
+1c21cbd6-b303-4738-981d-14d941a837bd ,HCM72537596 ,Mới tạo      ,2025-11-20 15:36:04.502714 ,Shop tạo đơn tại TP.HCM
+23e7a5c7-4f09-4814-89fa-05ca92634b53 ,HCM72537596 ,Đã điều phối ,2025-11-20 16:06:04.502714 ,Gán cho Shipper SHP_002
+412116ab-79d5-4525-966c-79eb41501ea8 ,HCM72537596 ,Đang giao    ,2025-11-20 18:06:04.502714 ,Shipper đã lấy hàng
+f41b5435-5848-46f3-8412-e683b857bc9e ,HCM72537596 ,Đã giao      ,2025-11-21 07:06:04.502714 ,Giao thành công
+53819ae1-4ffb-483d-b51b-e32092c8cb8c ,HCM91742524 ,Mới tạo      ,2025-12-03 17:45:19.144718 ,Shop tạo đơn tại TP.HCM
+ba24d3bd-152c-4e1d-9b0d-ff0acf1d6359 ,HCM91742524 ,Đã điều phối ,2025-12-03 18:15:19.144718 ,Gán cho Shipper SHP_009
+6db8e400-0be7-4163-9205-a406974bd551 ,HCM91742524 ,Đang giao    ,2025-12-03 20:15:19.144718 ,Shipper đã lấy hàng
+752536a3-5709-408e-8c4e-97d4e6d1aca1 ,HCM91742524 ,Đã giao      ,2025-12-04 09:15:19.144718 ,Giao thành công
+41b73113-05d4-4703-aa72-668b2dd94986 ,HCM72790072 ,Mới tạo      ,2025-11-30 00:22:38.836443 ,Shop tạo đơn tại TP.HCM
+12b9db54-064d-475c-9811-7bc5b1ceeb1b ,HCM61906394 ,Mới tạo      ,2025-11-15 20:43:18.222187 ,Shop tạo đơn tại TP.HCM
+94bfa5cb-a75a-4f7e-9235-48dd0ef64ab4 ,HCM61906394 ,Đã điều phối ,2025-11-15 21:13:18.222187 ,Gán cho Shipper SHP_002
+07dae2ef-c564-4994-88a8-1122f4d1b360 ,HCM61906394 ,Đang giao    ,2025-11-15 23:13:18.222187 ,Shipper đã lấy hàng
+98dbe242-21d3-47c2-bccb-146c8fa87be5 ,HCM61906394 ,Đang lấy     ,2025-11-16 11:13:18.222187 ,Giao thất bại/Hoàn trả
+9c6ce532-1d68-4975-a5d4-facc07c27619 ,HCM16066920 ,Mới tạo      ,2025-11-16 05:24:55.185579 ,Shop tạo đơn tại TP.HCM
+104e2bf6-3574-4272-a530-6f88ee9bda99 ,HCM16066920 ,Đã điều phối ,2025-11-16 05:54:55.185579 ,Gán cho Shipper SHP_012
+7e1a3473-026f-4630-b274-82ee4252efbd ,HCM16066920 ,Đang giao    ,2025-11-16 07:54:55.185579 ,Shipper đã lấy hàng
+8bda67c8-3361-4090-8562-1029b74e1012 ,HCM16066920 ,Đang giao    ,2025-11-16 10:54:55.185579 ,Giao thất bại/Hoàn trả
+e525ed34-6507-4cd0-a0f6-2ff341f0a04e ,HCM80636307 ,Mới tạo      ,2025-12-03 22:41:46.687038 ,Shop tạo đơn tại TP.HCM
+afc27fa8-f7af-4260-86e9-a5f1e53ea251 ,HCM80636307 ,Đã điều phối ,2025-12-03 23:11:46.687038 ,Gán cho Shipper SHP_011
+dd07dfff-097f-4958-982b-8f692ed8756b ,HCM80636307 ,Đang giao    ,2025-12-04 01:11:46.687038 ,Shipper đã lấy hàng
+4aa521c8-a408-4104-9df5-889082dd35d4 ,HCM80636307 ,Hoàn trả     ,2025-12-04 03:11:46.687038 ,Giao thất bại/Hoàn trả
+5fa98c4f-bf4f-42f6-a23c-e4dbd234ddf0 ,HCM74859645 ,Mới tạo      ,2025-11-19 20:47:43.257167 ,Shop tạo đơn tại TP.HCM
+dfd9a7d8-c6aa-462a-b754-d4caf4813963 ,HCM74859645 ,Đã điều phối ,2025-11-19 21:17:43.257167 ,Gán cho Shipper SHP_008
+ad723985-a7ea-44a3-9ccd-6b69c703de81 ,HCM74859645 ,Đang giao    ,2025-11-19 23:17:43.257167 ,Shipper đã lấy hàng
+4cdac4e6-b04c-4fa8-a1e7-eb4f6ec3e8f3 ,HCM74859645 ,Hoàn trả     ,2025-11-20 02:17:43.257167 ,Giao thất bại/Hoàn trả
+f80f6278-2d26-441b-b84e-49839926955a ,HCM69273186 ,Mới tạo      ,2025-11-14 06:56:02.824549 ,Shop tạo đơn tại TP.HCM
+b960ca4d-267f-478a-a84d-e02969520c9f ,HCM9368469  ,Mới tạo      ,2025-12-06 00:34:59.390805 ,Shop tạo đơn tại TP.HCM
+8c31878b-d047-4a73-a2a8-0d086c953ef1 ,HCM70099204 ,Mới tạo      ,2025-11-25 20:35:05.829376 ,Shop tạo đơn tại TP.HCM
+5f013a77-07e5-4128-8034-a4d8efa55ccc ,HCM70099204 ,Đã điều phối ,2025-11-25 21:05:05.829376 ,Gán cho Shipper SHP_001
+5090ad4d-1561-41db-8d24-809dad8369c5 ,HCM70099204 ,Đang giao    ,2025-11-25 23:05:05.829376 ,Shipper đã lấy hàng
+d9c9f770-a382-4fe4-98c2-4943fc497763 ,HCM70099204 ,Đã giao      ,2025-11-26 13:05:05.829376 ,Giao thành công
+9b6c7c5b-ac66-4dbd-a7ef-41c17eb2d4b7 ,HCM36249834 ,Mới tạo      ,2025-11-15 23:32:31.748502 ,Shop tạo đơn tại TP.HCM
+4a6bb322-f82a-4acb-a5ad-1975c436c065 ,HCM36249834 ,Đã điều phối ,2025-11-16 00:02:31.748502 ,Gán cho Shipper SHP_009
+7ce26920-e14a-4655-8c2b-ae08d58d62f3 ,HCM36249834 ,Đang giao    ,2025-11-16 02:02:31.748502 ,Shipper đã lấy hàng
+6d251775-ef1b-454b-a6c2-c8d7be98c2d4 ,HCM36249834 ,Hoàn trả     ,2025-11-16 12:02:31.748502 ,Giao thất bại/Hoàn trả
+451e37af-c463-4591-b3e9-12957278f9ea ,HCM41639514 ,Mới tạo      ,2025-11-24 18:39:47.955418 ,Shop tạo đơn tại TP.HCM
+301c421b-3635-4b05-9c88-c96999bf6d31 ,HCM41639514 ,Đã điều phối ,2025-11-24 19:09:47.955418 ,Gán cho Shipper SHP_011
+0aaa4e45-0e53-4a2a-999c-39cf4c24e169 ,HCM41639514 ,Đang giao    ,2025-11-24 21:09:47.955418 ,Shipper đã lấy hàng
+30471b8f-bdd4-499e-8914-7185bcd74fe6 ,HCM41639514 ,Đã giao      ,2025-11-25 13:09:47.955418 ,Giao thành công
+ec60230c-2817-4d5d-a8f2-525b3ad3501b ,HCM36718625 ,Mới tạo      ,2025-11-21 23:47:26.305805 ,Shop tạo đơn tại TP.HCM
+109dca99-c797-4a41-8279-dd4cff6b60b5 ,HCM74885592 ,Mới tạo      ,2025-11-26 17:19:49.107881 ,Shop tạo đơn tại TP.HCM
+8cb93386-fd26-4ab6-a479-9df03f8de863 ,HCM74885592 ,Đã điều phối ,2025-11-26 17:49:49.107881 ,Gán cho Shipper SHP_008
+33a38b96-2cec-4d27-b216-8bf0b738ffc3 ,HCM74885592 ,Đang giao    ,2025-11-26 19:49:49.107881 ,Shipper đã lấy hàng
+fc5e5395-6f1a-4d5a-93ec-681e29fc8708 ,HCM74885592 ,Đã giao      ,2025-11-27 07:49:49.107881 ,Giao thành công
+c9d70b9d-a8d8-48a3-8408-161299d2a5fb ,HCM19025324 ,Mới tạo      ,2025-11-14 07:29:15.518122 ,Shop tạo đơn tại TP.HCM
+d36c7f4e-c664-4e56-867d-7c59e9db8d44 ,HCM89092007 ,Mới tạo      ,2025-12-05 00:56:58.536572 ,Shop tạo đơn tại TP.HCM
+b1df6216-ffad-45ed-848f-7e4e2e6fbae6 ,HCM89092007 ,Đã điều phối ,2025-12-05 01:26:58.536572 ,Gán cho Shipper SHP_006
+f086061c-6e71-49d6-8d76-a7804dd192ca ,HCM89092007 ,Đang giao    ,2025-12-05 03:26:58.536572 ,Shipper đã lấy hàng
+8d3339f2-f0b0-4340-8885-391f8c83589e ,HCM89092007 ,Hoàn trả     ,2025-12-05 09:26:58.536572 ,Giao thất bại/Hoàn trả
+90af348e-65a1-4f79-b159-e183473427e2 ,HCM478088   ,Mới tạo      ,2025-11-14 16:53:10.850670 ,Shop tạo đơn tại TP.HCM
+7a43fe1f-f5b2-4b36-8c04-295e611c07a9 ,HCM14748121 ,Mới tạo      ,2025-12-06 18:43:26.477122 ,Shop tạo đơn tại TP.HCM
+c73dc183-caf9-4813-bea3-3e706b0d00f6 ,HCM14748121 ,Đã điều phối ,2025-12-06 19:13:26.477122 ,Gán cho Shipper SHP_010
+61b2d66f-7c1f-4330-bf2d-6ab89d923d39 ,HCM14748121 ,Đang giao    ,2025-12-06 21:13:26.477122 ,Shipper đã lấy hàng
+76bd104b-82a1-4fd2-8135-cc7d5e2aa970 ,HCM14748121 ,Đang lấy     ,2025-12-07 10:13:26.477122 ,Giao thất bại/Hoàn trả
+20b378ee-5475-4005-b42e-cf0e93e338d8 ,HCM80301823 ,Mới tạo      ,2025-11-20 04:11:07.788660 ,Shop tạo đơn tại TP.HCM
+d96842dc-c549-4d29-8402-926b80466dd5 ,HCM51593071 ,Mới tạo      ,2025-12-05 11:44:20.475203 ,Shop tạo đơn tại TP.HCM
+328c6261-6180-4f8e-812f-bbf4be265b29 ,HCM6298677  ,Mới tạo      ,2025-11-28 12:48:38.861255 ,Shop tạo đơn tại TP.HCM
+9c3a076e-a559-4095-ac21-bb3dd0849833 ,HCM6298677  ,Đã điều phối ,2025-11-28 13:18:38.861255 ,Gán cho Shipper SHP_009
+e9f68c24-14b8-496e-87ab-49d3c2a25223 ,HCM6298677  ,Đang giao    ,2025-11-28 15:18:38.861255 ,Shipper đã lấy hàng
+4b64420b-bd81-4e3c-836e-b4dd88722813 ,HCM6298677  ,Đang lấy     ,2025-11-28 16:18:38.861255 ,Giao thất bại/Hoàn trả
+69fe0c99-fda0-42d5-9cdb-ad1e61007f26 ,HCM77546907 ,Mới tạo      ,2025-11-15 12:36:22.210656 ,Shop tạo đơn tại TP.HCM
+10b37a8c-e61a-4f14-876c-d35fe8ba2066 ,HCM79335863 ,Mới tạo      ,2025-12-02 06:18:54.044144 ,Shop tạo đơn tại TP.HCM
+622783af-d88a-4d87-9855-13eacc13949b ,HCM79335863 ,Đã điều phối ,2025-12-02 06:48:54.044144 ,Gán cho Shipper SHP_008
+cd6bf2fc-3aa4-40a6-9d80-fd5328ba1096 ,HCM79335863 ,Đang giao    ,2025-12-02 08:48:54.044144 ,Shipper đã lấy hàng
+6700eeba-3bb2-4a8e-a266-7453320cc80f ,HCM79335863 ,Đang giao    ,2025-12-03 07:48:54.044144 ,Giao thất bại/Hoàn trả
+32d090db-7b99-4b82-9ef5-7578fed4a26a ,HCM77447764 ,Mới tạo      ,2025-11-28 10:52:07.620604 ,Shop tạo đơn tại TP.HCM
+c7a119b3-8de4-4fe8-ba80-ada6b4322bef ,HCM77447764 ,Đã điều phối ,2025-11-28 11:22:07.620604 ,Gán cho Shipper SHP_002
+398e15aa-999c-4348-89b3-ff7858fb5a4e ,HCM77447764 ,Đang giao    ,2025-11-28 13:22:07.620604 ,Shipper đã lấy hàng
+863957b7-8291-4724-86be-0b1d21718747 ,HCM77447764 ,Đang giao    ,2025-11-29 12:22:07.620604 ,Giao thất bại/Hoàn trả
+20fe8974-e892-4bd1-a41e-8557f5623228 ,HCM90771721 ,Mới tạo      ,2025-12-08 20:41:29.852018 ,Shop tạo đơn tại TP.HCM
+98041a73-dcfe-4532-b69d-ab87728991bb ,HCM23061151 ,Mới tạo      ,2025-11-22 15:08:55.604326 ,Shop tạo đơn tại TP.HCM
+ec855b02-e45f-4588-a3d5-ee175c8aaa0d ,HCM30478759 ,Mới tạo      ,2025-12-05 01:39:15.880235 ,Shop tạo đơn tại TP.HCM
+4e3b5c47-1203-464c-8aed-92457e4f2a48 ,HCM30478759 ,Đã điều phối ,2025-12-05 02:09:15.880235 ,Gán cho Shipper SHP_005
+235ae293-d0d6-4281-a913-2da119d84c1c ,HCM30478759 ,Đang giao    ,2025-12-05 04:09:15.880235 ,Shipper đã lấy hàng
+63b095aa-059f-438a-9aee-3d77b046d32b ,HCM30478759 ,Đã giao      ,2025-12-05 22:09:15.880235 ,Giao thành công
+1d9b1421-02a8-43aa-990f-806e1c36e93d ,HCM40732084 ,Mới tạo      ,2025-11-16 13:23:09.436293 ,Shop tạo đơn tại TP.HCM
+d0640a50-20cb-4713-b343-41c1e8692777 ,HCM40732084 ,Đã điều phối ,2025-11-16 13:53:09.436293 ,Gán cho Shipper SHP_011
+dfc7b257-10f7-4af1-9ba6-5f7473eec37a ,HCM40732084 ,Đang giao    ,2025-11-16 15:53:09.436293 ,Shipper đã lấy hàng
+d3c7e6ba-ec99-432c-a767-1cafe5cbdc24 ,HCM40732084 ,Đã giao      ,2025-11-17 09:53:09.436293 ,Giao thành công
+c7d0c0bd-6285-44b8-93e2-54813a2e7420 ,HCM8419331  ,Mới tạo      ,2025-11-11 21:01:53.219347 ,Shop tạo đơn tại TP.HCM
+f7296233-812d-4bda-a9b5-aa3743baca09 ,HCM8419331  ,Đã điều phối ,2025-11-11 21:31:53.219347 ,Gán cho Shipper SHP_015
+0be398fb-1d8f-44a1-860d-910e2c471bb1 ,HCM8419331  ,Đang giao    ,2025-11-11 23:31:53.219347 ,Shipper đã lấy hàng
+0765e46c-6cfb-4d94-9af8-715ae7ed28ea ,HCM8419331  ,Hoàn trả     ,2025-11-12 16:31:53.219347 ,Giao thất bại/Hoàn trả
+75b4645e-422b-4374-9cd2-e406ed7eae1d ,HCM62362417 ,Mới tạo      ,2025-12-08 14:20:01.602181 ,Shop tạo đơn tại TP.HCM
+fb20362a-4fd6-49a5-8d68-7a8a47b55b59 ,HCM62362417 ,Đã điều phối ,2025-12-08 14:50:01.602181 ,Gán cho Shipper SHP_015
+91784320-530f-4e81-becb-cd2df37c9c56 ,HCM62362417 ,Đang giao    ,2025-12-08 16:50:01.602181 ,Shipper đã lấy hàng
+8e402ec4-4127-48e7-b487-90d6fb00285a ,HCM62362417 ,Hoàn trả     ,2025-12-08 17:50:01.602181 ,Giao thất bại/Hoàn trả
+91bcba64-7d50-44c0-87c4-1af0e61c68ad ,HCM92751649 ,Mới tạo      ,2025-11-17 03:07:38.541317 ,Shop tạo đơn tại TP.HCM
+95f6e289-d316-405d-a109-d7b576741a15 ,HCM92751649 ,Đã điều phối ,2025-11-17 03:37:38.541317 ,Gán cho Shipper SHP_015
+72bc3350-2b0d-43d1-8bbb-45d49c100911 ,HCM92751649 ,Đang giao    ,2025-11-17 05:37:38.541317 ,Shipper đã lấy hàng
+12ad33cd-895e-454e-b98f-3f5de8123574 ,HCM92751649 ,Đang giao    ,2025-11-17 10:37:38.541317 ,Giao thất bại/Hoàn trả
+825a5df1-6e5c-4db8-89ab-456894b3feba ,HCM63840258 ,Mới tạo      ,2025-11-10 21:38:48.226061 ,Shop tạo đơn tại TP.HCM
+8a0e922e-ee28-4650-96fb-2e5cd118db3e ,HCM63840258 ,Đã điều phối ,2025-11-10 22:08:48.226061 ,Gán cho Shipper SHP_003
+e1a71c53-63d1-43ad-b90c-324248589d71 ,HCM63840258 ,Đang giao    ,2025-11-11 00:08:48.226061 ,Shipper đã lấy hàng
+a148fbf4-3d01-4aec-b56b-f5d43bc3048f ,HCM63840258 ,Đang giao    ,2025-11-11 19:08:48.226061 ,Giao thất bại/Hoàn trả
+381adc09-3dae-413a-bf90-dccbb2b7f3a3 ,HCM44060466 ,Mới tạo      ,2025-11-28 14:55:18.228479 ,Shop tạo đơn tại TP.HCM
+c1a7c5c8-6844-49a6-ac70-478b86a73a53 ,HCM44060466 ,Đã điều phối ,2025-11-28 15:25:18.228479 ,Gán cho Shipper SHP_010
+f31c9fcd-0d41-41aa-921f-29cc61e2e8f8 ,HCM44060466 ,Đang giao    ,2025-11-28 17:25:18.228479 ,Shipper đã lấy hàng
+4b492977-6a0d-43c4-bf6a-60e9534e7807 ,HCM44060466 ,Đang lấy     ,2025-11-28 21:25:18.228479 ,Giao thất bại/Hoàn trả
+991dbf9b-9c5e-49cd-be11-447b60372567 ,HCM95868528 ,Mới tạo      ,2025-11-14 22:54:18.734173 ,Shop tạo đơn tại TP.HCM
+e7dd6056-1b9a-426b-b1cd-1632e74d5698 ,HCM95868528 ,Đã điều phối ,2025-11-14 23:24:18.734173 ,Gán cho Shipper SHP_010
+551a1108-3ace-470c-a890-ddc58742057f ,HCM95868528 ,Đang giao    ,2025-11-15 01:24:18.734173 ,Shipper đã lấy hàng
+13cc9ee9-aeca-4eb9-bf9f-12fe451d39d6 ,HCM95868528 ,Đang lấy     ,2025-11-15 03:24:18.734173 ,Giao thất bại/Hoàn trả
+a367d81e-3b1e-462d-9ae6-c390cf6b5445 ,HCM40274589 ,Mới tạo      ,2025-12-02 10:21:27.458826 ,Shop tạo đơn tại TP.HCM
+ad723d89-f807-42d4-8931-557e96fb1149 ,HCM40274589 ,Đã điều phối ,2025-12-02 10:51:27.458826 ,Gán cho Shipper SHP_010
+69513c0a-c4fe-4330-95b1-3b96db31dc46 ,HCM40274589 ,Đang giao    ,2025-12-02 12:51:27.458826 ,Shipper đã lấy hàng
+850fc6f9-5f30-46db-bdff-e9bf4aa897ed ,HCM40274589 ,Hoàn trả     ,2025-12-03 10:51:27.458826 ,Giao thất bại/Hoàn trả
+80e719c1-e257-4575-bef4-905643136f87 ,HCM16366513 ,Mới tạo      ,2025-11-26 20:41:11.067449 ,Shop tạo đơn tại TP.HCM
+c8874633-420c-4d5a-b74c-177a30d567b8 ,HCM16366513 ,Đã điều phối ,2025-11-26 21:11:11.067449 ,Gán cho Shipper SHP_006
+a07ce1cd-4c20-4c89-bbd6-6f45ad527a7e ,HCM16366513 ,Đang giao    ,2025-11-26 23:11:11.067449 ,Shipper đã lấy hàng
+002c829e-3012-4db5-98df-a2a87bb48ee5 ,HCM16366513 ,Đang giao    ,2025-11-27 00:11:11.067449 ,Giao thất bại/Hoàn trả
+ef1c9cfd-e3a7-494e-9143-8f68d350d051 ,HCM32594006 ,Mới tạo      ,2025-11-12 02:52:42.157640 ,Shop tạo đơn tại TP.HCM
+2ae24ae4-dd59-41b3-8b59-a82a7daf13fb ,HCM32594006 ,Đã điều phối ,2025-11-12 03:22:42.157640 ,Gán cho Shipper SHP_010
+35f282fd-c744-4467-82f0-4e26d58d4f96 ,HCM32594006 ,Đang giao    ,2025-11-12 05:22:42.157640 ,Shipper đã lấy hàng
+9c045d19-873d-4fe6-b444-c2238fb3ffbe ,HCM32594006 ,Đang lấy     ,2025-11-12 21:22:42.157640 ,Giao thất bại/Hoàn trả
+76047ca1-d443-431b-81f3-0850d27e5cbe ,HCM19767451 ,Mới tạo      ,2025-11-29 07:02:18.069658 ,Shop tạo đơn tại TP.HCM
+95085989-4f51-4eb0-aff4-7bad8f79225b ,HCM49283915 ,Mới tạo      ,2025-11-23 01:01:38.969931 ,Shop tạo đơn tại TP.HCM
+607a91bf-219d-4ade-bf28-cf1f6e2300a1 ,HCM49283915 ,Đã điều phối ,2025-11-23 01:31:38.969931 ,Gán cho Shipper SHP_004
+0c479ddc-d380-48c7-aa04-7266639bf881 ,HCM49283915 ,Đang giao    ,2025-11-23 03:31:38.969931 ,Shipper đã lấy hàng
+2272823b-076a-415c-b7c2-a10cdd7dce40 ,HCM49283915 ,Đã giao      ,2025-11-23 17:31:38.969931 ,Giao thành công
+929dc932-8ff4-4985-a7b1-c7fcee216f85 ,HCM27694602 ,Mới tạo      ,2025-12-03 02:30:34.612146 ,Shop tạo đơn tại TP.HCM
+9fc0e04f-0bd9-42bd-bca3-0e0f44562d52 ,HCM27694602 ,Đã điều phối ,2025-12-03 03:00:34.612146 ,Gán cho Shipper SHP_008
+1f4ac246-4088-40eb-bbf1-78fbbdee23d2 ,HCM27694602 ,Đang giao    ,2025-12-03 05:00:34.612146 ,Shipper đã lấy hàng
+996fd9a8-2c9a-42a3-aac9-81d09f9df322 ,HCM27694602 ,Đang giao    ,2025-12-03 08:00:34.612146 ,Giao thất bại/Hoàn trả
+4e385bf8-d17d-408c-be99-8126242833fc ,HCM60187128 ,Mới tạo      ,2025-11-13 11:13:10.312403 ,Shop tạo đơn tại TP.HCM
+a3e90524-fbd2-4703-a607-b5e7436d5ac5 ,HCM85425677 ,Mới tạo      ,2025-12-02 19:30:08.695482 ,Shop tạo đơn tại TP.HCM
+e605b21a-2a96-460a-814e-c0014f10cef8 ,HCM6480267  ,Mới tạo      ,2025-11-18 09:22:59.820616 ,Shop tạo đơn tại TP.HCM
+5ac47042-c69b-4976-8bff-32d29a3e3255 ,HCM6480267  ,Đã điều phối ,2025-11-18 09:52:59.820616 ,Gán cho Shipper SHP_014
+54444f8a-b2a6-4110-8fcb-b66670fc3a7d ,HCM6480267  ,Đang giao    ,2025-11-18 11:52:59.820616 ,Shipper đã lấy hàng
+2ef7f3be-394f-4d77-b03f-da5010ae3df2 ,HCM6480267  ,Đã giao      ,2025-11-18 18:52:59.820616 ,Giao thành công
+4a5edf62-c414-44a6-8398-5691e8ae26d1 ,HCM42681610 ,Mới tạo      ,2025-11-09 15:09:38.097606 ,Shop tạo đơn tại TP.HCM
+d95802de-4522-49ef-8a6f-c925a7b60cd8 ,HCM42681610 ,Đã điều phối ,2025-11-09 15:39:38.097606 ,Gán cho Shipper SHP_013
+e432711c-fe0d-422a-926d-8fd26d22f44a ,HCM42681610 ,Đang giao    ,2025-11-09 17:39:38.097606 ,Shipper đã lấy hàng
+bc51dc92-15ad-4117-b521-dc9841965820 ,HCM42681610 ,Hoàn trả     ,2025-11-09 20:39:38.097606 ,Giao thất bại/Hoàn trả
+bc82f462-f28d-49a9-9b63-75d700787811 ,HCM15032902 ,Mới tạo      ,2025-11-09 13:22:45.370520 ,Shop tạo đơn tại TP.HCM
+c4c6f27a-92fa-49f8-ab8e-a4d899e6158c ,HCM15032902 ,Đã điều phối ,2025-11-09 13:52:45.370520 ,Gán cho Shipper SHP_003
+25e921ad-2152-4ca9-afa9-06fd1ee690eb ,HCM15032902 ,Đang giao    ,2025-11-09 15:52:45.370520 ,Shipper đã lấy hàng
+e7d2a8ae-10bf-4cc0-8283-961f7c7a2c6d ,HCM15032902 ,Đã giao      ,2025-11-10 09:52:45.370520 ,Giao thành công
+e67cf0df-4f10-49c6-9f83-e9a8ef2ffbf7 ,HCM20529463 ,Mới tạo      ,2025-11-14 20:27:41.124112 ,Shop tạo đơn tại TP.HCM
+9715f26f-f8c5-4158-ad48-29febf975bba ,HCM9143094  ,Mới tạo      ,2025-11-10 16:29:43.307839 ,Shop tạo đơn tại TP.HCM
+b3155ea6-353a-4dde-8eba-1cec75602493 ,HCM9143094  ,Đã điều phối ,2025-11-10 16:59:43.307839 ,Gán cho Shipper SHP_004
+33ec7cfb-e2e0-49a4-88d1-1797416b4918 ,HCM9143094  ,Đang giao    ,2025-11-10 18:59:43.307839 ,Shipper đã lấy hàng
+c77e2464-e256-40b1-a778-9516d63dc676 ,HCM9143094  ,Đang lấy     ,2025-11-11 13:59:43.307839 ,Giao thất bại/Hoàn trả
+5375706e-0346-49a5-ad81-736126b3cfd2 ,HCM2832896  ,Mới tạo      ,2025-11-09 07:32:21.255151 ,Shop tạo đơn tại TP.HCM
+06b1faa7-140f-4bf3-84ee-5fb4d05c2a40 ,HCM2832896  ,Đã điều phối ,2025-11-09 08:02:21.255151 ,Gán cho Shipper SHP_003
+a45b80aa-72bf-4c51-83f8-8b1b2359440a ,HCM2832896  ,Đang giao    ,2025-11-09 10:02:21.255151 ,Shipper đã lấy hàng
+9c9ad437-fcc7-4cc1-aef0-0b6163f9b323 ,HCM2832896  ,Hoàn trả     ,2025-11-10 00:02:21.255151 ,Giao thất bại/Hoàn trả
+777f103b-dc3a-4e75-a5c1-870a51a9391c ,HCM89272886 ,Mới tạo      ,2025-11-09 21:02:03.752995 ,Shop tạo đơn tại TP.HCM
+c60a0d8f-3faa-4d7c-b27f-63a2ac26ccb7 ,HCM89272886 ,Đã điều phối ,2025-11-09 21:32:03.752995 ,Gán cho Shipper SHP_001
+c8a33eff-38fc-4091-b6c3-3e1968c30c67 ,HCM89272886 ,Đang giao    ,2025-11-09 23:32:03.752995 ,Shipper đã lấy hàng
+7d55ed27-7c40-42b1-83cf-f5248874a668 ,HCM89272886 ,Đang giao    ,2025-11-10 21:32:03.752995 ,Giao thất bại/Hoàn trả
+a7f145ea-57d2-46ba-8b34-de1ea8292ea8 ,HCM82897500 ,Mới tạo      ,2025-11-11 03:30:53.913805 ,Shop tạo đơn tại TP.HCM
+25826078-281a-4743-ac0e-6e7cb643d4a5 ,HCM82897500 ,Đã điều phối ,2025-11-11 04:00:53.913805 ,Gán cho Shipper SHP_013
+be4f06c2-0dbe-495a-afb0-04b84f6fd24b ,HCM82897500 ,Đang giao    ,2025-11-11 06:00:53.913805 ,Shipper đã lấy hàng
+4feb0b53-5310-497b-8b73-e6529d7a1b3c ,HCM82897500 ,Hoàn trả     ,2025-11-11 17:00:53.913805 ,Giao thất bại/Hoàn trả
+74866660-30a8-4a48-8cba-c6e673352c08 ,HCM31734914 ,Mới tạo      ,2025-11-27 16:01:02.766459 ,Shop tạo đơn tại TP.HCM
+1e868fcf-9942-4c63-b341-73f634fd3766 ,HCM57911946 ,Mới tạo      ,2025-12-07 21:01:27.744322 ,Shop tạo đơn tại TP.HCM
+5142dfc8-8bc1-404e-9579-91b8b18550fa ,HCM57911946 ,Đã điều phối ,2025-12-07 21:31:27.744322 ,Gán cho Shipper SHP_008
+21693c07-ebea-4505-b002-641763b0ed35 ,HCM57911946 ,Đang giao    ,2025-12-07 23:31:27.744322 ,Shipper đã lấy hàng
+2870579c-d207-46c2-be59-0fe491470b4b ,HCM57911946 ,Đang lấy     ,2025-12-08 05:31:27.744322 ,Giao thất bại/Hoàn trả
+498f7e12-cf9d-4460-b309-a1090907e492 ,HCM32285384 ,Mới tạo      ,2025-11-16 00:17:42.114534 ,Shop tạo đơn tại TP.HCM
+76dbdaf4-b4c0-4d36-b059-f5a1b93a2891 ,HCM32285384 ,Đã điều phối ,2025-11-16 00:47:42.114534 ,Gán cho Shipper SHP_001
+c9f518f0-9369-41fa-a9d1-9536e7fafe87 ,HCM32285384 ,Đang giao    ,2025-11-16 02:47:42.114534 ,Shipper đã lấy hàng
+4bdbf0cd-88e7-48f6-97bd-d75ec486790b ,HCM32285384 ,Đang lấy     ,2025-11-16 22:47:42.114534 ,Giao thất bại/Hoàn trả
+fa15bbf5-80f9-44f9-8547-8f435a9d7fce ,HCM1913557  ,Mới tạo      ,2025-11-17 21:26:25.152236 ,Shop tạo đơn tại TP.HCM
+7134dcea-e995-4d0a-a1c4-42468ce13a78 ,HCM1913557  ,Đã điều phối ,2025-11-17 21:56:25.152236 ,Gán cho Shipper SHP_009
+1afb449c-0925-47a0-860d-4556964d3342 ,HCM1913557  ,Đang giao    ,2025-11-17 23:56:25.152236 ,Shipper đã lấy hàng
+84c7c873-6a6d-4dc2-8593-edf3f583f07b ,HCM1913557  ,Đã giao      ,2025-11-18 02:56:25.152236 ,Giao thành công
+3169b637-975b-489f-a82e-b4be7de94c6d ,HCM74437320 ,Mới tạo      ,2025-11-20 13:14:42.045774 ,Shop tạo đơn tại TP.HCM
+e3ba0a0d-64fc-4037-bb29-ebb173307ee5 ,HCM74437320 ,Đã điều phối ,2025-11-20 13:44:42.045774 ,Gán cho Shipper SHP_007
+b8af30e4-d97e-476c-941a-6bae6adea306 ,HCM74437320 ,Đang giao    ,2025-11-20 15:44:42.045774 ,Shipper đã lấy hàng
+29732cdd-aa31-4d67-a06d-38ee87974067 ,HCM74437320 ,Đang lấy     ,2025-11-21 04:44:42.045774 ,Giao thất bại/Hoàn trả
+4b729289-aaab-41dc-99f1-965317de5123 ,HCM95429626 ,Mới tạo      ,2025-12-04 07:00:58.183572 ,Shop tạo đơn tại TP.HCM
+85c4e71e-4320-4e34-946e-e6f79f7625ea ,HCM43468261 ,Mới tạo      ,2025-11-14 21:12:54.794862 ,Shop tạo đơn tại TP.HCM
+a2c0e2f9-4098-42e2-953f-fdbacd242979 ,HCM43468261 ,Đã điều phối ,2025-11-14 21:42:54.794862 ,Gán cho Shipper SHP_001
+e74b32bc-2f0b-4cd0-8b4b-bfff25e3e5ee ,HCM43468261 ,Đang giao    ,2025-11-14 23:42:54.794862 ,Shipper đã lấy hàng
+f2146176-1caf-4935-b48a-ed6e783b3444 ,HCM43468261 ,Đang lấy     ,2025-11-15 22:42:54.794862 ,Giao thất bại/Hoàn trả
+48d149db-70d5-407b-826f-e0781c0f6f70 ,HCM8960149  ,Mới tạo      ,2025-11-15 10:04:18.434369 ,Shop tạo đơn tại TP.HCM
+6bcd91ba-5dd2-4415-a0a3-6eeab8f9e31f ,HCM8960149  ,Đã điều phối ,2025-11-15 10:34:18.434369 ,Gán cho Shipper SHP_010
+ce1c6e23-3ac8-4343-975c-dabb56c9f918 ,HCM8960149  ,Đang giao    ,2025-11-15 12:34:18.434369 ,Shipper đã lấy hàng
+7fd0cd02-8586-417a-ac6f-2aca8750cbe4 ,HCM8960149  ,Hoàn trả     ,2025-11-16 03:34:18.434369 ,Giao thất bại/Hoàn trả
+c2b3b45e-6ff9-4175-8daf-39d8311acd0e ,HCM86592585 ,Mới tạo      ,2025-11-30 06:56:24.596000 ,Shop tạo đơn tại TP.HCM
+b0f8c3a1-b17c-46cb-92d5-1a41355758ae ,HCM86592585 ,Đã điều phối ,2025-11-30 07:26:24.596000 ,Gán cho Shipper SHP_012
+ec72205d-bc5c-470f-967f-2e81f8fd4975 ,HCM86592585 ,Đang giao    ,2025-11-30 09:26:24.596000 ,Shipper đã lấy hàng
+64849771-72b4-440c-aae2-5b0936e872bd ,HCM86592585 ,Đang giao    ,2025-11-30 17:26:24.596000 ,Giao thất bại/Hoàn trả
+9f1b532e-5836-4862-84e1-f349c4d35503 ,HCM12675772 ,Mới tạo      ,2025-11-16 19:12:49.158042 ,Shop tạo đơn tại TP.HCM
+a11935f1-def4-4af6-9e37-7e2b8d0f632c ,HCM12675772 ,Đã điều phối ,2025-11-16 19:42:49.158042 ,Gán cho Shipper SHP_009
+751d18c6-2d55-4ea9-838e-9712f1b1ea86 ,HCM12675772 ,Đang giao    ,2025-11-16 21:42:49.158042 ,Shipper đã lấy hàng
+5a57e316-93f1-4ca8-b58f-1fe43cf4710c ,HCM12675772 ,Đã giao      ,2025-11-17 13:42:49.158042 ,Giao thành công
+933b93fb-6940-4805-b5d4-6b564105e840 ,HCM39173    ,Mới tạo      ,2025-11-20 11:07:53.821387 ,Shop tạo đơn tại TP.HCM
+21ee8a87-355b-4087-8014-1f3680a9e889 ,HCM3171800  ,Mới tạo      ,2025-12-03 03:49:53.863461 ,Shop tạo đơn tại TP.HCM
+5671030f-3422-4877-a783-6ba7aa5b1a27 ,HCM3171800  ,Đã điều phối ,2025-12-03 04:19:53.863461 ,Gán cho Shipper SHP_010
+29c4fc13-3348-48de-b557-ee1e95a0c4b6 ,HCM3171800  ,Đang giao    ,2025-12-03 06:19:53.863461 ,Shipper đã lấy hàng
+4b72504f-96d0-479d-b413-85ef54555fd6 ,HCM3171800  ,Đang giao    ,2025-12-03 22:19:53.863461 ,Giao thất bại/Hoàn trả
+a6b54f06-5b0c-49d6-bca2-513b31be3e79 ,HCM88441149 ,Mới tạo      ,2025-11-23 11:23:59.474414 ,Shop tạo đơn tại TP.HCM
+1076737c-0543-411a-a7a7-8c4778ae10d9 ,HCM37208233 ,Mới tạo      ,2025-12-03 14:20:19.109581 ,Shop tạo đơn tại TP.HCM
+bf39508c-dc14-4a70-a7b5-f25661ad55e7 ,HCM79109744 ,Mới tạo      ,2025-12-02 01:17:05.820709 ,Shop tạo đơn tại TP.HCM
+b541e91d-1cee-4045-b94c-09fcf9dffac2 ,HCM1328058  ,Mới tạo      ,2025-12-04 14:13:04.038875 ,Shop tạo đơn tại TP.HCM
+462b0c41-43d0-4ecb-9804-7c5acaf0dcac ,HCM1328058  ,Đã điều phối ,2025-12-04 14:43:04.038875 ,Gán cho Shipper SHP_014
+f1042f71-1d2c-4178-b0d1-6f177ab59d57 ,HCM1328058  ,Đang giao    ,2025-12-04 16:43:04.038875 ,Shipper đã lấy hàng
+62c244b7-28bb-4f20-a998-d2518d8104e9 ,HCM1328058  ,Đang lấy     ,2025-12-05 03:43:04.038875 ,Giao thất bại/Hoàn trả
+c4dbd814-5b38-4d4f-806e-30cccd2457ec ,HCM68124779 ,Mới tạo      ,2025-12-01 03:31:01.499195 ,Shop tạo đơn tại TP.HCM
+e0443e93-4ea1-402d-bd9d-7e53d03c611c ,HCM68124779 ,Đã điều phối ,2025-12-01 04:01:01.499195 ,Gán cho Shipper SHP_002
+3d0ff26a-ab46-499e-aa20-25947651972e ,HCM68124779 ,Đang giao    ,2025-12-01 06:01:01.499195 ,Shipper đã lấy hàng
+f97a3e7e-6319-45fd-a6c6-a335125b97ba ,HCM68124779 ,Đang giao    ,2025-12-01 23:01:01.499195 ,Giao thất bại/Hoàn trả
+633678ed-ddf4-4a62-a9e1-6aefb9cccae4 ,HCM97935936 ,Mới tạo      ,2025-11-21 05:01:08.304744 ,Shop tạo đơn tại TP.HCM
+bded0b54-d6c4-4da8-8fc9-92f159963d23 ,HCM75992125 ,Mới tạo      ,2025-11-28 05:31:21.769652 ,Shop tạo đơn tại TP.HCM
+aa7f1653-0ef2-48e8-9b37-af7a5fb5fb9f ,HCM32822470 ,Mới tạo      ,2025-12-05 07:30:05.270333 ,Shop tạo đơn tại TP.HCM
+498088a8-c6ca-4a65-af0a-c3571571e2bf ,HCM61670205 ,Mới tạo      ,2025-11-15 04:20:20.547545 ,Shop tạo đơn tại TP.HCM
+931c6347-a6e7-4f53-a383-1bd128354823 ,HCM61670205 ,Đã điều phối ,2025-11-15 04:50:20.547545 ,Gán cho Shipper SHP_007
+df658910-d661-4161-af3f-d23f7299bef9 ,HCM61670205 ,Đang giao    ,2025-11-15 06:50:20.547545 ,Shipper đã lấy hàng
+5b11e118-3b36-4da7-856d-5350fc1d07b5 ,HCM61670205 ,Hoàn trả     ,2025-11-15 18:50:20.547545 ,Giao thất bại/Hoàn trả
+2846b788-2faa-474a-83ae-31b74b7da241 ,HCM29686473 ,Mới tạo      ,2025-12-04 13:34:26.679379 ,Shop tạo đơn tại TP.HCM
+9d246a57-d01b-4458-b4b4-c33ff3f34bc9 ,HCM29686473 ,Đã điều phối ,2025-12-04 14:04:26.679379 ,Gán cho Shipper SHP_001
+89cd2624-7505-49b5-a438-58d96e2a0f30 ,HCM29686473 ,Đang giao    ,2025-12-04 16:04:26.679379 ,Shipper đã lấy hàng
+d79e70ce-99b7-4ed9-9407-1750bcc3c1ed ,HCM29686473 ,Đang lấy     ,2025-12-05 02:04:26.679379 ,Giao thất bại/Hoàn trả
+4f473d6f-d776-4aae-bc5f-bb838e9ef6c1 ,HCM22300650 ,Mới tạo      ,2025-12-02 15:06:15.664361 ,Shop tạo đơn tại TP.HCM
+24fe99ef-4c7c-483e-8cc3-be376dbeeee6 ,HCM63752059 ,Mới tạo      ,2025-11-30 17:53:14.751175 ,Shop tạo đơn tại TP.HCM
+6711ffe1-5dbc-4177-8b89-0b3f6889c1e3 ,HCM85310016 ,Mới tạo      ,2025-12-08 20:51:38.293285 ,Shop tạo đơn tại TP.HCM
+e116e660-9f89-443c-8b60-e13f967fd304 ,HCM85310016 ,Đã điều phối ,2025-12-08 21:21:38.293285 ,Gán cho Shipper SHP_005
+ccb0416a-4f27-46cf-83e6-2087c5f31061 ,HCM85310016 ,Đang giao    ,2025-12-08 23:21:38.293285 ,Shipper đã lấy hàng
+c81830f7-c199-47a8-9b1c-71b2819bdb1f ,HCM85310016 ,Đang giao    ,2025-12-09 05:21:38.293285 ,Giao thất bại/Hoàn trả
+b1ae8082-94b2-4566-bb59-c3b13ee55d8d ,HCM98980520 ,Mới tạo      ,2025-11-16 05:17:34.638426 ,Shop tạo đơn tại TP.HCM
+a9da9169-0109-4a8d-9f2d-7c3c89fc3869 ,HCM98980520 ,Đã điều phối ,2025-11-16 05:47:34.638426 ,Gán cho Shipper SHP_014
+3ed6071a-6440-4247-ab82-8330f632d0c2 ,HCM98980520 ,Đang giao    ,2025-11-16 07:47:34.638426 ,Shipper đã lấy hàng
+6a42da75-dbe6-4cf1-8f87-831248180bd2 ,HCM98980520 ,Hoàn trả     ,2025-11-16 14:47:34.638426 ,Giao thất bại/Hoàn trả
+ae68a57c-9369-41c9-800a-094c4b4734ba ,HCM80821968 ,Mới tạo      ,2025-12-03 03:27:17.212596 ,Shop tạo đơn tại TP.HCM
+a4cb53d4-2f32-489b-b2ae-7e1738b0a375 ,HCM80821968 ,Đã điều phối ,2025-12-03 03:57:17.212596 ,Gán cho Shipper SHP_007
+53687dbb-1e43-43fc-9806-84c5c74eccd9 ,HCM80821968 ,Đang giao    ,2025-12-03 05:57:17.212596 ,Shipper đã lấy hàng
+aca31a02-27e3-4886-9745-90fd11d976eb ,HCM80821968 ,Hoàn trả     ,2025-12-03 21:57:17.212596 ,Giao thất bại/Hoàn trả
+2116bc24-a7e0-4dfd-9f6e-b91164355b4e ,HCM82715940 ,Mới tạo      ,2025-12-05 13:06:20.152190 ,Shop tạo đơn tại TP.HCM
+d153fa7d-7a4b-49f1-b5f4-76396b96dd0f ,HCM82715940 ,Đã điều phối ,2025-12-05 13:36:20.152190 ,Gán cho Shipper SHP_011
+f556389f-e6fc-48fc-b263-591343fbaa52 ,HCM82715940 ,Đang giao    ,2025-12-05 15:36:20.152190 ,Shipper đã lấy hàng
+70800631-be2e-492b-a3f0-d5cd08794695 ,HCM82715940 ,Hoàn trả     ,2025-12-05 22:36:20.152190 ,Giao thất bại/Hoàn trả
+108b29df-2fda-49fc-bc44-ca939886c4b0 ,HCM62552679 ,Mới tạo      ,2025-11-19 02:53:21.505058 ,Shop tạo đơn tại TP.HCM
+06504cc4-af05-486c-b7be-1cc248d6688b ,HCM16801260 ,Mới tạo      ,2025-11-10 18:16:45.780896 ,Shop tạo đơn tại TP.HCM
+54c35f50-6729-429b-b2c7-6d812fea183b ,HCM16801260 ,Đã điều phối ,2025-11-10 18:46:45.780896 ,Gán cho Shipper SHP_013
+f5f010fc-d744-4faf-882e-fe38b368e40d ,HCM16801260 ,Đang giao    ,2025-11-10 20:46:45.780896 ,Shipper đã lấy hàng
+849fbbb4-828b-4e83-9e74-6ec3fef257fd ,HCM16801260 ,Đang giao    ,2025-11-11 17:46:45.780896 ,Giao thất bại/Hoàn trả
+db08c9d2-b064-43df-833b-1b6c28dff493 ,HCM69542850 ,Mới tạo      ,2025-11-10 03:35:04.419618 ,Shop tạo đơn tại TP.HCM
+7bc9e4b8-0a98-4516-9d21-5e78b77a9361 ,HCM92741309 ,Mới tạo      ,2025-11-19 00:13:03.774305 ,Shop tạo đơn tại TP.HCM
+12b89a1d-b5f2-485a-ab6e-0292d6c575c6 ,HCM33111536 ,Mới tạo      ,2025-11-22 05:16:51.662987 ,Shop tạo đơn tại TP.HCM
+0c59236c-233c-4f8d-ad76-90e5d2f2b0bf ,HCM35026264 ,Mới tạo      ,2025-12-04 04:25:40.003567 ,Shop tạo đơn tại TP.HCM
+aabb9f80-68b5-485f-a7c4-79391958d779 ,HCM35026264 ,Đã điều phối ,2025-12-04 04:55:40.003567 ,Gán cho Shipper SHP_014
+79e35203-8263-4be3-a8fd-ecc6eac2d233 ,HCM35026264 ,Đang giao    ,2025-12-04 06:55:40.003567 ,Shipper đã lấy hàng
+a2155e75-2af1-4049-9a86-f3b5838edd79 ,HCM35026264 ,Đang lấy     ,2025-12-05 02:55:40.003567 ,Giao thất bại/Hoàn trả
+ab376a25-792c-4b4d-8b63-ef418dd6a049 ,HCM70558958 ,Mới tạo      ,2025-11-21 11:49:31.597171 ,Shop tạo đơn tại TP.HCM
+8a7eecdb-fd97-4fa3-902c-bb0ddc19e334 ,HCM70558958 ,Đã điều phối ,2025-11-21 12:19:31.597171 ,Gán cho Shipper SHP_001
+3660077c-8dff-44fa-b368-1bc8d593671b ,HCM70558958 ,Đang giao    ,2025-11-21 14:19:31.597171 ,Shipper đã lấy hàng
+6ffc3c8a-11d3-4c8b-9e19-772fa5c3f47b ,HCM70558958 ,Hoàn trả     ,2025-11-22 13:19:31.597171 ,Giao thất bại/Hoàn trả
+a189613a-a99f-48a7-8bfe-f649a2f2a0d9 ,HCM6441162  ,Mới tạo      ,2025-11-17 14:49:35.287535 ,Shop tạo đơn tại TP.HCM
+4003ef8f-15ce-4e56-9575-39208a9ca1aa ,HCM6441162  ,Đã điều phối ,2025-11-17 15:19:35.287535 ,Gán cho Shipper SHP_013
+cbd42739-5d3d-42be-a4b3-083404e0af1d ,HCM6441162  ,Đang giao    ,2025-11-17 17:19:35.287535 ,Shipper đã lấy hàng
+7e400d06-6cdf-4570-91c8-8cfaef602e06 ,HCM6441162  ,Đã giao      ,2025-11-17 20:19:35.287535 ,Giao thành công
+61b6e501-ffce-4f2c-8993-b879fba09757 ,HCM40684923 ,Mới tạo      ,2025-11-11 00:25:45.428584 ,Shop tạo đơn tại TP.HCM
+d4cea4e5-f5ba-494b-a0a6-48b2b3e473d4 ,HCM25550375 ,Mới tạo      ,2025-11-26 15:46:38.297480 ,Shop tạo đơn tại TP.HCM
+3b56e782-74d8-4a96-9150-e9618aba29a4 ,HCM25550375 ,Đã điều phối ,2025-11-26 16:16:38.297480 ,Gán cho Shipper SHP_012
+0d1b22a2-c786-4e41-8c0b-571395c8cef5 ,HCM25550375 ,Đang giao    ,2025-11-26 18:16:38.297480 ,Shipper đã lấy hàng
+70e36a6d-5e5b-4739-a9b5-bba9783fe414 ,HCM25550375 ,Đang giao    ,2025-11-27 04:16:38.297480 ,Giao thất bại/Hoàn trả
+835ef89f-d8b1-4c44-90cc-e34370465ff1 ,HCM82395847 ,Mới tạo      ,2025-11-24 13:51:02.289032 ,Shop tạo đơn tại TP.HCM
+b3816a09-598c-4029-a96d-977750e4ec3c ,HCM82395847 ,Đã điều phối ,2025-11-24 14:21:02.289032 ,Gán cho Shipper SHP_008
+cc7631a0-6008-4bc4-93b7-9911b26825e3 ,HCM82395847 ,Đang giao    ,2025-11-24 16:21:02.289032 ,Shipper đã lấy hàng
+cfddd7d0-f5e2-474c-a2ae-05b64e9eb850 ,HCM82395847 ,Đang giao    ,2025-11-24 23:21:02.289032 ,Giao thất bại/Hoàn trả
+fee4274d-e4b7-48b7-b3c2-3f5057f99bc8 ,HCM19252173 ,Mới tạo      ,2025-11-23 21:36:10.512190 ,Shop tạo đơn tại TP.HCM
+189f5498-d3e8-46bf-a645-ad208fbb8f4d ,HCM38372605 ,Mới tạo      ,2025-11-22 00:55:57.090347 ,Shop tạo đơn tại TP.HCM
+d7cf3fd9-df6f-4833-a16f-8945a945861c ,HCM38372605 ,Đã điều phối ,2025-11-22 01:25:57.090347 ,Gán cho Shipper SHP_003
+39b70a79-4607-420b-967a-afecb7b6141a ,HCM38372605 ,Đang giao    ,2025-11-22 03:25:57.090347 ,Shipper đã lấy hàng
+d27cae65-8687-4075-9c73-eaf6b5307520 ,HCM38372605 ,Đang lấy     ,2025-11-22 17:25:57.090347 ,Giao thất bại/Hoàn trả
+5f1bd22b-7f6a-4861-a72c-75da924143ac ,HCM67783784 ,Mới tạo      ,2025-11-26 16:48:02.169997 ,Shop tạo đơn tại TP.HCM
+97437d05-533d-4ed6-ad55-78ae2227df51 ,HCM67783784 ,Đã điều phối ,2025-11-26 17:18:02.169997 ,Gán cho Shipper SHP_008
+b508f0e1-74af-4c70-8887-252b6ce8c631 ,HCM67783784 ,Đang giao    ,2025-11-26 19:18:02.169997 ,Shipper đã lấy hàng
+27c9f3e4-0dd7-4fb2-82f4-078c9c42d3d1 ,HCM67783784 ,Đang giao    ,2025-11-27 19:18:02.169997 ,Giao thất bại/Hoàn trả
+d91506f7-e7ff-473a-811c-f7415a7ef5af ,HCM42091797 ,Mới tạo      ,2025-11-23 18:15:02.089922 ,Shop tạo đơn tại TP.HCM
+3205e5b2-9af8-4490-8ba4-a88601d6c9cb ,HCM42091797 ,Đã điều phối ,2025-11-23 18:45:02.089922 ,Gán cho Shipper SHP_003
+53cf8334-ad56-45a3-bedf-9b45492567b4 ,HCM42091797 ,Đang giao    ,2025-11-23 20:45:02.089922 ,Shipper đã lấy hàng
+ccf99baa-b1eb-46cc-8ce8-b4e1ae688c70 ,HCM42091797 ,Đã giao      ,2025-11-24 11:45:02.089922 ,Giao thành công
+cf9ce850-bed0-4752-8f5d-f1359719e860 ,HCM43030184 ,Mới tạo      ,2025-11-24 04:15:20.559556 ,Shop tạo đơn tại TP.HCM
+9ec6d2dc-8892-4b34-85a3-248ba3f93c9a ,HCM50423647 ,Mới tạo      ,2025-12-03 00:22:00.984744 ,Shop tạo đơn tại TP.HCM
+bc32861a-f330-49f7-b6fd-0a55a6a5dc1f ,HCM50423647 ,Đã điều phối ,2025-12-03 00:52:00.984744 ,Gán cho Shipper SHP_014
+4a9f284a-cdcf-4ca3-9ffb-877ff15f6401 ,HCM50423647 ,Đang giao    ,2025-12-03 02:52:00.984744 ,Shipper đã lấy hàng
+d2db7977-2f06-4c2c-9a6c-cfb4d373886b ,HCM50423647 ,Đang giao    ,2025-12-03 13:52:00.984744 ,Giao thất bại/Hoàn trả
+2730e6cf-31ca-42fb-b046-de7d46f5ba97 ,HCM85011242 ,Mới tạo      ,2025-11-20 01:56:00.174898 ,Shop tạo đơn tại TP.HCM
+6633d443-5099-4087-adf1-03aab8433f03 ,HCM34098944 ,Mới tạo      ,2025-12-02 00:11:11.965188 ,Shop tạo đơn tại TP.HCM
+2d1170f5-28e1-4e2e-bf8a-4299b96c8e43 ,HCM34098944 ,Đã điều phối ,2025-12-02 00:41:11.965188 ,Gán cho Shipper SHP_012
+c2205067-9b97-458e-b978-82dc17ded881 ,HCM34098944 ,Đang giao    ,2025-12-02 02:41:11.965188 ,Shipper đã lấy hàng
+38784e7e-b466-4df0-9fea-164d826391fa ,HCM34098944 ,Đang giao    ,2025-12-02 15:41:11.965188 ,Giao thất bại/Hoàn trả
+a4e4c1e9-f313-4654-b4a1-3e477c53598a ,HCM5949844  ,Mới tạo      ,2025-11-09 09:36:52.748783 ,Shop tạo đơn tại TP.HCM
+9e62023a-c08a-4e07-a40d-c5dc7d09f49e ,HCM20718916 ,Mới tạo      ,2025-12-01 09:25:07.274907 ,Shop tạo đơn tại TP.HCM
+7fbbb020-8e4b-48fa-98c0-b28e936f1732 ,HCM20718916 ,Đã điều phối ,2025-12-01 09:55:07.274907 ,Gán cho Shipper SHP_015
+7a9192a1-553f-48c6-be3f-71f258682230 ,HCM20718916 ,Đang giao    ,2025-12-01 11:55:07.274907 ,Shipper đã lấy hàng
+0d4f7031-2fac-4992-ad20-1fedab883794 ,HCM20718916 ,Đang giao    ,2025-12-02 05:55:07.274907 ,Giao thất bại/Hoàn trả
+44dea1e9-da08-4a1a-974c-98fa667d87c0 ,HCM59490442 ,Mới tạo      ,2025-11-16 09:15:13.356730 ,Shop tạo đơn tại TP.HCM
+e1034ef8-95cb-4989-82be-21758935d02b ,HCM59490442 ,Đã điều phối ,2025-11-16 09:45:13.356730 ,Gán cho Shipper SHP_001
+124a215b-e059-4b12-8e22-5827a843adbf ,HCM59490442 ,Đang giao    ,2025-11-16 11:45:13.356730 ,Shipper đã lấy hàng
+0f63313f-68f4-431d-8119-12f0a1cac62c ,HCM59490442 ,Hoàn trả     ,2025-11-17 00:45:13.356730 ,Giao thất bại/Hoàn trả
+340dbf82-51ca-48fd-bb64-ea45abe973f2 ,HCM32758575 ,Mới tạo      ,2025-11-23 05:12:25.138062 ,Shop tạo đơn tại TP.HCM
+7a155c1b-e95d-41ff-9aca-5075b93b8784 ,HCM32758575 ,Đã điều phối ,2025-11-23 05:42:25.138062 ,Gán cho Shipper SHP_002
+59c7f3ba-11b8-436d-ba5a-c9e1c3be5e87 ,HCM32758575 ,Đang giao    ,2025-11-23 07:42:25.138062 ,Shipper đã lấy hàng
+d8564ca9-2b74-473a-8662-59ac20579371 ,HCM32758575 ,Đã giao      ,2025-11-23 09:42:25.138062 ,Giao thành công
+d1be0ae2-c200-4b2a-9a10-587c42bc1f57 ,HCM24792652 ,Mới tạo      ,2025-11-16 02:56:14.207234 ,Shop tạo đơn tại TP.HCM
+d9d698d1-1781-4d8b-b204-dd8b3840705f ,HCM49570393 ,Mới tạo      ,2025-11-13 16:05:15.654767 ,Shop tạo đơn tại TP.HCM
+d27d49ab-bfce-4f1f-8b4e-611e6602ebcb ,HCM15452971 ,Mới tạo      ,2025-11-09 14:30:51.027650 ,Shop tạo đơn tại TP.HCM
+7cda8278-ec6b-456b-ad3e-9c425e440ae2 ,HCM68614130 ,Mới tạo      ,2025-11-12 17:56:22.289941 ,Shop tạo đơn tại TP.HCM
+98503930-02ac-4af8-afff-0e84a7e517dd ,HCM40572128 ,Mới tạo      ,2025-11-20 11:09:23.528105 ,Shop tạo đơn tại TP.HCM
+7d2ff3df-a5e8-4878-8220-c9cc540b8593 ,HCM40572128 ,Đã điều phối ,2025-11-20 11:39:23.528105 ,Gán cho Shipper SHP_001
+bccc8d42-3741-41d6-b855-ca0ef33e2f00 ,HCM40572128 ,Đang giao    ,2025-11-20 13:39:23.528105 ,Shipper đã lấy hàng
+d809c1ff-ecb5-4ca8-96c1-2bdffcb43de6 ,HCM40572128 ,Đang giao    ,2025-11-21 01:39:23.528105 ,Giao thất bại/Hoàn trả
+8085e7bf-792e-4498-9730-da6292ad77fd ,HCM2133560  ,Mới tạo      ,2025-11-28 20:15:32.935333 ,Shop tạo đơn tại TP.HCM
+56db3f5b-16cb-4ff8-a850-aed34b28b481 ,HCM2133560  ,Đã điều phối ,2025-11-28 20:45:32.935333 ,Gán cho Shipper SHP_003
+b6173eea-5ef2-47d1-9d55-bafe2afb9c45 ,HCM2133560  ,Đang giao    ,2025-11-28 22:45:32.935333 ,Shipper đã lấy hàng
+d11314d9-1b1f-4045-8baf-e2faa7b04aa3 ,HCM2133560  ,Đang lấy     ,2025-11-29 18:45:32.935333 ,Giao thất bại/Hoàn trả
+0413220c-ad77-4bd1-b5ea-6e14f4d94886 ,HCM18168845 ,Mới tạo      ,2025-12-04 10:06:29.738523 ,Shop tạo đơn tại TP.HCM
+a1994ca8-aaf9-4396-8642-4925185d909f ,HCM15752117 ,Mới tạo      ,2025-12-02 23:00:39.066968 ,Shop tạo đơn tại TP.HCM
+c50cf468-1fe6-4a2b-a47d-226077bd1b29 ,HCM15752117 ,Đã điều phối ,2025-12-02 23:30:39.066968 ,Gán cho Shipper SHP_003
+4b523bc2-0eb2-4d26-9abc-6b30a9cd57a9 ,HCM15752117 ,Đang giao    ,2025-12-03 01:30:39.066968 ,Shipper đã lấy hàng
+3719a98f-296e-4787-9407-c106d64aeda6 ,HCM15752117 ,Đang giao    ,2025-12-03 16:30:39.066968 ,Giao thất bại/Hoàn trả
+959ccbcd-b117-4e75-8a16-f2ee85959579 ,HCM12410512 ,Mới tạo      ,2025-12-04 00:43:56.335381 ,Shop tạo đơn tại TP.HCM
+6a390c0b-9883-46a1-b30a-864204161d32 ,HCM12410512 ,Đã điều phối ,2025-12-04 01:13:56.335381 ,Gán cho Shipper SHP_006
+4190424f-61a7-4ed2-b513-195bb4352fd0 ,HCM12410512 ,Đang giao    ,2025-12-04 03:13:56.335381 ,Shipper đã lấy hàng
+8bb5602f-e1d4-418f-bc7a-918d866cc19e ,HCM12410512 ,Đang giao    ,2025-12-04 12:13:56.335381 ,Giao thất bại/Hoàn trả
+f2c94cb1-eac2-4cfc-8e0d-3cf3e78ff9ca ,HCM98798825 ,Mới tạo      ,2025-12-05 22:44:31.541038 ,Shop tạo đơn tại TP.HCM
+13d8e2da-e35c-43fb-afdc-d68cea7f6bbc ,HCM9188351  ,Mới tạo      ,2025-12-06 06:07:09.285453 ,Shop tạo đơn tại TP.HCM
+bb99955c-64fd-4fcd-b9ed-eb2723540ee1 ,HCM9188351  ,Đã điều phối ,2025-12-06 06:37:09.285453 ,Gán cho Shipper SHP_013
+2d899f45-df26-47fc-8d0d-af252dfb97ce ,HCM9188351  ,Đang giao    ,2025-12-06 08:37:09.285453 ,Shipper đã lấy hàng
+ca4699b0-e264-435c-890f-e03a62746224 ,HCM9188351  ,Đang giao    ,2025-12-06 21:37:09.285453 ,Giao thất bại/Hoàn trả
+3fcec8b3-782e-4a57-be16-4cba51430b75 ,HCM64908251 ,Mới tạo      ,2025-11-15 01:14:08.598159 ,Shop tạo đơn tại TP.HCM
+bc54f716-ec60-4823-9c6e-815bcdfa77d1 ,HCM67002347 ,Mới tạo      ,2025-11-10 02:39:25.213560 ,Shop tạo đơn tại TP.HCM
+8800c9ab-5386-4f0b-86ef-1bd5ef0b6cbb ,HCM88057477 ,Mới tạo      ,2025-11-25 18:01:05.437935 ,Shop tạo đơn tại TP.HCM
+8010efef-d8c5-494d-9fea-1e4ff57dd3b9 ,HCM45958638 ,Mới tạo      ,2025-11-18 20:42:29.237252 ,Shop tạo đơn tại TP.HCM
+dbdd2b18-919e-4e22-8040-bcab5da2e098 ,HCM45958638 ,Đã điều phối ,2025-11-18 21:12:29.237252 ,Gán cho Shipper SHP_007
+7e8c6cdc-55d0-4c6a-860a-c6871d3ba152 ,HCM45958638 ,Đang giao    ,2025-11-18 23:12:29.237252 ,Shipper đã lấy hàng
+aa20dd8e-9ca9-4cda-8a07-bb7e7b56d8b8 ,HCM45958638 ,Đang giao    ,2025-11-19 00:12:29.237252 ,Giao thất bại/Hoàn trả
+0bd847a9-211a-47a2-8ac4-87c1c11cc6ba ,HCM10625326 ,Mới tạo      ,2025-11-16 22:08:59.154795 ,Shop tạo đơn tại TP.HCM
+e03877f3-138f-4b63-95d1-4235c725e6d3 ,HCM10625326 ,Đã điều phối ,2025-11-16 22:38:59.154795 ,Gán cho Shipper SHP_012
+6f1ce5ed-ee85-4e61-8adb-8a564d85582a ,HCM10625326 ,Đang giao    ,2025-11-17 00:38:59.154795 ,Shipper đã lấy hàng
+7bc13fbe-3d1f-4183-857a-7edd70600544 ,HCM10625326 ,Đã giao      ,2025-11-17 11:38:59.154795 ,Giao thành công
+34468102-2b32-44da-ab77-b4893cff965f ,HCM95815392 ,Mới tạo      ,2025-11-10 15:45:52.185925 ,Shop tạo đơn tại TP.HCM
+9c3daf51-91c1-4201-8ca0-89403ec2824f ,HCM95815392 ,Đã điều phối ,2025-11-10 16:15:52.185925 ,Gán cho Shipper SHP_007
+daf219c3-031b-4dca-89c4-f1fbc98ca73c ,HCM95815392 ,Đang giao    ,2025-11-10 18:15:52.185925 ,Shipper đã lấy hàng
+b1cc0761-550f-4025-89a9-aec7b909fe9b ,HCM95815392 ,Đang lấy     ,2025-11-11 17:15:52.185925 ,Giao thất bại/Hoàn trả
+bd726df1-6fea-462a-a116-850a08d0d69e ,HCM73847883 ,Mới tạo      ,2025-12-06 02:40:13.562043 ,Shop tạo đơn tại TP.HCM
+22baf572-b09a-4bf4-a247-4d0d712445b3 ,HCM80853967 ,Mới tạo      ,2025-11-30 12:12:51.690252 ,Shop tạo đơn tại TP.HCM
+775c5df5-e70c-4ff1-9cf9-84fb3c1aebe2 ,HCM23304958 ,Mới tạo      ,2025-11-17 14:21:34.012751 ,Shop tạo đơn tại TP.HCM
+17e22835-2942-4000-8b8c-cf8d0cea07ed ,HCM19564071 ,Mới tạo      ,2025-12-01 01:27:35.459430 ,Shop tạo đơn tại TP.HCM
+e9c7d5d8-b606-476b-965d-6a982f2b4f96 ,HCM19564071 ,Đã điều phối ,2025-12-01 01:57:35.459430 ,Gán cho Shipper SHP_014
+e3f9350c-a004-445c-a8d6-453701629f37 ,HCM19564071 ,Đang giao    ,2025-12-01 03:57:35.459430 ,Shipper đã lấy hàng
+08965e02-20fb-4845-aa14-15a4326b29be ,HCM19564071 ,Đã giao      ,2025-12-01 11:57:35.459430 ,Giao thành công
+357f4326-9884-4f83-aaff-42f090bf5520 ,HCM94929183 ,Mới tạo      ,2025-12-04 22:33:27.118464 ,Shop tạo đơn tại TP.HCM
+fb6d791c-2bd3-4cd2-a432-dbdbe907360d ,HCM94929183 ,Đã điều phối ,2025-12-04 23:03:27.118464 ,Gán cho Shipper SHP_001
+ff59a4f2-2cd1-4d4c-9983-83cfdae2269e ,HCM94929183 ,Đang giao    ,2025-12-05 01:03:27.118464 ,Shipper đã lấy hàng
+c763e47f-0f68-4d86-b3d8-c53881b5500b ,HCM94929183 ,Hoàn trả     ,2025-12-05 14:03:27.118464 ,Giao thất bại/Hoàn trả
+fc14a1cb-66d8-48a1-993a-2a825a8c4a0b ,HCM99739903 ,Mới tạo      ,2025-12-05 20:20:47.166668 ,Shop tạo đơn tại TP.HCM
+a8deb9ae-a45c-41fe-95df-ba02f9779e95 ,HCM99739903 ,Đã điều phối ,2025-12-05 20:50:47.166668 ,Gán cho Shipper SHP_002
+edf8261e-6d9c-4a9f-a370-0802329afd3f ,HCM99739903 ,Đang giao    ,2025-12-05 22:50:47.166668 ,Shipper đã lấy hàng
+1fcef4a3-38af-408c-82a8-983fa31ec65d ,HCM99739903 ,Đang giao    ,2025-12-06 06:50:47.166668 ,Giao thất bại/Hoàn trả
+f95ce22b-c3d8-4fd2-8e11-8cf370429d75 ,HCM46670535 ,Mới tạo      ,2025-11-15 19:21:27.122882 ,Shop tạo đơn tại TP.HCM
+15e34025-5983-4267-a384-a84c1bbb39cd ,HCM46670535 ,Đã điều phối ,2025-11-15 19:51:27.122882 ,Gán cho Shipper SHP_010
+43cf79b8-1249-4627-b180-fcc287413838 ,HCM46670535 ,Đang giao    ,2025-11-15 21:51:27.122882 ,Shipper đã lấy hàng
+5fad360c-2727-473c-b48f-ad4d469daff0 ,HCM46670535 ,Hoàn trả     ,2025-11-16 11:51:27.122882 ,Giao thất bại/Hoàn trả
+e3f65306-5df7-4ce7-9129-aa5ce0b618e7 ,HCM89294432 ,Mới tạo      ,2025-11-25 17:17:02.553142 ,Shop tạo đơn tại TP.HCM
+ef27099a-caf2-40c1-9956-d65bec98b756 ,HCM89294432 ,Đã điều phối ,2025-11-25 17:47:02.553142 ,Gán cho Shipper SHP_007
+01a982cf-1724-414d-8cfa-1c3a903ab588 ,HCM89294432 ,Đang giao    ,2025-11-25 19:47:02.553142 ,Shipper đã lấy hàng
+7987235a-ba6b-473c-bda2-b66badc15f2a ,HCM89294432 ,Đã giao      ,2025-11-26 00:47:02.553142 ,Giao thành công
+94d2081a-3612-4056-9643-5abffb0264fd ,HCM92956861 ,Mới tạo      ,2025-12-06 14:50:29.417579 ,Shop tạo đơn tại TP.HCM
+8d6b2d86-be57-456f-bba4-8411d1b57780 ,HCM85482605 ,Mới tạo      ,2025-11-26 15:29:26.314326 ,Shop tạo đơn tại TP.HCM
+ec5d9c4a-86ea-4dde-8d60-8ae74b9abeb0 ,HCM85482605 ,Đã điều phối ,2025-11-26 15:59:26.314326 ,Gán cho Shipper SHP_007
+c5c0e2e6-daaf-4ae0-9861-7500664c24c0 ,HCM85482605 ,Đang giao    ,2025-11-26 17:59:26.314326 ,Shipper đã lấy hàng
+9f32afb3-a709-42f8-a844-d5a62f517a00 ,HCM85482605 ,Đang giao    ,2025-11-26 23:59:26.314326 ,Giao thất bại/Hoàn trả
+0b21429a-3db6-46e9-b508-ab9e9ab0086c ,HCM40856786 ,Mới tạo      ,2025-12-03 06:25:09.201818 ,Shop tạo đơn tại TP.HCM
+6bcbefa0-66c3-4b38-8b11-fe439af1f0c9 ,HCM40856786 ,Đã điều phối ,2025-12-03 06:55:09.201818 ,Gán cho Shipper SHP_008
+613b87ba-dcb7-45ed-8ae6-2558b21472d1 ,HCM40856786 ,Đang giao    ,2025-12-03 08:55:09.201818 ,Shipper đã lấy hàng
+aef4c0ba-6a8a-4c29-9ed6-3065a7bc1c51 ,HCM40856786 ,Đang lấy     ,2025-12-03 19:55:09.201818 ,Giao thất bại/Hoàn trả
+dfdab96e-a7da-4229-9c84-74cd23b51ba0 ,HCM88632353 ,Mới tạo      ,2025-12-01 10:09:46.813532 ,Shop tạo đơn tại TP.HCM
+e3df4c29-4c77-41df-839c-824e01138a25 ,HCM88632353 ,Đã điều phối ,2025-12-01 10:39:46.813532 ,Gán cho Shipper SHP_014
+9b410ec9-790f-47dd-b071-7391d676a3fa ,HCM88632353 ,Đang giao    ,2025-12-01 12:39:46.813532 ,Shipper đã lấy hàng
+9f083209-a5b8-4d17-a1a9-cff71e65d6fc ,HCM88632353 ,Đang giao    ,2025-12-02 01:39:46.813532 ,Giao thất bại/Hoàn trả
+53ec552e-3bbc-448e-b3be-a61697d34391 ,HCM82892606 ,Mới tạo      ,2025-12-03 12:19:30.977919 ,Shop tạo đơn tại TP.HCM
+48873251-8ce9-4e01-87e0-b09a4819aec5 ,HCM82892606 ,Đã điều phối ,2025-12-03 12:49:30.977919 ,Gán cho Shipper SHP_011
+f1e532c6-e41a-4457-bcd5-14bc61848f20 ,HCM82892606 ,Đang giao    ,2025-12-03 14:49:30.977919 ,Shipper đã lấy hàng
+988e48fd-6f14-4d79-94b5-5231e093e80a ,HCM82892606 ,Đang lấy     ,2025-12-04 09:49:30.977919 ,Giao thất bại/Hoàn trả
+f9473d02-b501-44f0-a4e6-6c2e095296da ,HCM90737965 ,Mới tạo      ,2025-11-23 07:36:51.616132 ,Shop tạo đơn tại TP.HCM
+a2389c5e-9f61-4082-9e35-d94cbd082982 ,HCM90737965 ,Đã điều phối ,2025-11-23 08:06:51.616132 ,Gán cho Shipper SHP_014
+37946ba6-1b3e-4a35-9dfe-556a8847f940 ,HCM90737965 ,Đang giao    ,2025-11-23 10:06:51.616132 ,Shipper đã lấy hàng
+25566029-0345-4968-b9a3-a471b30b5b95 ,HCM90737965 ,Đã giao      ,2025-11-23 19:06:51.616132 ,Giao thành công
+9c33a0ad-ba29-4c98-b9b9-ebfbc3ea87bf ,HCM5443051  ,Mới tạo      ,2025-12-03 02:21:07.749445 ,Shop tạo đơn tại TP.HCM
+8c679041-7f81-401e-8e6e-ac911af649d7 ,HCM5443051  ,Đã điều phối ,2025-12-03 02:51:07.749445 ,Gán cho Shipper SHP_001
+7caf770b-7471-47ca-927f-5d9856b21bbb ,HCM5443051  ,Đang giao    ,2025-12-03 04:51:07.749445 ,Shipper đã lấy hàng
+2aa7eddb-ae10-42e6-8815-c06a10eb879d ,HCM5443051  ,Đang lấy     ,2025-12-04 04:51:07.749445 ,Giao thất bại/Hoàn trả
+a8c7ab00-f87b-4b7d-8ebf-503e16598325 ,HCM68312782 ,Mới tạo      ,2025-12-07 23:34:25.477740 ,Shop tạo đơn tại TP.HCM
+00faa22c-728e-40b4-8f12-8a39028d7242 ,HCM42637853 ,Mới tạo      ,2025-11-19 16:49:25.061810 ,Shop tạo đơn tại TP.HCM
+c896bcf8-a045-491b-a915-910932bb69ae ,HCM26309755 ,Mới tạo      ,2025-11-26 08:48:24.036101 ,Shop tạo đơn tại TP.HCM
+b5aab8df-032a-4c48-8f06-2e976b023ebf ,HCM19343828 ,Mới tạo      ,2025-11-12 07:05:19.497403 ,Shop tạo đơn tại TP.HCM
+7c1cf7cc-de32-4bf2-bd85-084d651a7714 ,HCM19343828 ,Đã điều phối ,2025-11-12 07:35:19.497403 ,Gán cho Shipper SHP_011
+fea6637f-5913-49de-85ef-07d29d8ee3ee ,HCM19343828 ,Đang giao    ,2025-11-12 09:35:19.497403 ,Shipper đã lấy hàng
+fdffa93b-b223-4816-8926-bb68c6cde2f4 ,HCM19343828 ,Đang lấy     ,2025-11-12 12:35:19.497403 ,Giao thất bại/Hoàn trả
+ee7bb9d8-72df-4d09-87e5-07df73ab1a31 ,HCM22149299 ,Mới tạo      ,2025-11-30 14:06:08.777119 ,Shop tạo đơn tại TP.HCM
+2ef742ec-0c52-45a3-90e8-fbcd86b0b8d0 ,HCM22149299 ,Đã điều phối ,2025-11-30 14:36:08.777119 ,Gán cho Shipper SHP_003
+8ca51812-5bf7-4280-b345-675bd9ac5a09 ,HCM22149299 ,Đang giao    ,2025-11-30 16:36:08.777119 ,Shipper đã lấy hàng
+d3dfd144-8945-4679-8644-456229f5ab74 ,HCM22149299 ,Hoàn trả     ,2025-11-30 21:36:08.777119 ,Giao thất bại/Hoàn trả
+20517842-0de8-404f-840a-d289b73bbe6f ,HCM54400029 ,Mới tạo      ,2025-11-18 19:12:46.934146 ,Shop tạo đơn tại TP.HCM
+c5226f59-9d4a-452b-a832-2468f779fac5 ,HCM54400029 ,Đã điều phối ,2025-11-18 19:42:46.934146 ,Gán cho Shipper SHP_015
+8dbb65d6-0176-4dc5-b641-cf40aaab5a2f ,HCM54400029 ,Đang giao    ,2025-11-18 21:42:46.934146 ,Shipper đã lấy hàng
+c813f1b9-4655-415a-a1c3-8f2ed7f9d870 ,HCM54400029 ,Đang giao    ,2025-11-19 11:42:46.934146 ,Giao thất bại/Hoàn trả
+1b243670-4312-4ac1-bb56-a204dafefad4 ,HCM7180810  ,Mới tạo      ,2025-11-28 14:10:30.626494 ,Shop tạo đơn tại TP.HCM
+67934ea4-dfeb-40b8-935d-3abedd98ed69 ,HCM7180810  ,Đã điều phối ,2025-11-28 14:40:30.626494 ,Gán cho Shipper SHP_010
+eabf82b2-7f86-46dc-b3cd-a36a420e5a40 ,HCM7180810  ,Đang giao    ,2025-11-28 16:40:30.626494 ,Shipper đã lấy hàng
+185d83fe-291c-4486-8d29-d11b63b1c298 ,HCM7180810  ,Đang giao    ,2025-11-29 08:40:30.626494 ,Giao thất bại/Hoàn trả
+b950d9e7-f32e-4222-91bb-7ba990ea8bc3 ,HCM42605274 ,Mới tạo      ,2025-11-19 14:16:23.988605 ,Shop tạo đơn tại TP.HCM
+27b2d64b-77c7-48d9-a752-e67ba8e7d279 ,HCM42605274 ,Đã điều phối ,2025-11-19 14:46:23.988605 ,Gán cho Shipper SHP_015
+c99a0fa9-978b-4ab0-ae6f-f0d8adbe3517 ,HCM42605274 ,Đang giao    ,2025-11-19 16:46:23.988605 ,Shipper đã lấy hàng
+a5705459-9207-4b1e-a201-419e8d06f3d1 ,HCM42605274 ,Đã giao      ,2025-11-20 08:46:23.988605 ,Giao thành công
+e94a2b7b-1a74-48a6-b05c-5cabba078a99 ,HCM4116076  ,Mới tạo      ,2025-11-21 23:31:37.970790 ,Shop tạo đơn tại TP.HCM
+ee0c30a3-f88f-467d-83b4-3c19f3096526 ,HCM47032029 ,Mới tạo      ,2025-11-25 02:39:27.695220 ,Shop tạo đơn tại TP.HCM
+64b8d90b-9940-4fb6-98ea-8deda792ca48 ,HCM31016305 ,Mới tạo      ,2025-12-03 11:46:49.164239 ,Shop tạo đơn tại TP.HCM
+c11ed7e0-ff3b-48ef-8a32-1ce764d4853c ,HCM96939531 ,Mới tạo      ,2025-12-08 01:50:27.072326 ,Shop tạo đơn tại TP.HCM
+fc7897df-17b0-482f-b1e2-32f0a14a42cd ,HCM94577044 ,Mới tạo      ,2025-11-10 19:41:19.688762 ,Shop tạo đơn tại TP.HCM
+b1250d8c-b506-4d8e-b179-3c613ebc362f ,HCM39916116 ,Mới tạo      ,2025-12-04 11:57:43.090951 ,Shop tạo đơn tại TP.HCM
+fb25723d-332e-47cf-ac00-6457091269b4 ,HCM39916116 ,Đã điều phối ,2025-12-04 12:27:43.090951 ,Gán cho Shipper SHP_013
+515aaa97-af26-42bf-b452-c18a5a326246 ,HCM39916116 ,Đang giao    ,2025-12-04 14:27:43.090951 ,Shipper đã lấy hàng
+df826605-f25d-459f-825b-003462f3d86f ,HCM39916116 ,Đang giao    ,2025-12-04 20:27:43.090951 ,Giao thất bại/Hoàn trả
+6abb6b6c-dc68-4eab-85d7-fcc5fef26bc2 ,HCM9067589  ,Mới tạo      ,2025-11-15 01:15:16.364983 ,Shop tạo đơn tại TP.HCM
+5c312f28-b34e-4f9a-90d5-8c726961e0e6 ,HCM9067589  ,Đã điều phối ,2025-11-15 01:45:16.364983 ,Gán cho Shipper SHP_014
+1a58dbba-770b-4d95-af86-838991b3c46a ,HCM9067589  ,Đang giao    ,2025-11-15 03:45:16.364983 ,Shipper đã lấy hàng
+35fb577d-9f3f-40ed-94e6-99d15a0d1ea7 ,HCM9067589  ,Hoàn trả     ,2025-11-15 18:45:16.364983 ,Giao thất bại/Hoàn trả
+99b8420b-9926-4580-87c7-d89f4bd4df0a ,HCM49761287 ,Mới tạo      ,2025-11-27 11:39:46.083184 ,Shop tạo đơn tại TP.HCM
+b67820e7-9937-4f35-9b1e-f60fe749bf7a ,HCM49761287 ,Đã điều phối ,2025-11-27 12:09:46.083184 ,Gán cho Shipper SHP_015
+503af533-288a-4c28-82ff-b3138d9224e6 ,HCM49761287 ,Đang giao    ,2025-11-27 14:09:46.083184 ,Shipper đã lấy hàng
+5ba8cb85-39a0-4917-8caf-ce4898804619 ,HCM49761287 ,Hoàn trả     ,2025-11-28 14:09:46.083184 ,Giao thất bại/Hoàn trả
+a80ee558-279d-4370-9df6-6fd423290519 ,HCM64428628 ,Mới tạo      ,2025-11-20 21:13:27.895677 ,Shop tạo đơn tại TP.HCM
+03bc6d30-7ab6-486c-8d70-155d702d1b10 ,HCM64428628 ,Đã điều phối ,2025-11-20 21:43:27.895677 ,Gán cho Shipper SHP_007
+a0129516-1d6e-4cef-b8ac-435bfb2f429b ,HCM64428628 ,Đang giao    ,2025-11-20 23:43:27.895677 ,Shipper đã lấy hàng
+b4a2731e-8ebd-4fb5-90b2-002023d6ad1c ,HCM64428628 ,Đang lấy     ,2025-11-21 05:43:27.895677 ,Giao thất bại/Hoàn trả
+a6b909b0-6206-4818-8514-a58657473bbd ,HCM40218660 ,Mới tạo      ,2025-11-15 19:28:37.712132 ,Shop tạo đơn tại TP.HCM
+0a91fc75-7c2e-4d28-a2c4-a711ad8f63ab ,HCM40218660 ,Đã điều phối ,2025-11-15 19:58:37.712132 ,Gán cho Shipper SHP_007
+53fc3a15-87ee-45c9-aaba-dc8138e6542e ,HCM40218660 ,Đang giao    ,2025-11-15 21:58:37.712132 ,Shipper đã lấy hàng
+82ed230e-b99e-41a7-94dc-5ec7ed3f3d8f ,HCM40218660 ,Đã giao      ,2025-11-15 23:58:37.712132 ,Giao thành công
+914a2dc9-4e59-4be8-902e-20018277af9f ,HCM2036586  ,Mới tạo      ,2025-11-24 05:30:11.770947 ,Shop tạo đơn tại TP.HCM
+55f5fff4-97bd-41fd-a146-aee506ebe1d2 ,HCM32247753 ,Mới tạo      ,2025-11-19 14:17:00.998284 ,Shop tạo đơn tại TP.HCM
+36425784-4765-4767-a12d-cd01bd2da528 ,HCM32247753 ,Đã điều phối ,2025-11-19 14:47:00.998284 ,Gán cho Shipper SHP_006
+d4137168-b4bd-4fbd-bd8c-395b92fd34d7 ,HCM32247753 ,Đang giao    ,2025-11-19 16:47:00.998284 ,Shipper đã lấy hàng
+4cacf116-4737-4106-8cd9-beb3d8da1fa7 ,HCM32247753 ,Đang lấy     ,2025-11-19 21:47:00.998284 ,Giao thất bại/Hoàn trả
+f73af46b-7288-467a-8835-bd62e03e6dc8 ,HCM64908768 ,Mới tạo      ,2025-11-15 04:17:14.631431 ,Shop tạo đơn tại TP.HCM
+cc31bdf5-328c-4ada-91b6-badb87f88bca ,HCM50428380 ,Mới tạo      ,2025-11-15 11:20:56.490686 ,Shop tạo đơn tại TP.HCM
+856bb600-dd66-4528-9187-f0e5f7b9520f ,HCM50428380 ,Đã điều phối ,2025-11-15 11:50:56.490686 ,Gán cho Shipper SHP_001
+1fba4681-63a9-49ff-9fbf-9b39c728b47a ,HCM50428380 ,Đang giao    ,2025-11-15 13:50:56.490686 ,Shipper đã lấy hàng
+4091e4b7-10b4-425e-9df1-d9d2082fd3e4 ,HCM50428380 ,Hoàn trả     ,2025-11-16 10:50:56.490686 ,Giao thất bại/Hoàn trả
+206d42bd-1f12-41ae-8beb-eed867ab8b05 ,HCM10083229 ,Mới tạo      ,2025-12-01 07:10:15.463837 ,Shop tạo đơn tại TP.HCM
+bee9eb76-ac2c-4839-977f-5e9909164294 ,HCM10083229 ,Đã điều phối ,2025-12-01 07:40:15.463837 ,Gán cho Shipper SHP_010
+286d3b17-3018-4ba6-9719-63f96e32affe ,HCM10083229 ,Đang giao    ,2025-12-01 09:40:15.463837 ,Shipper đã lấy hàng
+4d94b547-2c0e-4425-a2a8-f11facf0ad4e ,HCM10083229 ,Đang giao    ,2025-12-02 00:40:15.463837 ,Giao thất bại/Hoàn trả
+732b2309-c761-48f4-9d63-6c5245897e59 ,HCM1523652  ,Mới tạo      ,2025-11-27 20:58:18.822625 ,Shop tạo đơn tại TP.HCM
+9dec85c5-faf9-41fa-8815-e11cc691cfcb ,HCM1523652  ,Đã điều phối ,2025-11-27 21:28:18.822625 ,Gán cho Shipper SHP_013
+886a411b-6b8b-4922-95fc-9c5c64eec0f7 ,HCM1523652  ,Đang giao    ,2025-11-27 23:28:18.822625 ,Shipper đã lấy hàng
+f12cc49b-8853-4c29-9a49-6e2deb28fb46 ,HCM1523652  ,Hoàn trả     ,2025-11-28 12:28:18.822625 ,Giao thất bại/Hoàn trả
+3395d610-41b6-4e41-a02e-b345f7e36768 ,HCM12173328 ,Mới tạo      ,2025-11-24 08:05:35.038819 ,Shop tạo đơn tại TP.HCM
+13cf4cfc-9834-48f1-8e27-eaf4896a55d5 ,HCM12173328 ,Đã điều phối ,2025-11-24 08:35:35.038819 ,Gán cho Shipper SHP_008
+6d0f40f4-78be-4562-8072-4fdc2f78d050 ,HCM12173328 ,Đang giao    ,2025-11-24 10:35:35.038819 ,Shipper đã lấy hàng
+0140d7e5-040b-4c89-821c-5b88cfbb9065 ,HCM12173328 ,Đang giao    ,2025-11-25 07:35:35.038819 ,Giao thất bại/Hoàn trả
+1c087c9e-0b35-4b52-9862-bdb1f2f831e1 ,HCM63718431 ,Mới tạo      ,2025-11-24 04:13:57.578147 ,Shop tạo đơn tại TP.HCM
+667719fe-b138-4961-9345-75f744e84819 ,HCM63718431 ,Đã điều phối ,2025-11-24 04:43:57.578147 ,Gán cho Shipper SHP_007
+58ee9413-ed3c-48bc-8709-e68f17ea61c0 ,HCM63718431 ,Đang giao    ,2025-11-24 06:43:57.578147 ,Shipper đã lấy hàng
+6434426b-2ac1-4088-8518-11872f13db60 ,HCM63718431 ,Đã giao      ,2025-11-24 11:43:57.578147 ,Giao thành công
+11b22233-a3a6-464a-bafd-ed003a69c2bd ,HCM33166040 ,Mới tạo      ,2025-11-24 19:36:50.257048 ,Shop tạo đơn tại TP.HCM
+48910b71-c0c5-46de-adca-1953c8faee38 ,HCM67724297 ,Mới tạo      ,2025-11-21 01:11:20.078954 ,Shop tạo đơn tại TP.HCM
+8ac1d804-129e-4f22-b491-2e687345c5fc ,HCM67724297 ,Đã điều phối ,2025-11-21 01:41:20.078954 ,Gán cho Shipper SHP_013
+35b0863a-2af7-4024-8f27-ff9722ba5914 ,HCM67724297 ,Đang giao    ,2025-11-21 03:41:20.078954 ,Shipper đã lấy hàng
+0f4e059b-beb6-476c-b14b-bd882a8bd8e0 ,HCM67724297 ,Đã giao      ,2025-11-22 02:41:20.078954 ,Giao thành công
+323143d0-0ef1-4f3d-8a2d-245281bacc0e ,HCM92203814 ,Mới tạo      ,2025-11-14 12:57:40.095111 ,Shop tạo đơn tại TP.HCM
+ed310502-4478-4699-bd02-25efc8ca4394 ,HCM92203814 ,Đã điều phối ,2025-11-14 13:27:40.095111 ,Gán cho Shipper SHP_008
+ba85d229-867d-45a3-ad1d-8c397e4a0650 ,HCM92203814 ,Đang giao    ,2025-11-14 15:27:40.095111 ,Shipper đã lấy hàng
+8a46df82-fed6-4e9b-8ecb-1d91ac5c3e86 ,HCM92203814 ,Đang lấy     ,2025-11-15 00:27:40.095111 ,Giao thất bại/Hoàn trả
+ebad8f7a-2335-4847-a09c-19a163470030 ,HCM44605532 ,Mới tạo      ,2025-11-14 00:32:08.961384 ,Shop tạo đơn tại TP.HCM
+fe6825c1-3bfc-49eb-98af-def01a9e9d93 ,HCM44605532 ,Đã điều phối ,2025-11-14 01:02:08.961384 ,Gán cho Shipper SHP_010
+8d25dc97-1418-4ec1-a1ef-48b4dd665a26 ,HCM44605532 ,Đang giao    ,2025-11-14 03:02:08.961384 ,Shipper đã lấy hàng
+522d3103-303a-4466-9131-28d5a7cb0423 ,HCM44605532 ,Hoàn trả     ,2025-11-14 21:02:08.961384 ,Giao thất bại/Hoàn trả
+fb03e30e-6377-42b4-822d-ecc925a99e7d ,HCM93724738 ,Mới tạo      ,2025-11-26 09:20:16.258638 ,Shop tạo đơn tại TP.HCM
+a805be2e-2eae-428f-a00a-56653dc43122 ,HCM70965221 ,Mới tạo      ,2025-11-13 10:09:37.616922 ,Shop tạo đơn tại TP.HCM
+5359353b-14f1-4ba1-96c5-f89681c81af6 ,HCM70965221 ,Đã điều phối ,2025-11-13 10:39:37.616922 ,Gán cho Shipper SHP_005
+3847d906-bda3-4611-9054-00a53089ce82 ,HCM70965221 ,Đang giao    ,2025-11-13 12:39:37.616922 ,Shipper đã lấy hàng
+b409143a-b072-47aa-afba-93aaf1fca6ed ,HCM70965221 ,Đang lấy     ,2025-11-14 00:39:37.616922 ,Giao thất bại/Hoàn trả
+2871f478-90f5-46a7-8e06-4001b05288c9 ,HCM79295819 ,Mới tạo      ,2025-11-24 04:55:42.439881 ,Shop tạo đơn tại TP.HCM
+eeda43c0-d770-4750-b98c-5a84f09e445f ,HCM79295819 ,Đã điều phối ,2025-11-24 05:25:42.439881 ,Gán cho Shipper SHP_012
+f9043b76-50af-40da-9c5b-ab331e1e5926 ,HCM79295819 ,Đang giao    ,2025-11-24 07:25:42.439881 ,Shipper đã lấy hàng
+0cea78b9-c0ff-495e-b893-3d5bf843010b ,HCM79295819 ,Đang lấy     ,2025-11-24 23:25:42.439881 ,Giao thất bại/Hoàn trả
+d1ebeb18-0b65-45ca-aced-f6faa6fdb546 ,HCM33776508 ,Mới tạo      ,2025-11-11 11:46:07.505104 ,Shop tạo đơn tại TP.HCM
+b315fdd0-2e8b-43ce-b9d1-808197900fd0 ,HCM33776508 ,Đã điều phối ,2025-11-11 12:16:07.505104 ,Gán cho Shipper SHP_014
+c825142f-f620-4161-ba01-594eec43f29a ,HCM33776508 ,Đang giao    ,2025-11-11 14:16:07.505104 ,Shipper đã lấy hàng
+434dd304-4f7b-44cf-bc1c-ed4b52ff15b9 ,HCM33776508 ,Đã giao      ,2025-11-12 07:16:07.505104 ,Giao thành công
+04a18049-180b-4f5b-a78b-6b0a1a63e965 ,HCM58834931 ,Mới tạo      ,2025-11-30 12:28:30.691523 ,Shop tạo đơn tại TP.HCM
+b20fb12e-420d-4f6a-917b-3307cdf45c5e ,HCM58834931 ,Đã điều phối ,2025-11-30 12:58:30.691523 ,Gán cho Shipper SHP_015
+bcd92c8f-dcf2-4b31-8eeb-1e30b2a4b230 ,HCM58834931 ,Đang giao    ,2025-11-30 14:58:30.691523 ,Shipper đã lấy hàng
+49ea800a-a1c2-42f4-9fe2-35a85dfdae51 ,HCM58834931 ,Hoàn trả     ,2025-11-30 16:58:30.691523 ,Giao thất bại/Hoàn trả
+f5d9a94b-70a7-481c-894f-aa517bc0972a ,HCM82717124 ,Mới tạo      ,2025-11-18 17:14:46.340142 ,Shop tạo đơn tại TP.HCM
+b6cf27fd-acac-4656-82b5-37abccc38747 ,HCM82717124 ,Đã điều phối ,2025-11-18 17:44:46.340142 ,Gán cho Shipper SHP_002
+eeb54de2-b2c4-490e-9814-68d8dbe4a908 ,HCM82717124 ,Đang giao    ,2025-11-18 19:44:46.340142 ,Shipper đã lấy hàng
+47dd434a-12e2-4fa5-9c33-0a81e565fe4c ,HCM82717124 ,Đang lấy     ,2025-11-19 03:44:46.340142 ,Giao thất bại/Hoàn trả
+8f2e5a27-2784-40d2-8a59-bfa562fc21e0 ,HCM51938089 ,Mới tạo      ,2025-11-26 07:15:28.700500 ,Shop tạo đơn tại TP.HCM
+842deaf7-3b76-470e-9311-ce2fcd5f711c ,HCM51938089 ,Đã điều phối ,2025-11-26 07:45:28.700500 ,Gán cho Shipper SHP_002
+b3f7442b-f753-49a9-945a-4857d6d7ff31 ,HCM51938089 ,Đang giao    ,2025-11-26 09:45:28.700500 ,Shipper đã lấy hàng
+fdb1e7a3-a76b-4085-b5a3-1a39799452ad ,HCM51938089 ,Hoàn trả     ,2025-11-26 22:45:28.700500 ,Giao thất bại/Hoàn trả
+c1f556f3-8e12-4b4a-8d8f-3ce7e57de6d5 ,HCM36446027 ,Mới tạo      ,2025-11-16 10:14:58.083630 ,Shop tạo đơn tại TP.HCM
+d304ebf5-bbaf-40b4-a88c-0858c906f196 ,HCM82730771 ,Mới tạo      ,2025-11-28 17:42:45.293201 ,Shop tạo đơn tại TP.HCM
+e9aaa48b-d019-4746-812d-82c56ce9a244 ,HCM82730771 ,Đã điều phối ,2025-11-28 18:12:45.293201 ,Gán cho Shipper SHP_007
+0e89011c-cfcb-4761-ad2a-f1716fc8a77e ,HCM82730771 ,Đang giao    ,2025-11-28 20:12:45.293201 ,Shipper đã lấy hàng
+69157aed-c6b9-4208-959b-b98e81b32781 ,HCM82730771 ,Đang giao    ,2025-11-29 16:12:45.293201 ,Giao thất bại/Hoàn trả
+3d7b289f-64ea-4ca4-85c3-dca5e811c72c ,HCM74593093 ,Mới tạo      ,2025-12-06 13:22:24.204838 ,Shop tạo đơn tại TP.HCM
+2be56396-a463-4960-b595-086d1d9006ff ,HCM74593093 ,Đã điều phối ,2025-12-06 13:52:24.204838 ,Gán cho Shipper SHP_002
+7eba01a5-1672-44b8-9e40-73f7a54d6d3f ,HCM74593093 ,Đang giao    ,2025-12-06 15:52:24.204838 ,Shipper đã lấy hàng
+163fe0cf-9590-4f1f-a5d5-3a054cda979c ,HCM74593093 ,Đã giao      ,2025-12-06 18:52:24.204838 ,Giao thành công
+73698e9b-459c-44d6-9fc6-05848739ad02 ,HCM73264696 ,Mới tạo      ,2025-11-21 16:06:03.418197 ,Shop tạo đơn tại TP.HCM
+b57b4e3c-27e8-49cb-a240-2d77b285c85d ,HCM73264696 ,Đã điều phối ,2025-11-21 16:36:03.418197 ,Gán cho Shipper SHP_011
+2f658b07-0604-484a-9b59-8e682c593223 ,HCM73264696 ,Đang giao    ,2025-11-21 18:36:03.418197 ,Shipper đã lấy hàng
+3a75f4ae-f2bb-434f-928b-0cd401ecb010 ,HCM73264696 ,Đã giao      ,2025-11-22 15:36:03.418197 ,Giao thành công
+6e8a52c2-91b5-4ef6-8b28-a8d46a6de0c3 ,HCM88451727 ,Mới tạo      ,2025-11-19 00:21:08.608766 ,Shop tạo đơn tại TP.HCM
+e8c4c2c2-1bff-4879-a3b0-e21472b28614 ,HCM56956145 ,Mới tạo      ,2025-11-13 23:00:09.413521 ,Shop tạo đơn tại TP.HCM
+071dd795-180d-44a2-b8af-63b0670e95a8 ,HCM56956145 ,Đã điều phối ,2025-11-13 23:30:09.413521 ,Gán cho Shipper SHP_007
+91b1bc5c-eaa7-426a-9dec-ce2a6388e50a ,HCM56956145 ,Đang giao    ,2025-11-14 01:30:09.413521 ,Shipper đã lấy hàng
+0230abcc-8c3b-4934-9f30-4a3470f795f2 ,HCM56956145 ,Hoàn trả     ,2025-11-14 16:30:09.413521 ,Giao thất bại/Hoàn trả
+d16ff822-3321-45f3-ae90-0186963b110e ,HCM42986912 ,Mới tạo      ,2025-12-06 06:57:03.422448 ,Shop tạo đơn tại TP.HCM
+4e113734-e510-400c-8771-2d16cd80cbc1 ,HCM66124966 ,Mới tạo      ,2025-12-08 16:01:13.685154 ,Shop tạo đơn tại TP.HCM
+adf864b1-7804-4073-a2af-eaf08706429c ,HCM66124966 ,Đã điều phối ,2025-12-08 16:31:13.685154 ,Gán cho Shipper SHP_003
+dd55d9cf-88da-4e6c-8640-2d275e6e0dc8 ,HCM66124966 ,Đang giao    ,2025-12-08 18:31:13.685154 ,Shipper đã lấy hàng
+49060de9-e31d-4fda-9e42-03ec589ce2bc ,HCM66124966 ,Đang lấy     ,2025-12-09 17:31:13.685154 ,Giao thất bại/Hoàn trả
+9dd8ec76-8c20-4cbf-affb-a76bb536868c ,HCM25887584 ,Mới tạo      ,2025-11-13 02:57:53.610650 ,Shop tạo đơn tại TP.HCM
+0b97a539-a9fd-418a-aa91-cbe73b2bab34 ,HCM25887584 ,Đã điều phối ,2025-11-13 03:27:53.610650 ,Gán cho Shipper SHP_004
+41c0e6d1-84bf-4401-a091-86e7a74e11b6 ,HCM25887584 ,Đang giao    ,2025-11-13 05:27:53.610650 ,Shipper đã lấy hàng
+bd6898dd-7387-4293-9111-bc51f95907d1 ,HCM25887584 ,Đã giao      ,2025-11-13 15:27:53.610650 ,Giao thành công
+a2131dca-4fc8-4feb-925b-de3de41448ce ,HCM78499933 ,Mới tạo      ,2025-12-07 23:19:24.908092 ,Shop tạo đơn tại TP.HCM
+d5a5532d-fe49-4c06-8c07-c3a4f4609921 ,HCM78499933 ,Đã điều phối ,2025-12-07 23:49:24.908092 ,Gán cho Shipper SHP_005
+afa43465-dd6a-42ee-921f-3a722f61b217 ,HCM78499933 ,Đang giao    ,2025-12-08 01:49:24.908092 ,Shipper đã lấy hàng
+81d09c57-a004-42da-9f60-455065e4af30 ,HCM78499933 ,Đang giao    ,2025-12-08 03:49:24.908092 ,Giao thất bại/Hoàn trả
+68c90757-64c9-469f-956d-7e066cf0812b ,HCM96618971 ,Mới tạo      ,2025-11-30 22:25:03.856477 ,Shop tạo đơn tại TP.HCM
+321d293c-1557-4878-aaa3-cdb1d8e35e0f ,HCM96618971 ,Đã điều phối ,2025-11-30 22:55:03.856477 ,Gán cho Shipper SHP_001
+e4aded06-49ca-4a65-bc0b-d9322905815e ,HCM96618971 ,Đang giao    ,2025-12-01 00:55:03.856477 ,Shipper đã lấy hàng
+11392779-2ac4-41c3-9572-9129eb8d2a40 ,HCM96618971 ,Đang giao    ,2025-12-01 07:55:03.856477 ,Giao thất bại/Hoàn trả
+728cedf6-f1e7-4981-b29b-76c86e13f1ba ,HCM66654822 ,Mới tạo      ,2025-12-05 04:39:16.665790 ,Shop tạo đơn tại TP.HCM
+8a716068-337e-408e-9de4-6c17bc0ce80c ,HCM21583498 ,Mới tạo      ,2025-11-17 06:04:35.047610 ,Shop tạo đơn tại TP.HCM
+a6841d78-d1ee-413e-9e9e-a7591f91460d ,HCM21583498 ,Đã điều phối ,2025-11-17 06:34:35.047610 ,Gán cho Shipper SHP_009
+8bc16773-1acf-486d-9d01-9f3174f65590 ,HCM21583498 ,Đang giao    ,2025-11-17 08:34:35.047610 ,Shipper đã lấy hàng
+a90f3fba-ca38-4e07-b003-206d24347c64 ,HCM21583498 ,Đã giao      ,2025-11-17 09:34:35.047610 ,Giao thành công
+0454e2d9-307b-4c0d-83bf-b40722529461 ,HCM92127167 ,Mới tạo      ,2025-11-20 17:57:11.302023 ,Shop tạo đơn tại TP.HCM
+bb16263a-d9e3-41ff-8eda-e6da9c30ddc8 ,HCM16376838 ,Mới tạo      ,2025-11-14 05:58:55.255214 ,Shop tạo đơn tại TP.HCM
+7e608b48-eb47-429d-a97b-37904cba8dd1 ,HCM16376838 ,Đã điều phối ,2025-11-14 06:28:55.255214 ,Gán cho Shipper SHP_015
+a5083294-688a-433d-aced-6eaad6f54fcd ,HCM16376838 ,Đang giao    ,2025-11-14 08:28:55.255214 ,Shipper đã lấy hàng
+981568c8-e29a-47a9-8fb6-2e8d7eff187b ,HCM16376838 ,Hoàn trả     ,2025-11-15 00:28:55.255214 ,Giao thất bại/Hoàn trả
+2e31962f-62a7-4908-bd8b-05f0261ab799 ,HCM76791508 ,Mới tạo      ,2025-11-12 03:33:56.881282 ,Shop tạo đơn tại TP.HCM
+78677a36-f354-461f-8ae0-901d9c4569a7 ,HCM72139405 ,Mới tạo      ,2025-11-21 22:06:25.499995 ,Shop tạo đơn tại TP.HCM
+84316ec2-1289-4081-8eb5-29617b30bd24 ,HCM72139405 ,Đã điều phối ,2025-11-21 22:36:25.499995 ,Gán cho Shipper SHP_003
+f796d739-ce21-4014-beab-b3d86f29e30c ,HCM72139405 ,Đang giao    ,2025-11-22 00:36:25.499995 ,Shipper đã lấy hàng
+c2cc1ca7-c665-4e4f-a6d0-4eccf18fda3c ,HCM72139405 ,Đang giao    ,2025-11-22 18:36:25.499995 ,Giao thất bại/Hoàn trả
+3bd506a9-af06-4ee4-9aff-31442a9c2971 ,HCM64247845 ,Mới tạo      ,2025-12-02 23:07:29.952969 ,Shop tạo đơn tại TP.HCM
+72851f43-bdfe-4cda-bd6e-d7bb3e302e8b ,HCM64247845 ,Đã điều phối ,2025-12-02 23:37:29.952969 ,Gán cho Shipper SHP_012
+24e7cb9e-80bf-4733-be89-bf6dcf183470 ,HCM64247845 ,Đang giao    ,2025-12-03 01:37:29.952969 ,Shipper đã lấy hàng
+e595cbea-e22a-403b-80d2-6e79b20eb9bc ,HCM64247845 ,Đang giao    ,2025-12-04 00:37:29.952969 ,Giao thất bại/Hoàn trả
+bfc264e4-e881-4a8c-9f6b-f1541dd00e6f ,HCM54781761 ,Mới tạo      ,2025-11-27 23:55:31.277070 ,Shop tạo đơn tại TP.HCM
+234cc356-d91d-4673-9582-35c7ff874ba5 ,HCM91629684 ,Mới tạo      ,2025-11-17 19:46:52.855243 ,Shop tạo đơn tại TP.HCM
+389168ac-cea6-402e-ae42-cfb390aec801 ,HCM99708223 ,Mới tạo      ,2025-11-22 12:39:01.531518 ,Shop tạo đơn tại TP.HCM
+a22ea952-7a13-421f-9da8-c02100abcac6 ,HCM48268161 ,Mới tạo      ,2025-11-19 09:00:14.970009 ,Shop tạo đơn tại TP.HCM
+76eb2f78-9690-460e-be63-052957175cd8 ,HCM48268161 ,Đã điều phối ,2025-11-19 09:30:14.970009 ,Gán cho Shipper SHP_004
+956fd510-7e1c-457a-bc03-c8023008f4a4 ,HCM48268161 ,Đang giao    ,2025-11-19 11:30:14.970009 ,Shipper đã lấy hàng
+54d1f231-83d8-49e8-a849-68e9c501b946 ,HCM48268161 ,Đã giao      ,2025-11-19 12:30:14.970009 ,Giao thành công
+7869c641-d3fd-4d19-94e5-9f41617b373a ,HCM63653433 ,Mới tạo      ,2025-11-21 12:12:40.178502 ,Shop tạo đơn tại TP.HCM
+736b16fd-27ca-41ce-9af1-394b81ecfd8f ,HCM63653433 ,Đã điều phối ,2025-11-21 12:42:40.178502 ,Gán cho Shipper SHP_008
+3384a4ad-738e-47dc-b4e9-7f3fee2435eb ,HCM63653433 ,Đang giao    ,2025-11-21 14:42:40.178502 ,Shipper đã lấy hàng
+a914689a-f22f-41da-bdbe-3196fb3a44be ,HCM63653433 ,Đang lấy     ,2025-11-21 23:42:40.178502 ,Giao thất bại/Hoàn trả
+faa12b65-3886-410f-8724-05d22497527d ,HCM71950073 ,Mới tạo      ,2025-11-27 23:31:16.743425 ,Shop tạo đơn tại TP.HCM
+252a3bba-f44d-45d9-9ddf-6580240e0730 ,HCM71950073 ,Đã điều phối ,2025-11-28 00:01:16.743425 ,Gán cho Shipper SHP_009
+3ef6e37a-764e-4e25-9123-baed0c4b1bab ,HCM71950073 ,Đang giao    ,2025-11-28 02:01:16.743425 ,Shipper đã lấy hàng
+47336c38-42f6-48ba-8d13-ce692ebc886b ,HCM71950073 ,Đang lấy     ,2025-11-28 15:01:16.743425 ,Giao thất bại/Hoàn trả
+71aa5d3f-229f-4e8f-b1ef-23a0fb391693 ,HCM25791299 ,Mới tạo      ,2025-11-25 12:01:07.907364 ,Shop tạo đơn tại TP.HCM
+3ae8a48d-a3dc-4b84-a81f-2e0502e3bd53 ,HCM80286364 ,Mới tạo      ,2025-11-20 18:56:02.328719 ,Shop tạo đơn tại TP.HCM
+8462d1b3-95f2-49af-81ca-859c216c30ae ,HCM80286364 ,Đã điều phối ,2025-11-20 19:26:02.328719 ,Gán cho Shipper SHP_001
+c6a785b9-eea6-4c59-885f-6911d746f595 ,HCM80286364 ,Đang giao    ,2025-11-20 21:26:02.328719 ,Shipper đã lấy hàng
+24995f45-6004-4b4b-b314-a5cd30ab8710 ,HCM80286364 ,Đã giao      ,2025-11-21 18:26:02.328719 ,Giao thành công
+470904a2-2f1f-4fa7-9be8-d8b2ed41d02e ,HCM52376354 ,Mới tạo      ,2025-12-05 23:26:42.583444 ,Shop tạo đơn tại TP.HCM
+07b31bbb-521f-494c-af35-2e72674dab20 ,HCM52376354 ,Đã điều phối ,2025-12-05 23:56:42.583444 ,Gán cho Shipper SHP_007
+936e4210-a13b-41d6-ac22-5ad8c5835a3b ,HCM52376354 ,Đang giao    ,2025-12-06 01:56:42.583444 ,Shipper đã lấy hàng
+0a46e941-b07c-438b-9f1b-48502221d279 ,HCM52376354 ,Hoàn trả     ,2025-12-06 20:56:42.583444 ,Giao thất bại/Hoàn trả
+8b068e01-7242-459c-8d15-0fbde4be8ce5 ,HCM6867075  ,Mới tạo      ,2025-11-23 01:32:23.054318 ,Shop tạo đơn tại TP.HCM
+2d8b9b9c-28a6-4d09-9752-71d84d3c8c0e ,HCM35632968 ,Mới tạo      ,2025-11-30 09:11:37.945511 ,Shop tạo đơn tại TP.HCM
+09974ccf-7f92-4adf-b613-2b976feb3a58 ,HCM35632968 ,Đã điều phối ,2025-11-30 09:41:37.945511 ,Gán cho Shipper SHP_003
+2be88497-d422-4d61-a847-b411b70179ae ,HCM35632968 ,Đang giao    ,2025-11-30 11:41:37.945511 ,Shipper đã lấy hàng
+128af430-a8e7-440f-933a-6265ed770d48 ,HCM35632968 ,Đang giao    ,2025-12-01 01:41:37.945511 ,Giao thất bại/Hoàn trả
+72716a37-6ad7-4a45-a085-fd65cdac2d0f ,HCM29445700 ,Mới tạo      ,2025-12-07 10:21:55.055477 ,Shop tạo đơn tại TP.HCM
+96bdb392-8bfa-44dd-b2d6-156ee11ac6f9 ,HCM29445700 ,Đã điều phối ,2025-12-07 10:51:55.055477 ,Gán cho Shipper SHP_014
+3effc911-8b93-42c6-98b2-0e983aafcd4e ,HCM29445700 ,Đang giao    ,2025-12-07 12:51:55.055477 ,Shipper đã lấy hàng
+2c1062b0-68d4-4af9-81f5-305aacc88236 ,HCM29445700 ,Đang giao    ,2025-12-07 20:51:55.055477 ,Giao thất bại/Hoàn trả
+14d01115-f2c1-4741-9c83-da3fb8b877a0 ,HCM21643285 ,Mới tạo      ,2025-11-16 16:59:26.394304 ,Shop tạo đơn tại TP.HCM
+418eec30-72d8-445c-9f56-0c74c6af0857 ,HCM21643285 ,Đã điều phối ,2025-11-16 17:29:26.394304 ,Gán cho Shipper SHP_006
+cf2e6556-88dc-49ed-841f-a0b20d4416d1 ,HCM21643285 ,Đang giao    ,2025-11-16 19:29:26.394304 ,Shipper đã lấy hàng
+7c3d6985-72b6-423c-bb56-ad12c02061a6 ,HCM21643285 ,Đang giao    ,2025-11-17 05:29:26.394304 ,Giao thất bại/Hoàn trả
+9fca4acd-89fd-489b-9aa1-e23a9dad37af ,HCM94668724 ,Mới tạo      ,2025-11-18 21:51:34.598217 ,Shop tạo đơn tại TP.HCM
+405eea65-dec7-46e9-8ea4-37eeb44c65f8 ,HCM73486699 ,Mới tạo      ,2025-12-02 07:44:01.580897 ,Shop tạo đơn tại TP.HCM
+097dbe47-b991-4994-bbe4-4c210cda2602 ,HCM79578190 ,Mới tạo      ,2025-11-17 17:43:52.120654 ,Shop tạo đơn tại TP.HCM
+19170b95-383a-42dd-a419-8a9cb4782fc5 ,HCM59791250 ,Mới tạo      ,2025-12-02 18:25:44.367716 ,Shop tạo đơn tại TP.HCM
+a1f70d9c-3a51-4021-bf62-c186e1cbbf1f ,HCM59791250 ,Đã điều phối ,2025-12-02 18:55:44.367716 ,Gán cho Shipper SHP_008
+bfb4c83b-abeb-4614-a153-e478b164b7b6 ,HCM59791250 ,Đang giao    ,2025-12-02 20:55:44.367716 ,Shipper đã lấy hàng
+80e382e6-20c5-4326-8d19-d2390cde09a8 ,HCM59791250 ,Đã giao      ,2025-12-03 17:55:44.367716 ,Giao thành công
+a8c38e36-ff9f-496d-bc26-72bb18deb180 ,HCM65794464 ,Mới tạo      ,2025-11-19 08:09:26.470814 ,Shop tạo đơn tại TP.HCM
+79ea9f9b-fdae-41df-9e68-8aae7aa6256c ,HCM65794464 ,Đã điều phối ,2025-11-19 08:39:26.470814 ,Gán cho Shipper SHP_010
+5439a3fd-a983-4d88-97cc-bc6fd7e59383 ,HCM65794464 ,Đang giao    ,2025-11-19 10:39:26.470814 ,Shipper đã lấy hàng
+8a0e4c2b-3001-4c44-8513-94fbaf92051a ,HCM65794464 ,Hoàn trả     ,2025-11-20 05:39:26.470814 ,Giao thất bại/Hoàn trả
+57726f42-54f3-4105-a0ce-7a27d784d9e2 ,HCM38268723 ,Mới tạo      ,2025-11-26 22:32:19.709481 ,Shop tạo đơn tại TP.HCM
+8ac5c7e0-b81a-494f-9a3e-115c43844667 ,HCM38268723 ,Đã điều phối ,2025-11-26 23:02:19.709481 ,Gán cho Shipper SHP_008
+1ba274de-d291-47a5-961a-c73c02eb79e0 ,HCM38268723 ,Đang giao    ,2025-11-27 01:02:19.709481 ,Shipper đã lấy hàng
+290d3741-1a3c-47c2-9c62-a7ded67f753e ,HCM38268723 ,Đang giao    ,2025-11-27 02:02:19.709481 ,Giao thất bại/Hoàn trả
+ddbfd24e-f424-4b75-93d6-66b584b39351 ,HCM24568588 ,Mới tạo      ,2025-11-22 11:18:32.084823 ,Shop tạo đơn tại TP.HCM
+cb53db7c-bb7e-4a5c-b969-edddb84e516d ,HCM24568588 ,Đã điều phối ,2025-11-22 11:48:32.084823 ,Gán cho Shipper SHP_005
+671acaff-d830-442e-9e2c-3887d57d04a7 ,HCM24568588 ,Đang giao    ,2025-11-22 13:48:32.084823 ,Shipper đã lấy hàng
+22c6c18f-5a77-4c52-a096-182e0bda03a6 ,HCM24568588 ,Đã giao      ,2025-11-22 22:48:32.084823 ,Giao thành công
+5a03b0d5-4cdf-44cb-a1dd-0399a1b9874d ,HCM71262504 ,Mới tạo      ,2025-12-04 08:50:31.749750 ,Shop tạo đơn tại TP.HCM
+22e7a5f3-cf79-4844-b1a4-a6bbedd75405 ,HCM71262504 ,Đã điều phối ,2025-12-04 09:20:31.749750 ,Gán cho Shipper SHP_012
+8cbb5e01-cfab-4d3d-9ce1-2beab886842f ,HCM71262504 ,Đang giao    ,2025-12-04 11:20:31.749750 ,Shipper đã lấy hàng
+3b1f620d-f4bb-4875-88fe-82f478079e65 ,HCM71262504 ,Đã giao      ,2025-12-05 04:20:31.749750 ,Giao thành công
+acb6f328-420d-4994-a069-28c79313ee1b ,HCM88775005 ,Mới tạo      ,2025-11-15 16:33:11.571752 ,Shop tạo đơn tại TP.HCM
+4ab601df-5e08-4db1-91e2-99cc8e07156a ,HCM6983415  ,Mới tạo      ,2025-11-23 15:54:39.371900 ,Shop tạo đơn tại TP.HCM
+e89ea63a-9727-49df-afde-ac333e398f23 ,HCM82937747 ,Mới tạo      ,2025-11-11 01:11:28.225051 ,Shop tạo đơn tại TP.HCM
+47bb2410-240f-4f7c-8cbe-6b2dd4ed77e0 ,HCM8491936  ,Mới tạo      ,2025-11-11 07:36:40.505539 ,Shop tạo đơn tại TP.HCM
+206aba6d-0dfa-4883-ac53-702a8d59d078 ,HCM82184832 ,Mới tạo      ,2025-11-24 08:11:29.195744 ,Shop tạo đơn tại TP.HCM
+483a4cf3-be34-4c40-a166-779bb8842886 ,HCM82184832 ,Đã điều phối ,2025-11-24 08:41:29.195744 ,Gán cho Shipper SHP_007
+351ce623-d374-4982-a8e5-28cd43a88249 ,HCM82184832 ,Đang giao    ,2025-11-24 10:41:29.195744 ,Shipper đã lấy hàng
+2922a8b1-a63c-4e32-beca-2befbf4d27cc ,HCM82184832 ,Đã giao      ,2025-11-24 11:41:29.195744 ,Giao thành công
+8ffe96b5-9d19-44e6-89c0-dc37125d94e1 ,HCM42818044 ,Mới tạo      ,2025-12-06 04:32:48.425551 ,Shop tạo đơn tại TP.HCM
+56c75c5b-78b2-4b3b-ba3f-f045e2edf560 ,HCM42818044 ,Đã điều phối ,2025-12-06 05:02:48.425551 ,Gán cho Shipper SHP_014
+86fc0b53-b0ba-4b07-9c9c-83db27d64e8e ,HCM42818044 ,Đang giao    ,2025-12-06 07:02:48.425551 ,Shipper đã lấy hàng
+b4ac9eb7-5573-46ec-bb6a-248a9ff04cee ,HCM42818044 ,Đang lấy     ,2025-12-07 07:02:48.425551 ,Giao thất bại/Hoàn trả
+7bea3721-66f8-47eb-9782-b796dfcf4ab0 ,HCM70140446 ,Mới tạo      ,2025-11-10 12:17:45.998330 ,Shop tạo đơn tại TP.HCM
+3613e0a2-703a-48b1-8e91-4d5bbbb786e5 ,HCM26375686 ,Mới tạo      ,2025-11-17 21:39:59.071621 ,Shop tạo đơn tại TP.HCM
+a2ad76d9-9b9f-4ae8-9da6-7079b0d4a43f ,HCM26375686 ,Đã điều phối ,2025-11-17 22:09:59.071621 ,Gán cho Shipper SHP_015
+86e86828-a572-4723-a976-ecc7bcce20db ,HCM26375686 ,Đang giao    ,2025-11-18 00:09:59.071621 ,Shipper đã lấy hàng
+277f99a3-c920-43a6-8c24-813edf35e980 ,HCM26375686 ,Hoàn trả     ,2025-11-18 04:09:59.071621 ,Giao thất bại/Hoàn trả
+536e5888-1443-4f17-a191-cc39721bc126 ,HCM25925725 ,Mới tạo      ,2025-11-24 17:57:40.262955 ,Shop tạo đơn tại TP.HCM
+f6c3bfe0-ad5f-479e-8b64-57c924fb1a72 ,HCM25925725 ,Đã điều phối ,2025-11-24 18:27:40.262955 ,Gán cho Shipper SHP_005
+c4faf7d6-617c-426b-bb54-fd43b9bc0da5 ,HCM25925725 ,Đang giao    ,2025-11-24 20:27:40.262955 ,Shipper đã lấy hàng
+24890068-f780-487b-821b-a7ee9205454f ,HCM25925725 ,Đang giao    ,2025-11-25 01:27:40.262955 ,Giao thất bại/Hoàn trả
+2c070627-039b-49f3-ad2b-3f548ffc8f6c ,HCM73377592 ,Mới tạo      ,2025-11-30 06:53:07.860523 ,Shop tạo đơn tại TP.HCM
+78a5cafe-3c88-49ee-a880-b0cda56ed1de ,HCM73377592 ,Đã điều phối ,2025-11-30 07:23:07.860523 ,Gán cho Shipper SHP_009
+8423873f-bf2d-40da-953b-603347a41c49 ,HCM73377592 ,Đang giao    ,2025-11-30 09:23:07.860523 ,Shipper đã lấy hàng
+13171cd4-c8a0-4657-a1f1-f62def4e87c8 ,HCM73377592 ,Đang giao    ,2025-11-30 23:23:07.860523 ,Giao thất bại/Hoàn trả
+93d4e8ad-e90d-47d0-8e95-342a16397213 ,HCM54715452 ,Mới tạo      ,2025-12-07 17:21:12.650878 ,Shop tạo đơn tại TP.HCM
+5d4224bc-7576-4cc7-9639-4a3742e16b5c ,HCM54715452 ,Đã điều phối ,2025-12-07 17:51:12.650878 ,Gán cho Shipper SHP_012
+06d3935d-448d-4f9d-a8a3-4c74a339db2f ,HCM54715452 ,Đang giao    ,2025-12-07 19:51:12.650878 ,Shipper đã lấy hàng
+8ce99e74-11ac-4856-8e06-70de3e44000b ,HCM54715452 ,Đã giao      ,2025-12-08 16:51:12.650878 ,Giao thành công
+c116c375-8a74-4a4b-bfdd-58f3c9ca6273 ,HCM50355873 ,Mới tạo      ,2025-12-05 17:48:49.194784 ,Shop tạo đơn tại TP.HCM
+f0888fc6-822f-4913-9652-be89d679acbc ,HCM70956748 ,Mới tạo      ,2025-11-22 03:30:43.475868 ,Shop tạo đơn tại TP.HCM
+fb87b524-d19d-4aeb-9443-e7072c7fff52 ,HCM38047454 ,Mới tạo      ,2025-12-04 23:15:54.589849 ,Shop tạo đơn tại TP.HCM
+51b5d0d4-08f1-4c74-9ab1-e779330f8e7a ,HCM38047454 ,Đã điều phối ,2025-12-04 23:45:54.589849 ,Gán cho Shipper SHP_003
+b48cd8c3-7afb-4845-977b-f244f8bc5d89 ,HCM38047454 ,Đang giao    ,2025-12-05 01:45:54.589849 ,Shipper đã lấy hàng
+44d0be24-b41b-4767-8084-28d6e6ec11a8 ,HCM38047454 ,Đang lấy     ,2025-12-05 14:45:54.589849 ,Giao thất bại/Hoàn trả
+4f2e2547-84f2-4fe9-a786-f3472cbfc56b ,HCM39582634 ,Mới tạo      ,2025-11-25 23:02:01.275756 ,Shop tạo đơn tại TP.HCM
+e1e7bc68-12f9-4708-a811-3fa28e4e962c ,HCM39582634 ,Đã điều phối ,2025-11-25 23:32:01.275756 ,Gán cho Shipper SHP_009
+19753d16-d453-4993-b943-b7044a349bd8 ,HCM39582634 ,Đang giao    ,2025-11-26 01:32:01.275756 ,Shipper đã lấy hàng
+59031c4a-45c3-4167-83e5-ee1535a78427 ,HCM39582634 ,Đang lấy     ,2025-11-26 17:32:01.275756 ,Giao thất bại/Hoàn trả
+0da918fe-52a5-4b81-848e-9de4b61ec157 ,HCM73135540 ,Mới tạo      ,2025-12-02 13:05:10.318470 ,Shop tạo đơn tại TP.HCM
+ed369a9e-f560-4b24-8cf1-bf551221765e ,HCM73135540 ,Đã điều phối ,2025-12-02 13:35:10.318470 ,Gán cho Shipper SHP_008
+47cd703a-e6d7-455d-ba5a-6c3adafc79ac ,HCM73135540 ,Đang giao    ,2025-12-02 15:35:10.318470 ,Shipper đã lấy hàng
+98b3b47d-4179-4378-ae54-e0c6ca1c5971 ,HCM73135540 ,Đang giao    ,2025-12-02 18:35:10.318470 ,Giao thất bại/Hoàn trả
+6d89b4a3-351b-4c66-a193-3d6311497d7a ,HCM71474443 ,Mới tạo      ,2025-11-22 20:12:23.519067 ,Shop tạo đơn tại TP.HCM
+96ec63b7-1bc6-4a20-a835-13e9a543b961 ,HCM71474443 ,Đã điều phối ,2025-11-22 20:42:23.519067 ,Gán cho Shipper SHP_012
+f8f4b20d-fddc-4c7f-896d-95a20cbd08e6 ,HCM71474443 ,Đang giao    ,2025-11-22 22:42:23.519067 ,Shipper đã lấy hàng
+344e1794-0ef0-4bf0-8d90-e9378261e13f ,HCM71474443 ,Đang giao    ,2025-11-23 17:42:23.519067 ,Giao thất bại/Hoàn trả
+efdb3f5a-9920-4297-8b39-6e80ad6c424b ,HCM52516305 ,Mới tạo      ,2025-11-15 05:16:24.395419 ,Shop tạo đơn tại TP.HCM
+609bc424-e523-4c74-b92e-8e732ea059ea ,HCM87763505 ,Mới tạo      ,2025-11-14 02:47:54.553378 ,Shop tạo đơn tại TP.HCM
+9ffb3255-6230-4268-a71b-a36110b7559e ,HCM87763505 ,Đã điều phối ,2025-11-14 03:17:54.553378 ,Gán cho Shipper SHP_009
+0cf2c5a2-77fc-46f7-a3f0-5d82ae18d8f0 ,HCM87763505 ,Đang giao    ,2025-11-14 05:17:54.553378 ,Shipper đã lấy hàng
+68020167-c69e-4bfe-87d2-054ea25a33e0 ,HCM87763505 ,Đang giao    ,2025-11-15 00:17:54.553378 ,Giao thất bại/Hoàn trả
+f015b7b5-6234-4dcb-9b9f-9070874897a3 ,HCM42062119 ,Mới tạo      ,2025-11-13 03:31:04.879540 ,Shop tạo đơn tại TP.HCM
+bb592153-03ec-4341-8000-06901cb90056 ,HCM67644731 ,Mới tạo      ,2025-11-10 18:06:18.382204 ,Shop tạo đơn tại TP.HCM
+4e8e5081-0f24-4a13-b731-64afc5b1e74c ,HCM67644731 ,Đã điều phối ,2025-11-10 18:36:18.382204 ,Gán cho Shipper SHP_008
+13c0e5c8-7cf3-4bea-ba90-94b7678580f5 ,HCM67644731 ,Đang giao    ,2025-11-10 20:36:18.382204 ,Shipper đã lấy hàng
+696eae71-5923-4a3b-8720-ef19d128fdfd ,HCM67644731 ,Đang giao    ,2025-11-11 06:36:18.382204 ,Giao thất bại/Hoàn trả
+d9c9066d-f044-4bbd-992b-5e4d2b572d4c ,HCM49007713 ,Mới tạo      ,2025-11-28 00:34:39.070492 ,Shop tạo đơn tại TP.HCM
+2f811e6a-bbdf-48d4-9736-d616eba57afc ,HCM29720976 ,Mới tạo      ,2025-11-20 09:38:15.220572 ,Shop tạo đơn tại TP.HCM
+b9df03a5-b233-4078-b97b-3e9c6260fda0 ,HCM29720976 ,Đã điều phối ,2025-11-20 10:08:15.220572 ,Gán cho Shipper SHP_011
+58144472-de3d-4d44-95e9-db582223b852 ,HCM29720976 ,Đang giao    ,2025-11-20 12:08:15.220572 ,Shipper đã lấy hàng
+b71dbac7-a1c1-4116-b3ff-aeef51062cd3 ,HCM29720976 ,Đã giao      ,2025-11-21 00:08:15.220572 ,Giao thành công
+88de5c34-20bd-40f5-aaff-2f821e4a58f4 ,HCM51940536 ,Mới tạo      ,2025-11-17 00:27:38.257669 ,Shop tạo đơn tại TP.HCM
+195f70c5-3e6f-427b-99c7-b18380a21147 ,HCM92682800 ,Mới tạo      ,2025-11-16 05:39:40.910766 ,Shop tạo đơn tại TP.HCM
+02d3402b-7813-4b29-8910-c67e1ef9c994 ,HCM92682800 ,Đã điều phối ,2025-11-16 06:09:40.910766 ,Gán cho Shipper SHP_010
+323abb63-e220-4842-8ae1-764a9bb20ba1 ,HCM92682800 ,Đang giao    ,2025-11-16 08:09:40.910766 ,Shipper đã lấy hàng
+1875b15d-9f06-4d8c-9853-83b9cf88b000 ,HCM92682800 ,Hoàn trả     ,2025-11-16 18:09:40.910766 ,Giao thất bại/Hoàn trả
+4a37a49c-c493-4d91-8634-4db3eb018cd4 ,HCM89076220 ,Mới tạo      ,2025-11-23 23:29:56.360844 ,Shop tạo đơn tại TP.HCM
+cbb5278b-7cc6-43e7-8ef1-defcd0d5ff2f ,HCM24727680 ,Mới tạo      ,2025-12-01 04:10:19.700675 ,Shop tạo đơn tại TP.HCM
+18b3d078-4d22-41b4-a595-58352a7d557c ,HCM23609628 ,Mới tạo      ,2025-11-10 10:07:40.354782 ,Shop tạo đơn tại TP.HCM
+852f2466-49d0-4d70-af2b-dbbf8303b72d ,HCM23609628 ,Đã điều phối ,2025-11-10 10:37:40.354782 ,Gán cho Shipper SHP_014
+1c04638d-064c-4127-95b7-2eb854990d45 ,HCM23609628 ,Đang giao    ,2025-11-10 12:37:40.354782 ,Shipper đã lấy hàng
+86ad4264-e5ed-4371-92a1-a63337e6ca27 ,HCM23609628 ,Đang giao    ,2025-11-11 10:37:40.354782 ,Giao thất bại/Hoàn trả
+ed32aa7e-d697-4762-8177-a7251b0a9952 ,HCM29973138 ,Mới tạo      ,2025-11-30 21:05:33.040876 ,Shop tạo đơn tại TP.HCM
+970696c2-3004-4e4f-8df4-8be5d3fb8a26 ,HCM31518669 ,Mới tạo      ,2025-12-08 20:38:18.240877 ,Shop tạo đơn tại TP.HCM
+1b1aa59d-2c23-4f47-a4fa-d97527dda3ff ,HCM31518669 ,Đã điều phối ,2025-12-08 21:08:18.240877 ,Gán cho Shipper SHP_002
+87646dc1-98a4-49d3-8070-53116f58bf3a ,HCM31518669 ,Đang giao    ,2025-12-08 23:08:18.240877 ,Shipper đã lấy hàng
+1d0c7cde-d47d-44f6-b5ff-ce187f1ac950 ,HCM31518669 ,Hoàn trả     ,2025-12-09 11:08:18.240877 ,Giao thất bại/Hoàn trả
+45961154-751a-4c1a-ac15-353108827a09 ,HCM53027792 ,Mới tạo      ,2025-11-15 20:20:02.090592 ,Shop tạo đơn tại TP.HCM
+2e642b2f-7fc3-450b-bffe-0ad16d85113a ,HCM53027792 ,Đã điều phối ,2025-11-15 20:50:02.090592 ,Gán cho Shipper SHP_002
+f3c31756-0b2c-43b4-8d02-5bf7368d80a6 ,HCM53027792 ,Đang giao    ,2025-11-15 22:50:02.090592 ,Shipper đã lấy hàng
+08972682-3f3c-4162-9d19-d07455637c7f ,HCM53027792 ,Đang giao    ,2025-11-16 17:50:02.090592 ,Giao thất bại/Hoàn trả
+cbfa0578-21f7-44c3-bfd4-4eafa34d0861 ,HCM65535230 ,Mới tạo      ,2025-12-01 04:07:26.312415 ,Shop tạo đơn tại TP.HCM
+e33c4cd8-23b9-47f4-83d9-9626c27281da ,HCM28502899 ,Mới tạo      ,2025-12-08 06:44:12.680044 ,Shop tạo đơn tại TP.HCM
+d7289b68-75ff-41fe-a68d-2a3bc47a656c ,HCM28502899 ,Đã điều phối ,2025-12-08 07:14:12.680044 ,Gán cho Shipper SHP_014
+9d0485a2-251a-4c63-851e-7c3513db5468 ,HCM28502899 ,Đang giao    ,2025-12-08 09:14:12.680044 ,Shipper đã lấy hàng
+cb83d10d-7ab8-4ef1-81f2-7eedc21bd47b ,HCM28502899 ,Đã giao      ,2025-12-08 12:14:12.680044 ,Giao thành công
+cca598f6-684d-4aaf-84dc-803fbf693d0e ,HCM26218902 ,Mới tạo      ,2025-12-01 21:11:38.378826 ,Shop tạo đơn tại TP.HCM
+03107ec0-497d-424d-9dd2-715467a55ea5 ,HCM76762886 ,Mới tạo      ,2025-11-12 08:51:33.470338 ,Shop tạo đơn tại TP.HCM
+8a6b8cdf-7fc6-4d2f-bb72-0f0cead85705 ,HCM10839828 ,Mới tạo      ,2025-11-16 09:13:55.838855 ,Shop tạo đơn tại TP.HCM
+b45916a3-08c0-47be-9841-e16cb75ffdbd ,HCM18592693 ,Mới tạo      ,2025-11-27 15:53:41.377017 ,Shop tạo đơn tại TP.HCM
+f61b42e0-fdb9-4374-87e1-dcbb0467b31b ,HCM31319214 ,Mới tạo      ,2025-11-11 11:46:40.618747 ,Shop tạo đơn tại TP.HCM
+07981053-0dcb-44d0-8e7f-d3d1f48ae5f0 ,HCM31319214 ,Đã điều phối ,2025-11-11 12:16:40.618747 ,Gán cho Shipper SHP_007
+255a3b11-9d4a-4f7b-8920-7425d2bbb031 ,HCM31319214 ,Đang giao    ,2025-11-11 14:16:40.618747 ,Shipper đã lấy hàng
+f2ca47ea-e648-4f03-a291-9aad374e6d20 ,HCM31319214 ,Đang lấy     ,2025-11-12 03:16:40.618747 ,Giao thất bại/Hoàn trả
+343754d9-a598-4beb-99cf-cb35bd9032a7 ,HCM59849291 ,Mới tạo      ,2025-11-27 05:53:38.273328 ,Shop tạo đơn tại TP.HCM
+3e7bd66a-f1df-4769-876b-52edb0f2423c ,HCM59849291 ,Đã điều phối ,2025-11-27 06:23:38.273328 ,Gán cho Shipper SHP_007
+75cef9bc-ca8b-47f3-98e3-655e5ad9bb4c ,HCM59849291 ,Đang giao    ,2025-11-27 08:23:38.273328 ,Shipper đã lấy hàng
+86ca9632-6c3a-4cca-a65d-ad7c2f930399 ,HCM59849291 ,Hoàn trả     ,2025-11-28 02:23:38.273328 ,Giao thất bại/Hoàn trả
+c9458ab7-b120-4ab5-9a09-4a6025773422 ,HCM94037260 ,Mới tạo      ,2025-12-05 05:55:39.349035 ,Shop tạo đơn tại TP.HCM
+720cd961-120c-42a3-a9a4-cf55ff0ca3dc ,HCM94037260 ,Đã điều phối ,2025-12-05 06:25:39.349035 ,Gán cho Shipper SHP_010
+11c91f71-5cb3-49c5-8150-41f206c4bb54 ,HCM94037260 ,Đang giao    ,2025-12-05 08:25:39.349035 ,Shipper đã lấy hàng
+07570ec0-fab5-405f-964f-1f949aa2d1a5 ,HCM94037260 ,Đã giao      ,2025-12-06 08:25:39.349035 ,Giao thành công
+2f0aa461-b883-4903-b7ca-e5845ccc3c5c ,HCM61041289 ,Mới tạo      ,2025-12-08 17:48:22.690454 ,Shop tạo đơn tại TP.HCM
+ad6fb3e1-bd2a-427c-845a-4cd7c32e86be ,HCM56852439 ,Mới tạo      ,2025-11-29 04:22:18.335118 ,Shop tạo đơn tại TP.HCM
+c623944a-86e5-4dd4-bb13-13a7815b302c ,HCM68898794 ,Mới tạo      ,2025-11-15 14:50:43.894937 ,Shop tạo đơn tại TP.HCM
+bf5af045-450c-4047-ab89-72ee74f549ef ,HCM68898794 ,Đã điều phối ,2025-11-15 15:20:43.894937 ,Gán cho Shipper SHP_005
+f2830c0f-8a83-4f98-acfb-e36810a192d2 ,HCM68898794 ,Đang giao    ,2025-11-15 17:20:43.894937 ,Shipper đã lấy hàng
+01c3361d-14b4-4e7b-8b5d-51228a5f47df ,HCM68898794 ,Đang giao    ,2025-11-16 01:20:43.894937 ,Giao thất bại/Hoàn trả
+ce61d14b-bbbd-42fc-baee-a7a6f81a8bca ,HCM20217059 ,Mới tạo      ,2025-11-12 12:14:13.677132 ,Shop tạo đơn tại TP.HCM
+b8325942-ff6f-43a4-8adb-a986fc2aa64c ,HCM20217059 ,Đã điều phối ,2025-11-12 12:44:13.677132 ,Gán cho Shipper SHP_005
+c6362eac-f049-4f93-82f3-32728228aac4 ,HCM20217059 ,Đang giao    ,2025-11-12 14:44:13.677132 ,Shipper đã lấy hàng
+45b1d9e1-ab54-467f-8851-b3bb295702c7 ,HCM20217059 ,Đã giao      ,2025-11-12 23:44:13.677132 ,Giao thành công
+77d29e06-4c18-42f0-961c-535d801ceda1 ,HCM34628902 ,Mới tạo      ,2025-11-09 21:47:32.159770 ,Shop tạo đơn tại TP.HCM
+ab8136a1-7336-42da-823c-a59277dfb1f3 ,HCM34628902 ,Đã điều phối ,2025-11-09 22:17:32.159770 ,Gán cho Shipper SHP_012
+b4b7602a-5912-4576-a795-7ee3b70107d6 ,HCM34628902 ,Đang giao    ,2025-11-10 00:17:32.159770 ,Shipper đã lấy hàng
+2e56abbf-b053-4376-b004-aac5d6b5424b ,HCM34628902 ,Đang lấy     ,2025-11-10 05:17:32.159770 ,Giao thất bại/Hoàn trả
+c109c9bd-9612-4f18-b86f-5fbc321e3dba ,HCM75166489 ,Mới tạo      ,2025-11-15 10:23:41.214339 ,Shop tạo đơn tại TP.HCM
+3edb74a1-d2c5-455d-8be2-3352ffdd3446 ,HCM99806543 ,Mới tạo      ,2025-11-21 09:34:50.409781 ,Shop tạo đơn tại TP.HCM
+7cb2d16f-05ec-4bd9-a623-b6d1c09df751 ,HCM35137636 ,Mới tạo      ,2025-12-07 06:05:54.211447 ,Shop tạo đơn tại TP.HCM
+d45dc4dd-884e-42e1-a3f5-f09b4e7b2e10 ,HCM35137636 ,Đã điều phối ,2025-12-07 06:35:54.211447 ,Gán cho Shipper SHP_014
+c4b7e431-b754-4dfc-9fd8-a94b33bf169a ,HCM35137636 ,Đang giao    ,2025-12-07 08:35:54.211447 ,Shipper đã lấy hàng
+09593203-7113-447c-80a2-13f647a30f9a ,HCM35137636 ,Hoàn trả     ,2025-12-07 17:35:54.211447 ,Giao thất bại/Hoàn trả
+402f1855-6b2d-46b4-bb85-08d8bcd25d99 ,HCM88377669 ,Mới tạo      ,2025-12-04 08:20:04.468575 ,Shop tạo đơn tại TP.HCM
+429f18c6-f729-425b-8a27-1ca7ca59453d ,HCM4668511  ,Mới tạo      ,2025-11-15 07:23:10.599374 ,Shop tạo đơn tại TP.HCM
+6cb0e319-5162-47e2-8839-82a0218a7e80 ,HCM4668511  ,Đã điều phối ,2025-11-15 07:53:10.599374 ,Gán cho Shipper SHP_015
+73c533ae-294f-4f10-9407-ec2cbb180fbb ,HCM4668511  ,Đang giao    ,2025-11-15 09:53:10.599374 ,Shipper đã lấy hàng
+f9d63394-ce91-4c5e-98e9-a9af14c5f41e ,HCM4668511  ,Đang lấy     ,2025-11-15 20:53:10.599374 ,Giao thất bại/Hoàn trả
+cfd1b96d-e723-449e-a827-53db8c1ca901 ,HCM63517811 ,Mới tạo      ,2025-12-06 00:09:47.710382 ,Shop tạo đơn tại TP.HCM
+cde24d16-5cdd-46a8-a1bb-0bdc8a0f1357 ,HCM78661228 ,Mới tạo      ,2025-11-16 21:51:35.692231 ,Shop tạo đơn tại TP.HCM
+7261c880-df1b-4c1d-9936-2d36ac76e1f5 ,HCM78661228 ,Đã điều phối ,2025-11-16 22:21:35.692231 ,Gán cho Shipper SHP_002
+1833381a-b62c-4086-a583-170a3076191f ,HCM78661228 ,Đang giao    ,2025-11-17 00:21:35.692231 ,Shipper đã lấy hàng
+4628d94d-13fb-4929-b141-4e5e440f1c22 ,HCM78661228 ,Hoàn trả     ,2025-11-17 04:21:35.692231 ,Giao thất bại/Hoàn trả
+7c46f532-1cd1-453a-a4f6-a7fc1ff37f71 ,HCM5726979  ,Mới tạo      ,2025-11-15 12:07:15.976190 ,Shop tạo đơn tại TP.HCM
+4ef5e147-fdd5-4551-b12d-9447e1632d95 ,HCM5726979  ,Đã điều phối ,2025-11-15 12:37:15.976190 ,Gán cho Shipper SHP_014
+804aeaad-9a06-4cbc-a159-fbbbebc301a8 ,HCM5726979  ,Đang giao    ,2025-11-15 14:37:15.976190 ,Shipper đã lấy hàng
+bfd11807-1859-4448-82a7-35b222315da6 ,HCM5726979  ,Đang giao    ,2025-11-15 18:37:15.976190 ,Giao thất bại/Hoàn trả
+e0924534-3e0f-4bdc-891b-412336443f89 ,HCM42804106 ,Mới tạo      ,2025-11-21 23:38:35.759698 ,Shop tạo đơn tại TP.HCM
+a0cd080e-0e9f-4422-9a8d-dab0ed0b0b66 ,HCM77256747 ,Mới tạo      ,2025-11-09 15:19:03.517493 ,Shop tạo đơn tại TP.HCM
+dd474545-c856-417c-bb5d-ff6b36aa0cc6 ,HCM43270523 ,Mới tạo      ,2025-12-01 00:40:31.912834 ,Shop tạo đơn tại TP.HCM
+b11de1de-952b-4797-b011-95927324d840 ,HCM43270523 ,Đã điều phối ,2025-12-01 01:10:31.912834 ,Gán cho Shipper SHP_011
+92d26ede-fdc2-4c2b-8faf-8d305e9e1fa5 ,HCM43270523 ,Đang giao    ,2025-12-01 03:10:31.912834 ,Shipper đã lấy hàng
+c525ff4b-275c-4c8d-b2dc-9f2fd770b429 ,HCM43270523 ,Đang lấy     ,2025-12-01 15:10:31.912834 ,Giao thất bại/Hoàn trả
+c8c97627-4726-4d70-a499-605b3cb6c6a3 ,HCM48108601 ,Mới tạo      ,2025-12-06 23:00:12.166812 ,Shop tạo đơn tại TP.HCM
+3f999720-8164-4600-8790-2f0429b94225 ,HCM83651042 ,Mới tạo      ,2025-11-11 09:50:31.239193 ,Shop tạo đơn tại TP.HCM
+8973a7c2-2156-40b9-8a5f-dc2801210141 ,HCM66542446 ,Mới tạo      ,2025-11-30 02:33:15.758536 ,Shop tạo đơn tại TP.HCM
+334fa1e0-5d6f-4d85-9c11-11532b2cab8f ,HCM66542446 ,Đã điều phối ,2025-11-30 03:03:15.758536 ,Gán cho Shipper SHP_014
+bb1cadf2-f20a-4c7f-9b70-6ffd9ea18137 ,HCM66542446 ,Đang giao    ,2025-11-30 05:03:15.758536 ,Shipper đã lấy hàng
+4d72a9b1-1ff3-4703-85ae-8b4f7d05166b ,HCM66542446 ,Đã giao      ,2025-11-30 19:03:15.758536 ,Giao thành công
+9831466f-e624-41a1-b313-54ae3405b005 ,HCM48838045 ,Mới tạo      ,2025-11-25 19:50:15.201913 ,Shop tạo đơn tại TP.HCM
+b0b8cd3c-d9ec-44a9-a502-a0f8d5a2f8ca ,HCM48838045 ,Đã điều phối ,2025-11-25 20:20:15.201913 ,Gán cho Shipper SHP_006
+4036b29f-465e-43d0-82b0-d29a46956e20 ,HCM48838045 ,Đang giao    ,2025-11-25 22:20:15.201913 ,Shipper đã lấy hàng
+e68fbc1b-a51c-43b0-bb7a-6aadd6c5f1c9 ,HCM48838045 ,Đang giao    ,2025-11-25 23:20:15.201913 ,Giao thất bại/Hoàn trả
+b1e6004d-dee2-4869-8e8a-64b845ef33a5 ,HCM73474247 ,Mới tạo      ,2025-11-10 08:30:47.776913 ,Shop tạo đơn tại TP.HCM
+5839c741-8d58-40ce-9016-aeb663720c1a ,HCM73474247 ,Đã điều phối ,2025-11-10 09:00:47.776913 ,Gán cho Shipper SHP_004
+5cb60fb4-18af-474e-8304-6c213475241a ,HCM73474247 ,Đang giao    ,2025-11-10 11:00:47.776913 ,Shipper đã lấy hàng
+68ef0591-c9b5-47c9-a649-2624798702e4 ,HCM73474247 ,Đang giao    ,2025-11-10 23:00:47.776913 ,Giao thất bại/Hoàn trả
+4cd960c5-3c9b-4ffd-ba7e-51665e5d2c38 ,HCM97623261 ,Mới tạo      ,2025-12-07 10:51:01.845578 ,Shop tạo đơn tại TP.HCM
+56378264-e631-49c1-b760-d5f3b5266e0d ,HCM49125313 ,Mới tạo      ,2025-11-25 03:53:54.198333 ,Shop tạo đơn tại TP.HCM
+4f865dd0-afe0-46db-8ce8-767eb45df6d8 ,HCM49125313 ,Đã điều phối ,2025-11-25 04:23:54.198333 ,Gán cho Shipper SHP_006
+880d9ee5-2fca-40aa-9cd9-68aba5340924 ,HCM49125313 ,Đang giao    ,2025-11-25 06:23:54.198333 ,Shipper đã lấy hàng
+72c74d5a-bb52-4119-8421-7498f694e24c ,HCM49125313 ,Hoàn trả     ,2025-11-25 13:23:54.198333 ,Giao thất bại/Hoàn trả
+809b0072-d601-49b9-a2b7-92e6ae548a8c ,HCM35932440 ,Mới tạo      ,2025-12-03 03:20:39.549821 ,Shop tạo đơn tại TP.HCM
+fe75a995-7e47-4d3e-a017-079fcb7145be ,HCM76756451 ,Mới tạo      ,2025-11-16 05:53:28.300754 ,Shop tạo đơn tại TP.HCM
+8677f6f8-bf0b-4001-9c98-4e87f7e74605 ,HCM76756451 ,Đã điều phối ,2025-11-16 06:23:28.300754 ,Gán cho Shipper SHP_010
+433dfa7e-abd5-45a4-b6af-4cffbd80bb70 ,HCM76756451 ,Đang giao    ,2025-11-16 08:23:28.300754 ,Shipper đã lấy hàng
+188cee6c-76b3-4640-b6c7-173f7a2235a2 ,HCM76756451 ,Đang lấy     ,2025-11-16 23:23:28.300754 ,Giao thất bại/Hoàn trả
+f79aac80-e2e6-4670-bd42-6ef746e0bba0 ,HCM61731476 ,Mới tạo      ,2025-11-21 01:59:41.652941 ,Shop tạo đơn tại TP.HCM
+83b12933-db2d-49c7-a495-4d870fdf5582 ,HCM12893216 ,Mới tạo      ,2025-12-02 07:29:41.374521 ,Shop tạo đơn tại TP.HCM
+c914bb66-dbdc-4420-8ea4-589cb5f1c325 ,HCM12893216 ,Đã điều phối ,2025-12-02 07:59:41.374521 ,Gán cho Shipper SHP_009
+fa9d381e-8445-4413-840c-bf322d532206 ,HCM12893216 ,Đang giao    ,2025-12-02 09:59:41.374521 ,Shipper đã lấy hàng
+03b8f49e-a704-4080-8dcf-1ad2c04bf2c2 ,HCM12893216 ,Đang giao    ,2025-12-02 19:59:41.374521 ,Giao thất bại/Hoàn trả
+083af338-c132-4d3c-a274-cf919e6dc90f ,HCM35951706 ,Mới tạo      ,2025-11-20 14:15:13.424006 ,Shop tạo đơn tại TP.HCM
+a775150f-71b0-4be6-9516-cbadaf76973e ,HCM35951706 ,Đã điều phối ,2025-11-20 14:45:13.424006 ,Gán cho Shipper SHP_001
+2be4b564-5e5b-4e08-871f-4d7f0456d373 ,HCM35951706 ,Đang giao    ,2025-11-20 16:45:13.424006 ,Shipper đã lấy hàng
+1761d680-4126-402a-aa6c-4b6d23052520 ,HCM35951706 ,Đã giao      ,2025-11-20 19:45:13.424006 ,Giao thành công
+05c36e77-fe2b-40a5-9158-c8f9208614cc ,HCM36043673 ,Mới tạo      ,2025-11-30 15:10:20.980444 ,Shop tạo đơn tại TP.HCM
+7d9b7811-de02-4c10-a434-a83510ad4bc2 ,HCM11753163 ,Mới tạo      ,2025-12-05 17:40:59.706771 ,Shop tạo đơn tại TP.HCM
+564b6530-b1b0-46db-96ae-aaad61042783 ,HCM11753163 ,Đã điều phối ,2025-12-05 18:10:59.706771 ,Gán cho Shipper SHP_010
+ae1cf6ae-3d2a-448d-968b-ee52a52d1822 ,HCM11753163 ,Đang giao    ,2025-12-05 20:10:59.706771 ,Shipper đã lấy hàng
+6a7893bb-0d3a-4358-b6b7-c36458c41e29 ,HCM11753163 ,Đã giao      ,2025-12-06 15:10:59.706771 ,Giao thành công
+8f4e448a-044b-4b5f-8976-5a8cbb04fae8 ,HCM19210501 ,Mới tạo      ,2025-12-04 19:09:11.607061 ,Shop tạo đơn tại TP.HCM
+4c9c93ea-67a8-4129-991d-41b0bd8c8918 ,HCM11550113 ,Mới tạo      ,2025-12-02 06:20:32.550848 ,Shop tạo đơn tại TP.HCM
+960662aa-83bb-4bcc-8c4e-2c8f17c37af3 ,HCM11550113 ,Đã điều phối ,2025-12-02 06:50:32.550848 ,Gán cho Shipper SHP_011
+68799858-8bc1-4036-9748-e97633b0325f ,HCM11550113 ,Đang giao    ,2025-12-02 08:50:32.550848 ,Shipper đã lấy hàng
+5651a051-50e6-4b38-92f1-cd48a0476e08 ,HCM11550113 ,Đã giao      ,2025-12-03 05:50:32.550848 ,Giao thành công
+3ae00f36-fd28-449f-b664-84ca28b2f419 ,HCM3026656  ,Mới tạo      ,2025-11-23 22:24:35.678520 ,Shop tạo đơn tại TP.HCM
+7f75c7c3-0dbe-469c-acce-16aed1f2ebcc ,HCM3026656  ,Đã điều phối ,2025-11-23 22:54:35.678520 ,Gán cho Shipper SHP_005
+2fa78bd2-f4fd-4d35-be4e-25bac6c6ba71 ,HCM3026656  ,Đang giao    ,2025-11-24 00:54:35.678520 ,Shipper đã lấy hàng
+0a4c9f9e-45f1-4e02-85cd-ce50eb38ef8d ,HCM3026656  ,Đang lấy     ,2025-11-24 10:54:35.678520 ,Giao thất bại/Hoàn trả
+97101362-e108-41e9-8b6e-0da5e04c6220 ,HCM63703876 ,Mới tạo      ,2025-12-03 09:42:30.114470 ,Shop tạo đơn tại TP.HCM
+3ab6f7a3-8f4c-4e26-a81b-3208c025f4d6 ,HCM63703876 ,Đã điều phối ,2025-12-03 10:12:30.114470 ,Gán cho Shipper SHP_012
+29146e85-a705-4536-ad37-6d2b9db7fa9a ,HCM63703876 ,Đang giao    ,2025-12-03 12:12:30.114470 ,Shipper đã lấy hàng
+ffeb4d8c-3aae-4174-a98b-57bf89a1b6d9 ,HCM63703876 ,Đã giao      ,2025-12-03 15:12:30.114470 ,Giao thành công
+768a6fee-f246-414d-922b-a51ead754307 ,HCM16332826 ,Mới tạo      ,2025-11-28 13:50:35.516711 ,Shop tạo đơn tại TP.HCM
+8548799c-552e-4dbc-a048-ed4ab29e5a5e ,HCM93546855 ,Mới tạo      ,2025-11-23 19:58:10.531982 ,Shop tạo đơn tại TP.HCM
+c48363a9-5c18-413b-8f44-73cf5788d763 ,HCM93546855 ,Đã điều phối ,2025-11-23 20:28:10.531982 ,Gán cho Shipper SHP_009
+59f75604-da5c-4ee3-934d-7d33f89dbfe7 ,HCM93546855 ,Đang giao    ,2025-11-23 22:28:10.531982 ,Shipper đã lấy hàng
+b1ce5912-a8a8-4861-91a0-5269a67c5b64 ,HCM93546855 ,Đã giao      ,2025-11-24 03:28:10.531982 ,Giao thành công
+bcab02fc-be7c-4374-8941-af9afa5ba304 ,HCM5393751  ,Mới tạo      ,2025-12-07 19:36:25.630946 ,Shop tạo đơn tại TP.HCM
+ee5a7330-bb31-4d96-985b-a8870cb0afa3 ,HCM5393751  ,Đã điều phối ,2025-12-07 20:06:25.630946 ,Gán cho Shipper SHP_014
+c8d74f66-d7c5-472f-b31d-fe5315bd697a ,HCM5393751  ,Đang giao    ,2025-12-07 22:06:25.630946 ,Shipper đã lấy hàng
+518cc5af-d3b7-4df0-b20d-b149b9f1892a ,HCM5393751  ,Đã giao      ,2025-12-08 13:06:25.630946 ,Giao thành công
+53a18bd6-0113-4621-9282-b9d15349686b ,HCM47066836 ,Mới tạo      ,2025-11-20 01:20:40.100881 ,Shop tạo đơn tại TP.HCM
+92aac999-603c-40f2-a91e-e524674b14ef ,HCM35812897 ,Mới tạo      ,2025-11-13 05:56:52.760061 ,Shop tạo đơn tại TP.HCM
+137c9de0-5bf8-4b4f-a1e8-64f7fd779ca3 ,HCM59376194 ,Mới tạo      ,2025-11-09 16:46:16.699425 ,Shop tạo đơn tại TP.HCM
+3d4092c9-0985-44cd-bac0-331c7b21e4d4 ,HCM59376194 ,Đã điều phối ,2025-11-09 17:16:16.699425 ,Gán cho Shipper SHP_010
+110d1cbe-e96a-4f3b-bf35-fc73231fafa2 ,HCM59376194 ,Đang giao    ,2025-11-09 19:16:16.699425 ,Shipper đã lấy hàng
+73950721-4c2a-4840-8035-496932ba0813 ,HCM59376194 ,Hoàn trả     ,2025-11-10 02:16:16.699425 ,Giao thất bại/Hoàn trả
+f70ffc0d-1c08-4438-9486-3a8b53d18286 ,HCM38237993 ,Mới tạo      ,2025-12-08 10:35:20.714615 ,Shop tạo đơn tại TP.HCM
+ca087a87-e779-4cfb-aa2e-75374c58807d ,HCM38237993 ,Đã điều phối ,2025-12-08 11:05:20.714615 ,Gán cho Shipper SHP_015
+0521d41d-4272-4806-abe4-e68aae28f0f0 ,HCM38237993 ,Đang giao    ,2025-12-08 13:05:20.714615 ,Shipper đã lấy hàng
+78170045-cc76-4c58-bde0-94e43915f4c4 ,HCM38237993 ,Đã giao      ,2025-12-08 14:05:20.714615 ,Giao thành công
+c61d5a2b-db5e-44b2-9ba6-b99bfb1fbcb2 ,HCM34084740 ,Mới tạo      ,2025-11-19 08:58:39.343312 ,Shop tạo đơn tại TP.HCM
+57bdbd7e-92f6-4842-b0ac-0721d139769a ,HCM34084740 ,Đã điều phối ,2025-11-19 09:28:39.343312 ,Gán cho Shipper SHP_013
+0a07e0ea-d4b1-45e5-b28f-c794232d5801 ,HCM34084740 ,Đang giao    ,2025-11-19 11:28:39.343312 ,Shipper đã lấy hàng
+15491df2-4656-4e16-ab0b-4f0d4966b08c ,HCM34084740 ,Đang giao    ,2025-11-19 20:28:39.343312 ,Giao thất bại/Hoàn trả
+d26a9d40-f2a3-4bce-9651-5bff4c1d54db ,HCM50042862 ,Mới tạo      ,2025-11-22 17:57:57.221104 ,Shop tạo đơn tại TP.HCM
+354b1875-c0f5-4b5e-be7a-e0bea3c392be ,HCM7470042  ,Mới tạo      ,2025-11-12 21:43:27.823983 ,Shop tạo đơn tại TP.HCM
+807fb8e8-d7d8-4a6b-8723-264881802d52 ,HCM7470042  ,Đã điều phối ,2025-11-12 22:13:27.823983 ,Gán cho Shipper SHP_011
+9ead3bb1-927e-4251-8f70-dfec1be35fff ,HCM7470042  ,Đang giao    ,2025-11-13 00:13:27.823983 ,Shipper đã lấy hàng
+98835e08-e8e3-4feb-abdc-68984b8cddbb ,HCM7470042  ,Đang giao    ,2025-11-13 02:13:27.823983 ,Giao thất bại/Hoàn trả
+8387d5c1-06b0-45f4-a3c5-1bc60d9014ef ,HCM89808571 ,Mới tạo      ,2025-11-28 00:57:10.647587 ,Shop tạo đơn tại TP.HCM
+4dfc186a-0eb4-41e3-bbe2-0b477c1de35f ,HCM89808571 ,Đã điều phối ,2025-11-28 01:27:10.647587 ,Gán cho Shipper SHP_012
+6493b860-3f01-4d95-b6f5-7dd67308dbc5 ,HCM89808571 ,Đang giao    ,2025-11-28 03:27:10.647587 ,Shipper đã lấy hàng
+c9f14e93-575d-4222-82ae-d690e14bb858 ,HCM89808571 ,Đang lấy     ,2025-11-28 04:27:10.647587 ,Giao thất bại/Hoàn trả
+084d9fb0-9185-43dd-9a2f-f2de3b0355c6 ,HCM26567351 ,Mới tạo      ,2025-11-11 06:50:08.476927 ,Shop tạo đơn tại TP.HCM
+a575fde2-4221-403e-8a5e-e2cfe0ef9be9 ,HCM26567351 ,Đã điều phối ,2025-11-11 07:20:08.476927 ,Gán cho Shipper SHP_005
+2476cc41-6297-4cf2-9e88-4b66fdd3fb58 ,HCM26567351 ,Đang giao    ,2025-11-11 09:20:08.476927 ,Shipper đã lấy hàng
+fa82bc66-d847-433e-b9b0-9bbfe0fcb5c6 ,HCM26567351 ,Đang giao    ,2025-11-11 14:20:08.476927 ,Giao thất bại/Hoàn trả
+c89a3544-7999-4ebc-a7db-16dbae6d5076 ,HCM25782990 ,Mới tạo      ,2025-11-29 23:12:58.556177 ,Shop tạo đơn tại TP.HCM
+d5b873f9-b902-41f9-bd2c-d87b5c82237d ,HCM25782990 ,Đã điều phối ,2025-11-29 23:42:58.556177 ,Gán cho Shipper SHP_011
+e359bfb9-17c5-44a5-ac32-0012c5553865 ,HCM25782990 ,Đang giao    ,2025-11-30 01:42:58.556177 ,Shipper đã lấy hàng
+c86669a4-5ae5-4479-9492-bff60c4e5fcf ,HCM25782990 ,Đang giao    ,2025-11-30 07:42:58.556177 ,Giao thất bại/Hoàn trả
+18988809-605b-4670-8f2a-d5f4e0a6d642 ,HCM36720739 ,Mới tạo      ,2025-11-12 09:39:05.781456 ,Shop tạo đơn tại TP.HCM
+185090bf-480c-4f7a-9087-ef2bcf070299 ,HCM36720739 ,Đã điều phối ,2025-11-12 10:09:05.781456 ,Gán cho Shipper SHP_008
+e32938c8-8691-4597-ae56-d064ed62247a ,HCM36720739 ,Đang giao    ,2025-11-12 12:09:05.781456 ,Shipper đã lấy hàng
+25de6187-f1da-4ec0-a920-110148475bc1 ,HCM36720739 ,Đang lấy     ,2025-11-12 20:09:05.781456 ,Giao thất bại/Hoàn trả
+90cb5e23-8642-4c8a-bbe8-7a21e05ff9a2 ,HCM2125685  ,Mới tạo      ,2025-11-10 12:53:43.169470 ,Shop tạo đơn tại TP.HCM
+83b5bc1e-58d8-4c79-b29d-da20d2e5bc26 ,HCM84382257 ,Mới tạo      ,2025-11-16 09:38:00.828619 ,Shop tạo đơn tại TP.HCM
+adb09810-e0c8-40c8-a3de-f5d515a31a71 ,HCM84382257 ,Đã điều phối ,2025-11-16 10:08:00.828619 ,Gán cho Shipper SHP_015
+82df8990-31b3-479b-9772-69815f8e6c37 ,HCM84382257 ,Đang giao    ,2025-11-16 12:08:00.828619 ,Shipper đã lấy hàng
+793b5c11-d001-4973-9c50-30b343bee213 ,HCM84382257 ,Hoàn trả     ,2025-11-17 06:08:00.828619 ,Giao thất bại/Hoàn trả
+1a312b9a-116a-40b2-930b-4249d2b56033 ,HCM37850486 ,Mới tạo      ,2025-12-01 15:08:55.454257 ,Shop tạo đơn tại TP.HCM
+8cd4d2ec-1f79-448b-84d3-ed073a20dd4c ,HCM37850486 ,Đã điều phối ,2025-12-01 15:38:55.454257 ,Gán cho Shipper SHP_013
+04f8f181-83b6-43fd-87e3-ed1d634b5e13 ,HCM37850486 ,Đang giao    ,2025-12-01 17:38:55.454257 ,Shipper đã lấy hàng
+c3086639-b947-43c6-aec0-3f89f84f82c7 ,HCM37850486 ,Đang giao    ,2025-12-02 06:38:55.454257 ,Giao thất bại/Hoàn trả
+35ae915d-6551-4c88-ab2d-dca43763618e ,HCM37488598 ,Mới tạo      ,2025-11-26 08:15:30.196373 ,Shop tạo đơn tại TP.HCM
+e52f2333-0d5f-4fc3-a179-8efa1d4a13b2 ,HCM37488598 ,Đã điều phối ,2025-11-26 08:45:30.196373 ,Gán cho Shipper SHP_006
+7b6d739a-6f68-47f9-8f85-b60b68319355 ,HCM37488598 ,Đang giao    ,2025-11-26 10:45:30.196373 ,Shipper đã lấy hàng
+b240cfa2-e018-43dc-b739-e050c5646089 ,HCM37488598 ,Đã giao      ,2025-11-27 09:45:30.196373 ,Giao thành công
+e37d7926-003e-4ba9-ad9b-5ebcda3f3838 ,HCM68237487 ,Mới tạo      ,2025-11-15 19:26:08.316218 ,Shop tạo đơn tại TP.HCM
+a22d953e-9d6d-4b26-8216-207d473800cd ,HCM13559670 ,Mới tạo      ,2025-11-19 02:50:53.188504 ,Shop tạo đơn tại TP.HCM
+67cb214c-d22a-40ed-ab76-0f41bd737a38 ,HCM13559670 ,Đã điều phối ,2025-11-19 03:20:53.188504 ,Gán cho Shipper SHP_006
+f9877aac-b20a-473b-a06f-77c43eb449b1 ,HCM13559670 ,Đang giao    ,2025-11-19 05:20:53.188504 ,Shipper đã lấy hàng
+42a2e6f5-afa0-4e33-a935-0638f7cedd03 ,HCM13559670 ,Hoàn trả     ,2025-11-19 23:20:53.188504 ,Giao thất bại/Hoàn trả
+0bd9ea4b-1272-4672-b672-ba67edae993f ,HCM57237448 ,Mới tạo      ,2025-12-06 00:40:45.343886 ,Shop tạo đơn tại TP.HCM
+99da85ec-297b-4af0-b57d-a4786292df66 ,HCM58223211 ,Mới tạo      ,2025-11-27 23:12:05.617473 ,Shop tạo đơn tại TP.HCM
+9853387c-077c-4b0f-b4e9-5c1d1a7e9d81 ,HCM58223211 ,Đã điều phối ,2025-11-27 23:42:05.617473 ,Gán cho Shipper SHP_012
+c9f4fdf7-015c-4bc3-95b1-aa69a61fedf6 ,HCM58223211 ,Đang giao    ,2025-11-28 01:42:05.617473 ,Shipper đã lấy hàng
+44b55de4-7e57-453f-98c6-a606491dd196 ,HCM58223211 ,Đang giao    ,2025-11-28 12:42:05.617473 ,Giao thất bại/Hoàn trả
+5e692a8d-fff4-45e6-92da-f674ff4d2ec1 ,HCM58373367 ,Mới tạo      ,2025-12-06 03:39:09.086976 ,Shop tạo đơn tại TP.HCM
+52b2cc04-bf07-4df7-9277-c8aefca023ea ,HCM58373367 ,Đã điều phối ,2025-12-06 04:09:09.086976 ,Gán cho Shipper SHP_006
+3e379f05-9de0-4b76-94d5-244c694ac655 ,HCM58373367 ,Đang giao    ,2025-12-06 06:09:09.086976 ,Shipper đã lấy hàng
+01b9fa7c-c07d-4a94-afd8-4bf51f31ed81 ,HCM58373367 ,Hoàn trả     ,2025-12-06 20:09:09.086976 ,Giao thất bại/Hoàn trả
+fab060b4-386e-453f-899a-cbe5f062b9fb ,HCM38797325 ,Mới tạo      ,2025-11-30 05:42:01.728126 ,Shop tạo đơn tại TP.HCM
+bdb03de9-1cc7-4cd8-92cf-793f6e45ada3 ,HCM38797325 ,Đã điều phối ,2025-11-30 06:12:01.728126 ,Gán cho Shipper SHP_009
+c6e29f42-0d81-4cb5-93da-351aa0a6ef72 ,HCM38797325 ,Đang giao    ,2025-11-30 08:12:01.728126 ,Shipper đã lấy hàng
+5950e386-1d75-4247-ba25-dd8f741aa52b ,HCM38797325 ,Hoàn trả     ,2025-11-30 13:12:01.728126 ,Giao thất bại/Hoàn trả
+de5362e3-2f2a-48f3-a898-0551a415603d ,HCM26386799 ,Mới tạo      ,2025-11-25 17:52:35.400452 ,Shop tạo đơn tại TP.HCM
+3f6108ce-9cc7-42fd-b82a-cea4841a5cf3 ,HCM26386799 ,Đã điều phối ,2025-11-25 18:22:35.400452 ,Gán cho Shipper SHP_008
+13894312-f92d-4199-88ab-3bcc5037c504 ,HCM26386799 ,Đang giao    ,2025-11-25 20:22:35.400452 ,Shipper đã lấy hàng
+466b13d8-f95b-41e1-a962-2da045034d5c ,HCM26386799 ,Đang giao    ,2025-11-26 06:22:35.400452 ,Giao thất bại/Hoàn trả
+95d5ab31-2f05-4717-87d0-ee3914524c81 ,HCM17568398 ,Mới tạo      ,2025-11-30 11:24:16.610623 ,Shop tạo đơn tại TP.HCM
+fcf83b4b-9c57-43cd-a9e0-d4e89c582128 ,HCM17568398 ,Đã điều phối ,2025-11-30 11:54:16.610623 ,Gán cho Shipper SHP_001
+34d92a0a-12f0-467a-b0ce-3fc805dd65bb ,HCM17568398 ,Đang giao    ,2025-11-30 13:54:16.610623 ,Shipper đã lấy hàng
+caa3dbd5-da19-4614-9e0b-9ce6bca2d51b ,HCM17568398 ,Đang lấy     ,2025-12-01 05:54:16.610623 ,Giao thất bại/Hoàn trả
+590c9feb-4c43-4084-83d4-ee6f8e93b58a ,HCM28880841 ,Mới tạo      ,2025-11-10 04:09:21.652397 ,Shop tạo đơn tại TP.HCM
+b4dfdfe3-0e32-46ce-a47b-a99846e7e2f0 ,HCM28880841 ,Đã điều phối ,2025-11-10 04:39:21.652397 ,Gán cho Shipper SHP_014
+98defc33-54c0-44f6-be71-283b808c4901 ,HCM28880841 ,Đang giao    ,2025-11-10 06:39:21.652397 ,Shipper đã lấy hàng
+9fba3651-2021-4f6d-b099-e0a9c1ad660a ,HCM28880841 ,Hoàn trả     ,2025-11-11 02:39:21.652397 ,Giao thất bại/Hoàn trả
+654d21ee-8de4-4367-ac54-3c1dbf275b3c ,HCM18973906 ,Mới tạo      ,2025-12-05 15:05:56.228238 ,Shop tạo đơn tại TP.HCM
+dd08fd13-b9d3-45bd-a41a-7c92590655ac ,HCM18973906 ,Đã điều phối ,2025-12-05 15:35:56.228238 ,Gán cho Shipper SHP_013
+da15049d-5a04-4592-9a8b-0a63bb5c7808 ,HCM18973906 ,Đang giao    ,2025-12-05 17:35:56.228238 ,Shipper đã lấy hàng
+f5fec1f0-0493-4497-aee8-f56e5ca30719 ,HCM18973906 ,Đã giao      ,2025-12-05 20:35:56.228238 ,Giao thành công
+d7d23030-8254-437e-821b-3497e43675d9 ,HCM75104799 ,Mới tạo      ,2025-12-08 09:49:12.683666 ,Shop tạo đơn tại TP.HCM
+3b01ea65-3c11-4687-a783-80abbef5db13 ,HCM36723917 ,Mới tạo      ,2025-11-12 05:57:40.142589 ,Shop tạo đơn tại TP.HCM
+1a17dc08-f3db-4456-87b4-def14f477e00 ,HCM36723917 ,Đã điều phối ,2025-11-12 06:27:40.142589 ,Gán cho Shipper SHP_006
+541fa131-0760-47a5-8120-dcda384aa4ec ,HCM36723917 ,Đang giao    ,2025-11-12 08:27:40.142589 ,Shipper đã lấy hàng
+2dc15943-e90f-45b4-a64b-dd0890c3500e ,HCM36723917 ,Hoàn trả     ,2025-11-12 15:27:40.142589 ,Giao thất bại/Hoàn trả
+a1c10fb7-7d58-4116-b00c-7ad111b0bef1 ,HCM99248697 ,Mới tạo      ,2025-11-27 11:54:35.597957 ,Shop tạo đơn tại TP.HCM
+af47f89c-0e6a-452a-baff-e087f000b7c1 ,HCM99248697 ,Đã điều phối ,2025-11-27 12:24:35.597957 ,Gán cho Shipper SHP_003
+94d3f253-db4b-4209-b1c2-68ef8f97c3eb ,HCM99248697 ,Đang giao    ,2025-11-27 14:24:35.597957 ,Shipper đã lấy hàng
+3443d5d2-5061-4bdb-a1d4-86e064cdff79 ,HCM99248697 ,Đang giao    ,2025-11-28 03:24:35.597957 ,Giao thất bại/Hoàn trả
+12839ca3-efad-4e45-9f0c-8ff71800cf80 ,HCM98481692 ,Mới tạo      ,2025-12-07 05:49:37.908137 ,Shop tạo đơn tại TP.HCM
+ef6fd140-4d6a-4008-8ec9-1f5c1e43f695 ,HCM98481692 ,Đã điều phối ,2025-12-07 06:19:37.908137 ,Gán cho Shipper SHP_002
+86b9ef7f-80b2-4b1a-91f0-e21d3dca58be ,HCM98481692 ,Đang giao    ,2025-12-07 08:19:37.908137 ,Shipper đã lấy hàng
+e6a48a8e-ae03-4549-b9ed-73eccb50f912 ,HCM98481692 ,Hoàn trả     ,2025-12-07 14:19:37.908137 ,Giao thất bại/Hoàn trả
+7c26e8b2-caa0-4947-b8de-46a402086913 ,HCM51509014 ,Mới tạo      ,2025-11-23 23:59:30.782993 ,Shop tạo đơn tại TP.HCM
+d823f673-1952-4341-8693-8b825613d3dd ,HCM51509014 ,Đã điều phối ,2025-11-24 00:29:30.782993 ,Gán cho Shipper SHP_002
+e13fde06-1cae-47de-97dc-767347f96805 ,HCM51509014 ,Đang giao    ,2025-11-24 02:29:30.782993 ,Shipper đã lấy hàng
+11fc431c-2bb8-4c78-a4ce-8a59fa2b0826 ,HCM51509014 ,Đã giao      ,2025-11-24 07:29:30.782993 ,Giao thành công
+685a704d-5d36-48e2-9841-88a69921a90f ,HCM52771037 ,Mới tạo      ,2025-12-04 00:55:25.626134 ,Shop tạo đơn tại TP.HCM
+90345107-432c-4fa3-91e7-4cd03aedb31b ,HCM52771037 ,Đã điều phối ,2025-12-04 01:25:25.626134 ,Gán cho Shipper SHP_014
+93f47ad6-179c-4de7-97da-50dc7dce6847 ,HCM52771037 ,Đang giao    ,2025-12-04 03:25:25.626134 ,Shipper đã lấy hàng
+612a9f42-05e0-46b8-95c8-48bb3cbdc077 ,HCM52771037 ,Đã giao      ,2025-12-04 23:25:25.626134 ,Giao thành công
+b28256bb-1b4d-4f9b-92d2-0d7e2992a752 ,HCM82122819 ,Mới tạo      ,2025-11-28 03:46:56.290729 ,Shop tạo đơn tại TP.HCM
+43fe353d-b318-4f74-8efe-1086a41c9002 ,HCM82122819 ,Đã điều phối ,2025-11-28 04:16:56.290729 ,Gán cho Shipper SHP_007
+6532aca0-dc31-4d60-aa58-4cc2b6ea7699 ,HCM82122819 ,Đang giao    ,2025-11-28 06:16:56.290729 ,Shipper đã lấy hàng
+82334e0b-6259-4e39-8baa-753fb4877ad4 ,HCM82122819 ,Đã giao      ,2025-11-28 16:16:56.290729 ,Giao thành công
+22426e86-0829-469a-bbb2-a747672c8887 ,HCM48406635 ,Mới tạo      ,2025-12-06 05:42:20.067672 ,Shop tạo đơn tại TP.HCM
+a3319277-f8ed-47b3-a35b-47d4efcf6a5c ,HCM48406635 ,Đã điều phối ,2025-12-06 06:12:20.067672 ,Gán cho Shipper SHP_014
+edeb4d39-ebb8-4eaf-98e4-0579e3f13b9b ,HCM48406635 ,Đang giao    ,2025-12-06 08:12:20.067672 ,Shipper đã lấy hàng
+4598a606-a75e-411a-93f3-1abf7cf3e37b ,HCM48406635 ,Đang lấy     ,2025-12-06 16:12:20.067672 ,Giao thất bại/Hoàn trả
+bd0b087b-0e41-43be-b3f5-007c7a382e35 ,HCM23692959 ,Mới tạo      ,2025-11-09 02:01:46.000223 ,Shop tạo đơn tại TP.HCM
+08023b4c-2f1e-4ef7-9341-dd18241bc6ca ,HCM23692959 ,Đã điều phối ,2025-11-09 02:31:46.000223 ,Gán cho Shipper SHP_007
+e5da185a-dba9-4e93-ba07-24b909ea57f1 ,HCM23692959 ,Đang giao    ,2025-11-09 04:31:46.000223 ,Shipper đã lấy hàng
+5653304a-bbb9-475b-954d-d15f0465baaf ,HCM23692959 ,Đang lấy     ,2025-11-09 12:31:46.000223 ,Giao thất bại/Hoàn trả
+43d73a4f-1ea9-4f97-82f2-38fb04731e3b ,HCM14351557 ,Mới tạo      ,2025-11-11 04:20:02.563734 ,Shop tạo đơn tại TP.HCM
+1f89ce52-c537-47a8-ba72-8974b982211e ,HCM14351557 ,Đã điều phối ,2025-11-11 04:50:02.563734 ,Gán cho Shipper SHP_012
+c5dd9532-10ad-4651-9b20-58ae813ca8ef ,HCM14351557 ,Đang giao    ,2025-11-11 06:50:02.563734 ,Shipper đã lấy hàng
+59261bf6-14a6-436a-9f16-83ef6b12876d ,HCM14351557 ,Đã giao      ,2025-11-11 17:50:02.563734 ,Giao thành công
+971bc2f8-6195-439a-bf84-e0334d9dbb6a ,HCM50896420 ,Mới tạo      ,2025-11-21 01:06:20.959802 ,Shop tạo đơn tại TP.HCM
+eec46a90-6c94-4893-a636-cd406e00f256 ,HCM50896420 ,Đã điều phối ,2025-11-21 01:36:20.959802 ,Gán cho Shipper SHP_003
+525bba9e-07c2-4b6c-ab9b-1efc7467636d ,HCM50896420 ,Đang giao    ,2025-11-21 03:36:20.959802 ,Shipper đã lấy hàng
+457a984f-5ba8-4f69-8f41-4728cb709100 ,HCM50896420 ,Đang lấy     ,2025-11-21 13:36:20.959802 ,Giao thất bại/Hoàn trả
+38b3a6b1-b131-4627-beef-5bca26a04587 ,HCM35748619 ,Mới tạo      ,2025-12-01 05:04:14.055836 ,Shop tạo đơn tại TP.HCM
+3d91d96e-2e89-4a8c-a37f-f9f31c673327 ,HCM35748619 ,Đã điều phối ,2025-12-01 05:34:14.055836 ,Gán cho Shipper SHP_002
+d27a2e33-6f61-4933-9ebd-c78c0737dfe4 ,HCM35748619 ,Đang giao    ,2025-12-01 07:34:14.055836 ,Shipper đã lấy hàng
+a51fc528-ef30-462e-9274-dd26ec6b6396 ,HCM35748619 ,Đang lấy     ,2025-12-01 10:34:14.055836 ,Giao thất bại/Hoàn trả
+416f0d9c-6928-4e80-8078-20ce4ff9566f ,HCM77716343 ,Mới tạo      ,2025-11-21 20:29:52.754493 ,Shop tạo đơn tại TP.HCM
+32a2aa1b-e4e3-45a8-8183-7900a5bb8285 ,HCM77716343 ,Đã điều phối ,2025-11-21 20:59:52.754493 ,Gán cho Shipper SHP_015
+e359e818-6164-4c6f-9d0e-dbd20e3157e0 ,HCM77716343 ,Đang giao    ,2025-11-21 22:59:52.754493 ,Shipper đã lấy hàng
+4863eb57-bc34-4d42-9a9e-37fd603d8ff7 ,HCM77716343 ,Đang giao    ,2025-11-22 16:59:52.754493 ,Giao thất bại/Hoàn trả
+c8f6f4c9-2cc1-4249-b36b-629cbaf71b6d ,HCM97260868 ,Mới tạo      ,2025-11-15 14:30:45.591202 ,Shop tạo đơn tại TP.HCM
+fbe057d6-90fb-403e-93db-78dec8b02b52 ,HCM97260868 ,Đã điều phối ,2025-11-15 15:00:45.591202 ,Gán cho Shipper SHP_014
+7290ddd8-2646-4b0e-9eb8-f3e39a271343 ,HCM97260868 ,Đang giao    ,2025-11-15 17:00:45.591202 ,Shipper đã lấy hàng
+dd02f901-3891-4877-9810-d84e0294ec02 ,HCM97260868 ,Đã giao      ,2025-11-16 00:00:45.591202 ,Giao thành công
+03b24909-9902-4fdb-99e5-5f8fa5a7d85a ,HCM63707657 ,Mới tạo      ,2025-12-07 08:18:32.657094 ,Shop tạo đơn tại TP.HCM
+077591d2-de5c-43da-ab53-5945711dce54 ,HCM46346745 ,Mới tạo      ,2025-11-15 08:59:15.538019 ,Shop tạo đơn tại TP.HCM
+4a0c85fe-8adf-4545-97b5-261dfeb38976 ,HCM46346745 ,Đã điều phối ,2025-11-15 09:29:15.538019 ,Gán cho Shipper SHP_002
+6bc8047c-c248-42f6-a8cd-c50906009be7 ,HCM46346745 ,Đang giao    ,2025-11-15 11:29:15.538019 ,Shipper đã lấy hàng
+1b1524fa-efdb-4f75-bb50-18dc7bc0d7c1 ,HCM46346745 ,Đang lấy     ,2025-11-16 01:29:15.538019 ,Giao thất bại/Hoàn trả
+fa21b3f0-41c4-4d5b-8302-bf7afc43f5d5 ,HCM73730271 ,Mới tạo      ,2025-11-13 10:25:09.197578 ,Shop tạo đơn tại TP.HCM
+8f29461c-b3af-4ff2-b742-68bc3f9618e4 ,HCM73730271 ,Đã điều phối ,2025-11-13 10:55:09.197578 ,Gán cho Shipper SHP_009
+1e3ca721-1a95-481c-9fd7-33b7ff3b8144 ,HCM73730271 ,Đang giao    ,2025-11-13 12:55:09.197578 ,Shipper đã lấy hàng
+7fff52cd-44a7-4480-8d4e-fdf8723b9a2b ,HCM73730271 ,Đang giao    ,2025-11-14 11:55:09.197578 ,Giao thất bại/Hoàn trả
+ea93d717-bdfe-40f6-96d9-e84c125d0a8b ,HCM75471560 ,Mới tạo      ,2025-11-16 04:47:51.569410 ,Shop tạo đơn tại TP.HCM
+1d432146-c07a-447a-b710-b58677bd7964 ,HCM36397793 ,Mới tạo      ,2025-12-07 09:05:42.190272 ,Shop tạo đơn tại TP.HCM
+35214baf-d564-43cc-816c-13e65b2f44b3 ,HCM36397793 ,Đã điều phối ,2025-12-07 09:35:42.190272 ,Gán cho Shipper SHP_012
+c5f3dfc0-de9f-4743-b46a-247e6ecbf5a4 ,HCM36397793 ,Đang giao    ,2025-12-07 11:35:42.190272 ,Shipper đã lấy hàng
+f39face2-36d3-4d19-b57a-6402ba8b6d73 ,HCM36397793 ,Đã giao      ,2025-12-08 08:35:42.190272 ,Giao thành công
+84031365-0e9e-4038-80fc-f07a9da1cb40 ,HCM29331511 ,Mới tạo      ,2025-12-08 00:17:10.406670 ,Shop tạo đơn tại TP.HCM
+f68d0691-62ce-4a1e-adab-b1661cebe0e2 ,HCM29331511 ,Đã điều phối ,2025-12-08 00:47:10.406670 ,Gán cho Shipper SHP_005
+62640e08-ddc3-46a7-9380-5e8551aaa7f4 ,HCM29331511 ,Đang giao    ,2025-12-08 02:47:10.406670 ,Shipper đã lấy hàng
+b29f6830-d784-4131-9adc-ebedaabb3111 ,HCM29331511 ,Hoàn trả     ,2025-12-08 11:47:10.406670 ,Giao thất bại/Hoàn trả
+5528fffb-8072-48fd-a5a6-7151ed304a62 ,HCM49356588 ,Mới tạo      ,2025-11-11 12:39:04.753039 ,Shop tạo đơn tại TP.HCM
+2a296f44-1b0d-4faa-ab01-16da7fc04577 ,HCM97029896 ,Mới tạo      ,2025-11-17 00:33:10.862974 ,Shop tạo đơn tại TP.HCM
+ecbb0675-2ba4-4125-a1d4-df2d8c922e2b ,HCM76221507 ,Mới tạo      ,2025-11-28 10:39:14.752575 ,Shop tạo đơn tại TP.HCM
+8148a365-1d72-4a51-adb9-fbfaf2b680e3 ,HCM76221507 ,Đã điều phối ,2025-11-28 11:09:14.752575 ,Gán cho Shipper SHP_015
+27a8d2a1-6287-47f2-98aa-2d35358a4aba ,HCM76221507 ,Đang giao    ,2025-11-28 13:09:14.752575 ,Shipper đã lấy hàng
+a785cbfe-15a2-4f55-9166-c6c11d156569 ,HCM76221507 ,Đang giao    ,2025-11-28 20:09:14.752575 ,Giao thất bại/Hoàn trả
+e333ea41-db84-4b65-a584-11be5e0cf8d5 ,HCM65471096 ,Mới tạo      ,2025-11-29 07:48:33.711284 ,Shop tạo đơn tại TP.HCM
+eeec8da0-d9b4-4801-9148-7feaf79a6d3a ,HCM65471096 ,Đã điều phối ,2025-11-29 08:18:33.711284 ,Gán cho Shipper SHP_010
+3bf9572d-0007-4921-8550-e28a60602bda ,HCM65471096 ,Đang giao    ,2025-11-29 10:18:33.711284 ,Shipper đã lấy hàng
+eddb5df6-0ae3-437a-a169-6f2b3be927fb ,HCM65471096 ,Đang giao    ,2025-11-29 12:18:33.711284 ,Giao thất bại/Hoàn trả
+32d9798e-b434-46c8-b1ec-5106331239cf ,HCM36832173 ,Mới tạo      ,2025-12-05 01:15:10.145315 ,Shop tạo đơn tại TP.HCM
+07c87814-e660-452d-9f79-beca10b10237 ,HCM36832173 ,Đã điều phối ,2025-12-05 01:45:10.145315 ,Gán cho Shipper SHP_003
+ab540081-2f27-4b1b-9efa-459d012bbacf ,HCM36832173 ,Đang giao    ,2025-12-05 03:45:10.145315 ,Shipper đã lấy hàng
+66d5a4d1-e7c6-4364-97a6-b9da6746d4e1 ,HCM36832173 ,Đang lấy     ,2025-12-05 18:45:10.145315 ,Giao thất bại/Hoàn trả
+5d596a41-0cd7-4114-b7da-ce843870b813 ,HCM98780667 ,Mới tạo      ,2025-12-04 06:59:07.012736 ,Shop tạo đơn tại TP.HCM
+b9ba70c1-147f-4e9a-b119-fc4c5055a0cf ,HCM29071590 ,Mới tạo      ,2025-12-08 19:40:37.753837 ,Shop tạo đơn tại TP.HCM
+bd5e797b-bb03-4695-a8ff-280ea13522a2 ,HCM29071590 ,Đã điều phối ,2025-12-08 20:10:37.753837 ,Gán cho Shipper SHP_008
+c76f46ca-56ae-41a3-8631-dbc6cbf24a78 ,HCM29071590 ,Đang giao    ,2025-12-08 22:10:37.753837 ,Shipper đã lấy hàng
+5f6297af-fe2f-4906-9926-1fc4c9cad1ee ,HCM29071590 ,Đã giao      ,2025-12-09 21:10:37.753837 ,Giao thành công
+a9273d3d-0f2f-48ca-9b42-94638b4c0c1d ,HCM12442528 ,Mới tạo      ,2025-11-27 22:35:39.796994 ,Shop tạo đơn tại TP.HCM
+635b7693-ad0e-4d37-9ac9-a2b09cf4eacd ,HCM12442528 ,Đã điều phối ,2025-11-27 23:05:39.796994 ,Gán cho Shipper SHP_007
+9ab2f000-ab91-4ffc-a697-40bf828f4632 ,HCM12442528 ,Đang giao    ,2025-11-28 01:05:39.796994 ,Shipper đã lấy hàng
+5a3281e4-a55d-4678-96d2-9ddb79a17e19 ,HCM12442528 ,Đã giao      ,2025-11-28 17:05:39.796994 ,Giao thành công
+5b722800-fb6d-4c66-bab6-65f579075bc5 ,HCM52945199 ,Mới tạo      ,2025-11-25 12:01:51.012807 ,Shop tạo đơn tại TP.HCM
+2dbd60d7-b82c-4e88-9786-7774570479f9 ,HCM26553619 ,Mới tạo      ,2025-11-22 05:52:57.846285 ,Shop tạo đơn tại TP.HCM
+dfbdad79-22d8-4109-a7e6-d09662bf9621 ,HCM26553619 ,Đã điều phối ,2025-11-22 06:22:57.846285 ,Gán cho Shipper SHP_012
+b303c586-e71e-46c7-97e8-8fee016c7680 ,HCM26553619 ,Đang giao    ,2025-11-22 08:22:57.846285 ,Shipper đã lấy hàng
+1fa00d89-82cb-4af9-aaf3-c845afe3c6ec ,HCM26553619 ,Đang giao    ,2025-11-22 23:22:57.846285 ,Giao thất bại/Hoàn trả
+9c47e384-3f80-4b0d-ac88-20ae8918cc08 ,HCM64176540 ,Mới tạo      ,2025-11-12 14:51:35.559891 ,Shop tạo đơn tại TP.HCM
+8c669f23-897d-4d58-aba3-db54d821e002 ,HCM64176540 ,Đã điều phối ,2025-11-12 15:21:35.559891 ,Gán cho Shipper SHP_010
+5abaa918-a99a-4d38-a62f-6dcd4195da41 ,HCM64176540 ,Đang giao    ,2025-11-12 17:21:35.559891 ,Shipper đã lấy hàng
+f71f5eb4-6bc6-41bd-af88-01fdabda2dbe ,HCM64176540 ,Đang giao    ,2025-11-13 14:21:35.559891 ,Giao thất bại/Hoàn trả
+292e9000-be7f-435b-b4a3-095b07caddd4 ,HCM85291836 ,Mới tạo      ,2025-11-18 10:30:50.261630 ,Shop tạo đơn tại TP.HCM
+438cc8ee-f0dd-4c67-9516-d013e499945e ,HCM85291836 ,Đã điều phối ,2025-11-18 11:00:50.261630 ,Gán cho Shipper SHP_001
+fdf8c602-405c-478f-97f2-210080f657f8 ,HCM85291836 ,Đang giao    ,2025-11-18 13:00:50.261630 ,Shipper đã lấy hàng
+8fcb7d9d-bb01-4ee8-b7c1-6e75564d1399 ,HCM85291836 ,Hoàn trả     ,2025-11-19 07:00:50.261630 ,Giao thất bại/Hoàn trả
+fe3d0fe4-0c3c-4aa0-b740-ea40b6665009 ,HCM18693150 ,Mới tạo      ,2025-11-25 09:22:21.695430 ,Shop tạo đơn tại TP.HCM
+bbb9ba9a-4c4e-4f5e-9e56-01d1603a81a7 ,HCM18693150 ,Đã điều phối ,2025-11-25 09:52:21.695430 ,Gán cho Shipper SHP_013
+cb9a025a-e07e-4a5f-8f7e-2f810e071e2f ,HCM18693150 ,Đang giao    ,2025-11-25 11:52:21.695430 ,Shipper đã lấy hàng
+5f522e0b-a6b1-47b9-81ba-985b0dfa800b ,HCM18693150 ,Hoàn trả     ,2025-11-26 03:52:21.695430 ,Giao thất bại/Hoàn trả
+73dbe2c6-f288-4813-94d1-b4cdd8465391 ,HCM36904098 ,Mới tạo      ,2025-11-16 07:57:08.875348 ,Shop tạo đơn tại TP.HCM
+5dc51c21-0d07-4c26-854e-5bd38a1cdf50 ,HCM36904098 ,Đã điều phối ,2025-11-16 08:27:08.875348 ,Gán cho Shipper SHP_001
+2c6898ad-f40f-422b-8116-4058381b6666 ,HCM36904098 ,Đang giao    ,2025-11-16 10:27:08.875348 ,Shipper đã lấy hàng
+35c50a1f-03d5-4488-b8ce-48c4572d9846 ,HCM36904098 ,Hoàn trả     ,2025-11-16 18:27:08.875348 ,Giao thất bại/Hoàn trả
+6e1c6aef-36c8-492f-b86d-ffdbfe128fae ,HCM41678833 ,Mới tạo      ,2025-11-09 17:31:25.023818 ,Shop tạo đơn tại TP.HCM
+bb1cae6e-ea97-4fa5-9bd8-d86723289294 ,HCM41678833 ,Đã điều phối ,2025-11-09 18:01:25.023818 ,Gán cho Shipper SHP_001
+6e5d3e99-72cc-4ba0-b0c9-918035ab0774 ,HCM41678833 ,Đang giao    ,2025-11-09 20:01:25.023818 ,Shipper đã lấy hàng
+564029fc-5f58-4c36-9d3a-5509742ee41e ,HCM41678833 ,Đang lấy     ,2025-11-10 12:01:25.023818 ,Giao thất bại/Hoàn trả
+6993ce03-ef1d-4201-8b51-d35ece740435 ,HCM77086107 ,Mới tạo      ,2025-11-13 17:20:47.315971 ,Shop tạo đơn tại TP.HCM
+40b91ebe-f860-4ba7-8c1b-ccfad015e37b ,HCM77086107 ,Đã điều phối ,2025-11-13 17:50:47.315971 ,Gán cho Shipper SHP_007
+efac8a2f-7eea-410d-9f1e-e83f98b7aedf ,HCM77086107 ,Đang giao    ,2025-11-13 19:50:47.315971 ,Shipper đã lấy hàng
+87d0df2d-b4ee-4a72-a25b-e42137d41fb5 ,HCM77086107 ,Đang lấy     ,2025-11-14 07:50:47.315971 ,Giao thất bại/Hoàn trả
+d11efe94-e419-4fd0-9fed-0161fc5ab77f ,HCM42559663 ,Mới tạo      ,2025-11-23 04:06:43.059628 ,Shop tạo đơn tại TP.HCM
+91a4e5bf-c186-4692-8df5-fe58d5f28af7 ,HCM42559663 ,Đã điều phối ,2025-11-23 04:36:43.059628 ,Gán cho Shipper SHP_015
+3dc1f096-42ff-48ab-a9e2-cc002063703b ,HCM42559663 ,Đang giao    ,2025-11-23 06:36:43.059628 ,Shipper đã lấy hàng
+ddc168e5-a807-47b7-a167-bfa3250df05c ,HCM42559663 ,Hoàn trả     ,2025-11-23 20:36:43.059628 ,Giao thất bại/Hoàn trả
+ce26848f-a96c-47d2-8974-5e7a90b62b03 ,HCM33511120 ,Mới tạo      ,2025-12-02 10:25:26.269253 ,Shop tạo đơn tại TP.HCM
+c51063cc-f019-43fa-8f2e-aafddbfc1edd ,HCM53244056 ,Mới tạo      ,2025-11-13 10:51:18.527282 ,Shop tạo đơn tại TP.HCM
+baa62897-7a82-4c5a-ba0a-33cafd3cea06 ,HCM53244056 ,Đã điều phối ,2025-11-13 11:21:18.527282 ,Gán cho Shipper SHP_015
+ff2c362d-c794-4eb2-b3a2-2aa7a43f6095 ,HCM53244056 ,Đang giao    ,2025-11-13 13:21:18.527282 ,Shipper đã lấy hàng
+47ff4f67-d4b7-4577-971c-3056782f9344 ,HCM53244056 ,Hoàn trả     ,2025-11-13 19:21:18.527282 ,Giao thất bại/Hoàn trả
+bc3f73c2-495c-471e-b694-de72050773bf ,HCM4414891  ,Mới tạo      ,2025-11-24 19:47:34.510149 ,Shop tạo đơn tại TP.HCM
+55dd60ab-8e56-45de-81c4-5ed74824d701 ,HCM4414891  ,Đã điều phối ,2025-11-24 20:17:34.510149 ,Gán cho Shipper SHP_007
+a829beb0-1427-4a89-8537-ab4ef9f2f25f ,HCM4414891  ,Đang giao    ,2025-11-24 22:17:34.510149 ,Shipper đã lấy hàng
+cc0ecfb9-0bd9-482d-b4c8-cedbccec4842 ,HCM4414891  ,Đã giao      ,2025-11-25 17:17:34.510149 ,Giao thành công
+ad30009d-ac28-4c9c-a4b3-8c9efed80520 ,HCM21369277 ,Mới tạo      ,2025-11-26 15:07:45.322855 ,Shop tạo đơn tại TP.HCM
+e33acfe1-252a-47c8-a702-45b6453a54b0 ,HCM16155203 ,Mới tạo      ,2025-11-20 23:59:09.766867 ,Shop tạo đơn tại TP.HCM
+600f6b4e-6fe9-4076-bb44-62f71fb80b65 ,HCM63356483 ,Mới tạo      ,2025-11-11 01:06:49.947650 ,Shop tạo đơn tại TP.HCM
+dca8b07a-9f24-4046-bc31-70fddb121fd3 ,HCM63356483 ,Đã điều phối ,2025-11-11 01:36:49.947650 ,Gán cho Shipper SHP_010
+3a6b7559-aeb0-4683-a9b9-7229cbe122a0 ,HCM63356483 ,Đang giao    ,2025-11-11 03:36:49.947650 ,Shipper đã lấy hàng
+1c5cec95-75b7-434b-972c-24b8daed1e16 ,HCM63356483 ,Đang giao    ,2025-11-11 10:36:49.947650 ,Giao thất bại/Hoàn trả
+18dcccaa-c026-47af-9427-5441e27c369e ,HCM75731116 ,Mới tạo      ,2025-11-23 20:29:37.161027 ,Shop tạo đơn tại TP.HCM
+dca35c4d-3ad0-44f3-972d-f455081c8df1 ,HCM78688118 ,Mới tạo      ,2025-11-28 14:41:39.687911 ,Shop tạo đơn tại TP.HCM
+6c0cb851-af97-4beb-aae6-d107710430d6 ,HCM78688118 ,Đã điều phối ,2025-11-28 15:11:39.687911 ,Gán cho Shipper SHP_004
+9d0547bb-a30e-40a8-9a19-24e2f558591d ,HCM78688118 ,Đang giao    ,2025-11-28 17:11:39.687911 ,Shipper đã lấy hàng
+4af36dab-c09c-4b87-af36-eda35f328e35 ,HCM78688118 ,Đang giao    ,2025-11-28 23:11:39.687911 ,Giao thất bại/Hoàn trả
+da5439f2-78d9-40bc-8ec0-8131a37bc396 ,HCM48483803 ,Mới tạo      ,2025-11-12 14:29:11.235887 ,Shop tạo đơn tại TP.HCM
+8354cfa0-7ec7-4d20-a3b2-125218f20cba ,HCM48483803 ,Đã điều phối ,2025-11-12 14:59:11.235887 ,Gán cho Shipper SHP_012
+fb2af7e3-9350-4e12-9270-fba59073a4c5 ,HCM48483803 ,Đang giao    ,2025-11-12 16:59:11.235887 ,Shipper đã lấy hàng
+78461dac-12e6-4fd3-a96c-9c1755149270 ,HCM48483803 ,Hoàn trả     ,2025-11-12 23:59:11.235887 ,Giao thất bại/Hoàn trả
+0b22c9ca-a542-4293-b1d3-29729a367f1b ,HCM97434092 ,Mới tạo      ,2025-11-17 23:54:01.798171 ,Shop tạo đơn tại TP.HCM
+2485ff19-9234-4e2b-8c3c-4b4ac933ee14 ,HCM97434092 ,Đã điều phối ,2025-11-18 00:24:01.798171 ,Gán cho Shipper SHP_009
+3c289237-a81f-41f9-828b-ccb961d14b98 ,HCM97434092 ,Đang giao    ,2025-11-18 02:24:01.798171 ,Shipper đã lấy hàng
+fdb9a36b-1605-41cb-87ef-eefbf398d59b ,HCM97434092 ,Hoàn trả     ,2025-11-18 14:24:01.798171 ,Giao thất bại/Hoàn trả
+35acf04f-bc84-4ac7-b26e-70c95c1f5add ,HCM56243629 ,Mới tạo      ,2025-12-02 11:13:59.124304 ,Shop tạo đơn tại TP.HCM
+1f1a021b-9f1f-40b0-b665-d508ff86576c ,HCM56243629 ,Đã điều phối ,2025-12-02 11:43:59.124304 ,Gán cho Shipper SHP_002
+d4881dae-1fff-40d7-92a8-e2e5f290617d ,HCM56243629 ,Đang giao    ,2025-12-02 13:43:59.124304 ,Shipper đã lấy hàng
+4bbfa811-6ab5-4c54-bb42-e09766558214 ,HCM56243629 ,Đang lấy     ,2025-12-03 13:43:59.124304 ,Giao thất bại/Hoàn trả
+7ae9a04a-50fd-40d7-a953-4f66405e68c1 ,HCM86114567 ,Mới tạo      ,2025-12-01 21:44:39.360237 ,Shop tạo đơn tại TP.HCM
+cad91289-7d82-40f2-8a88-31149642f72e ,HCM86114567 ,Đã điều phối ,2025-12-01 22:14:39.360237 ,Gán cho Shipper SHP_012
+3b6bb9f6-c99a-4d01-9753-faa49eeb104c ,HCM86114567 ,Đang giao    ,2025-12-02 00:14:39.360237 ,Shipper đã lấy hàng
+8d77d4d0-00fa-41a4-99e5-feb9ef3bfc2e ,HCM86114567 ,Đang lấy     ,2025-12-02 01:14:39.360237 ,Giao thất bại/Hoàn trả
+fce77445-6d4b-474e-a5ff-6ab38a4a83d1 ,HCM34889669 ,Mới tạo      ,2025-11-19 06:02:44.065524 ,Shop tạo đơn tại TP.HCM
+4d388e27-c149-4991-814e-4edd61a5adf3 ,HCM34889669 ,Đã điều phối ,2025-11-19 06:32:44.065524 ,Gán cho Shipper SHP_001
+ef87bf8d-f10a-44f7-a746-4382e560b34f ,HCM34889669 ,Đang giao    ,2025-11-19 08:32:44.065524 ,Shipper đã lấy hàng
+eeb6e23e-e5f3-484d-8690-2b849ef6515d ,HCM34889669 ,Đã giao      ,2025-11-19 12:32:44.065524 ,Giao thành công
+7e32bb26-ef87-445f-a580-ba274f6af09f ,HCM43564311 ,Mới tạo      ,2025-12-07 08:55:10.492864 ,Shop tạo đơn tại TP.HCM
+98b97e38-976f-4ef1-8794-b73936505766 ,HCM43564311 ,Đã điều phối ,2025-12-07 09:25:10.492864 ,Gán cho Shipper SHP_003
+322966cf-0902-4e0d-ae8b-05bba3df4afe ,HCM43564311 ,Đang giao    ,2025-12-07 11:25:10.492864 ,Shipper đã lấy hàng
+c4a75c99-630a-42c1-9a03-5e621123558f ,HCM43564311 ,Đã giao      ,2025-12-07 20:25:10.492864 ,Giao thành công
+2229dfbf-ad6d-4a18-8017-5142c2010eb5 ,HCM48918509 ,Mới tạo      ,2025-11-13 01:08:30.899276 ,Shop tạo đơn tại TP.HCM
+42c33c8d-8faa-49f3-9fe6-a8e6607525a1 ,HCM4515877  ,Mới tạo      ,2025-11-12 14:20:06.153848 ,Shop tạo đơn tại TP.HCM
+bc584691-f168-4857-8b50-248a4e38da8d ,HCM4515877  ,Đã điều phối ,2025-11-12 14:50:06.153848 ,Gán cho Shipper SHP_004
+5dcb4db4-d817-490e-8cef-7ed56f881a44 ,HCM4515877  ,Đang giao    ,2025-11-12 16:50:06.153848 ,Shipper đã lấy hàng
+938375ad-e46f-47eb-be3b-6d270f90f6ff ,HCM4515877  ,Đã giao      ,2025-11-13 09:50:06.153848 ,Giao thành công
+d7a42cc5-7eae-4848-91c5-fe577f8f88cd ,HCM96051577 ,Mới tạo      ,2025-11-21 10:33:40.714642 ,Shop tạo đơn tại TP.HCM
+668aac92-453e-4612-98dc-df2cd3174a15 ,HCM96051577 ,Đã điều phối ,2025-11-21 11:03:40.714642 ,Gán cho Shipper SHP_001
+f1fcbe27-29a3-49cd-bb9d-3840cef58199 ,HCM96051577 ,Đang giao    ,2025-11-21 13:03:40.714642 ,Shipper đã lấy hàng
+49ac6cb8-fa4f-46f5-a06a-be2ca7fd0e2b ,HCM96051577 ,Hoàn trả     ,2025-11-22 04:03:40.714642 ,Giao thất bại/Hoàn trả
+8a4d84be-276b-40c3-a2e3-e1b09e8d7793 ,HCM16252049 ,Mới tạo      ,2025-11-24 22:52:48.439491 ,Shop tạo đơn tại TP.HCM
+5fe25b85-34cf-4f27-b129-31b87e7113e5 ,HCM54216030 ,Mới tạo      ,2025-11-10 07:56:39.404758 ,Shop tạo đơn tại TP.HCM
+6eac1ac7-0c80-4812-a10c-c9da5f95069c ,HCM54216030 ,Đã điều phối ,2025-11-10 08:26:39.404758 ,Gán cho Shipper SHP_008
+d3b32168-aff4-4f89-bd64-05c66a8219b3 ,HCM54216030 ,Đang giao    ,2025-11-10 10:26:39.404758 ,Shipper đã lấy hàng
+7b8c225c-4ac2-4606-a758-d9796dc03dff ,HCM54216030 ,Đang lấy     ,2025-11-10 13:26:39.404758 ,Giao thất bại/Hoàn trả
+41ba53c1-4e96-4bb8-90ef-9f19daf6298b ,HCM5875520  ,Mới tạo      ,2025-12-03 21:02:12.614430 ,Shop tạo đơn tại TP.HCM
+6faded3d-62bb-467f-8c81-9742193f6aaa ,HCM5875520  ,Đã điều phối ,2025-12-03 21:32:12.614430 ,Gán cho Shipper SHP_009
+6eddf3ea-4ad7-478c-ac5e-5c3cd9b04c76 ,HCM5875520  ,Đang giao    ,2025-12-03 23:32:12.614430 ,Shipper đã lấy hàng
+487253f8-0b23-4b3f-9ccb-cbbb411c3399 ,HCM5875520  ,Hoàn trả     ,2025-12-04 11:32:12.614430 ,Giao thất bại/Hoàn trả
+02bd4ad1-2ebd-4bf6-8e3f-179856a12ed5 ,HCM18100951 ,Mới tạo      ,2025-11-26 09:49:08.098830 ,Shop tạo đơn tại TP.HCM
+ed7e9b2c-bd1f-4243-a754-55ac7b654b8b ,HCM78212950 ,Mới tạo      ,2025-11-21 16:10:46.318350 ,Shop tạo đơn tại TP.HCM
+b3708478-d9fe-41a7-9235-66b0e36b4123 ,HCM78212950 ,Đã điều phối ,2025-11-21 16:40:46.318350 ,Gán cho Shipper SHP_009
+532ddb1b-afe5-4915-a4fd-2d4c3da3a614 ,HCM78212950 ,Đang giao    ,2025-11-21 18:40:46.318350 ,Shipper đã lấy hàng
+557d51ca-d940-439e-991a-94a673378216 ,HCM78212950 ,Đã giao      ,2025-11-22 18:40:46.318350 ,Giao thành công
+a71c8776-7550-4aab-9c8a-d0b2968032f0 ,HCM8770217  ,Mới tạo      ,2025-11-18 04:35:09.196676 ,Shop tạo đơn tại TP.HCM
+99bf2b96-9780-41a9-9c08-7989a945d8fa ,HCM8770217  ,Đã điều phối ,2025-11-18 05:05:09.196676 ,Gán cho Shipper SHP_015
+4afa0d31-f53c-4f9e-ad35-a58a88b5eba0 ,HCM8770217  ,Đang giao    ,2025-11-18 07:05:09.196676 ,Shipper đã lấy hàng
+b484475a-8622-4e0c-aa4a-12481d42c16f ,HCM8770217  ,Đang giao    ,2025-11-19 00:05:09.196676 ,Giao thất bại/Hoàn trả
+704dd546-d5ec-457c-9faa-50db30b55181 ,HCM75203515 ,Mới tạo      ,2025-12-04 20:01:51.413452 ,Shop tạo đơn tại TP.HCM
+901df3fe-f34a-4259-9c79-2444b48641f1 ,HCM660295   ,Mới tạo      ,2025-11-14 13:24:57.957063 ,Shop tạo đơn tại TP.HCM
+9c533842-1fcf-4361-ac2a-473c4741e853 ,HCM660295   ,Đã điều phối ,2025-11-14 13:54:57.957063 ,Gán cho Shipper SHP_004
+e9d00643-e050-4465-b8cc-11916ae6f56f ,HCM660295   ,Đang giao    ,2025-11-14 15:54:57.957063 ,Shipper đã lấy hàng
+853b0b81-5c90-4847-b04e-03791dd514e8 ,HCM660295   ,Đang giao    ,2025-11-15 14:54:57.957063 ,Giao thất bại/Hoàn trả
+91e6ad84-221e-4e77-93f4-458f3fb06ec3 ,HCM29608808 ,Mới tạo      ,2025-12-04 16:28:35.281241 ,Shop tạo đơn tại TP.HCM
+a435cd63-2219-4fcf-8e35-00a90b4bd47e ,HCM29608808 ,Đã điều phối ,2025-12-04 16:58:35.281241 ,Gán cho Shipper SHP_004
+e4fb3d91-7ea2-4ea7-a826-4d2ddbdcb2ea ,HCM29608808 ,Đang giao    ,2025-12-04 18:58:35.281241 ,Shipper đã lấy hàng
+1468bd03-a881-4e1e-a90a-3fcddd0f6e6e ,HCM29608808 ,Hoàn trả     ,2025-12-05 07:58:35.281241 ,Giao thất bại/Hoàn trả
+abb0d9a0-3c3b-410d-b5bf-37c32b8e0a80 ,HCM95280460 ,Mới tạo      ,2025-12-02 02:18:20.079905 ,Shop tạo đơn tại TP.HCM
+da9babee-3c01-4362-9fd9-1695373e9a25 ,HCM95280460 ,Đã điều phối ,2025-12-02 02:48:20.079905 ,Gán cho Shipper SHP_007
+b4ac6647-3478-43dd-8ed4-6c57c8365e7a ,HCM95280460 ,Đang giao    ,2025-12-02 04:48:20.079905 ,Shipper đã lấy hàng
+a782fa39-69eb-4e80-8f30-d3543f09c318 ,HCM95280460 ,Hoàn trả     ,2025-12-02 14:48:20.079905 ,Giao thất bại/Hoàn trả
+526c2db2-8a1d-4d35-b29e-bf94e196d7d4 ,HCM59459728 ,Mới tạo      ,2025-11-14 16:32:16.751265 ,Shop tạo đơn tại TP.HCM
+d9d78369-3eac-4901-b71e-e55a6f7ef490 ,HCM59459728 ,Đã điều phối ,2025-11-14 17:02:16.751265 ,Gán cho Shipper SHP_001
+912a8db1-a05a-445d-8895-e29aec5235c8 ,HCM59459728 ,Đang giao    ,2025-11-14 19:02:16.751265 ,Shipper đã lấy hàng
+20912d2c-3f21-48b1-885f-3b2a8ff7eeef ,HCM59459728 ,Đang lấy     ,2025-11-15 18:02:16.751265 ,Giao thất bại/Hoàn trả
+a311afd7-16d9-4d6a-b559-eb2a9bed7e43 ,HCM12126709 ,Mới tạo      ,2025-11-20 01:05:56.239700 ,Shop tạo đơn tại TP.HCM
+bfd63759-9331-46a2-a21e-e23a8be70823 ,HCM12126709 ,Đã điều phối ,2025-11-20 01:35:56.239700 ,Gán cho Shipper SHP_003
+06c2b448-17f8-4fd8-a751-94d2b5fd415c ,HCM12126709 ,Đang giao    ,2025-11-20 03:35:56.239700 ,Shipper đã lấy hàng
+da9543c0-1963-4e24-a4f7-d1de98e6867d ,HCM12126709 ,Đang giao    ,2025-11-21 00:35:56.239700 ,Giao thất bại/Hoàn trả
+bf413baf-e78c-4dac-82d1-af55bb987fce ,HCM95243445 ,Mới tạo      ,2025-12-06 04:36:31.355555 ,Shop tạo đơn tại TP.HCM
+1f3f40de-a806-4bce-b66b-72c599f3ec67 ,HCM39821430 ,Mới tạo      ,2025-11-13 14:18:17.517296 ,Shop tạo đơn tại TP.HCM
+90915b9b-4dd9-4108-9310-093c80f01b00 ,HCM39821430 ,Đã điều phối ,2025-11-13 14:48:17.517296 ,Gán cho Shipper SHP_009
+f08b619f-a96e-423c-8145-2cbb3b6c2d26 ,HCM39821430 ,Đang giao    ,2025-11-13 16:48:17.517296 ,Shipper đã lấy hàng
+7093788d-16b9-4906-8641-b4ae4bc741b3 ,HCM39821430 ,Đang giao    ,2025-11-13 22:48:17.517296 ,Giao thất bại/Hoàn trả
+9fc79405-17ad-4511-b2ce-c652ab6998d2 ,HCM99947658 ,Mới tạo      ,2025-11-16 09:33:15.312603 ,Shop tạo đơn tại TP.HCM
+fcf24863-1638-47d9-b7c4-7eb9975fa779 ,HCM99947658 ,Đã điều phối ,2025-11-16 10:03:15.312603 ,Gán cho Shipper SHP_011
+9eea076a-6a93-476a-816b-f7368a932e90 ,HCM99947658 ,Đang giao    ,2025-11-16 12:03:15.312603 ,Shipper đã lấy hàng
+ea9a2810-1fba-460f-aa99-a49503d1a543 ,HCM99947658 ,Đã giao      ,2025-11-17 06:03:15.312603 ,Giao thành công
+c2e76a42-2ac3-4bab-97c1-8047cd4e35d0 ,HCM68830247 ,Mới tạo      ,2025-11-21 03:16:13.802212 ,Shop tạo đơn tại TP.HCM
+ca1f616a-5640-43c0-a36b-262511a75193 ,HCM68830247 ,Đã điều phối ,2025-11-21 03:46:13.802212 ,Gán cho Shipper SHP_009
+a676aa9e-4e81-467c-bbdd-c075a9163418 ,HCM68830247 ,Đang giao    ,2025-11-21 05:46:13.802212 ,Shipper đã lấy hàng
+df037acd-b275-4b3e-9b9a-8a848a651738 ,HCM68830247 ,Đang giao    ,2025-11-21 06:46:13.802212 ,Giao thất bại/Hoàn trả
+5a6976d6-20b3-48e7-a609-bf2ca0040fe4 ,HCM59264931 ,Mới tạo      ,2025-11-27 08:15:26.510572 ,Shop tạo đơn tại TP.HCM
+9de8918d-61a4-4943-a37f-d8fe4af73c7d ,HCM59264931 ,Đã điều phối ,2025-11-27 08:45:26.510572 ,Gán cho Shipper SHP_008
+d8b5ed68-4b80-481d-9278-e0bcb0c169be ,HCM59264931 ,Đang giao    ,2025-11-27 10:45:26.510572 ,Shipper đã lấy hàng
+bf8429bc-1776-4fac-a385-aa9dc6781356 ,HCM59264931 ,Đã giao      ,2025-11-27 22:45:26.510572 ,Giao thành công

@@ -1,0 +1,11 @@
+﻿Shop_ID  ,User_ID    ,Ten_Shop                                  ,Chu_Shop      ,SDT_Lien_He  ,Dia_Chi_Kho                         ,So_Du_Vi ,Ngan_Hang       ,STK
+SHOP_001 ,U_SHOP_001 ,Phạm và Đặng Tập Đoàn                     ,Hải Thế Vũ    ,091489500546 ,"971 Jane Số, Quận 3, TP.HCM"       , 3800000 ,Sacombank       ,4438043848396994
+SHOP_002 ,U_SHOP_002 ,Phạm Công ty Cổ phần                      ,Bà Kim Nguyễn ,093920231333 ,"655 Hoàng Ngõ, Quận 6, TP.HCM"     ,       0 ,Vietcombank HCM ,4576131959920611
+SHOP_003 ,U_SHOP_003 ,Trần và Đặng Tập Đoàn                     ,Vân Vũ        ,092491658953 ,"9 Trần Làng, Quận 4, TP.HCM"       ,  700000 ,Vietcombank HCM ,4761154169903644
+SHOP_004 ,U_SHOP_004 ,Đặng và đối tác Công ty Hợp danh          ,Cô Dương Vũ   ,091137520548 ,"725 Nguyễn Đường, Quận 8, TP.HCM"  ,  800000 ,ACB HCM         ,4106615200304343
+SHOP_005 ,U_SHOP_005 ,Vũ và đối tác Công ty Trách nhiệm hữu hạn ,Thành Nguyễn  ,090527238353 ,"7 John Tổ, Quận Phú Nhuận, TP.HCM" , 4600000 ,Vietcombank HCM ,4862491262470511
+SHOP_006 ,U_SHOP_006 ,Dương và đối tác Doanh nghiệp tư nhân     ,Anh Quang Lê  ,097505198431 ,"18 Jane Hẻm, Quận 4, TP.HCM"       , 2000000 ,ACB HCM         ,4799948630108352
+SHOP_007 ,U_SHOP_007 ,Đặng và Đặng Doanh nghiệp tư nhân         ,Hà Văn Phạm   ,091304635544 ,"27 Jane Số, TP. Thủ Đức, TP.HCM"   ,  200000 ,Sacombank       ,4767757742984677
+SHOP_008 ,U_SHOP_008 ,Trần và đối tác Công ty Cổ phần           ,Quang Phạm    ,092106481819 ,"643 John Hẻm, Quận 3, TP.HCM"      , 3900000 ,Vietcombank HCM ,4199943042742324
+SHOP_009 ,U_SHOP_009 ,Bùi Mai Doanh nghiệp tư nhân              ,Cô Vân Mai    ,094347474428 ,"7 Bùi Dãy, Quận Tân Phú, TP.HCM"   , 1300000 ,Vietcombank HCM ,4752107917825536
+SHOP_010 ,U_SHOP_010 ,Dương và đối tác Công ty Cổ phần          ,Cô Khoa Bùi   ,090307262770 ,"889 John Số, Quận 7, TP.HCM"       , 3500000 ,Sacombank       ,4904476228314598
