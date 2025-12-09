@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản Test - ShopCOD Pro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .account-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .copy-btn {
+            background: #4361ee;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .copy-btn:hover {
+            background: #3a56d4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tài khoản Test - ShopCOD Pro</h1>
+    <p>Chỉ các tài khoản sau mới login được:</p>
+    
+    <div class="account-card">
+        <h3> Tài khoản Shop Owner</h3>
+        <p><strong>Email:</strong> shop@example.com</p>
+        <p><strong>Số điện thoại:</strong> 0987654321</p>
+        <p><strong>Mật khẩu:</strong> password123</p>
+        <button class="copy-btn" onclick="copyToClipboard('shop@example.com')">Copy Email</button>
+        <button class="copy-btn" onclick="copyToClipboard('password123')">Copy Password</button>
+    </div>
+    
+    <div class="account-card">
+        <h3> Tài khoản Admin</h3>
+        <p><strong>Email:</strong> admin@shopcod.com</p>
+        <p><strong>Email:</strong> dthuy9772@gmail.com</p>
+        <p><strong>Số điện thoại:</strong> 0123456789</p>
+        <p><strong>Mật khẩu:</strong> password123</p>
+        <button class="copy-btn" onclick="copyToClipboard('admin@shopcod.com')">Copy Email</button>
+        <button class="copy-btn" onclick="copyToClipboard('password123')">Copy Password</button>
+    </div>
+    
+    <div class="account-card">
+        <h3> Các tài khoản KHÁC sẽ KHÔNG login được</h3>
+        <p>Hệ thống chỉ cho phép login với các tài khoản trên.</p>
+        <p>Ví dụ: test@gmail.com, user@example.com, ... sẽ bị từ chối.</p>
+    </div>
+    
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Đã copy: ' + text);
+            });
+        }
+    </script>
+</body>
+</html>

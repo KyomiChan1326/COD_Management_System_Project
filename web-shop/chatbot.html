@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <script src="js/auth-check.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Tra Cứu - ShopCOD Pro</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4361ee;
+            --primary-light: #eef2ff;
+            --secondary: #3a0ca3;
+            --accent: #4cc9f0;
+            --success: #06d6a0;
+            --warning: #ffd166;
+            --danger: #ef476f;
+            --dark: #1e293b;
+            --dark-light: #334155;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --sidebar-width: 260px;
+            --header-height: 70px;
+            --radius: 16px;
+            --radius-sm: 10px;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f6f9fc 0%, #f1f5f9 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--dark) 0%, #0f172a 100%);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .logo-text h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .nav-section {
+            margin-bottom: 2rem;
+        }
+
+        .nav-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1rem;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-links a.active {
+            background: linear-gradient(90deg, var(--primary), rgba(67, 97, 238, 0.3));
+            color: white;
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+        }
+
+        .nav-links a i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .user-profile {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .user-info h4 {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .user-info p {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            z-index: 50;
+        }
+
+        .header-left h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header-left p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .search-bar {
+            position: relative;
+        }
+
+        .search-bar input {
+            padding: 0.8rem 1rem 0.8rem 2.5rem;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            width: 300px;
+            font-size: 0.9rem;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        /* Chat Container */
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .chatbot-avatar {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .chatbot-info h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .chatbot-info p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .chat-status {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Chat Area */
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            padding: 1.5rem;
+            background: var(--light);
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .quick-btn {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary-light);
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .quick-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(67, 97, 238, 0.2);
+            border-color: var(--primary);
+        }
+
+        .quick-btn i {
+            font-size: 1rem;
+        }
+
+        /* Chat Messages */
+        .chat-messages {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            background: var(--light);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .message {
+            display: flex;
+            max-width: 80%;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.bot {
+            align-self: flex-start;
+        }
+
+        .message.user {
+            align-self: flex-end;
+        }
+
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 0.3rem;
+        }
+
+        .bot .message-avatar {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary-light);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .user .message-avatar {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .message-content {
+            margin: 0 1.2rem;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            position: relative;
+            line-height: 1.6;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+        .bot .message-content {
+            background: white;
+            border-top-left-radius: 6px;
+            border: 1px solid var(--gray-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .user .message-content {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-top-right-radius: 6px;
+            box-shadow: 0 2px 10px rgba(67, 97, 238, 0.15);
+        }
+
+        .message-text {
+            font-size: 0.95rem;
+        }
+
+        .message-time {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 0.8rem;
+            text-align: right;
+        }
+
+        /* Chat Input */
+        .chat-input-area {
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid var(--gray-light);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+
+        .send-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.2);
+        }
+
+        .send-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.3);
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.2rem 1.5rem;
+            background: white;
+            border-radius: 20px;
+            border: 1px solid var(--gray-light);
+            width: fit-content;
+            margin: 0.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .typing-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--gray);
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        /* Data Display Cards */
+        .data-card {
+            background: white;
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            animation: slideIn 0.4s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .data-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .data-title {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .data-status {
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-success { background: rgba(6, 214, 160, 0.1); color: var(--success); border: 1px solid rgba(6, 214, 160, 0.2); }
+        .status-warning { background: rgba(255, 209, 102, 0.1); color: var(--warning); border: 1px solid rgba(255, 209, 102, 0.2); }
+        .status-danger { background: rgba(239, 71, 111, 0.1); color: var(--danger); border: 1px solid rgba(239, 71, 111, 0.2); }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .data-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .data-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .data-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .amount-positive { color: var(--success); }
+        .amount-negative { color: var(--danger); }
+
+        /* Navigation Cards */
+        .nav-card {
+            background: white;
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border: 2px solid var(--primary-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-card-title {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .nav-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 1rem;
+            background: var(--light);
+            border: 2px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--dark);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .nav-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .nav-button i {
+            font-size: 1.8rem;
+        }
+
+        .nav-button span {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .nav-button small {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 0.3rem;
+        }
+
+        /* Payment Timeline */
+        .timeline {
+            margin-top: 1.5rem;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gray-light);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -25px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .timeline-dot.completed {
+            background: var(--success);
+            color: white;
+        }
+
+        .timeline-dot.current {
+            background: var(--primary);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        .timeline-dot.pending {
+            background: var(--gray-light);
+            color: var(--gray);
+        }
+
+        .timeline-content {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid;
+        }
+
+        .timeline-content.completed {
+            border-left-color: var(--success);
+        }
+
+        .timeline-content.current {
+            border-left-color: var(--primary);
+        }
+
+        .timeline-content.pending {
+            border-left-color: var(--gray);
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-time {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+
+        /* Error Message */
+        .error-card {
+            border-left-color: var(--danger);
+            background: rgba(239, 71, 111, 0.05);
+            border: 1px solid rgba(239, 71, 111, 0.1);
+        }
+
+        .error-card .data-title {
+            color: var(--danger);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .header-right {
+                gap: 1rem;
+            }
+            
+            .search-bar input {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .chat-container {
+                padding: 1.5rem;
+            }
+            
+            .chat-header {
+                padding: 1.2rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .chat-status {
+                margin-left: 0;
+            }
+            
+            .nav-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-actions {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .header-left h1 {
+                font-size: 1.5rem;
+            }
+            
+            .search-bar input {
+                width: 100%;
+            }
+            
+            .chat-messages {
+                padding: 1rem;
+            }
+            
+            .message {
+                max-width: 90%;
+            }
+            
+            .message-content {
+                margin: 0 0.8rem;
+                padding: 1rem 1.2rem;
+            }
+            
+            .quick-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chat-input-area {
+                padding: 1rem;
+            }
+            
+            .send-btn {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline {
+                padding-left: 20px;
+            }
+            
+            .timeline-dot {
+                left: -15px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        /* Animation for messages */
+        .message:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+        
+        .message:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="logo-text">
+                <h2>ShopCOD AI</h2>
+                <span>Chatbot Assistant</span>
+            </div>
+        </div>
+
+        <div class="nav-section">
+            <h4 class="nav-title">MAIN MENU</h4>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="wallet.html"><i class="fas fa-wallet"></i> Ví điện tử</a></li>
+                <li><a href="history.html"><i class="fas fa-history"></i> Lịch sử GD</a></li>
+                <li><a href="chatbot.html" class="active"><i class="fas fa-robot"></i> Chatbot</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-section">
+            <h4 class="nav-title">CHATBOT TOOLS</h4>
+            <ul class="nav-links">
+                <li><a href="#" onclick="quickAction('balance')"><i class="fas fa-wallet"></i> Kiểm tra số dư</a></li>
+                <li><a href="#" onclick="quickAction('track_order')"><i class="fas fa-box"></i> Tra cứu đơn hàng</a></li>
+                <li><a href="#" onclick="quickAction('payment_status')"><i class="fas fa-money-check"></i> Kiểm tra tiền về ví</a></li>
+                <li><a href="#" onclick="quickAction('recent_orders')"><i class="fas fa-history"></i> Đơn hàng gần đây</a></li>
+                <li><a href="#" onclick="quickAction('navigation')"><i class="fas fa-compass"></i> Điều hướng</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-section">
+            <h4 class="nav-title">SUPPORT</h4>
+            <ul class="nav-links">
+                <li><a href="#" onclick="quickAction('help')"><i class="fas fa-question-circle"></i> Trợ giúp</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Cài đặt</a></li>
+                <li><a href="#" onclick="exportChatHistory()"><i class="fas fa-download"></i> Xuất chat</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> Giới thiệu</a></li>
+                <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+            </ul>
+        </div>
+
+        <div class="user-profile">
+            <div class="user-avatar">SM</div>
+            <div class="user-info">
+                <h4 class="user-name">Sumo</h4>
+                <p>Premium User</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1><i class="fas fa-robot"></i> Chatbot Tra Cứu Thông Minh</h1>
+                <p>Trợ lý ảo hỗ trợ tra cứu đơn hàng và tài khoản 24/7</p>
+            </div>
+            
+            <div class="header-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm trong chat...">
+                </div>
+                
+                <div class="user-profile" style="background: none; padding: 0; cursor: default;">
+                    <div class="user-avatar">SM</div>
+                    <div class="user-info">
+                        <h4 class="user-name">Sumo</h4>
+                        <p>Đang trực tuyến</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="chatbot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chatbot-info">
+                    <h2>COD Assistant Pro</h2>
+                    <p>Trợ lý tra cứu đơn hàng & tài khoản thông minh</p>
+                </div>
+                <div class="chat-status">
+                    <div class="status-dot"></div>
+                    <span>Trực tuyến • Sẵn sàng hỗ trợ</span>
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-area">
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="quick-btn" onclick="quickAction('balance')">
+                        <i class="fas fa-wallet"></i> Số dư ví
+                    </button>
+                    <button class="quick-btn" onclick="quickAction('track_order')">
+                        <i class="fas fa-box"></i> Tra cứu đơn hàng
+                    </button>
+                    <button class="quick-btn" onclick="quickAction('payment_status')">
+                        <i class="fas fa-money-check"></i> Kiểm tra tiền về ví
+                    </button>
+                    <button class="quick-btn" onclick="quickAction('recent_orders')">
+                        <i class="fas fa-history"></i> Đơn hàng gần đây
+                    </button>
+                    <button class="quick-btn" onclick="quickAction('navigation')">
+                        <i class="fas fa-compass"></i> Điều hướng
+                    </button>
+                    <button class="quick-btn" onclick="quickAction('help')">
+                        <i class="fas fa-question-circle"></i> Trợ giúp
+                    </button>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be loaded here -->
+                </div>
+
+                <!-- Typing Indicator -->
+                <div class="typing-indicator" id="typingIndicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <span>COD Assistant đang soạn tin nhắn...</span>
+                </div>
+
+                <!-- Chat Input -->
+                <div class="chat-input-area">
+                    <input type="text" 
+                           class="chat-input" 
+                           id="userInput" 
+                           placeholder="Ví dụ: 'Tiền đơn 123456 đã về ví chưa?' hoặc nhập mã đơn hàng..."
+                           onkeypress="handleKeyPress(event)">
+                    <button class="send-btn" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // ========== CONFIGURATION ==========
+        const API_CONFIG = {
+            BASE_URL: 'http://localhost:3000/api',
+            ENDPOINTS: {
+                WALLET_BALANCE: '/wallet/balance',
+                ORDER_DETAIL: '/orders/{code}',
+                ORDER_RECENT: '/orders/recent',
+                PAYMENT_STATUS: '/orders/{code}/payment-status'
+            },
+            MOCK_MODE: true
+        };
+
+        // ========== STATE MANAGEMENT ==========
+        const chatState = {
+            waitingFor: null,
+            context: {},
+            userInfo: {
+                userId: 'USER123',
+                name: 'Sumo'
+            },
+            chatHistory: []
+        };
+
+        // ========== RULE-BASED INTENT RECOGNITION ==========
+        class IntentRecognizer {
+            static recognize(text) {
+                const lowerText = text.toLowerCase().trim();
+                
+                // Enhanced pattern matching
+                const patterns = {
+                    // Order patterns
+                    order_tracking: /(mã|đơn|hàng|tracking|vận đơn|đơn hàng|dh|đh|order|mã vận đơn|mã đơn)(\s+)?(\d+)/i,
+                    order_status: /(trạng thái|tình trạng|đang ở đâu|khi nào giao|bao giờ đến|delivery|status)/i,
+                    order_search: /(tra cứu|tìm kiếm|kiểm tra|check).*(đơn|hàng|order)/i,
+                    
+                    // Payment status patterns (MỚI THÊM)
+                    order_payment_status: /(tiền|tiền đơn|thanh toán|đã về ví|về ví chưa|đối soát|thu hộ|chưa về|đã chuyển|về tài khoản).*(đơn|hàng|order|mã|dh|đh)?.*?(\d+)/i,
+                    
+                    // Wallet patterns
+                    balance_check: /(số dư|tiền|còn bao nhiêu|balance|wallet|tài khoản|account)/i,
+                    deposit: /(nạp tiền|thêm tiền|deposit|charge|top up)/i,
+                    withdraw: /(rút tiền|lấy tiền|withdraw|chuyển về ngân hàng)/i,
+                    
+                    // Transaction patterns
+                    transaction_history: /(lịch sử|giao dịch|transaction|history|hoạt động)/i,
+                    transaction_detail: /(giao dịch|gd|transaction)(\s+)?(\d+)/i,
+                    
+                    // Navigation patterns
+                    navigation: /(điều hướng|menu|chuyển trang|về trang|dashboard|ví|lịch sử|đi đến|go to|navigate)/i,
+                    go_dashboard: /(dashboard|trang chủ|home)/i,
+                    go_wallet: /(ví điện tử|wallet|tài khoản)/i,
+                    go_history: /(lịch sử|history|giao dịch)/i,
+                    
+                    // Help patterns
+                    help: /(giúp|hỗ trợ|help|support|hướng dẫn|instruction|manual)/i,
+                    greeting: /(chào|hello|hi|xin chào|hi there|hey)/i,
+                    goodbye: /(tạm biệt|cám ơn|thank|bye|goodbye|see you)/i,
+                    capabilities: /(bạn làm được gì|chức năng|features|abilities)/i
+                };
+
+                // Check each pattern
+                for (const [intent, pattern] of Object.entries(patterns)) {
+                    if (pattern.test(lowerText)) {
+                        if (intent === 'order_tracking' || intent === 'transaction_detail' || intent === 'order_payment_status') {
+                            const matches = lowerText.match(/(\d{6,10})/);
+                            if (matches) {
+                                return {
+                                    intent: intent,
+                                    entities: { code: matches[0] }
+                                };
+                            }
+                        }
+                        return { intent: intent };
+                    }
+                }
+
+                // Check for pure order code
+                const orderCodeMatch = lowerText.match(/^(\d{6,10})$/);
+                if (orderCodeMatch) {
+                    return {
+                        intent: 'order_tracking',
+                        entities: { code: orderCodeMatch[1] }
+                    };
+                }
+
+                // Check for DH + code format
+                const dhCodeMatch = lowerText.match(/^(dh|đh)(\d{6,10})$/i);
+                if (dhCodeMatch) {
+                    return {
+                        intent: 'order_tracking',
+                        entities: { code: dhCodeMatch[2] }
+                    };
+                }
+
+                return { intent: 'unknown' };
+            }
+        }
+
+        // ========== CHAT FUNCTIONS ==========
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            addMessage(message, 'user');
+            input.value = '';
+            input.focus();
+            
+            // Save to history
+            chatState.chatHistory.push({
+                type: 'user',
+                message: message,
+                timestamp: new Date()
+            });
+            
+            setTimeout(() => processUserMessage(message), 500);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function quickAction(action) {
+            const messages = {
+                'balance': 'Kiểm tra số dư ví của tôi',
+                'track_order': 'Tôi muốn tra cứu đơn hàng',
+                'payment_status': 'Tiền đơn hàng đã về ví chưa?',
+                'recent_orders': 'Hiển thị đơn hàng gần đây của tôi',
+                'navigation': 'Điều hướng đến các trang khác',
+                'help': 'Bạn có thể giúp gì cho tôi?'
+            };
+            
+            document.getElementById('userInput').value = messages[action];
+            sendMessage();
+        }
+
+        function addMessage(text, sender, data = null) {
+            const chatMessages = document.getElementById('chatMessages');
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('vi-VN', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            let avatarIcon = sender === 'bot' ? 'fas fa-robot' : 'fas fa-user';
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">
+                    <i class="${avatarIcon}"></i>
+                </div>
+                <div class="message-content">
+                    <div class="message-text">${text}</div>
+                    <div class="message-time">${timeString}</div>
+                </div>
+            `;
+            
+            chatMessages.appendChild(messageDiv);
+            
+            // Add data card if provided
+            if (data && typeof data === 'object') {
+                const dataCard = createDataCard(data);
+                if (dataCard) {
+                    const botMessageDiv = document.createElement('div');
+                    botMessageDiv.className = 'message bot';
+                    botMessageDiv.innerHTML = `
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            ${dataCard}
+                            <div class="message-time">${timeString}</div>
+                        </div>
+                    `;
+                    chatMessages.appendChild(botMessageDiv);
+                    
+                    // Save to history
+                    chatState.chatHistory.push({
+                        type: 'bot',
+                        message: text,
+                        data: data,
+                        timestamp: now
+                    });
+                }
+            } else {
+                // Save simple message to history
+                chatState.chatHistory.push({
+                    type: sender,
+                    message: text,
+                    timestamp: now
+                });
+            }
+            
+            // Scroll to bottom with smooth animation
+            setTimeout(() => {
+                chatMessages.scrollTo({
+                    top: chatMessages.scrollHeight,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+
+        function createDataCard(data) {
+            if (data.type === 'navigation') {
+                return `
+                    <div class="nav-card">
+                        <div class="nav-card-title">
+                            <i class="fas fa-compass"></i>
+                            Điều Hướng Nhanh
+                        </div>
+                        <div class="nav-buttons">
+                            <a href="index.html" class="nav-button">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Dashboard</span>
+                                <small>Tổng quan hệ thống & thống kê</small>
+                            </a>
+                            <a href="wallet.html" class="nav-button">
+                                <i class="fas fa-wallet"></i>
+                                <span>Ví Điện Tử</span>
+                                <small>Quản lý tài chính & giao dịch</small>
+                            </a>
+                            <a href="history.html" class="nav-button">
+                                <i class="fas fa-history"></i>
+                                <span>Lịch Sử GD</span>
+                                <small>Xem chi tiết giao dịch</small>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (data.type === 'help') {
+                return `
+                    <div class="data-card">
+                        <div class="data-header">
+                            <div class="data-title">
+                                <i class="fas fa-question-circle"></i>
+                                Hướng Dẫn Sử Dụng
+                            </div>
+                        </div>
+                        <div style="line-height: 1.7;">
+                            <p><strong> Các chức năng chính:</strong></p>
+                            <ul style="margin-left: 1.5rem; margin-top: 0.8rem;">
+                                <li><strong>Tra cứu đơn hàng:</strong> Nhập mã đơn hàng (VD: 123456)</li>
+                                <li><strong>Kiểm tra số dư:</strong> Hỏi về số dư ví</li>
+                                <li><strong>Kiểm tra tiền về ví:</strong> "Tiền đơn X đã về ví chưa?"</li>
+                                <li><strong>Đơn hàng gần đây:</strong> Xem các đơn hàng mới nhất</li>
+                                <li><strong>Điều hướng:</strong> Chuyển đến các trang khác</li>
+                            </ul>
+                            
+                            <p style="margin-top: 1.5rem;"><strong>💡 Ví dụ câu lệnh:</strong></p>
+                            <div style="background: var(--light); padding: 1rem; border-radius: 10px; margin-top: 0.8rem;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-chevron-right" style="color: var(--primary);"></i>
+                                    <span>"Tiền đơn 123456 đã về ví chưa?"</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-chevron-right" style="color: var(--primary);"></i>
+                                    <span>"Tra cứu đơn hàng DH789012"</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <i class="fas fa-chevron-right" style="color: var(--primary);"></i>
+                                    <span>"Số dư ví của tôi là bao nhiêu?"</span>
+                                </div>
+                            </div>
+                            
+                            <p style="margin-top: 1.5rem;"><strong>🚀 Mẹo sử dụng:</strong></p>
+                            <p>• Sử dụng các nút phía trên để thao tác nhanh<br>
+                               • Click vào các mục trong menu bên trái để chuyển trang<br>
+                               • Có thể nhập trực tiếp mã đơn hàng để tra cứu</p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (data.type === 'wallet') {
+                return `
+                    <div class="data-card">
+                        <div class="data-header">
+                            <div class="data-title">
+                                <i class="fas fa-wallet"></i>
+                                Thông Tin Ví Điện Tử
+                            </div>
+                        </div>
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <div class="data-label">Số dư khả dụng</div>
+                                <div class="data-value amount-positive">${formatCurrency(data.balance)}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Tiền đang chờ xử lý</div>
+                                <div class="data-value">${formatCurrency(data.pending)}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Tổng số giao dịch</div>
+                                <div class="data-value">${data.totalTransactions || 48}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Cập nhật lần cuối</div>
+                                <div class="data-value">${formatDateTime(data.lastUpdated)}</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-light);">
+                            <a href="wallet.html" class="nav-button" style="padding: 1rem; text-align: center; width: 100%;">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Mở trang Ví Điện Tử để xem chi tiết</span>
+                                <small>Click để chuyển đến trang quản lý ví</small>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (data.type === 'order') {
+                const statusClass = `status-${data.status === 'delivered' ? 'success' : 
+                                   data.status === 'cancelled' ? 'danger' : 'warning'}`;
+                const statusText = data.status === 'delivered' ? 'Đã giao hàng' :
+                                 data.status === 'shipping' ? 'Đang giao hàng' :
+                                 data.status === 'processing' ? 'Đang xử lý' :
+                                 data.status === 'cancelled' ? 'Đã hủy' : 'Chờ xử lý';
+                
+                return `
+                    <div class="data-card">
+                        <div class="data-header">
+                            <div class="data-title">
+                                <i class="fas fa-box"></i>
+                                Đơn Hàng ${data.code}
+                            </div>
+                            <div class="data-status ${statusClass}">
+                                ${statusText}
+                            </div>
+                        </div>
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <div class="data-label">Khách hàng</div>
+                                <div class="data-value">${data.customer}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Số điện thoại</div>
+                                <div class="data-value">${data.phone}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Tổng giá trị</div>
+                                <div class="data-value">${formatCurrency(data.total)}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Tiền thu hộ (COD)</div>
+                                <div class="data-value">${formatCurrency(data.codAmount)}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Ngày đặt hàng</div>
+                                <div class="data-value">${formatDateTime(data.createdAt)}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Dự kiến giao hàng</div>
+                                <div class="data-value">${formatDateTime(data.expectedDelivery)}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Địa chỉ giao hàng</div>
+                                <div class="data-value">${data.address}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Người giao hàng</div>
+                                <div class="data-value">${data.shipper}</div>
+                            </div>
+                        </div>
+                        ${data.items ? `
+                            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-light);">
+                                <div class="data-label" style="margin-bottom: 0.8rem; font-size: 1rem;">Danh sách sản phẩm:</div>
+                                ${data.items.map(item => `
+                                    <div style="display: flex; justify-content: space-between; align-items: center; 
+                                               padding: 0.8rem; margin-bottom: 0.5rem; background: var(--light); border-radius: 8px;">
+                                        <div>
+                                            <strong>${item.name}</strong><br>
+                                            <small>Số lượng: ${item.quantity}</small>
+                                        </div>
+                                        <div class="data-value">${formatCurrency(item.price * item.quantity)}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-light);">
+                            <button onclick="checkPaymentStatus('${data.code.replace('DH', '')}')" 
+                                    class="quick-btn" style="width: 100%; justify-content: center;">
+                                <i class="fas fa-money-check"></i>
+                                Kiểm tra tiền đã về ví chưa?
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (data.type === 'payment_status') {
+                const statusColor = getStatusColor(data.payment_status);
+                const statusText = getPaymentStatusText(data.payment_status);
+                const orderStatusText = getOrderStatusText(data.order_status);
+                
+                // Tạo timeline steps
+                const timelineSteps = [];
+                
+                // Step 1: Order created
+                timelineSteps.push({
+                    title: 'Đơn hàng được tạo',
+                    time: formatDateTime(data.createdAt || new Date(Date.now() - 86400000 * 3).toISOString()),
+                    completed: true,
+                    current: false
+                });
+                
+                // Step 2: Money collected (nếu đã thu)
+                if (data.collected_at) {
+                    timelineSteps.push({
+                        title: 'Shipper đã thu tiền',
+                        time: formatDateTime(data.collected_at),
+                        completed: true,
+                        current: false
+                    });
+                } else if (data.payment_status === 'not_collected') {
+                    timelineSteps.push({
+                        title: 'Đang thu tiền từ khách',
+                        time: 'Đang thực hiện',
+                        completed: false,
+                        current: true
+                    });
+                } else {
+                    timelineSteps.push({
+                        title: 'Chờ thu tiền',
+                        time: 'Chưa thực hiện',
+                        completed: false,
+                        current: data.payment_status === 'collected_pending'
+                    });
+                }
+                
+                // Step 3: Settlement (nếu đã đối soát)
+                if (data.settled_at) {
+                    timelineSteps.push({
+                        title: 'Đã đối soát với shipper',
+                        time: formatDateTime(data.settled_at),
+                        completed: true,
+                        current: false
+                    });
+                } else if (data.payment_status === 'collected_pending') {
+                    timelineSteps.push({
+                        title: 'Chờ đối soát',
+                        time: 'Đang xử lý',
+                        completed: false,
+                        current: true
+                    });
+                } else {
+                    timelineSteps.push({
+                        title: 'Chờ đối soát',
+                        time: 'Chưa thực hiện',
+                        completed: false,
+                        current: false
+                    });
+                }
+                
+                // Step 4: Transfer to wallet (nếu đã chuyển)
+                if (data.transferred_to_wallet_at) {
+                    timelineSteps.push({
+                        title: 'Đã chuyển vào ví',
+                        time: formatDateTime(data.transferred_to_wallet_at),
+                        completed: true,
+                        current: false
+                    });
+                } else if (data.payment_status === 'settled_pending') {
+                    timelineSteps.push({
+                        title: 'Đang chuyển vào ví',
+                        time: 'Đang xử lý',
+                        completed: false,
+                        current: true
+                    });
+                } else {
+                    timelineSteps.push({
+                        title: 'Chuyển vào ví điện tử',
+                        time: 'Chưa thực hiện',
+                        completed: false,
+                        current: false
+                    });
+                }
+                
+                return `
+                    <div class="data-card" style="border-left-color: ${statusColor};">
+                        <div class="data-header">
+                            <div class="data-title">
+                                <i class="fas fa-money-check-alt"></i>
+                                Trạng Thái Thanh Toán
+                            </div>
+                            <div class="data-status" style="background: ${statusColor}20; color: ${statusColor}; border-color: ${statusColor}40;">
+                                ${data.current_stage}
+                            </div>
+                        </div>
+                        
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <div class="data-label">Mã đơn hàng</div>
+                                <div class="data-value">${data.order_code}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Số tiền thu hộ</div>
+                                <div class="data-value amount-positive">${formatCurrency(data.cod_amount)}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Trạng thái đơn</div>
+                                <div class="data-value">${orderStatusText}</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Trạng thái thanh toán</div>
+                                <div class="data-value">${statusText}</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline -->
+                        <div class="timeline">
+                            ${timelineSteps.map((step, index) => `
+                                <div class="timeline-item">
+                                    <div class="timeline-dot ${step.completed ? 'completed' : step.current ? 'current' : 'pending'}">
+                                        <i class="fas fa-${step.completed ? 'check' : step.current ? 'sync-alt' : 'clock'}"></i>
+                                    </div>
+                                    <div class="timeline-content ${step.completed ? 'completed' : step.current ? 'current' : 'pending'}">
+                                        <div class="timeline-title">
+                                            ${step.title}
+                                        </div>
+                                        <div class="timeline-time">
+                                            <i class="fas fa-clock"></i> ${step.time}
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        
+                        ${data.next_step ? `
+                            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255, 209, 102, 0.1); 
+                                       border-radius: 8px; border-left: 4px solid var(--warning);">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-forward" style="color: var(--warning);"></i>
+                                    <strong>Bước tiếp theo:</strong>
+                                </div>
+                                <div>${data.next_step}</div>
+                                ${data.estimated_time ? `
+                                    <div style="margin-top: 0.5rem; font-size: 0.9rem;">
+                                        <i class="fas fa-clock"></i> Dự kiến: ${data.estimated_time}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        
+                        <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                            <a href="history.html?order=${data.order_code}" 
+                               class="quick-btn" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-external-link-alt"></i>
+                                Xem chi tiết giao dịch
+                            </a>
+                            <button onclick="checkOrderStatus('${data.order_code.replace('DH', '')}')" 
+                                    class="quick-btn" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-sync-alt"></i>
+                                Cập nhật trạng thái
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (data.type === 'order_list') {
+                return `
+                    <div class="data-card">
+                        <div class="data-header">
+                            <div class="data-title">
+                                <i class="fas fa-list-alt"></i>
+                                Đơn Hàng Gần Đây
+                            </div>
+                        </div>
+                        ${data.orders.map(order => {
+                            const statusColor = order.status === 'delivered' ? 'success' : 
+                                              order.status === 'cancelled' ? 'danger' : 'warning';
+                            const statusText = order.status === 'delivered' ? 'Đã giao' :
+                                             order.status === 'shipping' ? 'Đang giao' : 'Đang xử lý';
+                            
+                            return `
+                                <div style="display: flex; justify-content: space-between; align-items: center; 
+                                           padding: 1rem; margin-bottom: 0.8rem; background: var(--light); 
+                                           border-radius: 10px; border-left: 4px solid var(--${statusColor});">
+                                    <div>
+                                        <strong style="font-size: 1.1rem;">${order.id}</strong><br>
+                                        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                                            <span style="font-size: 0.85rem; color: var(--gray);">
+                                                <i class="fas fa-calendar"></i> ${formatDate(order.date)}
+                                            </span>
+                                            <span style="font-size: 0.85rem; color: var(--gray);">
+                                                <i class="fas fa-money-bill"></i> ${formatCurrency(order.total)}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="data-status status-${statusColor}" style="font-size: 0.8rem;">
+                                        ${statusText}
+                                    </span>
+                                </div>
+                            `;
+                        }).join('')}
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-light);">
+                            <a href="history.html" class="nav-button" style="padding: 1rem; text-align: center; width: 100%;">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Xem chi tiết tất cả đơn hàng</span>
+                                <small>Click để chuyển đến trang lịch sử đầy đủ</small>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (data.type === 'error') {
+                return `
+                    <div class="data-card error-card">
+                        <div class="data-header">
+                            <div class="data-title">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                ${data.title || 'Đã Xảy Ra Lỗi'}
+                            </div>
+                        </div>
+                        <div style="line-height: 1.6;">
+                            <p style="margin-bottom: 1rem;">${data.message}</p>
+                            ${data.suggestion ? `
+                                <div style="background: rgba(239, 71, 111, 0.05); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--danger);">
+                                    <strong style="color: var(--danger);">💡 Gợi ý:</strong>
+                                    <p style="margin-top: 0.5rem;">${data.suggestion}</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                            <button class="quick-btn" onclick="quickAction('help')" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-question-circle"></i>
+                                Xem hướng dẫn
+                            </button>
+                            <button class="quick-btn" onclick="quickAction('navigation')" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-compass"></i>
+                                Điều hướng
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            return '';
+        }
+
+        function showTyping(show) {
+            const typingIndicator = document.getElementById('typingIndicator');
+            typingIndicator.style.display = show ? 'flex' : 'none';
+            if (show) {
+                const chatMessages = document.getElementById('chatMessages');
+                setTimeout(() => {
+                    chatMessages.scrollTo({
+                        top: chatMessages.scrollHeight,
+                        behavior: 'smooth'
+                    });
+                }, 100);
+            }
+        }
+
+        // ========== MESSAGE PROCESSING ==========
+        async function processUserMessage(message) {
+            const intentResult = IntentRecognizer.recognize(message);
+            
+            switch(intentResult.intent) {
+                case 'order_tracking':
+                    if (intentResult.entities?.code) {
+                        await handleOrderTracking(intentResult.entities.code);
+                    } else {
+                        askForOrderCode();
+                    }
+                    break;
+                    
+                case 'order_payment_status':
+                    if (intentResult.entities?.code) {
+                        await handleOrderPaymentStatus(intentResult.entities.code);
+                    } else {
+                        askForOrderCodeForPaymentCheck();
+                    }
+                    break;
+                    
+                case 'balance_check':
+                case 'go_wallet':
+                    await handleBalanceCheck();
+                    break;
+                    
+                case 'navigation':
+                case 'go_dashboard':
+                case 'go_history':
+                    showNavigation();
+                    break;
+                    
+                case 'help':
+                case 'capabilities':
+                    showHelp();
+                    break;
+                    
+                case 'greeting':
+                    addMessage(`Xin chào ${chatState.userInfo.name}!  Rất vui được hỗ trợ bạn. Tôi có thể giúp gì cho bạn hôm nay?`, 'bot');
+                    break;
+                    
+                case 'goodbye':
+                    addMessage('Cảm ơn bạn đã sử dụng dịch vụ của ShopCOD! Chúc bạn một ngày tốt lành. 😊', 'bot');
+                    break;
+                    
+                case 'unknown':
+                    handleUnknownIntent(message);
+                    break;
+                    
+                default:
+                    addMessage('Tôi chưa hiểu ý của bạn. Bạn có thể:<br>• Tra cứu đơn hàng<br>• Kiểm tra tiền về ví<br>• Kiểm tra số dư ví<br>• Yêu cầu điều hướng<br>• Hoặc sử dụng các nút phía trên để thao tác nhanh.', 'bot');
+            }
+        }
+
+        async function handleOrderTracking(orderCode) {
+            try {
+                showTyping(true);
+                
+                // Simulate API delay
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                const mockData = {
+                    type: 'order',
+                    code: `DH${orderCode}`,
+                    customer: 'Nguyễn Văn B',
+                    phone: '0912***789',
+                    total: 850000,
+                    codAmount: 850000,
+                    status: 'shipping',
+                    createdAt: '2024-05-15T10:30:00Z',
+                    expectedDelivery: '2024-05-17T16:00:00Z',
+                    address: '123 Nguyễn Trãi, Quận 1, TP.HCM',
+                    shipper: 'Nguyễn Văn C - 0903***456',
+                    items: [
+                        { name: 'Áo thun nam cao cấp', quantity: 2, price: 250000 },
+                        { name: 'Quần jean slim fit', quantity: 1, price: 350000 }
+                    ]
+                };
+                
+                addMessage(`Đã tìm thấy thông tin đơn hàng **${mockData.code}**`, 'bot', mockData);
+                
+            } catch (error) {
+                addMessage(`Không tìm thấy đơn hàng với mã "${orderCode}"`, 'bot', {
+                    type: 'error',
+                    title: 'Không Tìm Thấy Đơn Hàng',
+                    message: `Không tìm thấy đơn hàng nào với mã <strong>${orderCode}</strong>. Có thể mã đơn hàng không tồn tại hoặc bạn không có quyền truy cập.`,
+                    suggestion: 'Vui lòng kiểm tra lại mã đơn hàng hoặc liên hệ bộ phận hỗ trợ của ShopCOD.'
+                });
+            } finally {
+                showTyping(false);
+            }
+        }
+
+        async function handleOrderPaymentStatus(orderCode) {
+            try {
+                showTyping(true);
+                
+                // Simulate API delay
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Mock data với các trạng thái thanh toán
+                const mockStatuses = [
+                    {
+                        type: 'payment_status',
+                        order_code: `DH${orderCode}`,
+                        order_status: 'delivered',
+                        payment_status: 'transferred',
+                        cod_amount: Math.floor(Math.random() * 5000000) + 100000,
+                        collected_at: new Date(Date.now() - 86400000 * 2).toISOString(),
+                        settled_at: new Date(Date.now() - 86400000 * 1).toISOString(),
+                        transferred_to_wallet_at: new Date().toISOString(),
+                        current_stage: 'Đã chuyển vào ví',
+                        next_step: null,
+                        estimated_time: null
+                    },
+                    {
+                        type: 'payment_status',
+                        order_code: `DH${orderCode}`,
+                        order_status: 'delivered',
+                        payment_status: 'settled_pending',
+                        cod_amount: 1850000,
+                        collected_at: new Date(Date.now() - 172800000).toISOString(),
+                        settled_at: new Date().toISOString(),
+                        transferred_to_wallet_at: null,
+                        current_stage: 'Đã đối soát, đang chuyển vào ví',
+                        next_step: 'Chuyển vào ví điện tử',
+                        estimated_time: 'Trong vòng 24h'
+                    },
+                    {
+                        type: 'payment_status',
+                        order_code: `DH${orderCode}`,
+                        order_status: 'shipping',
+                        payment_status: 'collected_pending',
+                        cod_amount: 950000,
+                        collected_at: new Date(Date.now() - 86400000).toISOString(),
+                        settled_at: null,
+                        transferred_to_wallet_at: null,
+                        current_stage: 'Đã thu tiền, chờ đối soát',
+                        next_step: 'Đối soát với shipper',
+                        estimated_time: '1-2 ngày làm việc'
+                    },
+                    {
+                        type: 'payment_status',
+                        order_code: `DH${orderCode}`,
+                        order_status: 'processing',
+                        payment_status: 'not_collected',
+                        cod_amount: 1250000,
+                        collected_at: null,
+                        settled_at: null,
+                        transferred_to_wallet_at: null,
+                        current_stage: 'Chưa thu tiền - Đang giao hàng',
+                        next_step: 'Shipper giao hàng và thu tiền',
+                        estimated_time: 'Dự kiến giao: ' + formatDateTime(new Date(Date.now() + 86400000 * 2).toISOString())
+                    }
+                ];
+                
+                // Random chọn một trạng thái để demo
+                const randomIndex = Math.floor(Math.random() * mockStatuses.length);
+                const paymentData = mockStatuses[randomIndex];
+                
+                // Tạo thông báo tương ứng
+                const message = generatePaymentStatusMessage(paymentData);
+                
+                addMessage(message, 'bot', paymentData);
+                
+            } catch (error) {
+                addMessage(`Không thể kiểm tra trạng thái thanh toán cho đơn hàng ${orderCode}`, 'bot', {
+                    type: 'error',
+                    title: 'Lỗi tra cứu',
+                    message: 'Không thể truy vấn trạng thái thanh toán lúc này.',
+                    suggestion: 'Vui lòng thử lại sau hoặc liên hệ hỗ trợ.'
+                });
+            } finally {
+                showTyping(false);
+            }
+        }
+
+        function generatePaymentStatusMessage(data) {
+            const templates = {
+                'not_collected': ` **Đơn hàng ${data.order_code} chưa thu tiền**\n\n` +
+                                `• Shipper chưa giao hàng thành công\n` +
+                                `• Tiền thu hộ: ${formatCurrency(data.cod_amount)}\n` +
+                                `• ${data.estimated_time || 'Đang chờ giao hàng'}`,
+                
+                'collected_pending': ` **Đơn ${data.order_code} đã thu tiền, đang chờ đối soát**\n\n` +
+                                    `• Shipper đã thu tiền: ${formatDateTime(data.collected_at)}\n` +
+                                    `• Số tiền: ${formatCurrency(data.cod_amount)}\n` +
+                                    `• ${data.estimated_time || 'Đang chờ đối soát'}`,
+                
+                'settled_pending': ` **Đơn ${data.order_code} đã đối soát, đang chuyển vào ví**\n\n` +
+                                  `• Đã đối soát: ${formatDateTime(data.settled_at)}\n` +
+                                  `• Số tiền: ${formatCurrency(data.cod_amount)}\n` +
+                                  `• ${data.estimated_time || 'Đang xử lý chuyển khoản'}`,
+                
+                'transferred': ` **ĐƠN ${data.order_code} ĐÃ VỀ VÍ!** 🎉\n\n` +
+                              `• Đã chuyển vào ví: ${formatDateTime(data.transferred_to_wallet_at)}\n` +
+                              `• Số tiền: ${formatCurrency(data.cod_amount)}\n` +
+                              `• Bạn có thể rút tiền hoặc sử dụng ngay!`,
+                
+                'cancelled': ` **Đơn ${data.order_code} đã hủy/trả hàng**\n\n` +
+                            `• Trạng thái: ${data.order_status}\n` +
+                            `• Không có tiền thu hộ\n` +
+                            `• Lý do: ${data.cancellation_reason || 'Khách không nhận hàng'}`
+            };
+            
+            return templates[data.payment_status] || 
+                   `📊 **Trạng thái thanh toán đơn ${data.order_code}:**\n\n` +
+                   `• ${data.current_stage}\n` +
+                   `• Số tiền: ${formatCurrency(data.cod_amount)}`;
+        }
+
+        async function handleBalanceCheck() {
+            try {
+                showTyping(true);
+                
+                await new Promise(resolve => setTimeout(resolve, 800));
+                
+                const mockData = {
+                    type: 'wallet',
+                    balance: 25480000,
+                    pending: 1500000,
+                    totalTransactions: 48,
+                    lastUpdated: new Date().toISOString()
+                };
+                
+                addMessage(`Thông tin số dư ví điện tử của bạn:`, 'bot', mockData);
+                
+            } catch (error) {
+                addMessage('Không thể kiểm tra số dư lúc này.', 'bot', {
+                    type: 'error',
+                    title: 'Lỗi Kết Nối',
+                    message: 'Hệ thống đang gặp sự cố kết nối. Không thể truy vấn số dư ví.',
+                    suggestion: 'Vui lòng thử lại sau ít phút hoặc truy cập trực tiếp vào trang Ví Điện Tử.'
+                });
+            } finally {
+                showTyping(false);
+            }
+        }
+
+        function showNavigation() {
+            addMessage('Dưới đây là các trang bạn có thể truy cập nhanh:', 'bot', {
+                type: 'navigation'
+            });
+        }
+
+        function showHelp() {
+            addMessage('Tôi là COD Assistant Pro - Trợ lý thông minh của ShopCOD. Dưới đây là hướng dẫn sử dụng:', 'bot', {
+                type: 'help'
+            });
+        }
+
+        function askForOrderCode() {
+            addMessage('Vui lòng nhập mã đơn hàng của bạn (VD: <strong>123456</strong> hoặc <strong>DH123456</strong>):', 'bot');
+            chatState.waitingFor = 'order_code';
+        }
+
+        function askForOrderCodeForPaymentCheck() {
+            addMessage('Vui lòng nhập mã đơn hàng để kiểm tra tiền về ví (VD: <strong>123456</strong>):', 'bot');
+            chatState.waitingFor = 'payment_status_code';
+        }
+
+        function handleUnknownIntent(message) {
+            const possibleCode = message.match(/^\s*(\d{6,10})\s*$/);
+            if (possibleCode) {
+                if (chatState.waitingFor === 'order_code') {
+                    handleOrderTracking(possibleCode[1]);
+                    chatState.waitingFor = null;
+                    return;
+                } else if (chatState.waitingFor === 'payment_status_code') {
+                    handleOrderPaymentStatus(possibleCode[1]);
+                    chatState.waitingFor = null;
+                    return;
+                }
+            }
+            
+            const responses = [
+                "Tôi chưa hiểu ý của bạn. Vui lòng thử một trong các cách sau:<br>• Nhập mã đơn hàng để tra cứu<br>• Hỏi về số dư ví<br>• Kiểm tra tiền về ví<br>• Yêu cầu điều hướng đến trang khác<br>• Sử dụng các nút phía trên để thao tác nhanh",
+                "Xin lỗi, tôi chỉ có thể giúp bạn với:<br>• Tra cứu đơn hàng<br>• Kiểm tra số dư<br>• Kiểm tra tiền về ví<br>• Điều hướng website<br><br>Vui lòng thử lại với một trong các chức năng trên.",
+                "Tôi là trợ lý tra cứu COD. Bạn có thể:<br>• Nhập trực tiếp mã đơn hàng<br>• Hỏi: 'Tiền đơn X đã về ví chưa?'<br>• Click vào các nút phía trên<br>• Sử dụng menu bên trái để điều hướng"
+            ];
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            addMessage(randomResponse, 'bot');
+        }
+
+        // ========== HELPER FUNCTIONS ==========
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('vi-VN', {
+                style: 'currency',
+                currency: 'VND',
+                minimumFractionDigits: 0
+            }).format(amount);
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('vi-VN', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+        }
+
+        function formatDateTime(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleString('vi-VN', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        function getStatusColor(paymentStatus) {
+            const colors = {
+                'transferred': 'var(--success)',
+                'settled_pending': 'var(--warning)',
+                'collected_pending': 'var(--accent)',
+                'not_collected': 'var(--gray)',
+                'cancelled': 'var(--danger)'
+            };
+            return colors[paymentStatus] || 'var(--primary)';
+        }
+
+        function getPaymentStatusText(paymentStatus) {
+            const texts = {
+                'transferred': 'Đã về ví',
+                'settled_pending': 'Đã đối soát, chờ chuyển',
+                'collected_pending': 'Đã thu tiền, chờ đối soát',
+                'not_collected': 'Chưa thu tiền',
+                'cancelled': 'Đã hủy'
+            };
+            return texts[paymentStatus] || paymentStatus;
+        }
+
+        function getOrderStatusText(orderStatus) {
+            const texts = {
+                'processing': 'Đang xử lý',
+                'shipping': 'Đang giao hàng',
+                'delivered': 'Đã giao hàng',
+                'cancelled': 'Đã hủy'
+            };
+            return texts[orderStatus] || orderStatus;
+        }
+
+        function checkPaymentStatus(orderCode) {
+            addMessage(`Kiểm tra tiền đơn hàng ${orderCode} đã về ví chưa...`, 'user');
+            setTimeout(() => {
+                handleOrderPaymentStatus(orderCode);
+            }, 500);
+        }
+
+        function checkOrderStatus(orderCode) {
+            addMessage(`Kiểm tra lại trạng thái đơn hàng ${orderCode}...`, 'user');
+            setTimeout(() => {
+                handleOrderTracking(orderCode);
+            }, 500);
+        }
+
+        function exportChatHistory() {
+            try {
+                const chatData = {
+                    user: chatState.userInfo.name,
+                    timestamp: new Date().toISOString(),
+                    messages: chatState.chatHistory
+                };
+                
+                const blob = new Blob([JSON.stringify(chatData, null, 2)], 
+                    { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `chat-history-${Date.now()}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                
+                addMessage('Đã xuất lịch sử chat thành công!', 'bot');
+            } catch (error) {
+                addMessage('Không thể xuất lịch sử chat.', 'bot', {
+                    type: 'error',
+                    title: 'Lỗi xuất file',
+                    message: 'Đã xảy ra lỗi khi xuất lịch sử chat.',
+                    suggestion: 'Vui lòng thử lại sau.'
+                });
+            }
+        }
+
+        // ========== INITIALIZATION ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check authentication
+            if (!Auth.isLoggedIn()) {
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            // Load user data
+            const user = Auth.getCurrentUser();
+            if (user) {
+                // Update UI with user data
+                document.querySelectorAll('.user-name').forEach(el => {
+                    el.textContent = user.name;
+                });
+            }
+            
+            // Add welcome message
+            setTimeout(() => {
+                addMessage(
+                    `<strong>Chào mừng ${chatState.userInfo.name} đến với COD Assistant Pro!</strong><br><br>` +
+                    `Tôi là trợ lý thông minh của hệ thống ShopCOD, có thể giúp bạn:<br><br>` +
+                    `• <strong>Tra cứu đơn hàng</strong> - Nhập mã đơn hàng để xem chi tiết<br>` +
+                    `• <strong>Kiểm tra tiền về ví</strong> - "Tiền đơn X đã về ví chưa?"<br>` +
+                    `• <strong>Kiểm tra số dư</strong> - Hỏi về tình trạng ví điện tử<br>` +
+                    `• <strong>Điều hướng website</strong> - Chuyển đến các trang khác<br>` +
+                    `• <strong>Hỗ trợ 24/7</strong> - Luôn sẵn sàng giải đáp thắc mắc<br><br>` +
+                    `Hãy bắt đầu bằng cách nhập mã đơn hàng hoặc sử dụng các nút bên trên!`,
+                    'bot'
+                );
+            }, 800);
+            
+            // Focus on input
+            document.getElementById('userInput').focus();
+            
+            // Setup search functionality
+            const searchInput = document.querySelector('.search-bar input');
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const query = this.value.trim();
+                    if (query) {
+                        addMessage(`Tìm kiếm: "${query}" trong lịch sử chat...`, 'user');
+                        // In real app, would search through chat history
+                        setTimeout(() => {
+                            addMessage(`Tìm thấy ${Math.floor(Math.random() * 5) + 1} kết quả liên quan đến "${query}" trong lịch sử chat của bạn.`, 'bot');
+                        }, 800);
+                        this.value = '';
+                    }
+                }
+            });
+            
+            // Mobile menu toggle
+            const menuToggle = document.createElement('button');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            menuToggle.style.cssText = `
+                position: fixed;
+                top: 1rem;
+                left: 1rem;
+                z-index: 1000;
+                background: var(--primary);
+                color: white;
+                border: none;
+                width: 45px;
+                height: 45px;
+                border-radius: 10px;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                box-shadow: var(--shadow-lg);
+                font-size: 1.2rem;
+            `;
+            
+            document.body.appendChild(menuToggle);
+            
+            menuToggle.addEventListener('click', function() {
+                document.querySelector('.sidebar').classList.toggle('active');
+            });
+            
+            // Show/hide menu toggle based on screen size
+            function checkScreenSize() {
+                if (window.innerWidth <= 1200) {
+                    menuToggle.style.display = 'flex';
+                } else {
+                    menuToggle.style.display = 'none';
+                    document.querySelector('.sidebar').classList.remove('active');
+                }
+            }
+            
+            checkScreenSize();
+            window.addEventListener('resize', checkScreenSize);
+            
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', function(event) {
+                const sidebar = document.querySelector('.sidebar');
+                if (window.innerWidth <= 1200 && 
+                    !sidebar.contains(event.target) && 
+                    !menuToggle.contains(event.target) &&
+                    sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                }
+            });
+            
+            // Add API mode indicator
+            const modeIndicator = document.createElement('div');
+            modeIndicator.style.cssText = `
+                position: fixed;
+                bottom: 15px;
+                right: 15px;
+                background: ${API_CONFIG.MOCK_MODE ? '#ffd166' : '#06d6a0'};
+                color: ${API_CONFIG.MOCK_MODE ? '#333' : 'white'};
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-size: 12px;
+                font-weight: 600;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            `;
+            modeIndicator.innerHTML = `
+                <i class="fas fa-${API_CONFIG.MOCK_MODE ? 'code' : 'plug'}"></i>
+                ${API_CONFIG.MOCK_MODE ? 'MOCK API MODE' : 'REAL API MODE'}
+            `;
+            document.body.appendChild(modeIndicator);
+            
+            // Auto-clear waiting state after 60 seconds
+            setInterval(() => {
+                if (chatState.waitingFor) {
+                    chatState.waitingFor = null;
+                }
+            }, 60000);
+        });
+
+        // Logout function
+        function logout() {
+            if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+                // Xóa tất cả dữ liệu đăng nhập
+                localStorage.removeItem('token');
+                localStorage.removeItem('user');
+                sessionStorage.removeItem('token');
+                sessionStorage.removeItem('user');
+                
+                // Chuyển hướng về trang đăng nhập
+                window.location.href = 'login.html';
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

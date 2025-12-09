@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <script src="js/auth-check.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Sử Giao Dịch - ShopCOD Pro</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4361ee;
+            --primary-light: #eef2ff;
+            --secondary: #3a0ca3;
+            --accent: #4cc9f0;
+            --success: #06d6a0;
+            --warning: #ffd166;
+            --danger: #ef476f;
+            --dark: #1e293b;
+            --dark-light: #334155;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --sidebar-width: 260px;
+            --header-height: 70px;
+            --radius: 16px;
+            --radius-sm: 10px;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f6f9fc 0%, #f1f5f9 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--dark) 0%, #0f172a 100%);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .logo-text h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .nav-section {
+            margin-bottom: 2rem;
+        }
+
+        .nav-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1rem;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-links a.active {
+            background: linear-gradient(90deg, var(--primary), rgba(67, 97, 238, 0.3));
+            color: white;
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+        }
+
+        .nav-links a i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .user-profile {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .user-info h4 {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .user-info p {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            z-index: 50;
+        }
+
+        .header-left h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header-left p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .search-bar {
+            position: relative;
+        }
+
+        .search-bar input {
+            padding: 0.8rem 1rem 0.8rem 2.5rem;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            width: 300px;
+            font-size: 0.9rem;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .notification-btn {
+            position: relative;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            color: var(--dark);
+        }
+
+        .notification-btn:hover {
+            background: var(--gray-light);
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 8px;
+            height: 8px;
+            background: var(--danger);
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        /* ===== CONTENT CONTAINER ===== */
+        .content-container {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        /* Stats Overview */
+        .stats-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, currentColor 0%, transparent 70%);
+            opacity: 0.1;
+            border-radius: 0 var(--radius) 0 50px;
+        }
+
+        .stat-card.total { border-color: var(--primary); color: var(--primary); }
+        .stat-card.income { border-color: var(--success); color: var(--success); }
+        .stat-card.expense { border-color: var(--danger); color: var(--danger); }
+        .stat-card.pending { border-color: var(--warning); color: var(--warning); }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .total .stat-icon { background: rgba(67, 97, 238, 0.1); }
+        .income .stat-icon { background: rgba(6, 214, 160, 0.1); }
+        .expense .stat-icon { background: rgba(239, 71, 111, 0.1); }
+        .pending .stat-icon { background: rgba(255, 209, 102, 0.1); }
+
+        .stat-content {
+            flex: 1;
+        }
+
+        .stat-title {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-change {
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .stat-change.positive {
+            color: var(--success);
+        }
+
+        .stat-change.negative {
+            color: var(--danger);
+        }
+
+        /* Filters Section */
+        .filters-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .filters-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .filters-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-select, .filter-input {
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .filter-select:focus, .filter-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            align-self: flex-end;
+        }
+
+        .filter-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.2);
+        }
+
+        /* Transactions Table */
+        .transactions-section {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .transactions-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .transactions-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .transaction-count {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .transactions-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1000px;
+        }
+
+        .transactions-table thead {
+            background: var(--light);
+        }
+
+        .transactions-table th {
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            color: var(--dark-light);
+            font-size: 0.9rem;
+            border-bottom: 2px solid var(--gray-light);
+            white-space: nowrap;
+        }
+
+        .transactions-table tbody tr {
+            border-bottom: 1px solid var(--gray-light);
+            transition: background 0.3s;
+        }
+
+        .transactions-table tbody tr:hover {
+            background: var(--light);
+        }
+
+        .transactions-table td {
+            padding: 1.2rem 1.5rem;
+            font-size: 0.95rem;
+            vertical-align: middle;
+        }
+
+        .transaction-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            min-width: 100px;
+        }
+
+        .type-deposit { background: rgba(6, 214, 160, 0.1); color: var(--success); border: 1px solid rgba(6, 214, 160, 0.2); }
+        .type-withdraw { background: rgba(76, 201, 240, 0.1); color: var(--accent); border: 1px solid rgba(76, 201, 240, 0.2); }
+        .type-payment { background: rgba(239, 71, 111, 0.1); color: var(--danger); border: 1px solid rgba(239, 71, 111, 0.2); }
+        .type-transfer { background: rgba(255, 209, 102, 0.1); color: var(--warning); border: 1px solid rgba(255, 209, 102, 0.2); }
+
+        .transaction-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            min-width: 100px;
+        }
+
+        .status-success { background: rgba(6, 214, 160, 0.1); color: var(--success); border: 1px solid rgba(6, 214, 160, 0.2); }
+        .status-pending { background: rgba(255, 209, 102, 0.1); color: var(--warning); border: 1px solid rgba(255, 209, 102, 0.2); }
+        .status-failed { background: rgba(239, 71, 111, 0.1); color: var(--danger); border: 1px solid rgba(239, 71, 111, 0.2); }
+
+        .transaction-amount {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .amount-positive { color: var(--success); }
+        .amount-negative { color: var(--danger); }
+
+        .transaction-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .action-btn {
+            padding: 0.5rem 0.8rem;
+            background: white;
+            border: 1px solid var(--gray-light);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--dark);
+        }
+
+        .action-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.5rem;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gray-light);
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .page-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .page-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Export Section */
+        .export-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .export-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .export-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .export-btn {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .export-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.2);
+        }
+
+        /* Charts Section */
+        .charts-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .chart-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chart-period {
+            display: flex;
+            gap: 0.5rem;
+            background: var(--light);
+            padding: 0.3rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .period-btn {
+            padding: 0.4rem 0.8rem;
+            border: none;
+            background: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .period-btn.active {
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .header-right {
+                gap: 1rem;
+            }
+            
+            .search-bar input {
+                width: 250px;
+            }
+            
+            .charts-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .content-container {
+                padding: 1.5rem;
+            }
+            
+            .stats-overview {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .filters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-btn {
+                align-self: stretch;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .header-left h1 {
+                font-size: 1.5rem;
+            }
+            
+            .search-bar input {
+                width: 100%;
+            }
+            
+            .stats-overview {
+                grid-template-columns: 1fr;
+            }
+            
+            .export-section {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .export-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+            .export-btn {
+                justify-content: center;
+            }
+            
+            .transaction-actions {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chart-container {
+                height: 250px;
+            }
+            
+            .period-btn {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-card, .filters-section, .transactions-section, .chart-card, .export-section {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .stat-card:nth-child(2) { animation-delay: 0.1s; }
+        .stat-card:nth-child(3) { animation-delay: 0.2s; }
+        .stat-card:nth-child(4) { animation-delay: 0.3s; }
+        .filters-section { animation-delay: 0.4s; }
+        .transactions-section { animation-delay: 0.5s; }
+        .chart-card:nth-child(1) { animation-delay: 0.6s; }
+        .chart-card:nth-child(2) { animation-delay: 0.7s; }
+        .export-section { animation-delay: 0.8s; }
+
+        /* Print Styles */
+        @media print {
+            .sidebar, .header, .filters-section, .export-section, .action-btn, .pagination {
+                display: none !important;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .content-container {
+                padding: 0;
+            }
+            
+            .transactions-section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-history"></i>
+            </div>
+            <div class="logo-text">
+                <h2>ShopCOD</h2>
+                <span>Transaction History</span>
+            </div>
+        </div>
+
+        <div class="nav-section">
+            <h4 class="nav-title">MAIN MENU</h4>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="wallet.html"><i class="fas fa-wallet"></i> Ví điện tử</a></li>
+                <li><a href="history.html" class="active"><i class="fas fa-history"></i> Lịch sử GD</a></li>
+                <li><a href="chatbot.html"><i class="fas fa-robot"></i> Chatbot</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-section">
+            <h4 class="nav-title">TRANSACTION FILTERS</h4>
+            <ul class="nav-links">
+                <li><a href="#" onclick="filterTransactions('all')"><i class="fas fa-list"></i> Tất cả GD</a></li>
+                <li><a href="#" onclick="filterTransactions('deposit')"><i class="fas fa-arrow-down"></i> Tiền vào</a></li>
+                <li><a href="#" onclick="filterTransactions('withdraw')"><i class="fas fa-arrow-up"></i> Tiền ra</a></li>
+                <li><a href="#" onclick="filterTransactions('pending')"><i class="fas fa-clock"></i> Đang chờ</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-section">
+            <h4 class="nav-title">EXPORT OPTIONS</h4>
+            <ul class="nav-links">
+                <li><a href="#" onclick="exportPDF()"><i class="fas fa-file-pdf"></i> Xuất PDF</a></li>
+                <li><a href="#" onclick="exportExcel()"><i class="fas fa-file-excel"></i> Xuất Excel</a></li>
+                <li><a href="#" onclick="printReport()"><i class="fas fa-print"></i> In báo cáo</a></li>
+                <li><a href="#" onclick="refreshData()"><i class="fas fa-sync-alt"></i> Làm mới</a></li>
+            </ul>
+        </div>
+        <!-- Trong sidebar, phần SETTINGS -->
+<div class="nav-section">
+    <div class="section-label">SETTINGS</div>
+    <ul class="nav-menu">
+        <!-- ... các mục khác ... -->
+        
+        <li class="nav-item">
+            <a href="#" class="nav-link" onclick="logout()">
+                <i class="fas fa-sign-out-alt nav-icon"></i>
+                <span class="nav-text">Đăng xuất</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+        <div class="user-profile">
+            <div class="user-avatar">SM</div>
+            <div class="user-info">
+                <h4>Sumo</h4>
+                <p>Quản trị viên</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1><i class="fas fa-history"></i> Lịch Sử Giao Dịch</h1>
+                <p>Quản lý và theo dõi tất cả giao dịch trong hệ thống</p>
+            </div>
+            
+            <div class="header-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm giao dịch...">
+                </div>
+                
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <div class="notification-badge"></div>
+                </button>
+                
+                <div class="user-profile" style="background: none; padding: 0; cursor: default;">
+                    <div class="user-avatar">SM</div>
+                    <div class="user-info">
+                        <h4>Sumo</h4>
+                        <p>Cập nhật 5 phút trước</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Container -->
+        <div class="content-container">
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-card total">
+                    <div class="stat-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-title">TỔNG GIAO DỊCH</div>
+                        <div class="stat-value">8,450,000 ₫</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12.5% so với tháng trước</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card income">
+                    <div class="stat-icon">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-title">TIỀN VÀO</div>
+                        <div class="stat-value">6,250,000 ₫</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>24.3% tăng trưởng</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card expense">
+                    <div class="stat-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-title">TIỀN RA</div>
+                        <div class="stat-value">2,200,000 ₫</div>
+                        <div class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>8.5% giảm so với T4</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card pending">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-title">CHỜ XỬ LÝ</div>
+                        <div class="stat-value">3 GD</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>2 GD so với tuần trước</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters Section -->
+            <div class="filters-section">
+                <div class="filters-header">
+                    <h3><i class="fas fa-filter"></i> Bộ Lọc Giao Dịch</h3>
+                    <button class="filter-btn" onclick="applyFilters()">
+                        <i class="fas fa-sliders-h"></i> Áp Dụng Lọc
+                    </button>
+                </div>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="dateRange"><i class="fas fa-calendar"></i> Khoảng Thời Gian</label>
+                        <select id="dateRange" class="filter-select">
+                            <option value="all">Tất cả thời gian</option>
+                            <option value="today">Hôm nay</option>
+                            <option value="week">Tuần này</option>
+                            <option value="month" selected>Tháng này</option>
+                            <option value="quarter">Quý này</option>
+                            <option value="custom">Tùy chọn</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="transactionType"><i class="fas fa-exchange-alt"></i> Loại Giao Dịch</label>
+                        <select id="transactionType" class="filter-select">
+                            <option value="all">Tất cả loại</option>
+                            <option value="deposit">Nạp tiền</option>
+                            <option value="withdraw">Rút tiền</option>
+                            <option value="payment">Thanh toán</option>
+                            <option value="transfer">Chuyển khoản</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="statusFilter"><i class="fas fa-check-circle"></i> Trạng Thái</label>
+                        <select id="statusFilter" class="filter-select">
+                            <option value="all">Tất cả trạng thái</option>
+                            <option value="success">Thành công</option>
+                            <option value="pending">Đang xử lý</option>
+                            <option value="failed">Thất bại</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="amountRange"><i class="fas fa-coins"></i> Khoảng Số Tiền</label>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <input type="number" id="minAmount" class="filter-input" placeholder="Từ">
+                            <input type="number" id="maxAmount" class="filter-input" placeholder="Đến">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transactions Table -->
+            <div class="transactions-section">
+                <div class="transactions-header">
+                    <h3><i class="fas fa-list"></i> Danh Sách Giao Dịch</h3>
+                    <div class="transaction-count" id="transactionCount">15 giao dịch</div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="transactions-table" id="transactionsTable">
+                        <thead>
+                            <tr>
+                                <th>Mã GD</th>
+                                <th>Thời gian</th>
+                                <th>Loại GD</th>
+                                <th>Khách hàng</th>
+                                <th>Số tiền</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionsBody">
+                            <!-- Dữ liệu sẽ được load bằng JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="pagination">
+                    <button class="page-btn" onclick="changePage(1)">1</button>
+                    <button class="page-btn" onclick="changePage(2)">2</button>
+                    <button class="page-btn active" onclick="changePage(3)">3</button>
+                    <button class="page-btn" onclick="changePage(4)">4</button>
+                    <button class="page-btn" onclick="changePage(5)">5</button>
+                </div>
+            </div>
+
+            <!-- Export Section -->
+            <div class="export-section">
+                <div class="export-info">
+                    <h3><i class="fas fa-download"></i> Xuất Dữ Liệu</h3>
+                    <p>Tải xuống lịch sử giao dịch dưới nhiều định dạng khác nhau</p>
+                </div>
+                <div class="export-buttons">
+                    <button class="export-btn" onclick="exportPDF()">
+                        <i class="fas fa-file-pdf"></i> PDF
+                    </button>
+                    <button class="export-btn" onclick="exportExcel()">
+                        <i class="fas fa-file-excel"></i> Excel
+                    </button>
+                    <button class="export-btn" onclick="exportCSV()">
+                        <i class="fas fa-file-csv"></i> CSV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Dữ liệu mẫu
+        const transactions = [
+            { id: "GD20231025001", time: "25/10/2023 14:30", type: "deposit", customer: "Nguyễn Văn A", amount: 1500000, status: "success", note: "Thanh toán đơn hàng #12345" },
+            { id: "GD20231025002", time: "25/10/2023 15:45", type: "withdraw", customer: "Trần Thị B", amount: -500000, status: "success", note: "Rút tiền về ngân hàng" },
+            { id: "GD20231024001", time: "24/10/2023 09:15", type: "payment", customer: "Lê Văn C", amount: -300000, status: "pending", note: "Thanh toán dịch vụ" },
+            { id: "GD20231024002", time: "24/10/2023 11:30", type: "deposit", customer: "Phạm Thị D", amount: 2000000, status: "success", note: "Nạp tiền ví điện tử" },
+            { id: "GD20231023001", time: "23/10/2023 16:20", type: "transfer", customer: "Hoàng Văn E", amount: -750000, status: "success", note: "Chuyển khoản nội bộ" },
+            { id: "GD20231023002", time: "23/10/2023 18:45", type: "deposit", customer: "Đặng Thị F", amount: 1200000, status: "failed", note: "Thanh toán thất bại" },
+            { id: "GD20231022001", time: "22/10/2023 10:00", type: "payment", customer: "Bùi Văn G", amount: -450000, status: "success", note: "Thanh toán hóa đơn" },
+            { id: "GD20231022002", time: "22/10/2023 14:15", type: "deposit", customer: "Mai Thị H", amount: 1800000, status: "success", note: "Nhận thanh toán COD" },
+            { id: "GD20231021001", time: "21/10/2023 08:30", type: "withdraw", customer: "Võ Văn I", amount: -1000000, status: "pending", note: "Yêu cầu rút tiền" },
+            { id: "GD20231021002", time: "21/10/2023 12:45", type: "deposit", customer: "Hồ Thị K", amount: 2500000, status: "success", note: "Thanh toán sản phẩm" },
+            { id: "GD20231020001", time: "20/10/2023 15:20", type: "payment", customer: "Ngô Văn L", amount: -350000, status: "success", note: "Phí dịch vụ" },
+            { id: "GD20231020002", time: "20/10/2023 17:30", type: "transfer", customer: "Trương Thị M", amount: -600000, status: "success", note: "Chuyển tiền liên ngân hàng" },
+            { id: "GD20231019001", time: "19/10/2023 09:45", type: "deposit", customer: "Lương Văn N", amount: 1700000, status: "success", note: "Nhận chuyển khoản" },
+            { id: "GD20231019002", time: "19/10/2023 13:20", type: "payment", customer: "Đỗ Thị O", amount: -250000, status: "failed", note: "Lỗi thanh toán" },
+            { id: "GD20231018001", time: "18/10/2023 11:10", type: "deposit", customer: "Phan Văn P", amount: 2100000, status: "success", note: "Thanh toán đơn hàng VIP" }
+        ];
+
+        // Biến toàn cục
+        let currentPage = 1;
+        const itemsPerPage = 5;
+        let filteredTransactions = [...transactions];
+
+        // Hàm định dạng tiền
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+            }).format(amount);
+        }
+
+        // Hàm render bảng
+        function renderTable() {
+            const tbody = document.getElementById('transactionsBody');
+            tbody.innerHTML = '';
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageData = filteredTransactions.slice(startIndex, endIndex);
+
+            pageData.forEach(transaction => {
+                const row = document.createElement('tr');
+                
+                // Xác định class cho loại giao dịch
+                let typeClass = '';
+                let typeText = '';
+                let typeIcon = '';
+                
+                switch(transaction.type) {
+                    case 'deposit':
+                        typeClass = 'type-deposit';
+                        typeText = 'Nạp tiền';
+                        typeIcon = '<i class="fas fa-arrow-down"></i>';
+                        break;
+                    case 'withdraw':
+                        typeClass = 'type-withdraw';
+                        typeText = 'Rút tiền';
+                        typeIcon = '<i class="fas fa-arrow-up"></i>';
+                        break;
+                    case 'payment':
+                        typeClass = 'type-payment';
+                        typeText = 'Thanh toán';
+                        typeIcon = '<i class="fas fa-credit-card"></i>';
+                        break;
+                    case 'transfer':
+                        typeClass = 'type-transfer';
+                        typeText = 'Chuyển khoản';
+                        typeIcon = '<i class="fas fa-exchange-alt"></i>';
+                        break;
+                }
+
+                // Xác định class cho trạng thái
+                let statusClass = '';
+                let statusText = '';
+                let statusIcon = '';
+                
+                switch(transaction.status) {
+                    case 'success':
+                        statusClass = 'status-success';
+                        statusText = 'Thành công';
+                        statusIcon = '<i class="fas fa-check-circle"></i>';
+                        break;
+                    case 'pending':
+                        statusClass = 'status-pending';
+                        statusText = 'Đang xử lý';
+                        statusIcon = '<i class="fas fa-clock"></i>';
+                        break;
+                    case 'failed':
+                        statusClass = 'status-failed';
+                        statusText = 'Thất bại';
+                        statusIcon = '<i class="fas fa-times-circle"></i>';
+                        break;
+                }
+
+                row.innerHTML = `
+                    <td><strong>${transaction.id}</strong><br><small>${transaction.note}</small></td>
+                    <td>${transaction.time}</td>
+                    <td><span class="transaction-type ${typeClass}">${typeIcon} ${typeText}</span></td>
+                    <td>${transaction.customer}</td>
+                    <td><span class="transaction-amount ${transaction.amount >= 0 ? 'amount-positive' : 'amount-negative'}">${formatCurrency(transaction.amount)}</span></td>
+                    <td><span class="transaction-status ${statusClass}">${statusIcon} ${statusText}</span></td>
+                    <td>
+                        <div class="transaction-actions">
+                            <button class="action-btn" onclick="viewTransaction('${transaction.id}')">
+                                <i class="fas fa-eye"></i> Xem
+                            </button>
+                            <button class="action-btn" onclick="downloadReceipt('${transaction.id}')">
+                                <i class="fas fa-download"></i> Biên lai
+                            </button>
+                        </div>
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+
+            // Cập nhật số lượng giao dịch
+            document.getElementById('transactionCount').textContent = `${filteredTransactions.length} giao dịch`;
+            
+            // Cập nhật thống kê
+            updateStats();
+        }
+
+        // Hàm tìm kiếm
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                
+                filteredTransactions = transactions.filter(transaction => 
+                    transaction.id.toLowerCase().includes(searchTerm) ||
+                    transaction.customer.toLowerCase().includes(searchTerm) ||
+                    transaction.note.toLowerCase().includes(searchTerm)
+                );
+                
+                currentPage = 1;
+                renderTable();
+            });
+        }
+
+        // Hàm áp dụng bộ lọc
+        function applyFilters() {
+            const dateRange = document.getElementById('dateRange').value;
+            const transactionType = document.getElementById('transactionType').value;
+            const status = document.getElementById('statusFilter').value;
+            const minAmount = document.getElementById('minAmount').value;
+            const maxAmount = document.getElementById('maxAmount').value;
+
+            filteredTransactions = transactions.filter(transaction => {
+                // Lọc theo loại giao dịch
+                if (transactionType !== 'all' && transaction.type !== transactionType) {
+                    return false;
+                }
+
+                // Lọc theo trạng thái
+                if (status !== 'all' && transaction.status !== status) {
+                    return false;
+                }
+
+                // Lọc theo số tiền
+                const amount = Math.abs(transaction.amount);
+                if (minAmount && amount < parseInt(minAmount)) {
+                    return false;
+                }
+                if (maxAmount && amount > parseInt(maxAmount)) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            currentPage = 1;
+            renderTable();
+        }
+
+        // Hàm lọc nhanh từ sidebar
+        function filterTransactions(filterType) {
+            switch(filterType) {
+                case 'all':
+                    filteredTransactions = [...transactions];
+                    break;
+                case 'deposit':
+                    filteredTransactions = transactions.filter(t => t.type === 'deposit');
+                    break;
+                case 'withdraw':
+                    filteredTransactions = transactions.filter(t => t.type === 'withdraw');
+                    break;
+                case 'pending':
+                    filteredTransactions = transactions.filter(t => t.status === 'pending');
+                    break;
+            }
+            
+            currentPage = 1;
+            renderTable();
+        }
+
+        // Hàm thay đổi trang
+        function changePage(page) {
+            currentPage = page;
+            
+            // Cập nhật active class cho pagination
+            document.querySelectorAll('.page-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.textContent) === page) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            renderTable();
+        }
+
+        // Hàm cập nhật thống kê
+        function updateStats() {
+            const totalAmount = filteredTransactions.reduce((sum, t) => sum + t.amount, 0);
+            const income = filteredTransactions.filter(t => t.amount > 0).reduce((sum, t) => sum + t.amount, 0);
+            const expense = filteredTransactions.filter(t => t.amount < 0).reduce((sum, t) => sum + t.amount, 0);
+            const pending = filteredTransactions.filter(t => t.status === 'pending').length;
+
+            // Cập nhật thống kê
+            document.querySelectorAll('.stat-value')[0].textContent = formatCurrency(totalAmount);
+            document.querySelectorAll('.stat-value')[1].textContent = formatCurrency(income);
+            document.querySelectorAll('.stat-value')[2].textContent = formatCurrency(Math.abs(expense));
+            document.querySelectorAll('.stat-value')[3].textContent = `${pending} GD`;
+        }
+
+        // Hàm xem chi tiết giao dịch
+        function viewTransaction(transactionId) {
+            const transaction = transactions.find(t => t.id === transactionId);
+            if (transaction) {
+                alert(`Chi tiết giao dịch:\n\n` +
+                      `Mã GD: ${transaction.id}\n` +
+                      `Thời gian: ${transaction.time}\n` +
+                      `Loại: ${getTransactionTypeText(transaction.type)}\n` +
+                      `Khách hàng: ${transaction.customer}\n` +
+                      `Số tiền: ${formatCurrency(transaction.amount)}\n` +
+                      `Trạng thái: ${getStatusText(transaction.status)}\n` +
+                      `Ghi chú: ${transaction.note}`);
+            }
+        }
+
+        // Hàm hỗ trợ
+        function getTransactionTypeText(type) {
+            const types = {
+                'deposit': 'Nạp tiền',
+                'withdraw': 'Rút tiền',
+                'payment': 'Thanh toán',
+                'transfer': 'Chuyển khoản'
+            };
+            return types[type] || type;
+        }
+
+        function getStatusText(status) {
+            const statuses = {
+                'success': 'Thành công',
+                'pending': 'Đang xử lý',
+                'failed': 'Thất bại'
+            };
+            return statuses[status] || status;
+        }
+
+        // Hàm download biên lai
+        function downloadReceipt(transactionId) {
+            alert(`Đang tải biên lai cho giao dịch ${transactionId}...`);
+        }
+
+        // Hàm export
+        function exportPDF() {
+            alert('Đang xuất file PDF...');
+        }
+
+        function exportExcel() {
+            alert('Đang xuất file Excel...');
+        }
+
+        function exportCSV() {
+            alert('Đang xuất file CSV...');
+        }
+
+        function printReport() {
+            window.print();
+        }
+
+        function refreshData() {
+            filteredTransactions = [...transactions];
+            currentPage = 1;
+            renderTable();
+            alert('Dữ liệu đã được làm mới!');
+        }
+
+        // Khởi tạo khi trang load
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTable();
+            setupSearch();
+            
+            // Setup notification button
+            document.querySelector('.notification-btn').addEventListener('click', function() {
+                alert('Bạn có 3 thông báo mới!');
+            });
+        });
+    </script>
+    <script>
+    // Check authentication on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!Auth.isLoggedIn()) {
+            window.location.href = 'login.html';
+            return;
+        }
+        
+        // Load user data
+        const user = Auth.getCurrentUser();
+        if (user) {
+            // Update UI with user data
+            document.querySelectorAll('.user-name').forEach(el => {
+                el.textContent = user.name;
+            });
+            document.querySelectorAll('.user-role').forEach(el => {
+                el.textContent = user.role === 'shop_owner' ? 'Chủ shop' : user.role;
+            });
+        }
+    });
+
+    // Logout function
+   function logout() {
+    if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+        // Xóa tất cả dữ liệu đăng nhập
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        sessionStorage.removeItem('token');
+        sessionStorage.removeItem('user');
+        
+        // Chuyển hướng về trang đăng nhập
+        window.location.href = 'login.html';
+    }
+    return false; // Ngăn chặn hành vi mặc định của thẻ a
+}
+</script>
+</body>
+</html>
