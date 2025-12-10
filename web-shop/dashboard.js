@@ -124,7 +124,7 @@ function updateCharts(charts) {
             type: 'doughnut',
             data: {
                 labels: ['Thành công', 'Đang giao', 'Chờ xử lý', 'Đã hủy'],
-                // ĐÃ SỬA LỖI: ĐIỀN DỮ LIỆU ĐỒ THỊ VÀO ĐÂY
+                //  ĐIỀN DỮ LIỆU ĐỒ THỊ VÀO ĐÂY
                 datasets: [{
                     data: charts.orderTypeData,
                     backgroundColor: ['#06d6a0', '#4361ee', '#ffd166', '#ef476f'],
@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadDashboardData();
 });
 
-// Export các hàm để có thể gọi từ nơi khác (giữ nguyên yêu cầu này)
+// Export các hàm để có thể gọi từ nơi khác 
 window.updateStatsCards = updateStatsCards;
 window.updateCharts = updateCharts;
 window.updateActivityLists = updateActivityLists;

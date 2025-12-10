@@ -1199,7 +1199,14 @@
             </div>
         </div>
     </main>
-  <script>
+    <script>
+(function() {
+    const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+    if (!token) {
+        window.location.href = 'login.html'; 
+    }
+})();
+  
         // Hàm logout
         function logout() {
             // Xóa tất cả dữ liệu đăng nhập
@@ -1232,163 +1239,7 @@
             }, 30000);
         });
     </script>
-    <script>
-        // Hàm custom để render giao diện mới
-        function updateActivityListsWithNewUI(transactions, pendingOrders) {
-            const transactionListEl = document.getElementById('transaction-list');
-            const orderListEl = document.getElementById('order-list');
-            
-            // Xóa loading state nếu có
-            const transactionLoading = document.getElementById('transaction-loading');
-            const orderLoading = document.getElementById('order-loading');
-            if (transactionLoading) transactionLoading.remove();
-            if (orderLoading) orderLoading.remove();
-            
-            // Helper function để format currency
-            function formatCurrency(number) {
-                if (typeof number !== 'number') return '0 ₫'; 
-                return new Intl.NumberFormat('vi-VN', { 
-                    style: 'currency', 
-                    currency: 'VND',
-                    minimumFractionDigits: 0 
-                }).format(number);
-            }
-            
-            // 1. Render Giao Dịch Gần Đây
-            if (transactionListEl) {
-                if (!transactions || transactions.length === 0) {
-                    transactionListEl.innerHTML = `
-                        <div class="empty-state">
-                            <i class="fas fa-exchange-alt"></i>
-                            <p>Chưa có giao dịch nào</p>
-                        </div>
-                    `;
-                } else {
-                    const transactionHtml = transactions.map(transaction => {
-                        const typeClass = transaction.iconClass;
-                        const statusClass = transaction.status.toLowerCase().includes('hoàn tất') || 
-                                           transaction.status.toLowerCase().includes('thành công') ||
-                                           transaction.status.toLowerCase().includes('đã đối soát') ? 'success' :
-                                           transaction.status.toLowerCase().includes('đang xử lý') ? 'warning' :
-                                           transaction.status.toLowerCase().includes('hủy') ? 'danger' : 'primary';
-                        const isPositive = transaction.type === 'in';
-                        const amountSign = isPositive ? '+' : '-';
-                        
-                        return `
-                            <li class="transaction-item ${typeClass}">
-                                <div class="transaction-icon ${typeClass}">
-                                    <i class="${transaction.icon}"></i>
-                                </div>
-                                <div class="transaction-details">
-                                    <div class="transaction-title">${transaction.description}</div>
-                                    <div class="transaction-info">
-                                        <div class="transaction-amount ${isPositive ? 'positive' : 'negative'}">
-                                            ${amountSign}${formatCurrency(transaction.amount)}
-                                        </div>
-                                        <div class="transaction-time">${transaction.time}</div>
-                                    </div>
-                                    <div class="transaction-status status-${statusClass}">
-                                        ${transaction.status}
-                                    </div>
-                                </div>
-                            </li>
-                        `;
-                    }).join('');
-                    transactionListEl.innerHTML = transactionHtml;
-                }
-            }
-            
-            // 2. Render Đơn Hàng Đang Giao
-            if (orderListEl) {
-                if (!pendingOrders || pendingOrders.length === 0) {
-                    orderListEl.innerHTML = `
-                        <div class="empty-state">
-                            <i class="fas fa-shipping-fast"></i>
-                            <p>Không có đơn hàng đang giao</p>
-                        </div>
-                    `;
-                } else {
-                    const orderHtml = pendingOrders.map(order => {
-                        const statusClass = order.iconClass;
-                        const progress = order.status === 'Đang giao' ? 70 :
-                                       order.status === 'Đang đóng gói' ? 40 :
-                                       order.status === 'Chờ xác nhận' ? 20 :
-                                       order.status === 'Đã giao' ? 100 :
-                                       order.status === 'Đã hủy' ? 0 : 50;
-                        
-                        // Tạo avatar từ tên khách hàng
-                        const customerName = order.customer;
-                        const avatarText = customerName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
-                        
-                        return `
-                            <li class="order-item">
-                                <div class="order-avatar">${avatarText}</div>
-                                <div class="order-details">
-                                    <div class="order-customer">${customerName}</div>
-                                    <div class="order-id">${order.orderId}</div>
-                                    <div class="order-progress">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: ${progress}%;"></div>
-                                        </div>
-                                        <div class="order-value">${formatCurrency(order.cod)}</div>
-                                    </div>
-                                </div>
-                                <div class="delivery-time">${order.time}</div>
-                            </li>
-                        `;
-                    }).join('');
-                    orderListEl.innerHTML = orderHtml;
-                }
-            }
-            
-            // Thêm animation cho các item
-            setTimeout(() => {
-                const transactionItems = document.querySelectorAll('.transaction-item');
-                const orderItems = document.querySelectorAll('.order-item');
-                
-                transactionItems.forEach((item, index) => {
-                    item.style.animation = 'fadeInUp 0.5s ease forwards';
-                    item.style.animationDelay = `${index * 0.1}s`;
-                });
-                
-                orderItems.forEach((item, index) => {
-                    item.style.animation = 'fadeInUp 0.5s ease forwards';
-                    item.style.animationDelay = `${index * 0.1}s`;
-                });
-            }, 100);
-        }
-
-        // Override hàm updateActivityLists từ dashboard.js để sử dụng giao diện mới
-        if (window.updateActivityLists) {
-            const originalUpdateActivityLists = window.updateActivityLists;
-            window.updateActivityLists = function(transactions, pendingOrders) {
-                updateActivityListsWithNewUI(transactions, pendingOrders);
-            };
-        }
-
-        // Tự động refresh dữ liệu mỗi 30 giây
-        function startAutoRefresh() {
-            setInterval(() => {
-                if (window.loadDashboardData) {
-                    window.loadDashboardData();
-                }
-            }, 30000);
-        }
-
-        // Khởi tạo khi trang load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Thêm sự kiện click cho các nút period
-            document.querySelectorAll('.period-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-            
-            // Bắt đầu auto refresh
-            startAutoRefresh();
-        });
-    </script>
+   
     <script src="mock-api.js"></script> 
     <script src="auth-check.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

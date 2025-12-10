@@ -1,4 +1,3 @@
-// File: mock-api.js - API MOCK ĐẦY ĐỦ VÀ ĐỘNG
 const MockAPI = {
     // Dữ liệu User Mock
     users: [
@@ -785,6 +784,429 @@ const MockAPI = {
     },
 
     // =========================================================================
+    // CHỨC NĂNG LỊCH SỬ GIAO DỊCH (HISTORY) - SỬA LẠI CHO ĐÚNG
+    // =========================================================================
+
+    // Lấy danh sách giao dịch với bộ lọc và phân trang
+    getHistoryTransactions: function(filters = {}) {
+        console.log('📊 MockAPI.getHistoryTransactions called with:', filters);
+        
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                try {
+                    const user = this.getCurrentUser();
+                    if (!user) {
+                        resolve({ 
+                            success: false, 
+                            message: 'Chưa đăng nhập',
+                            data: { transactions: [], pagination: {} }
+                        });
+                        return;
+                    }
+                    
+                    const walletKey = `wallet_${user.id}`;
+                    const walletData = JSON.parse(localStorage.getItem(walletKey));
+                    
+                    if (!walletData || !walletData.transactions) {
+                        console.log('📦 No wallet data found, generating sample data');
+                        // Tạo dữ liệu mẫu nếu chưa có
+                        this.initializeUserWallet(user.id);
+                        const newData = JSON.parse(localStorage.getItem(walletKey));
+                        
+                        if (!newData) {
+                            resolve({ 
+                                success: true, 
+                                data: { 
+                                    transactions: this.generateSampleTransactions(),
+                                    pagination: { page: 1, totalPages: 1, total: 10 }
+                                }
+                            });
+                            return;
+                        }
+                        
+                        // Sử dụng dữ liệu mới tạo
+                        walletData = newData;
+                    }
+                    
+                    console.log(`📦 Found ${walletData.transactions.length} transactions`);
+                    
+                    let transactions = [...walletData.transactions];
+                    
+                    // Format thời gian đúng chuẩn
+                    transactions = transactions.map(tx => ({
+                        ...tx,
+                        time: new Date(tx.date).toLocaleString('vi-VN', {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            second: '2-digit'
+                        })
+                    }));
+                    
+                    // Áp dụng bộ lọc thời gian
+                    transactions = this.filterTransactionsByDate(transactions, filters.dateRange || 'month');
+                    
+                    // Áp dụng bộ lọc tìm kiếm
+                    if (filters.search) {
+                        const searchTerm = filters.search.toLowerCase();
+                        transactions = transactions.filter(t => 
+                            t.description.toLowerCase().includes(searchTerm) ||
+                            (t.reference && t.reference.toLowerCase().includes(searchTerm)) ||
+                            t.id.toLowerCase().includes(searchTerm)
+                        );
+                    }
+                    
+                    // Áp dụng bộ lọc loại giao dịch
+                    if (filters.type && filters.type !== 'all') {
+                        transactions = transactions.filter(t => t.type === filters.type);
+                    }
+                    
+                    // Áp dụng bộ lọc trạng thái
+                    if (filters.status && filters.status !== 'all') {
+                        transactions = transactions.filter(t => t.status === filters.status);
+                    }
+                    
+                    // Áp dụng bộ lọc số tiền
+                    if (filters.minAmount) {
+                        const min = parseInt(filters.minAmount);
+                        if (!isNaN(min)) {
+                            transactions = transactions.filter(t => Math.abs(t.amount) >= min);
+                        }
+                    }
+                    
+                    if (filters.maxAmount) {
+                        const max = parseInt(filters.maxAmount);
+                        if (!isNaN(max)) {
+                            transactions = transactions.filter(t => Math.abs(t.amount) <= max);
+                        }
+                    }
+                    
+                    console.log(`🔍 After filtering: ${transactions.length} transactions`);
+                    
+                    // Tính toán phân trang
+                    const page = filters.page || 1;
+                    const limit = filters.limit || 10;
+                    const total = transactions.length;
+                    const totalPages = Math.ceil(total / limit) || 1;
+                    const startIndex = (page - 1) * limit;
+                    const endIndex = startIndex + limit;
+                    const paginatedTransactions = transactions.slice(startIndex, endIndex);
+                    
+                    // Format lại dữ liệu cho hiển thị
+                    const formattedTransactions = paginatedTransactions.map(tx => ({
+                        id: tx.id,
+                        reference: tx.reference || tx.id,
+                        time: tx.time,
+                        type: tx.type,
+                        note: tx.description,
+                        amount: tx.amount,
+                        status: tx.status,
+                        customer: this.extractCustomerFromDescription(tx.description)
+                    }));
+                    
+                    const result = {
+                        success: true,
+                        message: "Lấy dữ liệu lịch sử thành công",
+                        data: {
+                            transactions: formattedTransactions,
+                            pagination: {
+                                page,
+                                limit,
+                                total,
+                                totalPages,
+                                hasNextPage: endIndex < total,
+                                hasPrevPage: startIndex > 0
+                            }
+                        }
+                    };
+                    
+                    console.log('✅ Returning history data:', result);
+                    resolve(result);
+                    
+                } catch (error) {
+                    console.error('❌ Error in getHistoryTransactions:', error);
+                    resolve({
+                        success: true,
+                        message: "Lấy dữ liệu thành công",
+                        data: {
+                            transactions: this.generateSampleTransactions(),
+                            pagination: { page: 1, totalPages: 1, total: 5 }
+                        }
+                    });
+                }
+            }, 300);
+        });
+    },
+
+    // Tạo dữ liệu mẫu cho history
+    generateSampleTransactions: function() {
+        const now = new Date();
+        const sampleTransactions = [];
+        
+        for (let i = 0; i < 10; i++) {
+            const date = new Date(now);
+            date.setDate(date.getDate() - i);
+            
+            const types = ['deposit', 'withdraw', 'transfer', 'payment'];
+            const type = types[Math.floor(Math.random() * types.length)];
+            
+            let amount, note, status;
+            
+            switch(type) {
+                case 'deposit':
+                    amount = Math.floor(Math.random() * 5000000) + 1000000;
+                    note = ['Nạp tiền từ Vietcombank', 'Nạp tiền từ MoMo', 'Thu hộ COD đơn hàng #DH20240515001'][Math.floor(Math.random() * 3)];
+                    status = 'success';
+                    break;
+                case 'withdraw':
+                    amount = -Math.floor(Math.random() * 3000000) - 500000;
+                    note = ['Rút tiền về VPBANK', 'Thanh toán đơn hàng', 'Chi phí vận chuyển'][Math.floor(Math.random() * 3)];
+                    status = Math.random() > 0.3 ? 'success' : 'pending';
+                    break;
+                case 'transfer':
+                    amount = -Math.floor(Math.random() * 2000000) - 100000;
+                    note = ['Chuyển khoản cho NCC Vải', 'Ứng tiền cho nhân viên', 'Thanh toán hóa đơn'][Math.floor(Math.random() * 3)];
+                    status = 'success';
+                    break;
+                case 'payment':
+                    amount = -Math.floor(Math.random() * 1500000) - 100000;
+                    note = ['Thanh toán hóa đơn điện', 'Mua nguyên liệu', 'Đóng phí dịch vụ'][Math.floor(Math.random() * 3)];
+                    status = 'success';
+                    break;
+            }
+            
+            sampleTransactions.push({
+                id: 'TXN-SAMPLE-' + i,
+                reference: 'GD' + date.getFullYear().toString().slice(-2) + 
+                          String(date.getMonth() + 1).padStart(2, '0') + 
+                          String(date.getDate()).padStart(2, '0') + 
+                          String(Math.floor(Math.random() * 1000)).padStart(3, '0'),
+                time: date.toLocaleString('vi-VN', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }),
+                type: type,
+                note: note,
+                amount: amount,
+                status: status,
+                customer: ['Nguyễn Văn A', 'Trần Thị B', 'Lê Văn C', 'Phạm Thị D'][Math.floor(Math.random() * 4)]
+            });
+        }
+        
+        return sampleTransactions;
+    },
+
+    // Lọc giao dịch theo thời gian
+    filterTransactionsByDate: function(transactions, dateRange) {
+        if (!dateRange || dateRange === 'all') {
+            return transactions;
+        }
+        
+        const now = new Date();
+        let startDate = new Date();
+        
+        switch(dateRange) {
+            case 'today':
+                startDate.setHours(0, 0, 0, 0);
+                break;
+            case 'week':
+                startDate.setDate(now.getDate() - 7);
+                break;
+            case 'month':
+                startDate.setMonth(now.getMonth() - 1);
+                break;
+            case 'quarter':
+                startDate.setMonth(now.getMonth() - 3);
+                break;
+            default:
+                return transactions;
+        }
+        
+        return transactions.filter(tx => {
+            const txDate = new Date(tx.date);
+            return txDate >= startDate;
+        });
+    },
+
+    // Trích xuất tên khách hàng từ mô tả
+    extractCustomerFromDescription: function(description) {
+        if (!description) return 'Không xác định';
+        
+        const lowerDesc = description.toLowerCase();
+        
+        // Mẫu thông tin khách hàng
+        const customers = [
+            'Nguyễn Văn A', 'Trần Thị B', 'Lê Văn C', 'Phạm Thị D', 
+            'Hoàng Văn E', 'Đặng Thị F', 'Bùi Văn G', 'Mai Thị H',
+            'Võ Văn I', 'Hồ Thị K', 'Ngô Văn L', 'Trương Thị M'
+        ];
+        
+        // Kiểm tra nếu có chứa tên khách hàng trong mô tả
+        for (const customer of customers) {
+            const firstName = customer.toLowerCase().split(' ')[0];
+            if (lowerDesc.includes(firstName)) {
+                return customer;
+            }
+        }
+        
+        // Nếu description chứa từ khóa đặc biệt
+        if (lowerDesc.includes('đơn hàng') || lowerDesc.includes('cod') || lowerDesc.includes('ncc')) {
+            return customers[Math.floor(Math.random() * 8)]; // Lấy ngẫu nhiên 8 khách đầu
+        }
+        
+        // Nếu không tìm thấy, chọn ngẫu nhiên
+        return customers[Math.floor(Math.random() * customers.length)];
+    },
+
+    // Lấy thống kê cho lịch sử giao dịch
+    getHistoryStatistics: function(filters = {}) {
+        console.log('📈 MockAPI.getHistoryStatistics called');
+        
+        return new Promise((resolve) => {
+            setTimeout(async () => {
+                try {
+                    // Lấy tất cả giao dịch đã lọc
+                    const response = await this.getHistoryTransactions({ 
+                        ...filters, 
+                        page: 1, 
+                        limit: 10000 
+                    });
+                    
+                    if (!response.success) {
+                        resolve({
+                            success: true,
+                            data: {
+                                totalAmount: 2357724,
+                                income: 13919131,
+                                expense: 11561407,
+                                pending: 0,
+                                depositChange: 0.243,
+                                withdrawChange: -0.085
+                            }
+                        });
+                        return;
+                    }
+                    
+                    const transactions = response.data.transactions;
+                    
+                    if (!transactions || transactions.length === 0) {
+                        // Trả về dữ liệu mẫu nếu không có giao dịch
+                        resolve({
+                            success: true,
+                            data: {
+                                totalAmount: 2357724,
+                                income: 13919131,
+                                expense: 11561407,
+                                pending: 0,
+                                depositChange: 0.243,
+                                withdrawChange: -0.085,
+                                transactionCount: 0
+                            }
+                        });
+                        return;
+                    }
+                    
+                    // Tính toán thống kê từ dữ liệu thực
+                    const totalAmount = transactions.reduce((sum, t) => sum + t.amount, 0);
+                    const income = transactions
+                        .filter(t => t.amount > 0)
+                        .reduce((sum, t) => sum + t.amount, 0);
+                    const expense = transactions
+                        .filter(t => t.amount < 0)
+                        .reduce((sum, t) => sum + Math.abs(t.amount), 0);
+                    const pending = transactions.filter(t => t.status === 'pending').length;
+                    
+                    resolve({
+                        success: true,
+                        data: {
+                            totalAmount: Math.abs(totalAmount),
+                            income: income,
+                            expense: expense,
+                            pending: pending,
+                            depositChange: 0.243, // Mẫu: 24.3% tăng
+                            withdrawChange: -0.085 // Mẫu: -8.5% giảm
+                        },
+                        message: "Lấy thống kê thành công"
+                    });
+                    
+                } catch (error) {
+                    console.error('❌ Error in getHistoryStatistics:', error);
+                    // Trả về dữ liệu mẫu an toàn
+                    resolve({
+                        success: true,
+                        data: {
+                            totalAmount: 2357724,
+                            income: 13919131,
+                            expense: 11561407,
+                            pending: 0,
+                            depositChange: 0.243,
+                            withdrawChange: -0.085
+                        }
+                    });
+                }
+            }, 200);
+        });
+    },
+
+    // Xuất dữ liệu lịch sử
+    exportHistoryData: function(format = 'pdf', filters = {}) {
+        return new Promise((resolve) => {
+            setTimeout(async () => {
+                try {
+                    // Lấy tất cả giao dịch đã lọc
+                    const response = await this.getHistoryTransactions({ 
+                        ...filters, 
+                        page: 1, 
+                        limit: 10000 
+                    });
+                    
+                    if (!response.success) {
+                        resolve({
+                            success: true,
+                            message: `Xuất ${format.toUpperCase()} thành công`,
+                            data: {
+                                filename: `lich_su_giao_dich.${format}`,
+                                downloadUrl: `#`,
+                                count: 0,
+                                format: format
+                            }
+                        });
+                        return;
+                    }
+                    
+                    const transactionCount = response.data.transactions.length;
+                    const now = new Date();
+                    const dateStr = now.toLocaleDateString('vi-VN').replace(/\//g, '-');
+                    
+                    resolve({
+                        success: true,
+                        message: `Xuất ${format.toUpperCase()} thành công (${transactionCount} giao dịch)`,
+                        data: {
+                            filename: `lich_su_giao_dich_${dateStr}.${format}`,
+                            downloadUrl: `#`,
+                            count: transactionCount,
+                            format: format
+                        }
+                    });
+                } catch (error) {
+                    console.error('❌ Error in exportHistoryData:', error);
+                    resolve({
+                        success: false,
+                        message: "Lỗi xuất dữ liệu",
+                        data: null
+                    });
+                }
+            }, 500);
+        });
+    },
+
+    // =========================================================================
     // CHỨC NĂNG DASHBOARD
     // =========================================================================
 
@@ -842,4 +1264,8 @@ const MockAPI = {
     }
 };
 
-window.MockAPI = MockAPI;
+// Khởi tạo MockAPI toàn cục
+if (typeof window !== 'undefined') {
+    window.MockAPI = MockAPI;
+    console.log('✅ MockAPI loaded successfully');
+}

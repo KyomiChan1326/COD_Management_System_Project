@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <script src="js/auth-check.js"></script>
+    <script src="mock-api.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lịch Sử Giao Dịch - ShopCOD Pro</title>
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <style>
         * {
@@ -284,6 +279,40 @@
             overflow-y: auto;
         }
 
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+        }
+
+        .loading-content {
+            text-align: center;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--gray-light);
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         /* Stats Overview */
         .stats-overview {
             display: grid;
@@ -336,7 +365,6 @@
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            background: rgba(67, 97, 238, 0.1);
         }
 
         .total .stat-icon { background: rgba(67, 97, 238, 0.1); }
@@ -594,6 +622,17 @@
             transform: translateY(-2px);
         }
 
+        .action-btn.confirm {
+            background: rgba(6, 214, 160, 0.1);
+            color: var(--success);
+            border-color: rgba(6, 214, 160, 0.3);
+        }
+
+        .action-btn.confirm:hover {
+            background: var(--success);
+            color: white;
+        }
+
         /* Pagination */
         .pagination {
             display: flex;
@@ -638,6 +677,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 2rem;
         }
 
         .export-info h3 {
@@ -680,209 +720,40 @@
             box-shadow: 0 4px 12px rgba(67, 97, 238, 0.2);
         }
 
-        /* Charts Section */
-        .charts-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
         }
 
-        .chart-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
         }
 
-        .chart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
+        .empty-state p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .chart-header h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .chart-period {
-            display: flex;
-            gap: 0.5rem;
-            background: var(--light);
-            padding: 0.3rem;
-            border-radius: var(--radius-sm);
-        }
-
-        .period-btn {
-            padding: 0.4rem 0.8rem;
-            border: none;
-            background: none;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .period-btn.active {
-            background: white;
-            box-shadow: var(--shadow);
-        }
-
-        .chart-container {
-            position: relative;
-            height: 300px;
-        }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .sidebar {
-                transform: translateX(-100%);
-                transition: transform 0.3s;
-            }
-            
-            .sidebar.active {
-                transform: translateX(0);
-            }
-            
-            .main-content {
-                margin-left: 0;
-            }
-            
-            .header-right {
-                gap: 1rem;
-            }
-            
-            .search-bar input {
-                width: 250px;
-            }
-            
-            .charts-section {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .content-container {
-                padding: 1.5rem;
-            }
-            
-            .stats-overview {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .filters-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .filter-btn {
-                align-self: stretch;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-                padding: 1rem;
-            }
-            
-            .header-left h1 {
-                font-size: 1.5rem;
-            }
-            
-            .search-bar input {
-                width: 100%;
-            }
-            
-            .stats-overview {
-                grid-template-columns: 1fr;
-            }
-            
-            .export-section {
-                flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
-            }
-            
-            .export-buttons {
-                width: 100%;
-                flex-direction: column;
-            }
-            
-            .export-btn {
-                justify-content: center;
-            }
-            
-            .transaction-actions {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .chart-container {
-                height: 250px;
-            }
-            
-            .period-btn {
-                padding: 0.3rem 0.6rem;
-                font-size: 0.8rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .stat-card, .filters-section, .transactions-section, .chart-card, .export-section {
-            animation: fadeInUp 0.5s ease forwards;
-        }
-
-        .stat-card:nth-child(2) { animation-delay: 0.1s; }
-        .stat-card:nth-child(3) { animation-delay: 0.2s; }
-        .stat-card:nth-child(4) { animation-delay: 0.3s; }
-        .filters-section { animation-delay: 0.4s; }
-        .transactions-section { animation-delay: 0.5s; }
-        .chart-card:nth-child(1) { animation-delay: 0.6s; }
-        .chart-card:nth-child(2) { animation-delay: 0.7s; }
-        .export-section { animation-delay: 0.8s; }
-
-        /* Print Styles */
-        @media print {
-            .sidebar, .header, .filters-section, .export-section, .action-btn, .pagination {
-                display: none !important;
-            }
-            
-            .main-content {
-                margin-left: 0;
-            }
-            
-            .content-container {
-                padding: 0;
-            }
-            
-            .transactions-section {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
+        .empty-state .empty-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-    <!-- Sidebar -->
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Đang tải dữ liệu...</p>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
     <nav class="sidebar">
         <div class="logo">
             <div class="logo-icon">
@@ -905,51 +776,33 @@
         </div>
 
         <div class="nav-section">
-            <h4 class="nav-title">TRANSACTION FILTERS</h4>
-            <ul class="nav-links">
-                <li><a href="#" onclick="filterTransactions('all')"><i class="fas fa-list"></i> Tất cả GD</a></li>
-                <li><a href="#" onclick="filterTransactions('deposit')"><i class="fas fa-arrow-down"></i> Tiền vào</a></li>
-                <li><a href="#" onclick="filterTransactions('withdraw')"><i class="fas fa-arrow-up"></i> Tiền ra</a></li>
-                <li><a href="#" onclick="filterTransactions('pending')"><i class="fas fa-clock"></i> Đang chờ</a></li>
-            </ul>
-        </div>
-
-        <div class="nav-section">
             <h4 class="nav-title">EXPORT OPTIONS</h4>
             <ul class="nav-links">
-                <li><a href="#" onclick="exportPDF()"><i class="fas fa-file-pdf"></i> Xuất PDF</a></li>
-                <li><a href="#" onclick="exportExcel()"><i class="fas fa-file-excel"></i> Xuất Excel</a></li>
+                <li><a href="#" onclick="exportData('pdf')"><i class="fas fa-file-pdf"></i> Xuất PDF</a></li>
+                <li><a href="#" onclick="exportData('excel')"><i class="fas fa-file-excel"></i> Xuất Excel</a></li>
                 <li><a href="#" onclick="printReport()"><i class="fas fa-print"></i> In báo cáo</a></li>
                 <li><a href="#" onclick="refreshData()"><i class="fas fa-sync-alt"></i> Làm mới</a></li>
             </ul>
         </div>
-        <!-- Trong sidebar, phần SETTINGS -->
-<div class="nav-section">
-    <div class="section-label">SETTINGS</div>
-    <ul class="nav-menu">
-        <!-- ... các mục khác ... -->
-        
-        <li class="nav-item">
-            <a href="#" class="nav-link" onclick="logout()">
-                <i class="fas fa-sign-out-alt nav-icon"></i>
-                <span class="nav-text">Đăng xuất</span>
-            </a>
-        </li>
-    </ul>
-</div>
+
+        <div class="nav-section">
+            <h4 class="nav-title">SETTINGS</h4>
+            <ul class="nav-links">
+                <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+            </ul>
+        </div>
 
         <div class="user-profile">
-            <div class="user-avatar">SM</div>
+            <div class="user-avatar" id="userAvatar">S</div>
             <div class="user-info">
-                <h4>Sumo</h4>
-                <p>Quản trị viên</p>
+                <h4 id="userName">Sumo</h4>
+                <p id="userRole">Chủ shop</p>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Header -->
         <header class="header">
             <div class="header-left">
                 <h1><i class="fas fa-history"></i> Lịch Sử Giao Dịch</h1>
@@ -962,22 +815,21 @@
                     <input type="text" id="searchInput" placeholder="Tìm kiếm giao dịch...">
                 </div>
                 
-                <button class="notification-btn">
+                <button class="notification-btn" onclick="showNotifications()">
                     <i class="fas fa-bell"></i>
                     <div class="notification-badge"></div>
                 </button>
                 
                 <div class="user-profile" style="background: none; padding: 0; cursor: default;">
-                    <div class="user-avatar">SM</div>
+                    <div class="user-avatar" id="headerUserAvatar">S</div>
                     <div class="user-info">
-                        <h4>Sumo</h4>
-                        <p>Cập nhật 5 phút trước</p>
+                        <h4 id="headerUserName">Sumo</h4>
+                        <p id="lastUpdateTime">Cập nhật 14:30:45</p>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Content Container -->
         <div class="content-container">
             <!-- Stats Overview -->
             <div class="stats-overview">
@@ -987,10 +839,10 @@
                     </div>
                     <div class="stat-content">
                         <div class="stat-title">TỔNG GIAO DỊCH</div>
-                        <div class="stat-value">8,450,000 ₫</div>
-                        <div class="stat-change positive">
+                        <div class="stat-value" id="totalAmount">₫0</div>
+                        <div class="stat-change positive" id="totalChange">
                             <i class="fas fa-arrow-up"></i>
-                            <span>12.5% so với tháng trước</span>
+                            <span id="totalChangeText">0%</span>
                         </div>
                     </div>
                 </div>
@@ -1001,10 +853,10 @@
                     </div>
                     <div class="stat-content">
                         <div class="stat-title">TIỀN VÀO</div>
-                        <div class="stat-value">6,250,000 ₫</div>
-                        <div class="stat-change positive">
+                        <div class="stat-value" id="incomeAmount">₫0</div>
+                        <div class="stat-change positive" id="incomeChange">
                             <i class="fas fa-arrow-up"></i>
-                            <span>24.3% tăng trưởng</span>
+                            <span id="incomeChangeText">0%</span>
                         </div>
                     </div>
                 </div>
@@ -1015,10 +867,10 @@
                     </div>
                     <div class="stat-content">
                         <div class="stat-title">TIỀN RA</div>
-                        <div class="stat-value">2,200,000 ₫</div>
-                        <div class="stat-change negative">
+                        <div class="stat-value" id="expenseAmount">₫0</div>
+                        <div class="stat-change negative" id="expenseChange">
                             <i class="fas fa-arrow-down"></i>
-                            <span>8.5% giảm so với T4</span>
+                            <span id="expenseChangeText">0%</span>
                         </div>
                     </div>
                 </div>
@@ -1029,10 +881,10 @@
                     </div>
                     <div class="stat-content">
                         <div class="stat-title">CHỜ XỬ LÝ</div>
-                        <div class="stat-value">3 GD</div>
-                        <div class="stat-change positive">
+                        <div class="stat-value" id="pendingCount">0</div>
+                        <div class="stat-change negative" id="pendingChange">
                             <i class="fas fa-arrow-down"></i>
-                            <span>2 GD so với tuần trước</span>
+                            <span id="pendingChangeText">0</span>
                         </div>
                     </div>
                 </div>
@@ -1041,7 +893,7 @@
             <!-- Filters Section -->
             <div class="filters-section">
                 <div class="filters-header">
-                    <h3><i class="fas fa-filter"></i> Bộ Lọc Giao Dịch</h3>
+                    <h3><i class="fas fa-filter"></i> Bộ Lọc & Tìm Kiếm</h3>
                     <button class="filter-btn" onclick="applyFilters()">
                         <i class="fas fa-sliders-h"></i> Áp Dụng Lọc
                     </button>
@@ -1056,7 +908,6 @@
                             <option value="week">Tuần này</option>
                             <option value="month" selected>Tháng này</option>
                             <option value="quarter">Quý này</option>
-                            <option value="custom">Tùy chọn</option>
                         </select>
                     </div>
                     
@@ -1084,8 +935,8 @@
                     <div class="filter-group">
                         <label for="amountRange"><i class="fas fa-coins"></i> Khoảng Số Tiền</label>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <input type="number" id="minAmount" class="filter-input" placeholder="Từ">
-                            <input type="number" id="maxAmount" class="filter-input" placeholder="Đến">
+                            <input type="number" id="minAmount" class="filter-input" placeholder="Từ (VND)">
+                            <input type="number" id="maxAmount" class="filter-input" placeholder="Đến (VND)">
                         </div>
                     </div>
                 </div>
@@ -1095,34 +946,30 @@
             <div class="transactions-section">
                 <div class="transactions-header">
                     <h3><i class="fas fa-list"></i> Danh Sách Giao Dịch</h3>
-                    <div class="transaction-count" id="transactionCount">15 giao dịch</div>
+                    <div class="transaction-count" id="transactionCount">0 giao dịch</div>
                 </div>
                 
                 <div class="table-container">
-                    <table class="transactions-table" id="transactionsTable">
+                    <table class="transactions-table">
                         <thead>
                             <tr>
                                 <th>Mã GD</th>
                                 <th>Thời gian</th>
                                 <th>Loại GD</th>
-                                <th>Khách hàng</th>
+                                <th>Mô tả</th>
                                 <th>Số tiền</th>
                                 <th>Trạng thái</th>
                                 <th>Thao tác</th>
                             </tr>
                         </thead>
                         <tbody id="transactionsBody">
-                            <!-- Dữ liệu sẽ được load bằng JavaScript -->
+                            <!-- Dữ liệu sẽ được tải từ API -->
                         </tbody>
                     </table>
                 </div>
                 
-                <div class="pagination">
-                    <button class="page-btn" onclick="changePage(1)">1</button>
-                    <button class="page-btn" onclick="changePage(2)">2</button>
-                    <button class="page-btn active" onclick="changePage(3)">3</button>
-                    <button class="page-btn" onclick="changePage(4)">4</button>
-                    <button class="page-btn" onclick="changePage(5)">5</button>
+                <div class="pagination" id="pagination">
+                    <!-- Pagination sẽ được tạo từ API -->
                 </div>
             </div>
 
@@ -1133,13 +980,13 @@
                     <p>Tải xuống lịch sử giao dịch dưới nhiều định dạng khác nhau</p>
                 </div>
                 <div class="export-buttons">
-                    <button class="export-btn" onclick="exportPDF()">
+                    <button class="export-btn" onclick="exportData('pdf')">
                         <i class="fas fa-file-pdf"></i> PDF
                     </button>
-                    <button class="export-btn" onclick="exportExcel()">
+                    <button class="export-btn" onclick="exportData('excel')">
                         <i class="fas fa-file-excel"></i> Excel
                     </button>
-                    <button class="export-btn" onclick="exportCSV()">
+                    <button class="export-btn" onclick="exportData('csv')">
                         <i class="fas fa-file-csv"></i> CSV
                     </button>
                 </div>
@@ -1147,284 +994,447 @@
         </div>
     </main>
 
+    <!-- JavaScript -->
     <script>
-        // Dữ liệu mẫu
-        const transactions = [
-            { id: "GD20231025001", time: "25/10/2023 14:30", type: "deposit", customer: "Nguyễn Văn A", amount: 1500000, status: "success", note: "Thanh toán đơn hàng #12345" },
-            { id: "GD20231025002", time: "25/10/2023 15:45", type: "withdraw", customer: "Trần Thị B", amount: -500000, status: "success", note: "Rút tiền về ngân hàng" },
-            { id: "GD20231024001", time: "24/10/2023 09:15", type: "payment", customer: "Lê Văn C", amount: -300000, status: "pending", note: "Thanh toán dịch vụ" },
-            { id: "GD20231024002", time: "24/10/2023 11:30", type: "deposit", customer: "Phạm Thị D", amount: 2000000, status: "success", note: "Nạp tiền ví điện tử" },
-            { id: "GD20231023001", time: "23/10/2023 16:20", type: "transfer", customer: "Hoàng Văn E", amount: -750000, status: "success", note: "Chuyển khoản nội bộ" },
-            { id: "GD20231023002", time: "23/10/2023 18:45", type: "deposit", customer: "Đặng Thị F", amount: 1200000, status: "failed", note: "Thanh toán thất bại" },
-            { id: "GD20231022001", time: "22/10/2023 10:00", type: "payment", customer: "Bùi Văn G", amount: -450000, status: "success", note: "Thanh toán hóa đơn" },
-            { id: "GD20231022002", time: "22/10/2023 14:15", type: "deposit", customer: "Mai Thị H", amount: 1800000, status: "success", note: "Nhận thanh toán COD" },
-            { id: "GD20231021001", time: "21/10/2023 08:30", type: "withdraw", customer: "Võ Văn I", amount: -1000000, status: "pending", note: "Yêu cầu rút tiền" },
-            { id: "GD20231021002", time: "21/10/2023 12:45", type: "deposit", customer: "Hồ Thị K", amount: 2500000, status: "success", note: "Thanh toán sản phẩm" },
-            { id: "GD20231020001", time: "20/10/2023 15:20", type: "payment", customer: "Ngô Văn L", amount: -350000, status: "success", note: "Phí dịch vụ" },
-            { id: "GD20231020002", time: "20/10/2023 17:30", type: "transfer", customer: "Trương Thị M", amount: -600000, status: "success", note: "Chuyển tiền liên ngân hàng" },
-            { id: "GD20231019001", time: "19/10/2023 09:45", type: "deposit", customer: "Lương Văn N", amount: 1700000, status: "success", note: "Nhận chuyển khoản" },
-            { id: "GD20231019002", time: "19/10/2023 13:20", type: "payment", customer: "Đỗ Thị O", amount: -250000, status: "failed", note: "Lỗi thanh toán" },
-            { id: "GD20231018001", time: "18/10/2023 11:10", type: "deposit", customer: "Phan Văn P", amount: 2100000, status: "success", note: "Thanh toán đơn hàng VIP" }
-        ];
-
-        // Biến toàn cục
+        // ========== BIẾN TOÀN CỤC ==========
         let currentPage = 1;
-        const itemsPerPage = 5;
-        let filteredTransactions = [...transactions];
+        const itemsPerPage = 10;
+        let currentFilters = {};
+        let currentUser = null;
 
-        // Hàm định dạng tiền
+        // ========== UTILITY FUNCTIONS ==========
         function formatCurrency(amount) {
             return new Intl.NumberFormat('vi-VN', {
                 style: 'currency',
                 currency: 'VND'
-            }).format(amount);
+            }).format(Math.abs(amount || 0));
         }
 
-        // Hàm render bảng
-        function renderTable() {
-            const tbody = document.getElementById('transactionsBody');
-            tbody.innerHTML = '';
+        function showLoading() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+        }
 
-            const startIndex = (currentPage - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const pageData = filteredTransactions.slice(startIndex, endIndex);
+        function hideLoading() {
+            document.getElementById('loadingOverlay').style.display = 'none';
+        }
 
-            pageData.forEach(transaction => {
-                const row = document.createElement('tr');
-                
-                // Xác định class cho loại giao dịch
-                let typeClass = '';
-                let typeText = '';
-                let typeIcon = '';
-                
-                switch(transaction.type) {
-                    case 'deposit':
-                        typeClass = 'type-deposit';
-                        typeText = 'Nạp tiền';
-                        typeIcon = '<i class="fas fa-arrow-down"></i>';
-                        break;
-                    case 'withdraw':
-                        typeClass = 'type-withdraw';
-                        typeText = 'Rút tiền';
-                        typeIcon = '<i class="fas fa-arrow-up"></i>';
-                        break;
-                    case 'payment':
-                        typeClass = 'type-payment';
-                        typeText = 'Thanh toán';
-                        typeIcon = '<i class="fas fa-credit-card"></i>';
-                        break;
-                    case 'transfer':
-                        typeClass = 'type-transfer';
-                        typeText = 'Chuyển khoản';
-                        typeIcon = '<i class="fas fa-exchange-alt"></i>';
-                        break;
+        function updateLastUpdateTime() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('vi-VN', { 
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            });
+            document.getElementById('lastUpdateTime').textContent = `Cập nhật ${timeStr}`;
+        }
+
+        // ========== USER AUTH FUNCTIONS ==========
+        function checkAuth() {
+            try {
+                const userStr = localStorage.getItem('user') || sessionStorage.getItem('user');
+                if (!userStr) {
+                    window.location.href = 'login.html';
+                    return false;
                 }
-
-                // Xác định class cho trạng thái
-                let statusClass = '';
-                let statusText = '';
-                let statusIcon = '';
                 
-                switch(transaction.status) {
-                    case 'success':
-                        statusClass = 'status-success';
-                        statusText = 'Thành công';
-                        statusIcon = '<i class="fas fa-check-circle"></i>';
-                        break;
-                    case 'pending':
-                        statusClass = 'status-pending';
-                        statusText = 'Đang xử lý';
-                        statusIcon = '<i class="fas fa-clock"></i>';
-                        break;
-                    case 'failed':
-                        statusClass = 'status-failed';
-                        statusText = 'Thất bại';
-                        statusIcon = '<i class="fas fa-times-circle"></i>';
-                        break;
-                }
+                currentUser = JSON.parse(userStr);
+                updateUserInfo();
+                return true;
+            } catch (error) {
+                console.error('Lỗi kiểm tra đăng nhập:', error);
+                window.location.href = 'login.html';
+                return false;
+            }
+        }
 
-                row.innerHTML = `
-                    <td><strong>${transaction.id}</strong><br><small>${transaction.note}</small></td>
-                    <td>${transaction.time}</td>
-                    <td><span class="transaction-type ${typeClass}">${typeIcon} ${typeText}</span></td>
-                    <td>${transaction.customer}</td>
-                    <td><span class="transaction-amount ${transaction.amount >= 0 ? 'amount-positive' : 'amount-negative'}">${formatCurrency(transaction.amount)}</span></td>
-                    <td><span class="transaction-status ${statusClass}">${statusIcon} ${statusText}</span></td>
+        function updateUserInfo() {
+            if (!currentUser) return;
+            
+            document.getElementById('userName').textContent = currentUser.name || 'Sumo';
+            document.getElementById('headerUserName').textContent = currentUser.name || 'Sumo';
+            document.getElementById('userRole').textContent = currentUser.role || 'Chủ shop';
+            
+            const initials = currentUser.name ? 
+                currentUser.name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) : 
+                'S';
+            document.getElementById('userAvatar').textContent = initials;
+            document.getElementById('headerUserAvatar').textContent = initials;
+        }
+
+        // ========== RENDERING FUNCTIONS ==========
+        function getStatusText(status) {
+            const statusMap = { 
+                'success': 'Thành công', 
+                'pending': 'Đang xử lý', 
+                'failed': 'Thất bại' 
+            };
+            return statusMap[status] || status;
+        }
+        
+        function getTransactionTypeText(type) {
+            const typeMap = { 
+                'deposit': 'Nạp tiền', 
+                'withdraw': 'Rút tiền', 
+                'payment': 'Thanh toán', 
+                'transfer': 'Chuyển khoản' 
+            };
+            return typeMap[type] || type;
+        }
+
+        function renderTransactionRow(transaction) {
+            const amount = transaction.amount || 0;
+            const ref = transaction.reference || transaction.id || 'N/A';
+            const status = transaction.status || 'pending';
+            
+            // Xác định class và icon cho trạng thái
+            let statusClass, statusText, statusIcon;
+            if (status === 'success') {
+                statusClass = 'status-success';
+                statusText = 'Thành công';
+                statusIcon = 'fa-check-circle';
+            } else if (status === 'pending') {
+                statusClass = 'status-pending';
+                statusText = 'Đang xử lý';
+                statusIcon = 'fa-clock';
+            } else {
+                statusClass = 'status-failed';
+                statusText = 'Thất bại';
+                statusIcon = 'fa-times-circle';
+            }
+
+            // Xác định class và icon cho loại giao dịch
+            const type = transaction.type || 'deposit';
+            const typeClass = 'type-' + type;
+            const typeIcon = type === 'deposit' ? 'fa-arrow-down' : 
+                           type === 'withdraw' ? 'fa-arrow-up' : 
+                           'fa-exchange-alt';
+            
+            const amountClass = amount >= 0 ? 'amount-positive' : 'amount-negative';
+
+            // Tạo nút thao tác
+            const actionButtons = status === 'pending' ? 
+                `<button class="action-btn confirm" onclick="confirmTransaction('${ref}')">
+                    <i class="fas fa-check"></i> Xác nhận
+                </button>` : '';
+
+            return `
+                <tr>
+                    <td><strong>${ref}</strong></td>
+                    <td>${transaction.time || 'N/A'}</td>
+                    <td><span class="transaction-type ${typeClass}">
+                        <i class="fas ${typeIcon}"></i> ${getTransactionTypeText(type)}
+                    </span></td>
+                    <td>${transaction.note || transaction.description || 'Không có mô tả'}</td>
+                    <td><span class="transaction-amount ${amountClass}">${formatCurrency(amount)}</span></td>
+                    <td><span class="transaction-status ${statusClass}">
+                        <i class="fas ${statusIcon}"></i> ${statusText}
+                    </span></td>
                     <td>
                         <div class="transaction-actions">
-                            <button class="action-btn" onclick="viewTransaction('${transaction.id}')">
+                            <button class="action-btn" onclick="viewTransaction('${ref}')">
                                 <i class="fas fa-eye"></i> Xem
                             </button>
-                            <button class="action-btn" onclick="downloadReceipt('${transaction.id}')">
+                            <button class="action-btn" onclick="downloadReceipt('${ref}')">
                                 <i class="fas fa-download"></i> Biên lai
                             </button>
+                            ${actionButtons}
                         </div>
                     </td>
-                `;
-                
-                tbody.appendChild(row);
-            });
-
-            // Cập nhật số lượng giao dịch
-            document.getElementById('transactionCount').textContent = `${filteredTransactions.length} giao dịch`;
-            
-            // Cập nhật thống kê
-            updateStats();
+                </tr>
+            `;
         }
 
-        // Hàm tìm kiếm
+        function updateTransactionCount(count, pagination) {
+            const countElement = document.getElementById('transactionCount');
+            if (countElement) {
+                if (pagination && pagination.totalPages > 1) {
+                    countElement.textContent = `${count} giao dịch (Trang ${currentPage}/${pagination.totalPages})`;
+                } else {
+                    countElement.textContent = `${count} giao dịch`;
+                }
+            }
+        }
+
+        function updatePagination(pagination) {
+            const paginationEl = document.getElementById('pagination');
+            if (!paginationEl || !pagination || pagination.totalPages <= 1) {
+                paginationEl.innerHTML = '';
+                return;
+            }
+            
+            let html = '';
+            const totalPages = pagination.totalPages;
+            
+            // Nút Previous
+            if (currentPage > 1) {
+                html += `<button class="page-btn" onclick="changePage(${currentPage - 1})">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>`;
+            }
+            
+            // Các trang số
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === currentPage) {
+                    html += `<button class="page-btn active">${i}</button>`;
+                } else if (
+                    i === 1 || 
+                    i === totalPages || 
+                    (i >= currentPage - 1 && i <= currentPage + 1)
+                ) {
+                    html += `<button class="page-btn" onclick="changePage(${i})">${i}</button>`;
+                } else if (
+                    (i === currentPage - 2 && currentPage > 3) || 
+                    (i === currentPage + 2 && currentPage < totalPages - 2)
+                ) {
+                    html += `<button class="page-btn" disabled>...</button>`;
+                }
+            }
+            
+            // Nút Next
+            if (currentPage < totalPages) {
+                html += `<button class="page-btn" onclick="changePage(${currentPage + 1})">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>`;
+            }
+            
+            paginationEl.innerHTML = html;
+        }
+
+        function updateStats(stats) {
+            if (!stats) return;
+            
+            console.log(' Updating stats:', stats);
+            
+            // Cập nhật thống kê từ API
+            document.getElementById('totalAmount').textContent = formatCurrency(stats.totalAmount || 0);
+            document.getElementById('incomeAmount').textContent = formatCurrency(stats.income || 0);
+            document.getElementById('expenseAmount').textContent = formatCurrency(stats.expense || 0);
+            document.getElementById('pendingCount').textContent = stats.pending || 0;
+            
+            // Cập nhật % thay đổi
+            const depositChange = stats.depositChange || 0;
+            const withdrawChange = stats.withdrawChange || 0;
+            
+            document.getElementById('incomeChangeText').textContent = `${(depositChange * 100).toFixed(1)}%`;
+            document.getElementById('expenseChangeText').textContent = `${(withdrawChange * 100).toFixed(1)}%`;
+            document.getElementById('totalChangeText').textContent = `${(depositChange * 100).toFixed(1)}%`;
+            document.getElementById('pendingChangeText').textContent = stats.pending || 0;
+            
+            // Cập nhật màu sắc và icon
+            const incomeChangeEl = document.getElementById('incomeChange');
+            const expenseChangeEl = document.getElementById('expenseChange');
+            const totalChangeEl = document.getElementById('totalChange');
+            const pendingChangeEl = document.getElementById('pendingChange');
+            
+            if (incomeChangeEl) {
+                incomeChangeEl.className = `stat-change ${depositChange >= 0 ? 'positive' : 'negative'}`;
+                incomeChangeEl.querySelector('i').className = depositChange >= 0 ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
+            }
+            
+            if (expenseChangeEl) {
+                expenseChangeEl.className = `stat-change ${withdrawChange >= 0 ? 'positive' : 'negative'}`;
+                expenseChangeEl.querySelector('i').className = withdrawChange >= 0 ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
+            }
+            
+            if (totalChangeEl) {
+                totalChangeEl.className = `stat-change ${depositChange >= 0 ? 'positive' : 'negative'}`;
+                totalChangeEl.querySelector('i').className = depositChange >= 0 ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
+            }
+            
+            if (pendingChangeEl) {
+                pendingChangeEl.className = `stat-change ${stats.pendingChange || 0 >= 0 ? 'positive' : 'negative'}`;
+                pendingChangeEl.querySelector('i').className = stats.pendingChange || 0 >= 0 ? 'fas fa-arrow-up' : 'fas fa-arrow-down';
+            }
+        }
+
+        function renderEmptyState() {
+            const tbody = document.getElementById('transactionsBody');
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="7">
+                        <div class="empty-state">
+                            <i class="fas fa-search"></i>
+                            <p>Không tìm thấy giao dịch nào</p>
+                            <p class="empty-subtitle">Thử thay đổi bộ lọc hoặc tạo giao dịch mới</p>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // ========== DATA LOADING FUNCTIONS ==========
+        async function loadStatistics() {
+            try {
+                console.log(' Loading statistics...');
+                
+                // Gọi API thống kê từ mock-api.js
+                const response = await MockAPI.getHistoryStatistics(currentFilters);
+                
+                if (response && response.success) {
+                    updateStats(response.data);
+                    console.log(' Statistics loaded:', response.data);
+                } else {
+                    console.warn(' Failed to load statistics:', response?.message);
+                    // Fallback stats
+                    updateStats({
+                        totalAmount: 0,
+                        income: 0,
+                        expense: 0,
+                        pending: 0,
+                        depositChange: 0,
+                        withdrawChange: 0
+                    });
+                }
+            } catch (error) {
+                console.error(' Error loading statistics:', error);
+            }
+        }
+
+        async function loadTransactions() {
+            if (!checkAuth()) return;
+            
+            showLoading();
+            
+            try {
+                console.log(' Loading transactions with filters:', currentFilters);
+                
+                // Gọi API từ mock-api.js của bạn
+                const response = await MockAPI.getHistoryTransactions({
+                    ...currentFilters,
+                    page: currentPage,
+                    limit: itemsPerPage
+                });
+                
+                console.log(' API Response:', response);
+                
+                if (response && response.success) {
+                    const transactions = response.data.transactions || [];
+                    const pagination = response.data.pagination || { total: 0, totalPages: 1 };
+                    
+                    // Render bảng
+                    const tbody = document.getElementById('transactionsBody');
+                    tbody.innerHTML = '';
+                    
+                    if (transactions.length === 0) {
+                        renderEmptyState();
+                    } else {
+                        transactions.forEach(tx => {
+                            tbody.innerHTML += renderTransactionRow(tx);
+                        });
+                    }
+                    
+                    // Cập nhật UI
+                    updateTransactionCount(pagination.total || transactions.length, pagination);
+                    updatePagination(pagination);
+                    updateLastUpdateTime();
+                    
+                    // Load statistics
+                    await loadStatistics();
+                    
+                } else {
+                    console.error(' API Error:', response?.message);
+                    showError('Không thể tải dữ liệu: ' + (response?.message || 'Lỗi không xác định'));
+                    renderEmptyState();
+                }
+                
+            } catch (error) {
+                console.error(' Error loading transactions:', error);
+                showError('Lỗi kết nối: ' + error.message);
+                renderEmptyState();
+                
+            } finally {
+                hideLoading();
+            }
+        }
+
+        function showError(message) {
+            console.error('ERROR:', message);
+            // Có thể hiển thị thông báo lỗi đẹp hơn ở đây
+            alert('Lỗi: ' + message);
+        }
+
+        // ========== FILTER FUNCTIONS ==========
+        function applyFilters() {
+            // Thu thập filter từ form
+            currentFilters = {
+                type: document.getElementById('transactionType').value,
+                status: document.getElementById('statusFilter').value,
+                minAmount: document.getElementById('minAmount').value,
+                maxAmount: document.getElementById('maxAmount').value,
+                dateRange: document.getElementById('dateRange').value,
+                search: document.getElementById('searchInput').value
+            };
+            
+            // Xóa các filter trống
+            Object.keys(currentFilters).forEach(key => {
+                if (!currentFilters[key] || currentFilters[key] === 'all') {
+                    delete currentFilters[key];
+                }
+            });
+            
+            console.log(' Applying filters:', currentFilters);
+            currentPage = 1;
+            loadTransactions();
+        }
+
         function setupSearch() {
             const searchInput = document.getElementById('searchInput');
-            searchInput.addEventListener('input', function(e) {
-                const searchTerm = e.target.value.toLowerCase();
-                
-                filteredTransactions = transactions.filter(transaction => 
-                    transaction.id.toLowerCase().includes(searchTerm) ||
-                    transaction.customer.toLowerCase().includes(searchTerm) ||
-                    transaction.note.toLowerCase().includes(searchTerm)
-                );
-                
-                currentPage = 1;
-                renderTable();
-            });
-        }
-
-        // Hàm áp dụng bộ lọc
-        function applyFilters() {
-            const dateRange = document.getElementById('dateRange').value;
-            const transactionType = document.getElementById('transactionType').value;
-            const status = document.getElementById('statusFilter').value;
-            const minAmount = document.getElementById('minAmount').value;
-            const maxAmount = document.getElementById('maxAmount').value;
-
-            filteredTransactions = transactions.filter(transaction => {
-                // Lọc theo loại giao dịch
-                if (transactionType !== 'all' && transaction.type !== transactionType) {
-                    return false;
-                }
-
-                // Lọc theo trạng thái
-                if (status !== 'all' && transaction.status !== status) {
-                    return false;
-                }
-
-                // Lọc theo số tiền
-                const amount = Math.abs(transaction.amount);
-                if (minAmount && amount < parseInt(minAmount)) {
-                    return false;
-                }
-                if (maxAmount && amount > parseInt(maxAmount)) {
-                    return false;
-                }
-
-                return true;
-            });
-
-            currentPage = 1;
-            renderTable();
-        }
-
-        // Hàm lọc nhanh từ sidebar
-        function filterTransactions(filterType) {
-            switch(filterType) {
-                case 'all':
-                    filteredTransactions = [...transactions];
-                    break;
-                case 'deposit':
-                    filteredTransactions = transactions.filter(t => t.type === 'deposit');
-                    break;
-                case 'withdraw':
-                    filteredTransactions = transactions.filter(t => t.type === 'withdraw');
-                    break;
-                case 'pending':
-                    filteredTransactions = transactions.filter(t => t.status === 'pending');
-                    break;
-            }
+            let searchTimeout;
             
-            currentPage = 1;
-            renderTable();
+            searchInput.addEventListener('input', function(e) {
+                clearTimeout(searchTimeout);
+                
+                searchTimeout = setTimeout(() => {
+                    currentFilters.search = e.target.value.trim();
+                    currentPage = 1;
+                    loadTransactions();
+                }, 500);
+            });
         }
 
-        // Hàm thay đổi trang
+        // ========== ACTION FUNCTIONS ==========
         function changePage(page) {
             currentPage = page;
-            
-            // Cập nhật active class cho pagination
-            document.querySelectorAll('.page-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (parseInt(btn.textContent) === page) {
-                    btn.classList.add('active');
+            loadTransactions();
+        }
+
+        function viewTransaction(id) {
+            alert(` Xem chi tiết giao dịch #${id}\n\n` +
+                  `(Chức năng mock - Trong thực tế sẽ mở modal chi tiết)`);
+        }
+
+        async function confirmTransaction(id) {
+            if (confirm(`Bạn có chắc chắn muốn xác nhận giao dịch #${id}?`)) {
+                try {
+                    const response = await MockAPI.confirmTransaction(id, 'success');
+                    if (response.success) {
+                        alert(` ${response.message}`);
+                        loadTransactions();
+                    } else {
+                        alert(` ${response.message}`);
+                    }
+                } catch (error) {
+                    console.error('Lỗi xác nhận giao dịch:', error);
+                    alert(' Lỗi xác nhận giao dịch');
                 }
-            });
-            
-            renderTable();
-        }
-
-        // Hàm cập nhật thống kê
-        function updateStats() {
-            const totalAmount = filteredTransactions.reduce((sum, t) => sum + t.amount, 0);
-            const income = filteredTransactions.filter(t => t.amount > 0).reduce((sum, t) => sum + t.amount, 0);
-            const expense = filteredTransactions.filter(t => t.amount < 0).reduce((sum, t) => sum + t.amount, 0);
-            const pending = filteredTransactions.filter(t => t.status === 'pending').length;
-
-            // Cập nhật thống kê
-            document.querySelectorAll('.stat-value')[0].textContent = formatCurrency(totalAmount);
-            document.querySelectorAll('.stat-value')[1].textContent = formatCurrency(income);
-            document.querySelectorAll('.stat-value')[2].textContent = formatCurrency(Math.abs(expense));
-            document.querySelectorAll('.stat-value')[3].textContent = `${pending} GD`;
-        }
-
-        // Hàm xem chi tiết giao dịch
-        function viewTransaction(transactionId) {
-            const transaction = transactions.find(t => t.id === transactionId);
-            if (transaction) {
-                alert(`Chi tiết giao dịch:\n\n` +
-                      `Mã GD: ${transaction.id}\n` +
-                      `Thời gian: ${transaction.time}\n` +
-                      `Loại: ${getTransactionTypeText(transaction.type)}\n` +
-                      `Khách hàng: ${transaction.customer}\n` +
-                      `Số tiền: ${formatCurrency(transaction.amount)}\n` +
-                      `Trạng thái: ${getStatusText(transaction.status)}\n` +
-                      `Ghi chú: ${transaction.note}`);
             }
         }
 
-        // Hàm hỗ trợ
-        function getTransactionTypeText(type) {
-            const types = {
-                'deposit': 'Nạp tiền',
-                'withdraw': 'Rút tiền',
-                'payment': 'Thanh toán',
-                'transfer': 'Chuyển khoản'
-            };
-            return types[type] || type;
+        function downloadReceipt(id) {
+            alert(` Đang tải biên lai cho giao dịch #${id}...\n\n` +
+                  `(Chức năng mock - Trong thực tế sẽ tải file PDF)`);
         }
 
-        function getStatusText(status) {
-            const statuses = {
-                'success': 'Thành công',
-                'pending': 'Đang xử lý',
-                'failed': 'Thất bại'
-            };
-            return statuses[status] || status;
-        }
-
-        // Hàm download biên lai
-        function downloadReceipt(transactionId) {
-            alert(`Đang tải biên lai cho giao dịch ${transactionId}...`);
-        }
-
-        // Hàm export
-        function exportPDF() {
-            alert('Đang xuất file PDF...');
-        }
-
-        function exportExcel() {
-            alert('Đang xuất file Excel...');
-        }
-
-        function exportCSV() {
-            alert('Đang xuất file CSV...');
+        async function exportData(format) {
+            try {
+                const response = await MockAPI.exportHistoryData(format, currentFilters);
+                if (response.success) {
+                    alert(` ${response.message}\nTên file: ${response.data.filename}`);
+                } else {
+                    alert(` ${response.message}`);
+                }
+            } catch (error) {
+                console.error('Lỗi xuất dữ liệu:', error);
+                alert(' Lỗi xuất dữ liệu');
+            }
         }
 
         function printReport() {
@@ -1432,58 +1442,76 @@
         }
 
         function refreshData() {
-            filteredTransactions = [...transactions];
             currentPage = 1;
-            renderTable();
-            alert('Dữ liệu đã được làm mới!');
+            currentFilters = {};
+            
+            // Reset form
+            document.getElementById('transactionType').value = 'all';
+            document.getElementById('statusFilter').value = 'all';
+            document.getElementById('minAmount').value = '';
+            document.getElementById('maxAmount').value = '';
+            document.getElementById('dateRange').value = 'month';
+            document.getElementById('searchInput').value = '';
+            
+            loadTransactions();
+            alert(' Đã làm mới dữ liệu');
         }
 
-        // Khởi tạo khi trang load
+        function logout() {
+            if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+                // Xóa dữ liệu đăng nhập
+                localStorage.clear();
+                sessionStorage.clear();
+                
+                // Chuyển hướng về trang đăng nhập
+                window.location.href = 'login.html';
+            }
+        }
+
+        function showNotifications() {
+            alert(' Thông báo\n\n' +
+                  '• Có 2 giao dịch đang chờ xử lý\n' +
+                  '• Đã nhận thanh toán từ 3 đơn hàng\n' +
+                  '• Cập nhật hệ thống vào lúc 02:00 sáng');
+        }
+
+        // ========== INITIALIZATION ==========
         document.addEventListener('DOMContentLoaded', function() {
-            renderTable();
+            console.log(' Initializing history page...');
+            console.log('MockAPI available:', typeof MockAPI !== 'undefined' ? 'Yes' : 'No');
+            
+            // Kiểm tra đăng nhập
+            if (!checkAuth()) return;
+            
+            // Tải dữ liệu ban đầu
+            loadTransactions();
+            
+            // Thiết lập tìm kiếm
             setupSearch();
             
-            // Setup notification button
-            document.querySelector('.notification-btn').addEventListener('click', function() {
-                alert('Bạn có 3 thông báo mới!');
-            });
+            // Cập nhật thời gian mỗi 30 giây
+            setInterval(updateLastUpdateTime, 30000);
+            
+            // Giả lập thông báo mới
+            setTimeout(() => {
+                const badge = document.querySelector('.notification-badge');
+                if (badge) {
+                    badge.style.display = 'block';
+                }
+            }, 2000);
         });
-    </script>
-    <script>
-    // Check authentication on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        if (!Auth.isLoggedIn()) {
-            window.location.href = 'login.html';
-            return;
-        }
-        
-        // Load user data
-        const user = Auth.getCurrentUser();
-        if (user) {
-            // Update UI with user data
-            document.querySelectorAll('.user-name').forEach(el => {
-                el.textContent = user.name;
-            });
-            document.querySelectorAll('.user-role').forEach(el => {
-                el.textContent = user.role === 'shop_owner' ? 'Chủ shop' : user.role;
-            });
-        }
-    });
 
-    // Logout function
-   function logout() {
-    if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
-        // Xóa tất cả dữ liệu đăng nhập
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        sessionStorage.removeItem('token');
-        sessionStorage.removeItem('user');
-        
-        // Chuyển hướng về trang đăng nhập
-        window.location.href = 'login.html';
-    }
-    return false; // Ngăn chặn hành vi mặc định của thẻ a
-}
-</script>
+        // ========== EXPORT FUNCTIONS TO WINDOW ==========
+        window.changePage = changePage;
+        window.applyFilters = applyFilters;
+        window.viewTransaction = viewTransaction;
+        window.confirmTransaction = confirmTransaction;
+        window.downloadReceipt = downloadReceipt;
+        window.exportData = exportData;
+        window.printReport = printReport;
+        window.refreshData = refreshData;
+        window.logout = logout;
+        window.showNotifications = showNotifications;
+    </script>
 </body>
 </html>
