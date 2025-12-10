@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <script src="mock-api.js"></script> 
-    <script src="auth-check.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="dashboard.js"></script>
+    
    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopCOD Pro - Dashboard Thống Kê</title>
+    <title>ShopCOD Pro</title>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -359,6 +356,9 @@
             font-size: 1.8rem;
             font-weight: 400;
             margin-bottom: 0.5rem;
+            min-height: 2.5rem;
+            display: flex;
+            align-items: center;
         }
 
         .stat-change {
@@ -366,6 +366,7 @@
             display: flex;
             align-items: center;
             gap: 0.3rem;
+            min-height: 1.2rem;
         }
 
         .stat-change.positive {
@@ -431,7 +432,7 @@
             height: 300px;
         }
 
-        /* ===== RECENT ACTIVITY - CẢI TIẾN MỚI ===== */
+        /* ===== RECENT ACTIVITY ===== */
         .activity-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -509,7 +510,7 @@
             border-radius: 10px;
         }
 
-        /* CẢI TIẾN GIAO DỊCH GẦN ĐÂY - KẾT HỢP VỚI dashboard.js */
+        /* Giao Dịch Gần Đây */
         .transaction-item {
             display: flex;
             align-items: center;
@@ -653,7 +654,7 @@
             color: var(--primary);
         }
 
-        /* CẢI TIẾN ĐƠN HÀNG ĐANG GIAO - KẾT HỢP VỚI dashboard.js */
+        /* Đơn Hàng Đang Giao */
         .order-item {
             display: flex;
             align-items: center;
@@ -814,85 +815,6 @@
             font-size: 0.9rem;
         }
 
-        /* CSS CŨ cho activity-item (giữ lại để không bị lỗi) */
-        .activity-item {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            margin-bottom: 0.5rem;
-            background: white;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--gray-light);
-            transition: all 0.3s ease;
-        }
-
-        .activity-item:hover {
-            transform: translateX(5px);
-            box-shadow: var(--shadow);
-        }
-
-        .activity-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            margin-right: 1rem;
-            flex-shrink: 0;
-        }
-
-        .activity-icon.success {
-            background: var(--success-light);
-            color: var(--success);
-        }
-
-        .activity-icon.warning {
-            background: var(--warning-light);
-            color: var(--warning);
-        }
-
-        .activity-icon.danger {
-            background: var(--danger-light);
-            color: var(--danger);
-        }
-
-        .activity-icon.primary {
-            background: var(--primary-light);
-            color: var(--primary);
-        }
-
-        .activity-details {
-            flex: 1;
-        }
-
-        .activity-details p {
-            font-weight: 500;
-            margin-bottom: 0.2rem;
-            color: var(--dark);
-        }
-
-        .activity-details span {
-            font-size: 0.85rem;
-            color: var(--gray);
-        }
-
-        .activity-amount {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-left: 1rem;
-            white-space: nowrap;
-        }
-
-        .activity-amount.positive {
-            color: var(--success);
-        }
-
-        .activity-amount.negative {
-            color: var(--danger);
-        }
-
         /* ===== QUICK ACTIONS ===== */
         .quick-actions-section {
             background: white;
@@ -1043,41 +965,7 @@
         .stat-card:nth-child(4) { animation-delay: 0.3s; }
     </style>
 </head>
-<!-- Login Check Script -->
-<script>
-    // Simple login check for index.html
-    (function() {
-        console.log('Checking login status...');
-        
-        const token = localStorage.getItem('token') || sessionStorage.getItem('token');
-        const user = localStorage.getItem('user') || sessionStorage.getItem('user');
-        
-        console.log('Token exists:', !!token);
-        console.log('User exists:', !!user);
-        
-        if (!token || !user) {
-            console.log('Not logged in, redirecting to login.html');
-            window.location.href = 'login.html';
-            return;
-        }
-        
-        try {
-            const userData = JSON.parse(user);
-            console.log('User data:', userData);
-            
-            // Update UI with user info
-            document.addEventListener('DOMContentLoaded', function() {
-                const userNameElements = document.querySelectorAll('.user-name');
-                userNameElements.forEach(el => {
-                    el.textContent = userData.name || 'User';
-                });
-            });
-        } catch (e) {
-            console.error('Error parsing user data:', e);
-            window.location.href = 'login.html';
-        }
-    })();
-</script>
+
 <body>
     <!-- Sidebar -->
     <nav class="sidebar">
@@ -1111,27 +999,12 @@
             </ul>
         </div>
 
-        <!-- Trong sidebar, phần SETTINGS -->
-        <div class="nav-section">
-            <div class="section-label">SETTINGS</div>
-            <ul class="nav-menu">
-                <!-- ... các mục khác ... -->
-                
-                <li class="nav-item">
-                    <a href="#" class="nav-link" onclick="logout()">
-                        <i class="fas fa-sign-out-alt nav-icon"></i>
-                        <span class="nav-text">Đăng xuất</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
         <div class="nav-section" style="margin-top: auto;">
             <div class="user-profile" style="background: rgba(255,255,255,0.1); border: none;">
-                <div class="user-avatar" id="user-avatar-sidebar">SM</div> 
+                <div class="user-avatar" id="user-avatar-sidebar"></div> 
                 <div>
-                    <h4 class="user-name">Sumo</h4>
-                    <p class="user-role">Quản trị viên</p>
+                    <h4 class="user-name"></h4>
+                    <p class="user-role"></p>
                 </div>
             </div>
         </div>
@@ -1158,12 +1031,10 @@
                 </button>
                 
                 <div class="user-profile">
-                    <div class="user-avatar" id="user-avatar-header">
-                        <span>S</span>
-                    </div>
+                    <div class="user-avatar" id="user-avatar-header"></div>
                     <div class="user-info">
-                        <h4 class="user-name">Sumo</h4>
-                        <p>Admin</p>
+                        <h4 class="user-name"></h4>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -1177,10 +1048,10 @@
                 </div>
                 <div class="stat-content">
                     <div class="stat-title">TỔNG SỐ DƯ</div>
-                    <div class="stat-value" id="total-balance">25,840,000 ₫</div>
-                    <div class="stat-change positive" id="balance-change-container">
+                    <div class="stat-value" id="total-balance"></div>
+                    <div class="stat-change" id="balance-change-container">
                         <i class="fas fa-arrow-up"></i>
-                        <span id="balance-change"> 12.5% so với tháng trước</span>
+                        <span id="balance-change"></span>
                     </div>
                 </div>
             </div>
@@ -1191,10 +1062,10 @@
                 </div>
                 <div class="stat-content">
                     <div class="stat-title">ĐƠN HÀNG HÔM NAY</div>
-                    <div class="stat-value" id="today-orders">48</div>
-                    <div class="stat-change positive" id="orders-change-container">
+                    <div class="stat-value" id="today-orders"></div>
+                    <div class="stat-change" id="orders-change-container">
                         <i class="fas fa-arrow-up"></i>
-                        <span id="orders-change">8 đơn so với hôm qua</span>
+                        <span id="orders-change"></span>
                     </div>
                 </div>
             </div>
@@ -1205,10 +1076,10 @@
                 </div>
                 <div class="stat-content">
                     <div class="stat-title">DOANH THU THU HỘ</div>
-                    <div class="stat-value" id="total-revenue">18,450,000 ₫</div>
-                    <div class="stat-change positive">
+                    <div class="stat-value" id="total-revenue"></div>
+                    <div class="stat-change">
                         <i class="fas fa-arrow-up"></i>
-                        <span>24.3% tăng trưởng</span>
+                        <span id="revenue-change"></span>
                     </div>
                 </div>
             </div>
@@ -1219,10 +1090,10 @@
                 </div>
                 <div class="stat-content">
                     <div class="stat-title">KHÁCH HÀNG MỚI</div>
-                    <div class="stat-value" id="new-customers">12</div>
-                    <div class="stat-change negative">
+                    <div class="stat-value" id="new-customers"></div>
+                    <div class="stat-change">
                         <i class="fas fa-arrow-down"></i>
-                        <span>2 khách so với tuần trước</span>
+                        <span id="customers-change"></span>
                     </div>
                 </div>
             </div>
@@ -1259,7 +1130,7 @@
             </div>
         </div>
 
-        <!-- Recent Activity - CẢI TIẾN -->
+        <!-- Recent Activity -->
         <div class="activity-section">
             <!-- Giao Dịch Gần Đây -->
             <div class="activity-card">
@@ -1270,7 +1141,6 @@
                     </button>
                 </div>
                 <ul id="transaction-list" class="activity-list">
-                    <!-- Dữ liệu sẽ được load từ mock API qua dashboard.js -->
                     <div class="loading-state" id="transaction-loading">
                         <div class="loading-spinner"></div>
                         <p>Đang tải giao dịch...</p>
@@ -1287,7 +1157,6 @@
                     </button>
                 </div>
                 <ul id="order-list" class="activity-list">
-                    <!-- Dữ liệu sẽ được load từ mock API qua dashboard.js -->
                     <div class="loading-state" id="order-loading">
                         <div class="loading-spinner"></div>
                         <p>Đang tải đơn hàng...</p>
@@ -1330,9 +1199,41 @@
             </div>
         </div>
     </main>
+  <script>
+        // Hàm logout
+        function logout() {
+            // Xóa tất cả dữ liệu đăng nhập
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            sessionStorage.removeItem('token');
+            sessionStorage.removeItem('user');
+            
+            // Hiển thị thông báo
+            alert('Đã đăng xuất thành công!');
+            
+            // Chuyển hướng về trang login
+            window.location.href = 'login.html';
+        }
 
+        // Thêm sự kiện cho nút period
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.period-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Tự động refresh dữ liệu mỗi 30 giây
+            setInterval(() => {
+                if (window.loadDashboardData) {
+                    window.loadDashboardData();
+                }
+            }, 30000);
+        });
+    </script>
     <script>
-        // Hàm custom để render giao diện mới (bổ sung cho dashboard.js)
+        // Hàm custom để render giao diện mới
         function updateActivityListsWithNewUI(transactions, pendingOrders) {
             const transactionListEl = document.getElementById('transaction-list');
             const orderListEl = document.getElementById('order-list');
@@ -1343,7 +1244,17 @@
             if (transactionLoading) transactionLoading.remove();
             if (orderLoading) orderLoading.remove();
             
-            // 1. Render Giao Dịch Gần Đây với giao diện mới
+            // Helper function để format currency
+            function formatCurrency(number) {
+                if (typeof number !== 'number') return '0 ₫'; 
+                return new Intl.NumberFormat('vi-VN', { 
+                    style: 'currency', 
+                    currency: 'VND',
+                    minimumFractionDigits: 0 
+                }).format(number);
+            }
+            
+            // 1. Render Giao Dịch Gần Đây
             if (transactionListEl) {
                 if (!transactions || transactions.length === 0) {
                     transactionListEl.innerHTML = `
@@ -1387,7 +1298,7 @@
                 }
             }
             
-            // 2. Render Đơn Hàng Đang Giao với giao diện mới
+            // 2. Render Đơn Hàng Đang Giao
             if (orderListEl) {
                 if (!pendingOrders || pendingOrders.length === 0) {
                     orderListEl.innerHTML = `
@@ -1448,78 +1359,24 @@
         }
 
         // Override hàm updateActivityLists từ dashboard.js để sử dụng giao diện mới
-        const originalUpdateActivityLists = window.updateActivityLists;
-        if (originalUpdateActivityLists) {
+        if (window.updateActivityLists) {
+            const originalUpdateActivityLists = window.updateActivityLists;
             window.updateActivityLists = function(transactions, pendingOrders) {
-                // Gọi hàm custom của chúng ta
                 updateActivityListsWithNewUI(transactions, pendingOrders);
             };
         }
 
-        // Cập nhật loadDashboardData để đảm bảo gọi đúng
-        async function loadDashboardDataCustom() {
-            try {
-                const response = await MockAPI.getDashboardData(); 
-                
-                if (response.success) {
-                    console.log("Dashboard data loaded successfully.");
-                    
-                    // Cập nhật stats (sử dụng hàm từ dashboard.js)
-                    if (window.updateStatsCards) {
-                        window.updateStatsCards(response.stats);
-                    }
-                    
-                    // Cập nhật charts (sử dụng hàm từ dashboard.js)
-                    if (window.updateCharts) {
-                        window.updateCharts(response.charts);
-                    }
-                    
-                    // Cập nhật activity với giao diện mới
-                    updateActivityListsWithNewUI(response.transactions, response.pendingOrders);
-                    
-                    // Cập nhật thông tin User
-                    const userJSON = localStorage.getItem('user') || sessionStorage.getItem('user');
-                    if (userJSON) {
-                        const user = JSON.parse(userJSON);
-                        if (window.updateUserInfo) {
-                            window.updateUserInfo(user);
-                        }
-                    }
-                    
-                } else {
-                    console.error("Failed to load dashboard data:", response.message);
+        // Tự động refresh dữ liệu mỗi 30 giây
+        function startAutoRefresh() {
+            setInterval(() => {
+                if (window.loadDashboardData) {
+                    window.loadDashboardData();
                 }
-            } catch (error) {
-                console.error("Error in loadDashboardData:", error);
-                
-                // Hiển thị lỗi
-                document.getElementById('transaction-list').innerHTML = `
-                    <div class="empty-state">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <p>Không thể tải giao dịch</p>
-                    </div>
-                `;
-                
-                document.getElementById('order-list').innerHTML = `
-                    <div class="empty-state">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <p>Không thể tải đơn hàng</p>
-                    </div>
-                `;
-            }
+            }, 30000);
         }
 
         // Khởi tạo khi trang load
         document.addEventListener('DOMContentLoaded', function() {
-            // Load dữ liệu ban đầu
-            if (window.loadDashboardData) {
-                // Gọi hàm gốc nhưng override activity lists
-                window.loadDashboardData();
-            } else {
-                // Fallback: Gọi hàm custom của chúng ta
-                loadDashboardDataCustom();
-            }
-            
             // Thêm sự kiện click cho các nút period
             document.querySelectorAll('.period-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
@@ -1528,15 +1385,13 @@
                 });
             });
             
-            // Tự động refresh dữ liệu mỗi 30 giây
-            setInterval(() => {
-                if (window.loadDashboardData) {
-                    window.loadDashboardData();
-                } else {
-                    loadDashboardDataCustom();
-                }
-            }, 30000);
+            // Bắt đầu auto refresh
+            startAutoRefresh();
         });
     </script>
+    <script src="mock-api.js"></script> 
+    <script src="auth-check.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>

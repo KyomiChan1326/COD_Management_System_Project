@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập - ShopCOD Pro</title>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="mock-api.js"></script> 
+
     <style>
+      
         * {
             margin: 0;
             padding: 0;
@@ -325,7 +331,7 @@
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 20px;
-            display: flex;
+            display: none; /* Mặc định ẩn */
             align-items: center;
             gap: 10px;
             animation: slideIn 0.3s ease;
@@ -435,7 +441,7 @@
                             <input type="checkbox" id="rememberMe" name="rememberMe">
                             <span>Ghi nhớ đăng nhập</span>
                         </label>
-                        <a href="forgotpassword.html" class="forgotpassword">Quên mật khẩu?</a>
+                        <a href="forgotpassword.html" class="forgot-password">Quên mật khẩu?</a>
                     </div>
 
                     <button type="submit" class="login-btn" id="loginBtn">
@@ -447,11 +453,11 @@
                 <div class="divider">hoặc đăng nhập bằng</div>
 
                 <div class="social-login">
-                    <button type="button" class="social-btn google" onclick="loginWithGoogle()">
+                    <button type="button" class="social-btn google" onclick="showAlert('Tính năng Google chưa được tích hợp.', 'warning')">
                         <i class="fab fa-google"></i>
                         Google
                     </button>
-                    <button type="button" class="social-btn facebook" onclick="loginWithFacebook()">
+                    <button type="button" class="social-btn facebook" onclick="showAlert('Tính năng Facebook chưa được tích hợp.', 'warning')">
                         <i class="fab fa-facebook-f"></i>
                         Facebook
                     </button>
@@ -465,284 +471,133 @@
         </div>
     </div>
 
-   <script>
-    // ========== SIMPLE LOGIN SCRIPT ==========
-    
-    // Check if already logged in
-    window.addEventListener('load', function() {
-        const token = localStorage.getItem('token') || sessionStorage.getItem('token');
-        console.log('Page loaded. Token exists:', !!token);
+    <script>
+        // ========== CHỨC NĂNG CƠ BẢN VÀ LOGIC MOCK API ==========
         
-        if (token) {
-            console.log('Already logged in, redirecting to index.html');
-            // Dùng setTimeout để tránh redirect loop
-            setTimeout(() => {
-                window.location.href = './index.html';
-            }, 100);
-        }
-    });
-
-    // Toggle password visibility
-    function togglePassword() {
-        const passwordInput = document.getElementById('password');
-        const icon = document.querySelector('.password-toggle i');
-        
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            icon.className = 'fas fa-eye-slash';
-        } else {
-            passwordInput.type = 'password';
-            icon.className = 'fas fa-eye';
-        }
-    }
-
-    // Show alert
-    function showAlert(message, type = 'error') {
-        const alertDiv = document.getElementById('alertMessage');
-        if (!alertDiv) {
-            console.error('Alert div not found!');
-            return;
-        }
-        
-        alertDiv.innerHTML = `
-            <i class="fas fa-${type === 'error' ? 'exclamation-circle' : 'check-circle'}"></i>
-            <span>${message}</span>
-        `;
-        alertDiv.className = `alert ${type}`;
-        alertDiv.style.display = 'flex';
-        
-        setTimeout(() => {
-            alertDiv.style.display = 'none';
-        }, 4000);
-    }
-
-    // Set loading state
-    function setLoading(isLoading) {
-        const btnText = document.getElementById('btnText');
-        const btnLoading = document.getElementById('btnLoading');
-        const loginBtn = document.getElementById('loginBtn');
-        
-        if (!btnText || !btnLoading || !loginBtn) {
-            console.error('Login button elements not found!');
-            return;
-        }
-        
-        if (isLoading) {
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'block';
-            loginBtn.disabled = true;
-        } else {
-            btnText.style.display = 'inline';
-            btnLoading.style.display = 'none';
-            loginBtn.disabled = false;
-        }
-    }
-
-    // ========== MAIN LOGIN FUNCTION ==========
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        console.log('=== LOGIN FORM SUBMITTED ===');
-        
-        const email = document.getElementById('email').value.trim();
-        const password = document.getElementById('password').value;
-        const rememberMe = document.getElementById('rememberMe').checked;
-        
-        console.log('Email/Phone:', email);
-        console.log('Password length:', password.length);
-        console.log('Remember me:', rememberMe);
-        
-        // Simple validation
-        if (!email || !password) {
-            showAlert('Vui lòng nhập đầy đủ thông tin!');
-            return;
-        }
-        
-        // Test accounts
-        const testAccounts = [
-            { email: 'shop@example.com', phone: '0987654321', password: 'password123' },
-            { email: 'admin@shopcod.com', phone: '0123456789', password: 'password123' },
-            { email: 'test@shop.com', phone: '0912345678', password: 'password123' }
-        ];
-        
-        // Check credentials
-        let isValid = false;
-        let matchedAccount = null;
-        
-        for (let account of testAccounts) {
-            // Check both email and phone
-            const isEmailMatch = email.toLowerCase() === account.email.toLowerCase();
-            const isPhoneMatch = email === account.phone;
-            
-            if ((isEmailMatch || isPhoneMatch) && password === account.password) {
-                isValid = true;
-                matchedAccount = account;
-                console.log('Matched account:', account);
-                break;
-            }
-        }
-        
-        setLoading(true);
-        
-        // Simulate API delay
-        setTimeout(() => {
-            if (isValid && matchedAccount) {
-                console.log(' LOGIN SUCCESS');
-                
-                // Create user data
-                const userData = {
-                    id: 1,
-                    name: 'Nguyễn Văn A',
-                    email: matchedAccount.email,
-                    phone: matchedAccount.phone,
-                    role: 'shop_owner',
-                    shopName: matchedAccount.email === 'shop@example.com' ? 'Shop Thời Trang A' : 
-                              matchedAccount.email === 'admin@shopcod.com' ? 'Shop Admin' : 'Test Shop',
-                    avatar: 'NV',
-                    balance: 15000000,
-                    lastLogin: new Date().toISOString()
-                };
-                
-                console.log('User data:', userData);
-                
-                // Create simple token
-                const token = 'mock_jwt_token_' + Date.now();
-                console.log('Generated token:', token);
-                
-                // Save to storage
-                if (rememberMe) {
-                    localStorage.setItem('token', token);
-                    localStorage.setItem('user', JSON.stringify(userData));
-                    localStorage.setItem('login_time', Date.now().toString());
-                    console.log(' Saved to localStorage');
-                } else {
-                    sessionStorage.setItem('token', token);
-                    sessionStorage.setItem('user', JSON.stringify(userData));
-                    sessionStorage.setItem('login_time', Date.now().toString());
-                    console.log(' Saved to sessionStorage');
-                }
-                
-                showAlert(' Đăng nhập thành công!', 'success');
-                
-                // Redirect after delay
+        // Kiểm tra xem đã đăng nhập chưa và chuyển hướng (Chạy ngay khi script tải)
+        window.addEventListener('load', function() {
+            const token = localStorage.getItem('token') || sessionStorage.getItem('token');
+            if (token) {
                 setTimeout(() => {
-                    console.log('🔄 Redirecting to index.html...');
-                    // Thử nhiều cách redirect
-                    try {
-                        // Cách 1: Dùng window.location
-                        window.location.href = './index.html';
-                        
-                        // Cách 2: Hoặc thử cách này
-                        // window.location.replace('./index.html');
-                        
-                        // Cách 3: Hoặc cách này
-                        // window.location = './index.html';
-                    } catch (error) {
-                        console.error('Redirect error:', error);
-                        // Fallback
-                        window.location = './index.html';
-                    }
-                }, 1500);
-                
-            } else {
-                console.log(' LOGIN FAILED');
-                console.log('Input email/phone:', email);
-                console.log('Input password:', password);
-                
-                showAlert('Email/số điện thoại hoặc mật khẩu không đúng!');
-                
-                // Debug info
-                console.log('=== DEBUG INFO ===');
-                console.log('Available test accounts:');
-                testAccounts.forEach((acc, index) => {
-                    console.log(`${index + 1}. Email: "${acc.email}", Phone: "${acc.phone}", Password: "${acc.password}"`);
-                });
-                console.log('==================');
+                    window.location.href = './index.html';
+                }, 100);
             }
-            
-            setLoading(false);
-        }, 1000);
-    });
+        });
 
-    // ========== DEBUG FUNCTIONS ==========
-    
-    // Auto-fill for testing
-    document.getElementById('email').addEventListener('dblclick', function() {
-        this.value = 'shop@example.com';
-        document.getElementById('password').value = 'password123';
-        document.getElementById('rememberMe').checked = true;
-        showAlert('Đã điền tài khoản test!', 'success');
-    });
-    
-    // Enter key support
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
-            e.preventDefault();
-            const loginBtn = document.getElementById('loginBtn');
-            if (!loginBtn.disabled) {
-                document.getElementById('loginForm').dispatchEvent(new Event('submit'));
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const icon = document.querySelector('.password-toggle i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.className = 'fas fa-eye-slash';
+            } else {
+                passwordInput.type = 'password';
+                icon.className = 'fas fa-eye';
             }
         }
-    });
-    
-    // Manual test function (run in console)
-    window.testLogin = function() {
-        console.log('🔧 Testing login...');
-        document.getElementById('email').value = 'shop@example.com';
-        document.getElementById('password').value = 'password123';
-        document.getElementById('rememberMe').checked = true;
-        document.getElementById('loginForm').dispatchEvent(new Event('submit'));
-    };
-    
-    // Check storage
-    window.checkStorage = function() {
-        console.log('=== STORAGE CHECK ===');
-        console.log('localStorage token:', localStorage.getItem('token'));
-        console.log('localStorage user:', localStorage.getItem('user'));
-        console.log('sessionStorage token:', sessionStorage.getItem('token'));
-        console.log('sessionStorage user:', sessionStorage.getItem('user'));
-        console.log('=====================');
-    };
-    
-    // Clear storage
-    window.clearStorage = function() {
-        console.log('Clearing storage...');
-        localStorage.clear();
-        sessionStorage.clear();
-        console.log('Storage cleared!');
-        location.reload();
-    };
-    
-    // Log initial info
-    console.log('=== SHOPCOD PRO LOGIN PAGE ===');
-    console.log('Test Accounts:');
-    console.log('1. Email: "shop@example.com", Phone: "0987654321", Password: "password123"');
-    console.log('2. Email: "admin@shopcod.com", Phone: "0123456789", Password: "password123"');
-    console.log('3. Email: "test@shop.com", Phone: "0912345678", Password: "password123"');
-    console.log('==============================');
-    
-    // Add debug buttons to page
-    setTimeout(() => {
-        const debugDiv = document.createElement('div');
-        debugDiv.style.cssText = `
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            z-index: 9999;
-            font-size: 12px;
-        `;
-        debugDiv.innerHTML = `
-            <div style="margin-bottom: 5px; font-weight: bold; color: #4361ee;">🔧 DEBUG</div>
-            <button onclick="testLogin()" style="background: #4361ee; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin: 2px; font-size: 11px;">Test Login</button>
-            <button onclick="checkStorage()" style="background: #06d6a0; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin: 2px; font-size: 11px;">Check Storage</button>
-            <button onclick="clearStorage()" style="background: #ef476f; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin: 2px; font-size: 11px;">Clear Storage</button>
-        `;
-        document.body.appendChild(debugDiv);
-        console.log('Debug panel added to page');
-    }, 1000);
-</script>
+
+        function showAlert(message, type = 'error') {
+            const alertDiv = document.getElementById('alertMessage');
+            if (!alertDiv) return;
+            
+            alertDiv.innerHTML = `
+                <i class="fas fa-${type === 'error' ? 'exclamation-circle' : 'check-circle'}"></i>
+                <span>${message}</span>
+            `;
+            alertDiv.className = `alert ${type}`;
+            alertDiv.style.display = 'flex';
+            
+            setTimeout(() => {
+                alertDiv.style.display = 'none';
+            }, 4000);
+        }
+
+        function setLoading(isLoading) {
+            const btnText = document.getElementById('btnText');
+            const btnLoading = document.getElementById('btnLoading');
+            const loginBtn = document.getElementById('loginBtn');
+            
+            if (!btnText || !btnLoading || !loginBtn) return;
+            
+            if (isLoading) {
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'block';
+                loginBtn.disabled = true;
+            } else {
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                loginBtn.disabled = false;
+            }
+        }
+
+        // ========== MAIN LOGIN FUNCTION (Sử dụng MockAPI.login) ==========
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('rememberMe').checked;
+            
+            if (!email || !password) {
+                showAlert('Vui lòng nhập đầy đủ thông tin!');
+                return;
+            }
+            
+            setLoading(true);
+
+            try {
+                // Đảm bảo MockAPI đã được tải và có hàm login
+                if (typeof MockAPI === 'undefined' || typeof MockAPI.login !== 'function') {
+                    throw new Error("MockAPI is not available. Please check mock-api.js.");
+                }
+
+                // GỌI MOCKAPI.LOGIN
+                const response = await MockAPI.login(email, password);
+
+                if (response.success && response.user) {
+                    console.log(' LOGIN SUCCESS via MockAPI');
+                    
+                    const token = response.token;
+                    const userData = response.user;
+
+                    // LƯU DỮ LIỆU VÀO STORAGE
+                    const storage = rememberMe ? localStorage : sessionStorage;
+                    storage.setItem('token', token);
+                    storage.setItem('user', JSON.stringify(userData));
+                    
+                    showAlert(' Đăng nhập thành công!', 'success');
+                    
+                    // Chuyển hướng
+                    setTimeout(() => {
+                        window.location.href = './index.html';
+                    }, 1500);
+                    
+                } else {
+                    console.log(' LOGIN FAILED via MockAPI');
+                    showAlert(response.message || 'Email/số điện thoại hoặc mật khẩu không đúng!');
+                }
+            } catch (error) {
+                console.error('Login processing error:', error);
+                showAlert('Lỗi hệ thống hoặc lỗi kết nối MockAPI.');
+            } finally {
+                setLoading(false);
+            }
+        });
+
+        // ========== DEBUG FUNCTIONS (GIỮ LẠI ĐỂ TIỆN TEST) ==========
+        
+        // Auto-fill for testing
+        document.getElementById('email').addEventListener('dblclick', function() {
+            // Sử dụng tài khoản test đầu tiên trong MockAPI
+            this.value = '0123456789'; 
+            document.getElementById('password').value = 'password123';
+            document.getElementById('rememberMe').checked = true;
+            showAlert('Đã điền tài khoản test!', 'success');
+        });
+        
+        // Log initial info
+        console.log('=== SHOPCOD PRO LOGIN PAGE ===');
+    </script>
 </body>
 </html>
