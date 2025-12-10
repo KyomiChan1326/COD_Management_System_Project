@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <script src="js/auth-check.js"></script>
+    <script src="mock-api.js"></script> 
+    <script src="auth-check.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopCOD Pro - Dashboard Thống Kê</title>
@@ -12,10 +16,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
     <style>
+        /* Tất cả CSS giữ nguyên như trước */
         * {
             margin: 0;
             padding: 0;
@@ -355,7 +357,7 @@
 
         .stat-value {
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 400;
             margin-bottom: 0.5rem;
         }
 
@@ -429,7 +431,7 @@
             height: 300px;
         }
 
-        /* ===== RECENT ACTIVITY ===== */
+        /* ===== RECENT ACTIVITY - CẢI TIẾN MỚI ===== */
         .activity-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -442,31 +444,391 @@
             padding: 1.5rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        .activity-card h3 {
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .activity-header h3 {
             font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .activity-list {
-            list-style: none;
+        .view-all-btn {
+            background: var(--primary-light);
+            color: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
         }
 
+        .view-all-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .activity-list {
+            list-style: none;
+            flex: 1;
+            overflow-y: auto;
+            max-height: 350px;
+            padding-right: 5px;
+        }
+
+        .activity-list::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .activity-list::-webkit-scrollbar-track {
+            background: var(--gray-light);
+            border-radius: 10px;
+        }
+
+        .activity-list::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        /* CẢI TIẾN GIAO DỊCH GẦN ĐÂY - KẾT HỢP VỚI dashboard.js */
+        .transaction-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            background: var(--light);
+            border-radius: var(--radius-sm);
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .transaction-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow);
+        }
+
+        .transaction-item.success {
+            border-left-color: var(--success);
+            background: linear-gradient(90deg, var(--success-light) 0%, white 100%);
+        }
+
+        .transaction-item.warning {
+            border-left-color: var(--warning);
+            background: linear-gradient(90deg, var(--warning-light) 0%, white 100%);
+        }
+
+        .transaction-item.danger {
+            border-left-color: var(--danger);
+            background: linear-gradient(90deg, var(--danger-light) 0%, white 100%);
+        }
+
+        .transaction-item.primary {
+            border-left-color: var(--primary);
+            background: linear-gradient(90deg, var(--primary-light) 0%, white 100%);
+        }
+
+        .transaction-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .transaction-icon.success {
+            background: var(--success);
+            color: white;
+        }
+
+        .transaction-icon.warning {
+            background: var(--warning);
+            color: white;
+        }
+
+        .transaction-icon.danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        .transaction-icon.primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .transaction-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .transaction-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--dark);
+            font-size: 0.95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .transaction-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .transaction-amount {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .transaction-amount.positive {
+            color: var(--success);
+        }
+
+        .transaction-amount.negative {
+            color: var(--danger);
+        }
+
+        .transaction-time {
+            font-size: 0.8rem;
+            color: var(--gray);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+        }
+
+        .transaction-status {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-success {
+            background: var(--success-light);
+            color: var(--success);
+        }
+
+        .status-warning {
+            background: var(--warning-light);
+            color: var(--warning);
+        }
+
+        .status-danger {
+            background: var(--danger-light);
+            color: var(--danger);
+        }
+
+        .status-primary {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* CẢI TIẾN ĐƠN HÀNG ĐANG GIAO - KẾT HỢP VỚI dashboard.js */
+        .order-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            background: white;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .order-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .order-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .order-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .order-customer {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--dark);
+            font-size: 0.95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .order-id {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-bottom: 0.3rem;
+        }
+
+        .order-progress {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: var(--gray-light);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .order-value {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .delivery-time {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.75rem;
+            color: var(--gray);
+            background: var(--light);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+        }
+
+        /* Loading State */
+        .loading-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            color: var(--gray);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--gray-light);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Empty State */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem;
+            text-align: center;
+            color: var(--gray);
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .empty-state p {
+            font-size: 0.9rem;
+        }
+
+        /* CSS CŨ cho activity-item (giữ lại để không bị lỗi) */
         .activity-item {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--gray-light);
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: white;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
         }
 
-        .activity-item:last-child {
-            border-bottom: none;
+        .activity-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow);
         }
 
         .activity-icon {
@@ -477,12 +839,29 @@
             align-items: center;
             justify-content: center;
             font-size: 1rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
         }
 
-        .activity-icon.success { background: var(--success-light); color: var(--success); }
-        .activity-icon.warning { background: var(--warning-light); color: var(--warning); }
-        .activity-icon.danger { background: var(--danger-light); color: var(--danger); }
-        .activity-icon.primary { background: var(--primary-light); color: var(--primary); }
+        .activity-icon.success {
+            background: var(--success-light);
+            color: var(--success);
+        }
+
+        .activity-icon.warning {
+            background: var(--warning-light);
+            color: var(--warning);
+        }
+
+        .activity-icon.danger {
+            background: var(--danger-light);
+            color: var(--danger);
+        }
+
+        .activity-icon.primary {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
 
         .activity-details {
             flex: 1;
@@ -491,6 +870,7 @@
         .activity-details p {
             font-weight: 500;
             margin-bottom: 0.2rem;
+            color: var(--dark);
         }
 
         .activity-details span {
@@ -501,10 +881,17 @@
         .activity-amount {
             font-weight: 600;
             font-size: 1.1rem;
+            margin-left: 1rem;
+            white-space: nowrap;
         }
 
-        .activity-amount.positive { color: var(--success); }
-        .activity-amount.negative { color: var(--danger); }
+        .activity-amount.positive {
+            color: var(--success);
+        }
+
+        .activity-amount.negative {
+            color: var(--danger);
+        }
 
         /* ===== QUICK ACTIONS ===== */
         .quick-actions-section {
@@ -616,6 +1003,23 @@
             .user-info {
                 display: none;
             }
+            
+            .activity-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .transaction-info,
+            .order-progress {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+            
+            .transaction-time,
+            .delivery-time {
+                position: static;
+                margin-top: 0.3rem;
+            }
         }
 
         /* ===== ANIMATIONS ===== */
@@ -707,27 +1111,27 @@
             </ul>
         </div>
 
-    <!-- Trong sidebar, phần SETTINGS -->
-<div class="nav-section">
-    <div class="section-label">SETTINGS</div>
-    <ul class="nav-menu">
-        <!-- ... các mục khác ... -->
-        
-        <li class="nav-item">
-            <a href="#" class="nav-link" onclick="logout()">
-                <i class="fas fa-sign-out-alt nav-icon"></i>
-                <span class="nav-text">Đăng xuất</span>
-            </a>
-        </li>
-    </ul>
-</div>
+        <!-- Trong sidebar, phần SETTINGS -->
+        <div class="nav-section">
+            <div class="section-label">SETTINGS</div>
+            <ul class="nav-menu">
+                <!-- ... các mục khác ... -->
+                
+                <li class="nav-item">
+                    <a href="#" class="nav-link" onclick="logout()">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span class="nav-text">Đăng xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
         <div class="nav-section" style="margin-top: auto;">
             <div class="user-profile" style="background: rgba(255,255,255,0.1); border: none;">
-                <div class="user-avatar">SM</div>
+                <div class="user-avatar" id="user-avatar-sidebar">SM</div> 
                 <div>
-                    <h4>Sumo</h4>
-                    <p>Quản trị viên</p>
+                    <h4 class="user-name">Sumo</h4>
+                    <p class="user-role">Quản trị viên</p>
                 </div>
             </div>
         </div>
@@ -754,9 +1158,11 @@
                 </button>
                 
                 <div class="user-profile">
-                    <div class="user-avatar">SM</div>
+                    <div class="user-avatar" id="user-avatar-header">
+                        <span>S</span>
+                    </div>
                     <div class="user-info">
-                        <h4>Sumo</h4>
+                        <h4 class="user-name">Sumo</h4>
                         <p>Admin</p>
                     </div>
                 </div>
@@ -771,10 +1177,10 @@
                 </div>
                 <div class="stat-content">
                     <div class="stat-title">TỔNG SỐ DƯ</div>
-                    <div class="stat-value">25,840,000 ₫</div>
-                    <div class="stat-change positive">
+                    <div class="stat-value" id="total-balance">25,840,000 ₫</div>
+                    <div class="stat-change positive" id="balance-change-container">
                         <i class="fas fa-arrow-up"></i>
-                        <span>12.5% so với tháng trước</span>
+                        <span id="balance-change"> 12.5% so với tháng trước</span>
                     </div>
                 </div>
             </div>
@@ -785,10 +1191,10 @@
                 </div>
                 <div class="stat-content">
                     <div class="stat-title">ĐƠN HÀNG HÔM NAY</div>
-                    <div class="stat-value">48</div>
-                    <div class="stat-change positive">
+                    <div class="stat-value" id="today-orders">48</div>
+                    <div class="stat-change positive" id="orders-change-container">
                         <i class="fas fa-arrow-up"></i>
-                        <span>8 đơn so với hôm qua</span>
+                        <span id="orders-change">8 đơn so với hôm qua</span>
                     </div>
                 </div>
             </div>
@@ -799,7 +1205,7 @@
                 </div>
                 <div class="stat-content">
                     <div class="stat-title">DOANH THU THU HỘ</div>
-                    <div class="stat-value">18,450,000 ₫</div>
+                    <div class="stat-value" id="total-revenue">18,450,000 ₫</div>
                     <div class="stat-change positive">
                         <i class="fas fa-arrow-up"></i>
                         <span>24.3% tăng trưởng</span>
@@ -813,7 +1219,7 @@
                 </div>
                 <div class="stat-content">
                     <div class="stat-title">KHÁCH HÀNG MỚI</div>
-                    <div class="stat-value">12</div>
+                    <div class="stat-value" id="new-customers">12</div>
                     <div class="stat-change negative">
                         <i class="fas fa-arrow-down"></i>
                         <span>2 khách so với tuần trước</span>
@@ -853,125 +1259,39 @@
             </div>
         </div>
 
-        <!-- Recent Activity -->
+        <!-- Recent Activity - CẢI TIẾN -->
         <div class="activity-section">
+            <!-- Giao Dịch Gần Đây -->
             <div class="activity-card">
-                <h3><i class="fas fa-history"></i> Giao Dịch Gần Đây</h3>
-                <ul class="activity-list">
-                    <li class="activity-item">
-                        <div class="activity-icon success">
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>Nạp tiền từ VNPay</p>
-                            <span>14:30 • Hoàn tất</span>
-                        </div>
-                        <div class="activity-amount positive">+2,000,000 ₫</div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon danger">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>Thanh toán đơn #DH20240515</p>
-                            <span>13:45 • Thành công</span>
-                        </div>
-                        <div class="activity-amount negative">-850,000 ₫</div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon success">
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>Thu hộ đơn #DH20240514</p>
-                            <span>11:20 • Đã đối soát</span>
-                        </div>
-                        <div class="activity-amount positive">+1,500,000 ₫</div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon primary">
-                            <i class="fas fa-exchange-alt"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>Chuyển khoản cho shop ABC</p>
-                            <span>10:15 • Hoàn tất</span>
-                        </div>
-                        <div class="activity-amount negative">-750,000 ₫</div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon warning">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>Rút tiền về Vietcombank</p>
-                            <span>09:30 • Đang xử lý</span>
-                        </div>
-                        <div class="activity-amount negative">-3,000,000 ₫</div>
-                    </li>
+                <div class="activity-header">
+                    <h3><i class="fas fa-exchange-alt"></i> Giao Dịch Gần Đây</h3>
+                    <button class="view-all-btn" onclick="window.location.href='history.html'">
+                        Xem tất cả <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <ul id="transaction-list" class="activity-list">
+                    <!-- Dữ liệu sẽ được load từ mock API qua dashboard.js -->
+                    <div class="loading-state" id="transaction-loading">
+                        <div class="loading-spinner"></div>
+                        <p>Đang tải giao dịch...</p>
+                    </div>
                 </ul>
             </div>
             
+            <!-- Đơn Hàng Đang Giao -->
             <div class="activity-card">
-                <h3><i class="fas fa-truck"></i> Đơn Hàng Đang Giao</h3>
-                <ul class="activity-list">
-                    <li class="activity-item">
-                        <div class="activity-icon primary">
-                            <i class="fas fa-box"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>#DH20240515001 • Trần Văn B</p>
-                            <span>Đang giao • Dự kiến 16:00</span>
-                        </div>
-                        <div class="activity-amount">850,000 ₫</div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon primary">
-                            <i class="fas fa-box"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>#DH20240515002 • Lê Thị C</p>
-                            <span>Đang đóng gói • Giao sáng mai</span>
-                        </div>
-                        <div class="activity-amount">1,200,000 ₫</div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon warning">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>#DH20240514003 • Nguyễn Văn D</p>
-                            <span>Chờ xác nhận • Chưa có shipper</span>
-                        </div>
-                        <div class="activity-amount">450,000 ₫</div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon success">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>#DH20240513004 • Phạm Thị E</p>
-                            <span>Đã giao • 14/05/2024 15:30</span>
-                        </div>
-                        <div class="activity-amount">680,000 ₫</div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon danger">
-                            <i class="fas fa-times-circle"></i>
-                        </div>
-                        <div class="activity-details">
-                            <p>#DH20240512005 • Hoàng Văn F</p>
-                            <span>Đã hủy • Khách không nhận hàng</span>
-                        </div>
-                        <div class="activity-amount">950,000 ₫</div>
-                    </li>
+                <div class="activity-header">
+                    <h3><i class="fas fa-shipping-fast"></i> Đơn Hàng Đang Giao</h3>
+                    <button class="view-all-btn">
+                        Theo dõi <i class="fas fa-map-marker-alt"></i>
+                    </button>
+                </div>
+                <ul id="order-list" class="activity-list">
+                    <!-- Dữ liệu sẽ được load từ mock API qua dashboard.js -->
+                    <div class="loading-state" id="order-loading">
+                        <div class="loading-spinner"></div>
+                        <p>Đang tải đơn hàng...</p>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -1012,262 +1332,211 @@
     </main>
 
     <script>
-        // Initialize Charts
-        document.addEventListener('DOMContentLoaded', function() {
-            // Revenue Line Chart
-            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
-            const revenueChart = new Chart(revenueCtx, {
-                type: 'line',
-                data: {
-                    labels: ['1/5', '2/5', '3/5', '4/5', '5/5', '6/5', '7/5', '8/5', '9/5', '10/5', '11/5', '12/5', '13/5', '14/5', '15/5'],
-                    datasets: [{
-                        label: 'Doanh thu (triệu VNĐ)',
-                        data: [8.2, 9.1, 10.3, 8.7, 12.5, 14.2, 13.8, 15.3, 16.7, 18.2, 17.5, 19.1, 20.3, 21.5, 22.8],
-                        borderColor: '#4361ee',
-                        backgroundColor: 'rgba(67, 97, 238, 0.1)',
-                        borderWidth: 3,
-                        fill: true,
-                        tension: 0.4,
-                        pointBackgroundColor: '#4361ee',
-                        pointRadius: 4,
-                        pointHoverRadius: 7
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return `Doanh thu: ${context.parsed.y.toLocaleString()} triệu VNĐ`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            grid: {
-                                color: 'rgba(0,0,0,0.05)'
-                            },
-                            ticks: {
-                                callback: function(value) {
-                                    return value.toLocaleString() + ' tr';
-                                }
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
+        // Hàm custom để render giao diện mới (bổ sung cho dashboard.js)
+        function updateActivityListsWithNewUI(transactions, pendingOrders) {
+            const transactionListEl = document.getElementById('transaction-list');
+            const orderListEl = document.getElementById('order-list');
+            
+            // Xóa loading state nếu có
+            const transactionLoading = document.getElementById('transaction-loading');
+            const orderLoading = document.getElementById('order-loading');
+            if (transactionLoading) transactionLoading.remove();
+            if (orderLoading) orderLoading.remove();
+            
+            // 1. Render Giao Dịch Gần Đây với giao diện mới
+            if (transactionListEl) {
+                if (!transactions || transactions.length === 0) {
+                    transactionListEl.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-exchange-alt"></i>
+                            <p>Chưa có giao dịch nào</p>
+                        </div>
+                    `;
+                } else {
+                    const transactionHtml = transactions.map(transaction => {
+                        const typeClass = transaction.iconClass;
+                        const statusClass = transaction.status.toLowerCase().includes('hoàn tất') || 
+                                           transaction.status.toLowerCase().includes('thành công') ||
+                                           transaction.status.toLowerCase().includes('đã đối soát') ? 'success' :
+                                           transaction.status.toLowerCase().includes('đang xử lý') ? 'warning' :
+                                           transaction.status.toLowerCase().includes('hủy') ? 'danger' : 'primary';
+                        const isPositive = transaction.type === 'in';
+                        const amountSign = isPositive ? '+' : '-';
+                        
+                        return `
+                            <li class="transaction-item ${typeClass}">
+                                <div class="transaction-icon ${typeClass}">
+                                    <i class="${transaction.icon}"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">${transaction.description}</div>
+                                    <div class="transaction-info">
+                                        <div class="transaction-amount ${isPositive ? 'positive' : 'negative'}">
+                                            ${amountSign}${formatCurrency(transaction.amount)}
+                                        </div>
+                                        <div class="transaction-time">${transaction.time}</div>
+                                    </div>
+                                    <div class="transaction-status status-${statusClass}">
+                                        ${transaction.status}
+                                    </div>
+                                </div>
+                            </li>
+                        `;
+                    }).join('');
+                    transactionListEl.innerHTML = transactionHtml;
+                }
+            }
+            
+            // 2. Render Đơn Hàng Đang Giao với giao diện mới
+            if (orderListEl) {
+                if (!pendingOrders || pendingOrders.length === 0) {
+                    orderListEl.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-shipping-fast"></i>
+                            <p>Không có đơn hàng đang giao</p>
+                        </div>
+                    `;
+                } else {
+                    const orderHtml = pendingOrders.map(order => {
+                        const statusClass = order.iconClass;
+                        const progress = order.status === 'Đang giao' ? 70 :
+                                       order.status === 'Đang đóng gói' ? 40 :
+                                       order.status === 'Chờ xác nhận' ? 20 :
+                                       order.status === 'Đã giao' ? 100 :
+                                       order.status === 'Đã hủy' ? 0 : 50;
+                        
+                        // Tạo avatar từ tên khách hàng
+                        const customerName = order.customer;
+                        const avatarText = customerName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+                        
+                        return `
+                            <li class="order-item">
+                                <div class="order-avatar">${avatarText}</div>
+                                <div class="order-details">
+                                    <div class="order-customer">${customerName}</div>
+                                    <div class="order-id">${order.orderId}</div>
+                                    <div class="order-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: ${progress}%;"></div>
+                                        </div>
+                                        <div class="order-value">${formatCurrency(order.cod)}</div>
+                                    </div>
+                                </div>
+                                <div class="delivery-time">${order.time}</div>
+                            </li>
+                        `;
+                    }).join('');
+                    orderListEl.innerHTML = orderHtml;
+                }
+            }
+            
+            // Thêm animation cho các item
+            setTimeout(() => {
+                const transactionItems = document.querySelectorAll('.transaction-item');
+                const orderItems = document.querySelectorAll('.order-item');
+                
+                transactionItems.forEach((item, index) => {
+                    item.style.animation = 'fadeInUp 0.5s ease forwards';
+                    item.style.animationDelay = `${index * 0.1}s`;
+                });
+                
+                orderItems.forEach((item, index) => {
+                    item.style.animation = 'fadeInUp 0.5s ease forwards';
+                    item.style.animationDelay = `${index * 0.1}s`;
+                });
+            }, 100);
+        }
+
+        // Override hàm updateActivityLists từ dashboard.js để sử dụng giao diện mới
+        const originalUpdateActivityLists = window.updateActivityLists;
+        if (originalUpdateActivityLists) {
+            window.updateActivityLists = function(transactions, pendingOrders) {
+                // Gọi hàm custom của chúng ta
+                updateActivityListsWithNewUI(transactions, pendingOrders);
+            };
+        }
+
+        // Cập nhật loadDashboardData để đảm bảo gọi đúng
+        async function loadDashboardDataCustom() {
+            try {
+                const response = await MockAPI.getDashboardData(); 
+                
+                if (response.success) {
+                    console.log("Dashboard data loaded successfully.");
+                    
+                    // Cập nhật stats (sử dụng hàm từ dashboard.js)
+                    if (window.updateStatsCards) {
+                        window.updateStatsCards(response.stats);
+                    }
+                    
+                    // Cập nhật charts (sử dụng hàm từ dashboard.js)
+                    if (window.updateCharts) {
+                        window.updateCharts(response.charts);
+                    }
+                    
+                    // Cập nhật activity với giao diện mới
+                    updateActivityListsWithNewUI(response.transactions, response.pendingOrders);
+                    
+                    // Cập nhật thông tin User
+                    const userJSON = localStorage.getItem('user') || sessionStorage.getItem('user');
+                    if (userJSON) {
+                        const user = JSON.parse(userJSON);
+                        if (window.updateUserInfo) {
+                            window.updateUserInfo(user);
                         }
                     }
+                    
+                } else {
+                    console.error("Failed to load dashboard data:", response.message);
                 }
-            });
+            } catch (error) {
+                console.error("Error in loadDashboardData:", error);
+                
+                // Hiển thị lỗi
+                document.getElementById('transaction-list').innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Không thể tải giao dịch</p>
+                    </div>
+                `;
+                
+                document.getElementById('order-list').innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Không thể tải đơn hàng</p>
+                    </div>
+                `;
+            }
+        }
 
-            // Order Type Pie Chart
-            const orderTypeCtx = document.getElementById('orderTypeChart').getContext('2d');
-            const orderTypeChart = new Chart(orderTypeCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Thành công', 'Đang giao', 'Chờ xử lý', 'Đã hủy'],
-                    datasets: [{
-                        data: [65, 20, 10, 5],
-                        backgroundColor: [
-                            '#06d6a0',
-                            '#4361ee',
-                            '#ffd166',
-                            '#ef476f'
-                        ],
-                        borderWidth: 2,
-                        borderColor: 'white'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                padding: 20,
-                                usePointStyle: true,
-                                pointStyle: 'circle'
-                            }
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    const label = context.label || '';
-                                    const value = context.parsed || 0;
-                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
-                                    const percentage = Math.round((value / total) * 100);
-                                    return `${label}: ${value} đơn (${percentage}%)`;
-                                }
-                            }
-                        }
-                    },
-                    cutout: '70%'
-                }
-            });
-
-            // Period buttons functionality
+        // Khởi tạo khi trang load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load dữ liệu ban đầu
+            if (window.loadDashboardData) {
+                // Gọi hàm gốc nhưng override activity lists
+                window.loadDashboardData();
+            } else {
+                // Fallback: Gọi hàm custom của chúng ta
+                loadDashboardDataCustom();
+            }
+            
+            // Thêm sự kiện click cho các nút period
             document.querySelectorAll('.period-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
-                    
-                    // In real app, you would update chart data here
-                    console.log('Period changed to:', this.textContent);
                 });
             });
-
-            // Search functionality
-            const searchInput = document.querySelector('.search-bar input');
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    alert(`Đang tìm kiếm: "${this.value}"`);
-                    this.value = '';
-                }
-            });
-
-            // Notification button
-            document.querySelector('.notification-btn').addEventListener('click', function() {
-                alert('Bạn có 3 thông báo chưa đọc:\n1. Đơn hàng #DH20240515001 đã giao thành công\n2. Số dư ví sắp hết\n3. Cập nhật hệ thống mới');
-            });
-
-            // Update stats in real-time (simulated)
-            function updateStats() {
-                const balanceValue = document.querySelector('.balance .stat-value');
-                const currentBalance = parseInt(balanceValue.textContent.replace(/[^0-9]/g, ''));
-                
-                // Simulate small random changes
-                const change = Math.random() > 0.5 ? 10000 : -10000;
-                const newBalance = currentBalance + change;
-                
-                if (newBalance > 0) {
-                    balanceValue.textContent = newBalance.toLocaleString() + ' ₫';
-                }
-            }
-
-            // Update every 30 seconds
-            setInterval(updateStats, 30000);
-
-            // Add animation to cards
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all cards for animation
-            document.querySelectorAll('.stat-card, .chart-card, .activity-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'all 0.5s ease';
-                observer.observe(card);
-            });
-
-            // Mobile menu toggle
-            const menuToggle = document.createElement('button');
-            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            menuToggle.style.cssText = `
-                position: fixed;
-                top: 1rem;
-                left: 1rem;
-                z-index: 1000;
-                background: var(--primary);
-                color: white;
-                border: none;
-                width: 40px;
-                height: 40px;
-                border-radius: 8px;
-                display: none;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                box-shadow: var(--shadow);
-            `;
             
-            document.body.appendChild(menuToggle);
-            
-            menuToggle.addEventListener('click', function() {
-                document.querySelector('.sidebar').classList.toggle('active');
-            });
-            
-            // Show menu toggle on mobile
-            function checkScreenSize() {
-                if (window.innerWidth <= 992) {
-                    menuToggle.style.display = 'flex';
+            // Tự động refresh dữ liệu mỗi 30 giây
+            setInterval(() => {
+                if (window.loadDashboardData) {
+                    window.loadDashboardData();
                 } else {
-                    menuToggle.style.display = 'none';
-                    document.querySelector('.sidebar').classList.remove('active');
+                    loadDashboardDataCustom();
                 }
-            }
-            
-            checkScreenSize();
-            window.addEventListener('resize', checkScreenSize);
-            
-            // Close sidebar when clicking outside on mobile
-            document.addEventListener('click', function(event) {
-                const sidebar = document.querySelector('.sidebar');
-                if (window.innerWidth <= 992 && 
-                    !sidebar.contains(event.target) && 
-                    !menuToggle.contains(event.target) &&
-                    sidebar.classList.contains('active')) {
-                    sidebar.classList.remove('active');
-                }
-            });
+            }, 30000);
         });
-        
     </script>
-    <script>
-    // Check authentication on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        if (!Auth.isLoggedIn()) {
-            window.location.href = 'login.html';
-            return;
-        }
-        
-        // Load user data
-        const user = Auth.getCurrentUser();
-        if (user) {
-            // Update UI with user data
-            document.querySelectorAll('.user-name').forEach(el => {
-                el.textContent = user.name;
-            });
-            document.querySelectorAll('.user-role').forEach(el => {
-                el.textContent = user.role === 'shop_owner' ? 'Chủ shop' : user.role;
-            });
-        }
-    });
-
-    // Logout function
-    function logout() {
-    if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
-        // Xóa tất cả dữ liệu đăng nhập
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        sessionStorage.removeItem('token');
-        sessionStorage.removeItem('user');
-        
-        // Chuyển hướng về trang đăng nhập
-        window.location.href = 'login.html';
-    }
-    return false; // Ngăn chặn hành vi mặc định của thẻ a
-}
-</script>
 </body>
 </html>
