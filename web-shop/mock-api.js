@@ -784,12 +784,12 @@ const MockAPI = {
     },
 
     // =========================================================================
-    // CHỨC NĂNG LỊCH SỬ GIAO DỊCH (HISTORY) - SỬA LẠI CHO ĐÚNG
+    // CHỨC NĂNG LỊCH SỬ GIAO DỊCH (HISTORY) 
     // =========================================================================
 
     // Lấy danh sách giao dịch với bộ lọc và phân trang
     getHistoryTransactions: function(filters = {}) {
-        console.log('📊 MockAPI.getHistoryTransactions called with:', filters);
+        console.log(' MockAPI.getHistoryTransactions called with:', filters);
         
         return new Promise((resolve) => {
             setTimeout(() => {
@@ -808,7 +808,7 @@ const MockAPI = {
                     const walletData = JSON.parse(localStorage.getItem(walletKey));
                     
                     if (!walletData || !walletData.transactions) {
-                        console.log('📦 No wallet data found, generating sample data');
+                        console.log(' No wallet data found, generating sample data');
                         // Tạo dữ liệu mẫu nếu chưa có
                         this.initializeUserWallet(user.id);
                         const newData = JSON.parse(localStorage.getItem(walletKey));
@@ -828,7 +828,7 @@ const MockAPI = {
                         walletData = newData;
                     }
                     
-                    console.log(`📦 Found ${walletData.transactions.length} transactions`);
+                    console.log(` Found ${walletData.transactions.length} transactions`);
                     
                     let transactions = [...walletData.transactions];
                     
@@ -883,7 +883,7 @@ const MockAPI = {
                         }
                     }
                     
-                    console.log(`🔍 After filtering: ${transactions.length} transactions`);
+                    console.log(` After filtering: ${transactions.length} transactions`);
                     
                     // Tính toán phân trang
                     const page = filters.page || 1;
@@ -922,11 +922,11 @@ const MockAPI = {
                         }
                     };
                     
-                    console.log('✅ Returning history data:', result);
+                    console.log(' Returning history data:', result);
                     resolve(result);
                     
                 } catch (error) {
-                    console.error('❌ Error in getHistoryTransactions:', error);
+                    console.error(' Error in getHistoryTransactions:', error);
                     resolve({
                         success: true,
                         message: "Lấy dữ liệu thành công",
@@ -1066,7 +1066,7 @@ const MockAPI = {
 
     // Lấy thống kê cho lịch sử giao dịch
     getHistoryStatistics: function(filters = {}) {
-        console.log('📈 MockAPI.getHistoryStatistics called');
+        console.log(' MockAPI.getHistoryStatistics called');
         
         return new Promise((resolve) => {
             setTimeout(async () => {
@@ -1136,7 +1136,7 @@ const MockAPI = {
                     });
                     
                 } catch (error) {
-                    console.error('❌ Error in getHistoryStatistics:', error);
+                    console.error(' Error in getHistoryStatistics:', error);
                     // Trả về dữ liệu mẫu an toàn
                     resolve({
                         success: true,
@@ -1195,7 +1195,7 @@ const MockAPI = {
                         }
                     });
                 } catch (error) {
-                    console.error('❌ Error in exportHistoryData:', error);
+                    console.error(' Error in exportHistoryData:', error);
                     resolve({
                         success: false,
                         message: "Lỗi xuất dữ liệu",
@@ -1267,5 +1267,5 @@ const MockAPI = {
 // Khởi tạo MockAPI toàn cục
 if (typeof window !== 'undefined') {
     window.MockAPI = MockAPI;
-    console.log('✅ MockAPI loaded successfully');
+    console.log(' MockAPI loaded successfully');
 }

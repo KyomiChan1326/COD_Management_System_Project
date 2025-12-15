@@ -1,5 +1,5 @@
 // js/auth-check.js - Authentication Check for ShopCOD Pro
-console.log('🔐 Auth Check System Loading...');
+console.log(' Auth Check System Loading...');
 
 // ========== CONFIGURATION ==========
 const CONFIG = {
@@ -31,7 +31,7 @@ const AuthUtils = {
         const user = localStorage.getItem('user') || sessionStorage.getItem('user');
         
         if (!token || !user) {
-            CONFIG.debug && console.log('❌ No authentication data found');
+            CONFIG.debug && console.log(' No authentication data found');
             return false;
         }
         
@@ -106,7 +106,7 @@ const AuthUtils = {
         
         const storage = localStorage.getItem('token') ? localStorage : sessionStorage;
         storage.setItem('login_time', Date.now().toString());
-        CONFIG.debug && console.log('🔄 Session refreshed');
+        CONFIG.debug && console.log(' Session refreshed');
     },
     
     // Clear all authentication data
@@ -118,7 +118,7 @@ const AuthUtils = {
             sessionStorage.removeItem(item);
         });
         
-        CONFIG.debug && console.log('🧹 Auth data cleared');
+        CONFIG.debug && console.log(' Auth data cleared');
     },
     
     // Logout user
@@ -144,7 +144,7 @@ const AuthUtils = {
             return;
         }
         
-        CONFIG.debug && console.log('🎨 Updating UI with user data');
+        CONFIG.debug && console.log(' Updating UI with user data');
         
         // Wait for DOM to be ready
         const update = () => {
